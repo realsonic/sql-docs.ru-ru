@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b3265c99e185f4a8fcbe68e400ab1277b1e72671
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: f328e136bc0b07f23083153277ac98588702b373
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442883"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489664"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Заметки о выпуске Кластеров больших данных SQL Server 2019
 
@@ -191,6 +191,12 @@ SQL Server 2019 CU3 устраняет следующие проблемы, в�
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>Известные проблемы
+
+### <a name="msdtc-capabilities-can-not-be-enabled-for-sql-server-master-instance-running-within-bdc"></a>Не удается включить возможности MSDTC для главного экземпляра SQL Server, работающего в BDC
+
+- **Затронутые выпуски**: Все конфигурации развертывания кластера больших данных, независимо от выпуска.
+
+- **Проблема и последствия для клиентов**: Если SQL Server развернут в BDC как главный экземпляр SQL Server, функцию MSDTC включить нельзя. Для этой проблемы не существует обходного решения.
 
 ### <a name="ha-sql-server-database-encryption-key-encryptor-rotation"></a>Смена шифратора ключа шифрования базы данных SQL Server с высоким уровнем доступности
 

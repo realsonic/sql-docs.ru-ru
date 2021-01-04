@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: e80892bfef7ee2c8cf22aef1b491ab5ea0c0addd
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 5f0401081e6d437bcc0290c111bb5325e476650e
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235568"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97103197"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>Подключение SQL Server к Azure Arc
 
@@ -22,13 +22,14 @@ ms.locfileid: "93235568"
 ## <a name="prerequisites"></a>Предварительные требования
 
 * На компьютере должен быть установлен хотя бы один экземпляр SQL Server.
-* На компьютерах с ОС Windows необходимо установить Azure PowerShell. Чтобы [установить Azure PowerShell](/powershell/azure/install-az-ps), следуйте следующей инструкции.
-* На компьютерах с ОС Linux необходимо скачать Azure CLI и подключиться к учетной записи Azure. Чтобы [установить Azure CLI](/cli/azure/install-azure-cli-apt), следуйте следующей инструкции.
-* Поставщик ресурсов **Microsoft.AzureData** зарегистрирован. Дополнительные сведения о поставщиках ресурсов Azure см. в "Поставщики и типы ресурсов Azure".
-    * В PowerShell выполните команду `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureData`.
-    * В Linux выполните `az provider register --namespace 'Microsoft.AzureData`.
-
-
+* Поставщик ресурсов **Microsoft.AzureArcData** зарегистрирован с помощью одного из следующих методов:  
+    * Используя портал Azure, выполните указанные ниже действия.
+        - Выбор пункта **Подписки** 
+        - Выберите свою подписку
+        - В разделе **Параметры** с помощью пункта **Поставщики ресурсов**
+        - Посредством поиска по `Microsoft.AzureArcData` и выбора **Зарегистрировать**
+    * В PowerShell с помощью команды `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureArcData`
+    * В интерфейсе командной строки с помощью команды `az provider register --namespace 'Microsoft.AzureArcData`
 
 ## <a name="generate-a-registration-script-for-sql-server"></a>Создание скрипта регистрации для SQL Server
 
@@ -37,7 +38,7 @@ ms.locfileid: "93235568"
 1. Найдите тип ресурса __SQL Server — Azure Arc__ и добавьте новый ресурс в колонке создания.
 
 ![Начало создания](media/join/start-creation-of-sql-server-azure-arc-resource.png)
-    
+
 2. Проверьте предварительные требования и перейдите на вкладку **Сведения о сервере**.  
 
 3. Выберите подписку, группу ресурсов, регион Azure и операционную систему хост-компьютера. При необходимости укажите также прокси-сервер, используемый вашей сетью для подключения к Интернету.
@@ -88,15 +89,15 @@ ms.locfileid: "93235568"
 
 ## <a name="validate-the-sql-server---azure-arc-resources"></a>Проверка ресурсов SQL Server — Azure Arc
 
-Перейдите на [портал Azure](https://ms.portal.azure.com/#home) и откройте только что зарегистрированный ресурс __SQL Server — Azure Arc__ , чтобы проверить его.
+Перейдите на [портал Azure](https://ms.portal.azure.com/#home) и откройте только что зарегистрированный ресурс __SQL Server — Azure Arc__, чтобы проверить его.
 
 ![Проверка подключенного экземпляра SQL Server ](media/join/validate-sql-server-azure-arc.png)
 
-## <a name="un-register-the-sql-server---azure-arc-resources"></a>Отмена регистрации ресурсов SQL Server — Azure Arc
+## <a name="disconnect-your-sql-server-instance"></a>Отключение экземпляра SQL Server
 
-Чтобы удалить существующий ресурс __SQL Server — Azure Arc__ , перейдите в группу ресурсов, которая его содержит, и удалите его из списка ресурсов в этой группе.
+Чтобы отключить экземпляр SQL Server от Azure Arc, перейдите на портал Azure, откройте ресурс __SQL Server — Azure Arc__ для этого экземпляра и нажмите кнопку **Отменить регистрацию**.
 
-![Отмена регистрации экземпляра SQL Server](media/join/delete-sql-server-azure-arc.png)
+![Отмена регистрации экземпляра SQL Server](media/join/unregister-sql-server-azure-arc.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

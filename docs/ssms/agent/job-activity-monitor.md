@@ -14,13 +14,13 @@ ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 813740790db9a7f9bb15f8e5d2a003b73ba5a88f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 96a19ea760409d354390c171965f494f59cdff42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037957"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477035"
 ---
 # <a name="job-activity-monitor"></a>Монитор активности заданий
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,19 +37,19 @@ ms.locfileid: "92037957"
 **Enabled**  
 Указывает, включено задание (**да**) или отключено (**нет**).  
   
-**Состояние***  
+**Состояние** _  
 Текущее состояние задания.  
   
-**Результат последнего запуска**  
+_ *Результат последнего запуска**  
 Состояние задания при последнем запуске.  
   
 **Последний запуск**  
 Дата и время последнего запуска задания с использованием локальной даты и времени сервера.  
   
-**Следующий запуск***  
+**Следующий запуск** _  
 Дата и время запланированного следующего запуска задания с использованием локальной даты и времени сервера.  
   
-**Категория**  
+_ *Категория**  
 Категория, присвоенная заданию.  
   
 **Готово к запуску**  
@@ -62,7 +62,7 @@ ms.locfileid: "92037957"
   
 #### <a name="to-open-the-job-activity-monitor"></a>Как открыть монитор активности заданий  
   
--   В **обозревателе объектов**разверните сервер, раскройте узел **Агент SQL Server**, щелкните правой кнопкой мыши **Монитор активности заданий**, затем выберите пункт **Просмотр активности заданий**.  
+-   В **обозревателе объектов** разверните сервер, раскройте узел **Агент SQL Server**, щелкните правой кнопкой мыши **Монитор активности заданий**, затем выберите пункт **Просмотр активности заданий**.  
   
 ## <a name="see-also"></a>См. также  
 [Наблюдение за активностью заданий](../../ssms/agent/monitor-job-activity.md)  

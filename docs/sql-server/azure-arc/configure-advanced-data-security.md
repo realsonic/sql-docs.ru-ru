@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 2bd589ebacd9ea35e15881eaaeb022d4f2302986
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e0c68752d21de5945c06433af8c08f6208322f7c
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988030"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97103177"
 ---
 # <a name="configure-advanced-data-security-for-azure-arc-enabled-sql-server-instance"></a>Настройка расширенной защиты данных для экземпляра SQL Server с поддержкой Azure Arc
 
@@ -50,17 +50,17 @@ ms.locfileid: "91988030"
 
 1. Дополнительные сведения: [Управление расширениями с помощью Azure Arc](/azure/azure-arc/servers/manage-vm-extensions).
 
-## <a name="enable-advanced-data-security"></a>Включение расширенной защиты данных
+## <a name="enable-azure-defender"></a>Включение Azure Defender
 
-Теперь вам нужно активировать расширенную защиту данных для экземпляра SQL Server.
+Далее необходимо включить Azure Defender для экземпляра SQL Server.
 
 1. Перейдите в Центр безопасности и откройте страницу **Цены и параметры** на боковой панели.
 
 1. Выберите рабочую область, настроенную для расширения MMA на предыдущем шаге.
 
-1. Выберите **Стандартная**. Обязательно включите параметр **Cерверы SQL на компьютере (предварительная версия)** .
+1. Выберите **Включить Azure Defender**. Обязательно включите параметр **Cерверы SQL на компьютере**.
 
-   ![Обновление рабочей области](media/configure-advanced-data-security/upgrade-log-analytics-workspace.png)
+   ![Обновление рабочей области](media/configure-advanced-data-security/enable-azure-defender.png)
 
  > [!NOTE]
    > Первое сканирование для создания оценки уязвимостей будет выполнено в течение 24 часов после включения расширенной защиты данных. После этого автоматическое сканирование будет выполняться каждую неделю по воскресеньям.

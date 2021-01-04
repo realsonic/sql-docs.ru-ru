@@ -5,16 +5,16 @@ description: Управление экземплярами SQL Server с пом�
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 10/07/2020
+ms.date: 12/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: c1ba7f7552b5050e3c1fa7bc765acfa431f3df30
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987990"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97103149"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>SQL Server с поддержкой Azure Arc (предварительная версия)
 
@@ -43,8 +43,9 @@ SQL Server с поддержкой Azure Arc поддерживает SQL Server
 
 ### <a name="required-permissions"></a>Необходимые разрешения
 
-Для подключения экземпляров SQL Server и хост-компьютера к службе Azure Arc вам потребуется учетная запись с правами на выполнение следующих действий.
-   * Microsoft.AzureData/*
+Для подключения экземпляров SQL Server и хост-компьютера к службе Azure Arc вам потребуется учетная запись с правами на выполнение следующих действий:
+   * Microsoft.AzureArcData/sqlServerInstances/read
+   * Microsoft.AzureArcData/sqlServerInstances/write
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
@@ -58,6 +59,10 @@ SQL Server с поддержкой Azure Arc поддерживает SQL Server
 ### <a name="networking-configuration-and-resource-providers"></a>Конфигурация сети и поставщики ресурсов
 
 Проверьте [конфигурацию сети, протокол TLS и поставщики ресурсов](/azure/azure-arc/servers/agent-overview#prerequisites), необходимые для агента Connected Machine.
+
+Для подключения экземпляров SQL Server к Azure Arc требуется поставщик ресурсов `Microsoft.AzureArcData`. Инструкции по регистрации поставщика ресурсов приводятся в разделе [Предварительные требования](connect.md#prerequisites).
+
+Если у вас уже есть экземпляры SQL Server, подключенные к службе Azure Arc, выполните следующие действия, чтобы перенести существующие ресурсы **SQL Server — Azure Arc** в новое пространство имен.
 
 ### <a name="supported-azure-regions"></a>Поддерживаемые регионы Azure
 
