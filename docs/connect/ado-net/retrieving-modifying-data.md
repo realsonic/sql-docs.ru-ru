@@ -1,7 +1,7 @@
 ---
 title: Извлечение и изменение данных
-description: В .NET Framework поставщик данных Microsoft SqlClient для SQL Server выступает в качестве моста между приложением и источником данных для считывания и обновления данных.
-ms.date: 11/13/2020
+description: В .NET поставщик данных Microsoft SqlClient для SQL Server выступает в качестве моста между приложением и источником данных для считывания и обновления данных.
+ms.date: 11/30/2020
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: d6e4d6c298c632c446e1671b5d9adabaa19e0776
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: c3cf3766ffc6c8acf6025b58aa0adbaafafa2188
+ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761492"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97038962"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Извлечение и изменение данных в ADO.NET
 
@@ -41,6 +41,10 @@ ms.locfileid: "96761492"
 
 [Объекты DataAdapter и DataReader](dataadapters-datareaders.md)  
 Содержит разделы, в которых описываются объекты DataReader, DataAdapter, параметры, обработка событий объекта и выполнение пакетных операций.
+
+[Транзакции и параллелизм](transactions-and-concurrency.md) Содержит разделы, в которых описывается выполнение локальных транзакций, распределенных транзакций и работа с оптимистичным параллелизмом.
+
+[Извлечение сведений о схеме базы данных](retrieving-database-schema-information.md) Описывает получение доступных баз данных или каталогов, таблиц и представлений в базе данных, ограничений, существующих для таблиц, а также других сведений о схеме из источника данных.
 
 ## <a name="see-also"></a>См. также
 

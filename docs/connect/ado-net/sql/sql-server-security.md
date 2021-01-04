@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: ea2f8a65cb8ca16efd625309f73d7dccc3e27505
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e70f6da7755b28c400cc80a5ee6de79a004e4e42
+ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911670"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97038922"
 ---
 # <a name="sql-server-security"></a>Безопасность SQL Server
 
@@ -36,6 +36,9 @@ SQL Server предоставляет много функций для созд�
 ## <a name="in-this-section"></a>В этом разделе  
 [Проверка подлинности в SQL Server](authentication-sql-server.md)  
 Описание имен входа и проверки подлинности в SQL Server и ссылки на дополнительные ресурсы. 
+
+[Проверка подлинности Azure Active Directory](azure-active-directory-authentication.md)  
+Узнайте, как использовать поддерживаемые режимы проверки подлинности Azure Active Directory для подключения к источникам данных Azure SQL с помощью SqlClient.
   
 [Сценарии безопасности приложений в SQL Server](application-security-scenarios-sql-server.md)  
 Подразделы с описанием различных сценариев обеспечения безопасности для приложений ADO.NET и SQL Server.  
@@ -43,7 +46,7 @@ SQL Server предоставляет много функций для созд�
 [Безопасность SQL Server Express](sql-server-express-security.md)  
 Описание вопросов безопасности для SQL Server Express.  
   
-## <a name="related-sections"></a>См. также  
+## <a name="related-sections"></a>Связанные разделы  
 [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 Описывает вопросы безопасности для SQL Server и Базы данных Azure SQL.
 

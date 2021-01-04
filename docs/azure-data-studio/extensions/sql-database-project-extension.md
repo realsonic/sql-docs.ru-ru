@@ -8,13 +8,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
-ms.date: 10/22/2020
-ms.openlocfilehash: e4030cac39eca0d57af3bf2bcefad293e83971c2
-ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
+ms.date: 12/15/2020
+ms.openlocfilehash: 7b52827de249153adc54d148ead5d93a015d152d
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94704169"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559096"
 ---
 # <a name="sql-database-projects-extension-preview"></a>Расширение "Проекты Баз данных SQL" (предварительная версия)
 
@@ -61,6 +61,31 @@ ms.locfileid: "94704169"
 - Задачи (сборка или публикация) не определяются пользователем.
 - Публикация целевых объектов, определенных DacFx.
 - Поддержка среды WSL ограничена.
+
+## <a name="workspace"></a>Рабочая область
+Проекты базы данных SQL в Azure Data Studio содержатся в логической рабочей области.  Рабочая область служит для управления папками, видимыми в панели обозревателя, а также проектами, видимыми в области "Проект". Добавлять и удалять проекты рабочей области можно с помощью области "Проекты" в интерфейсе Azure Data Studio. При необходимости параметры рабочей области можно изменить вручную в файле `.code-workspace`.
+
+В приведенном ниже примере файла `.code-workspace` массив `folders` содержит перечисление всех папок, добавленных в панель обозревателя, а массив `dataworkspace.projects` в `settings` — список всех проектов SQL, включенных в область "Проекты".
+
+```json
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "name": "WideWorldImportersDW",
+            "path": "..\\WideWorldImportersDW"
+        }
+    ],
+    "settings": {
+        "dataworkspace.projects": [
+            "AdventureWorksLT.sqlproj",
+            "..\\WideWorldImportersDW\\WideWorldImportersDW.sqlproj"
+        ]
+    }
+}
+```
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

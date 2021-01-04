@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 7450ebddf94a4378313bb1793bcefe34a88407a5
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: b4c7027fd4695e1c1110fb19ae8cefc9be34ac10
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438857"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Соединитель Apache Spark для SQL Server и Azure SQL
 
@@ -25,7 +25,7 @@ ms.locfileid: "96442949"
 
 [Apache Spark](https://spark.apache.org/) — это единый аналитический механизм для крупномасштабной обработки данных.
 
-Вы можете импортировать соединитель в проект с помощью координат Maven: `com.microsoft.azure:spark-mssql-connector:1.0.0`. Вы также можете создать соединитель на основе источника данных или скачать JAR-файл из раздела выпуска на GitHub. Последние сведения о соединителе см. в [репозитории GitHub для соединителя Spark SQL](https://github.com/microsoft/sql-spark-connector).
+Вы можете получить соединитель от [Maven](https://search.maven.org/search?q=spark-mssql-connector). Чтобы импортировать соединитель, используйте координату `com.microsoft.azure:spark-mssql-connector:<latest version>`. Вы также можете создать соединитель на основе источника данных или скачать JAR-файл из раздела выпуска на GitHub. Последние сведения о соединителе см. в [репозитории GitHub для соединителя Spark SQL](https://github.com/microsoft/sql-spark-connector).
 
 ## <a name="supported-features"></a>Поддерживаемые функции
 
@@ -51,7 +51,7 @@ ms.locfileid: "96442949"
 
 Кроме того, поддерживаются указанные ниже параметры
 
-| Параметр | По умолчанию | Описание |
+| Параметр | Значение по умолчанию | Описание |
 | --------- | ------------------ | ------------------------------------------ |
 | `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` или `NO_DUPLICATES`. `NO_DUPLICATES` реализует надежную операцию вставки в сценариях перезапуска исполнителя |
 | `dataPoolDataSource` | `none` | `none` означает, что значение не задано и соединитель должен записывать данные в один экземпляр SQL Server. Присвойте этому параметру имя источника данных для записи в таблицу пула данных в кластере больших данных|
