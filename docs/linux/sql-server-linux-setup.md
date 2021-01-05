@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: de619ed83ca42f853a528ad280f49b4f256b18ea
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 4abb6180d60b149fe8b1b18118c98afd04c2e2e8
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97490054"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642420"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке SQL Server на Linux
 
@@ -95,10 +95,10 @@ SQL Server поддерживается на платформах Red Hat Enterp
 
 | Платформа | Краткие руководства по установке |
 |---|---|
-| Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
-| SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |
-| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15) |
-| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15) |
+| Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15&preserve-view=true) |
+| SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15&preserve-view=true) |
+| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true) |
+| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true) |
 
 Вы также можете запустить SQL Server на Linux на виртуальной машине Azure. Дополнительные сведения см. в статье [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json).
 

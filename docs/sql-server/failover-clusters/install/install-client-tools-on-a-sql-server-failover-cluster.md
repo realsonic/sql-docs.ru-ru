@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 467014114a17d6cafacdaf44f1f7a2c60042721a
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: a596212e17e6fb273b9a6c4f5a2548aff1bc1e7f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127667"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642852"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Установка клиентских средств на отказоустойчивом кластере SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

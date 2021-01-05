@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.addreplicawizard.f1
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 99cfe654cf9540d2b031353f0487d783045dd0c9
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: 066a215fa5e616cf33734b3c582ed4789ee43461
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94583676"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641830"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Добавление реплики в группу доступности Always On с помощью мастера создания групп доступности в SQL Server Management Studio
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

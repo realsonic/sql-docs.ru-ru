@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c8cd352c5347cbc48979af4e03775c9d7da8f3d1
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 9bf93bf9b59df77efe905a6c0debb722c63c3bbb
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96504973"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643064"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Запуск и использование помощника по настройке ядра СУБД
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "96504973"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Запуск помощника по настройке ядра СУБД из редактора запросов среды SQL Server Management Studio  
   
-1.  Откройте файл скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в статье [Редакторы запросов и текста (SQL Server Management Studio)](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15).  
+1.  Откройте файл скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в статье [Редакторы запросов и текста (SQL Server Management Studio)](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md).  
   
 2.  Выделите запрос в скриптe [!INCLUDE[tsql](../../includes/tsql-md.md)] или весь скрипт целиком, щелкните правой кнопкой мыши выбранный фрагмент и выберите пункт **Анализ запроса в помощнике по настройке ядра СУБД**. Откроется графический интерфейс помощника по настройке ядра СУБД, после чего будет выполнен импорт скрипта как XML-файла рабочей нагрузки. Для настройки выбранных запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] в качестве рабочей нагрузки вы можете указать имя сеанса и параметры настройки.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "96504973"
   
 ###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Для создания рабочей нагрузки скрипта Transact-SQL  
   
-1.  Запустите редактор запросов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в статье [Редакторы запросов и текста (SQL Server Management Studio)](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15).  
+1.  Запустите редактор запросов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в статье [Редакторы запросов и текста (SQL Server Management Studio)](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md).  
   
 2.  Введите скрипт на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] в редакторе запросов. Этот скрипт должен содержать набор инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемых в одной или нескольких базах данных, которые необходимо настроить.  
   

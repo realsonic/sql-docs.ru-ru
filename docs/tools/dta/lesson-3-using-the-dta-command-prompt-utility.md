@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 53eacd0177862b81d32b44616dc67cc0beb90f79
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 064d7fc2d47cbd4f688d113f60be6080ca90fee1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489266"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642617"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Урок 3. Использование программы командной строки dta
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ XML-схема помощника по настройке ядра СУБД ра
   
 В этом руководстве используется пример базы данных AdventureWorks2017. В целях повышения безопасности образцы баз данных не установлены. Дополнительные сведения об установке образцов баз данных см. в статье [Установка образцов SQL Server и образцов баз данных](../../samples/adventureworks-install-configure.md).  
   
-В следующих задачах рассматривается открытие командной строки, запуск программы командной строки **dta** , просмотр справки по ее синтаксису, а также настройка простой рабочей нагрузки MyScript.sql, которая была создана в примере [Настройка рабочей нагрузки](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15).  
+В следующих задачах рассматривается открытие командной строки, запуск программы командной строки **dta** , просмотр справки по ее синтаксису, а также настройка простой рабочей нагрузки MyScript.sql, которая была создана в примере [Настройка рабочей нагрузки](./lesson-2-using-database-engine-tuning-advisor.md).  
 
 ## <a name="prerequisites"></a>Предварительные требования 
 
@@ -84,7 +84,7 @@ XML-схема помощника по настройке ядра СУБД ра
 
   ![Использование CMD с DTA](media/dta-tutorials/dta-cmd.png)
   
-3.  Закончив настройку рабочей нагрузки, помощник по настройке ядра СУБД выведет сообщение, свидетельствующее об успешном завершении сеанса настройки. Можно просмотреть результаты настройки, используя среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы открыть файлы MySession2OutputScript.sql и MySession2Output.xml. Кроме того, сеанс настройки MySession2 можно открыть в графическом интерфейсе помощника по настройке ядра СУБД и просмотреть его рекомендации и отчеты, что рассматривалось в разделах [Просмотр рекомендаций по настройке](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15) и [Просмотр отчетов настройки](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15).  
+3.  Закончив настройку рабочей нагрузки, помощник по настройке ядра СУБД выведет сообщение, свидетельствующее об успешном завершении сеанса настройки. Можно просмотреть результаты настройки, используя среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы открыть файлы MySession2OutputScript.sql и MySession2Output.xml. Кроме того, сеанс настройки MySession2 можно открыть в графическом интерфейсе помощника по настройке ядра СУБД и просмотреть его рекомендации и отчеты, что рассматривалось в разделах [Просмотр рекомендаций по настройке](./lesson-2-using-database-engine-tuning-advisor.md) и [Просмотр отчетов настройки](./lesson-2-using-database-engine-tuning-advisor.md).  
   
  
 ## <a name="after-you-finish-this-tutorial"></a>После завершения работы с этим учебником  

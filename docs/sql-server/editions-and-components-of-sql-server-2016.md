@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8803d517b0f3917853261dc8bd6591123f4c3404
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 8e1544a46e84b77ce290dded936f86b75a251f13
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92255354"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642946"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Выпуски и поддерживаемые функции SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -53,7 +53,7 @@ ms.locfileid: "92255354"
 
 * [SQL Server 2019](editions-and-components-of-sql-server-version-15.md).  
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md).  
-* [SQL Server 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014).
+* [SQL Server 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014&preserve-view=true).
 
 Требования для установки сильно зависят от потребностей приложения. Различные выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] удовлетворяют индивидуальным требованиям каждой организации или отдельного лица к производительности, среде выполнения и цене. Набор устанавливаемых компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] зависит от потребностей конкретного пользователя. В следующих разделах содержатся сведения, на основе которых из множества выпусков и компонентов, доступных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], можно сделать наилучший выбор.  
 
@@ -136,7 +136,7 @@ ms.locfileid: "92255354"
 |Максимальный объем памяти для буферного пула на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Максимум, поддерживаемый операционной системой|128 ГБ|64 ГБ|1410 МБ|1410 МБ|
 |Максимальный объем памяти для кэша сегмента Columnstore на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Неограниченная память| 32 ГБ<sup>2</sup>| 16 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>|  
 |Максимальный размер данных, оптимизированных для памяти, на базу данных в [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Неограниченная память| 32 ГБ<sup>2</sup>| 16 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>|  
-|Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Максимум, поддерживаемый операционной системой|Табличный: 16 ГБ<br /><br /> MOLAP: 64 ГБ|Н/Д|Н/Д|Н/Д|  
+|Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Максимум, поддерживаемый операционной системой|Табличный: 16 ГБ<br /><br /> MOLAP: 64 ГБ|Н/Д|Недоступно|Н/Д|  
 |Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Максимум, поддерживаемый операционной системой|64 ГБ|64 ГБ|4 ГБ|Н/Д|
 |Максимальный размер реляционной базы данных|524 ПБ|524 ПБ|524 ПБ|10 ГБ|10 ГБ|  
   

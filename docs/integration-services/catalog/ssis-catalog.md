@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dd2fffbce8d2db5bb5bafbcb49b1f37ea48873c7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a8ed14b14198bb95db838e76ca07bffe5875ce69
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726055"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642613"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
 
@@ -126,7 +126,7 @@ ms.locfileid: "91726055"
   
  Вы можете обновить или повторно развернуть проект [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с тем же именем в той же папке в каталоге. По умолчанию при каждом повторном развертывании проекта в каталоге **SSISDB** сохраняется предыдущая версия проекта. Чтобы поддерживался размер данных операций, для удаления старых версий проектов используется **задание обслуживания сервера служб SSIS** .  
  
-Для запуска **задания обслуживания сервера служб SSIS**службы SSIS создают имя для входа SQL Server **##MS_SSISServerCleanupJobLogin##** . Это имя входа предназначено только для внутреннего использования службами SSIS.
+Для запуска **задания обслуживания сервера служб SSIS** службы SSIS создают имя для входа SQL Server **##MS_SSISServerCleanupJobLogin##** . Это имя входа предназначено только для внутреннего использования службами SSIS.
   
  Следующие два свойства каталога **SSISDB** определяют поведение этого задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Просмотреть и изменить свойства вы можете в диалоговом окне **Свойства каталога** или с помощью процедур [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) и [catalog.configure_catalog (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
@@ -173,7 +173,7 @@ ms.locfileid: "91726055"
   
  В следующей таблице приведены имена свойств, показанных в диалоговом окне **Свойства каталога** , а также соответствующие свойства в представлении базы данных.  
   
-|Имя свойства (диалоговое окно**Свойства каталога** )|Имя свойства (представление базы данных)|  
+|Имя свойства (диалоговое окно **Свойства каталога** )|Имя свойства (представление базы данных)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Имя алгоритма шифрования|ENCRYPTION_ALGORITHM|  
 |Периодическая очистка журналов|OPERATION_CLEANUP_ENABLED|  
@@ -379,7 +379,7 @@ ms.locfileid: "91726055"
   
 2.  Создайте соединение с компонентом Microsoft SQL Server Database Engine.  
   
-3.  В обозревателе объектов разверните узел **Службы Integration Services** , щелкните правой кнопкой мыши элемент **SSISDB**и выберите пункт **Свойства**.  
+3.  В обозревателе объектов разверните узел **Службы Integration Services** , щелкните правой кнопкой мыши элемент **SSISDB** и выберите пункт **Свойства**.  
   
 ###  <a name="configure-the-options"></a><a name="options"></a> Настройка параметров  
   
@@ -456,7 +456,7 @@ ms.locfileid: "91726055"
            FROM Executable File = 'C:\Program Files\Microsoft SQL Server\YourSQLServerDefaultCompatibilityLevel\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
     ```  
 
-    Для значения `YourSQLServerDefaultCompatibilityLevel` см. [список уровней совместимости SQL Server по умолчанию](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=sql-server-ver15#arguments).
+    Для значения `YourSQLServerDefaultCompatibilityLevel` см. [список уровней совместимости SQL Server по умолчанию](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#arguments).
   
     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] требуют предоставления разрешения UNSAFE для имени входа, поскольку имени входа необходим дополнительный доступ к ресурсам, на которые существуют ограничения, например API-интерфейс Microsoft Win32. Дополнительные сведения о коде разрешения UNSAFE см. в разделе [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
 
@@ -612,7 +612,7 @@ ms.locfileid: "91726055"
   
 4.  Щелкните **Включить автоматическое выполнение хранимой процедуры служб Integration Services при запуске SQL Server** , чтобы хранимая процедура [catalog.startup](../system-stored-procedures/catalog-startup.md) выполнялась каждый раз при перезапуске экземпляра сервера служб SSIS. Хранимая процедура осуществляет обслуживание состояния операций для каталога SSISDB. Она исправляет состояние любых пакетов, выполнявшихся в момент отключения экземпляра сервера служб SSIS.  
   
-5.  Введите **пароль**и нажмите кнопку **ОК**. Этот пароль защищает главный ключ базы данных, используемый для шифрования данных каталога. Сохраните пароль в надежном месте. Рекомендуется также создать резервную копию главного ключа базы данных. Дополнительные сведения см. в статье [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
+5.  Введите **пароль** и нажмите кнопку **ОК**. Этот пароль защищает главный ключ базы данных, используемый для шифрования данных каталога. Сохраните пароль в надежном месте. Рекомендуется также создать резервную копию главного ключа базы данных. Дополнительные сведения см. в статье [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ####  <a name="step-2-add-ssisdb-to-an-always-on-availability-group"></a><a name="Step2"></a> Шаг 2. Добавление SSISDB в группу доступности Always On  
 Процедура добавления базы данных SSISDB в группу доступности AlwaysOn практически не отличается от добавления другой базы данных пользователей в группу доступности. См. раздел [Использование мастера групп доступности](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
@@ -655,7 +655,7 @@ ms.locfileid: "91726055"
   
 2.  Удалите базу данных SSISDB со всех **узлов реплики**.  
   
-3.  Обновите базу данных SSISDB на **основном узле**. В**обозревателе объектов** в SQL Server Management Studio разверните **Каталоги служб Integration Services**, щелкните правой кнопкой мыши **SSISDB**, а затем выберите команду **Обновить базу данных**. Следуйте инструкциям в **мастере обновления SSISDB** по обновлению базы данных. **Мастер обновления SSIDB** необходимо запустить локально на **основном узле**.  
+3.  Обновите базу данных SSISDB на **основном узле**. В **обозревателе объектов** в SQL Server Management Studio разверните **Каталоги служб Integration Services**, щелкните правой кнопкой мыши **SSISDB**, а затем выберите команду **Обновить базу данных**. Следуйте инструкциям в **мастере обновления SSISDB** по обновлению базы данных. **Мастер обновления SSIDB** необходимо запустить локально на **основном узле**.  
   
 4.  Следуйте инструкциям по добавлению SSISDB обратно в группу доступности в разделе [Шаг 2. Добавление SSISDB в группу доступности Always On](#Step2).  
   

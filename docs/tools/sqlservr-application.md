@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 36fde81f6317d45b2169282d99e4eef27b3467b3
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 67f25ef21a7d4897bba7242da796bd41f9fc655e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714272"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642225"
 ---
 # <a name="sqlservr-application"></a>Приложение sqlservr
 
@@ -56,17 +56,17 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 > [!NOTE]
 >При использовании этого параметра остановить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью Service Manager [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или команды **net stop** будет невозможно. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будет остановлен, если выйти из системы на данном компьютере.)
 
-**-d** *master_path* — указывает полный путь к файлу базы данных **master**. Между параметрами **-d** и *master_path*нет пробелов. Если этот параметр не задан, используются параметры из реестра.
+**-d** *master_path* — указывает полный путь к файлу базы данных **master**. Между параметрами **-d** и *master_path* нет пробелов. Если этот параметр не задан, используются параметры из реестра.
 
 **-f** — запускает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с минимальной конфигурацией. Эта функция полезна в случае, если установленные значения конфигурации (например, слишком большой объем выделяемой памяти) не позволяют выполнить запуск сервера.
 
-**-e** *error_log_path* — указывает абсолютный путь к файлу журнала ошибок. Если этот параметр не указан, используется расположение по умолчанию `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog` для экземпляра по умолчанию и `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog` для именованного экземпляра. Между параметрами **-e** и *error_log_path*нет пробелов.
+**-e** *error_log_path* — указывает абсолютный путь к файлу журнала ошибок. Если этот параметр не указан, используется расположение по умолчанию `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog` для экземпляра по умолчанию и `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog` для именованного экземпляра. Между параметрами **-e** и *error_log_path* нет пробелов.
 
-**-l** *master_log_path* — указывает полный путь к файлу журнала транзакций базы данных **master**. Между параметрами **-l** и *master_log_path*нет пробелов.
+**-l** *master_log_path* — указывает полный путь к файлу журнала транзакций базы данных **master**. Между параметрами **-l** и *master_log_path* нет пробелов.
 
 **-m** — указывается для запуска экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в однопользовательском режиме. Если [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущен в однопользовательском режиме, к нему может подключиться только один пользователь. Механизм CHECKPOINT, гарантирующий, что завершенные транзакции регулярно записываются из дискового кэша в устройство хранения базы данных, не запускается. (Как правило, этот параметр используется при появлении проблем с системными базами данных, требующими исправления.) Включает параметр **sp_configure allow updates**. По умолчанию параметр **allow updates** отключен.
 
-**-n** — позволяет запустить именованный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Если не указать параметр **-s** , будет выполнена попытка запуска экземпляра по умолчанию. Перед запуском программы **sqlservr.exe**в командной строке необходимо перейти в каталог BINN соответствующего экземпляра. Например, если экземпляр Instance1 должен использовать \mssql$Instance1 для своих двоичных файлов, для запуска **sqlservr.exe -s instance1**пользователь должен быть в каталоге \mssql$Instance1\binn. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запускается с параметром **-n** , целесообразно также использовать параметр **-e** , иначе события [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не будут регистрироваться.
+**-n** — позволяет запустить именованный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Если не указать параметр **-s** , будет выполнена попытка запуска экземпляра по умолчанию. Перед запуском программы **sqlservr.exe** в командной строке необходимо перейти в каталог BINN соответствующего экземпляра. Например, если экземпляр Instance1 должен использовать \mssql$Instance1 для своих двоичных файлов, для запуска **sqlservr.exe -s instance1** пользователь должен быть в каталоге \mssql$Instance1\binn. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запускается с параметром **-n** , целесообразно также использовать параметр **-e** , иначе события [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не будут регистрироваться.
 
 **-T** *trace#*  — указывает, что экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] должен запускаться так, как если бы был установлен флаг трассировки (*trace#* ). Флаги трассировки используются для запуска сервера в нестандартном режиме. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -85,8 +85,8 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 |Параметр | Дополнительные сведения|
 |:-----|:-----|
-|**-h** | В более ранних версиях 32-битных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использовался для резервирования виртуального адресного пространства для метаданных памяти с «горячей» заменой при включенных расширениях AWE. Поддерживается вплоть до версии [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Дополнительные сведения см. в разделе [Неподдерживаемые функции SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server.md?view=sql-server-ver15).|
-|**-g** | *memory_to_reserve*<br/><br>Применяется к более ранним версиям 32-разрядных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Поддерживается вплоть до версии [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Определяет целое число мегабайтов (МБ) памяти, которую [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оставляет доступной для распределения памяти в пределах процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , но за пределами пула памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения см. в [разделе документации по SQL Server 2014, посвященном параметрам конфигурации памяти сервера](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
+|**-h** | В более ранних версиях 32-битных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использовался для резервирования виртуального адресного пространства для метаданных памяти с «горячей» заменой при включенных расширениях AWE. Поддерживается вплоть до версии [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Дополнительные сведения см. в разделе [Неподдерживаемые функции SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server.md).|
+|**-g** | *memory_to_reserve*<br/><br>Применяется к более ранним версиям 32-разрядных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Поддерживается вплоть до версии [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Определяет целое число мегабайтов (МБ) памяти, которую [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оставляет доступной для распределения памяти в пределах процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , но за пределами пула памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения см. в [разделе документации по SQL Server 2014, посвященном параметрам конфигурации памяти сервера](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014&preserve-view=true).|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>См. также:

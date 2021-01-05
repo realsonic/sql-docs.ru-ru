@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d54e8831218a64d854ae6b42955f59de8728518
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 998e1d6525613e121377abbe17861ecb86bf86f6
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789693"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642064"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Зеркальное отображение и репликация баз данных (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "85789693"
   
 2.  Настройка зеркального отображения базы данных. Дополнительные сведения см. в статьях [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) и [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-3.  Настройте распространение для зеркальной базы данных. Укажите имя зеркальной базы данных в качестве имени издателя и укажите те же самые распространитель и папку моментальных снимков, которые используются основной базой данных. Например, если проводится настройка репликации с помощью хранимых процедур, выполните [sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) на распространителе, а затем [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) на зеркальном сервере. Для **sp_adddistpublisher**выполните следующее:  
+3.  Настройте распространение для зеркальной базы данных. Укажите имя зеркальной базы данных в качестве имени издателя и укажите те же самые распространитель и папку моментальных снимков, которые используются основной базой данных. Например, если проводится настройка репликации с помощью хранимых процедур, выполните [sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) на распространителе, а затем [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) на зеркальном сервере. Для **sp_adddistpublisher** выполните следующее:  
   
     -   установите значение параметра **\@publisher** равным сетевому имени зеркала;  
   

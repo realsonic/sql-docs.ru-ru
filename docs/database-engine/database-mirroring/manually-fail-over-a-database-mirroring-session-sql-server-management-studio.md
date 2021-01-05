@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - failover [SQL Server], database mirroring
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 05e11b27e618dfc38f818f8dc86199cce3343d21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f01c967758f0603fe044e7449c972a6933f0e30
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754630"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642323"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85754630"
   
 1.  Установите соединение с экземпляром основного сервера и на панели **Обозреватель объектов** щелкните имя сервера, чтобы развернуть этот узел.  
   
-2.  Раскройте узел **Базы данных**и выберите базу данных для перехода на другой ресурс.  
+2.  Раскройте узел **Базы данных** и выберите базу данных для перехода на другой ресурс.  
   
 3.  Щелкните базу данных правой кнопкой мыши, выберите **Задачи**, а затем **Зеркальное отображение**. Откроется страница **Зеркальное отображение** диалогового окна **Свойства базы данных** .  
   

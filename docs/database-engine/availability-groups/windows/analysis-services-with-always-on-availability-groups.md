@@ -5,19 +5,19 @@ ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: cawrites
 ms.author: chadam
 manager: erikre
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: c0e02d7491d9afce4611e0d22c488b438c858ed5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c7d64fdbc557f5b985d27818847091f7eea1816f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438887"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641670"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Службы Analysis Services с группами доступности AlwaysOn
 

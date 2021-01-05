@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], turning off
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 70930149f26088d6c95bad6205b4421850292602
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8653d60228d2b1a72b5a25001d2f1212824b2608
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735202"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641381"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Удаление следящего сервера из сеанса зеркального отображения базы данных (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "85735202"
   
 1.  Установите соединение с экземпляром основного сервера и на панели **Обозреватель объектов** щелкните имя сервера, чтобы развернуть этот узел.  
   
-2.  Раскройте **Базы данных**и выберите базу данных, для которой нужно удалить следящий сервер.  
+2.  Раскройте **Базы данных** и выберите базу данных, для которой нужно удалить следящий сервер.  
   
 3.  Щелкните базу данных правой кнопкой мыши, выберите **Задачи**, а затем **Зеркальное отображение**. Откроется страница **Зеркальное отображение** диалогового окна **Свойства базы данных** .  
   

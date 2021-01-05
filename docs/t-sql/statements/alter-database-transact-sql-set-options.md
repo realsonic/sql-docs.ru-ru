@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 67c728b2620205a6dfa854c8328df6ea462bd673
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 97139ed9331853a5d84d261c69510993fb7231a2
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489934"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642270"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -60,13 +60,13 @@ ms.locfileid: "97489934"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1493,10 +1493,10 @@ SET QUERY_STORE = ON
         **_\* База данных SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -2367,7 +2367,7 @@ SET QUERY_STORE = ON
 - [Уровень совместимости ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Зеркальное отображение базы данных ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
 - [Статистика](../../relational-databases/statistics/statistics.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-currentls)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [Включение и отключение отслеживания изменений](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
@@ -2385,13 +2385,13 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Управляемый экземпляр SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -3161,7 +3161,7 @@ SET QUERY_STORE = ON
 - [Уровень совместимости ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Зеркальное отображение базы данных ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
 - [Статистика](../../relational-databases/statistics/statistics.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
 - [Включение и отключение отслеживания изменений](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
@@ -3179,10 +3179,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -3320,7 +3320,7 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-Выполните эту команду, чтобы проверить, был ли запрос выполнен с использованием кэшированного результата.  Столбец result_cache_hit возвращает 1 для попадания в кэше, 0 для промаха кэша и отрицательные значения для причин, по которым кэширование результирующего набора не использовалось.  Дополнительные сведения см. в описании [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md?view=aps-pdw-2016-au7).  
+Выполните эту команду, чтобы проверить, был ли запрос выполнен с использованием кэшированного результата.  Столбец result_cache_hit возвращает 1 для попадания в кэше, 0 для промаха кэша и отрицательные значения для причин, по которым кэширование результирующего набора не использовалось.  Дополнительные сведения см. в описании [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true).  
 
 ```sql
 SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests

@@ -20,12 +20,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 226db73ec48cdcd13ef80571b94e21fb283ecaac
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: eb082b29411b136edca7ed14f06effa354a5f0e6
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477915"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643108"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -131,7 +131,7 @@ GO
  Для выполнения скрипта репликации после его создания может быть использован один из следующих способов.  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Создание файла SQL-запроса в среде SQL Server Management Studio  
- Файл скрипта репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] может быть создан в проекте среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] как файл SQL-запроса. После записи скрипта может быть создано соединение с базой данных для этого файла запроса и скрипт вызван на выполнение. Дополнительные сведения о создании скриптов [!INCLUDE[tsql](../../../includes/tsql-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] см. в статье о [редакторах запросов и текста (SQL Server Management Studio)](../../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15).  
+ Файл скрипта репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] может быть создан в проекте среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] как файл SQL-запроса. После записи скрипта может быть создано соединение с базой данных для этого файла запроса и скрипт вызван на выполнение. Дополнительные сведения о создании скриптов [!INCLUDE[tsql](../../../includes/tsql-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] см. в статье о [редакторах запросов и текста (SQL Server Management Studio)](../../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md).  
   
  Чтобы использовать скрипт с переменными скрипта, необходимо запустить среду [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] в режиме **sqlcmd**. В режиме **sqlcmd** редактор запросов распознает дополнительный синтаксис, характерный для **sqlcmd**, например обозначение `:setvar` для значений переменных. Дополнительные сведения о режиме **sqlcmd** см. в разделе об [изменении скриптов SQLCMD при помощи редактора запросов](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md). В следующем скрипте `:setvar` используется для предоставления значения переменной `$(DistPubServer)`.  
   

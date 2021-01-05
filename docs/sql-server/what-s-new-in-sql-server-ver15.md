@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 28b2d4cf892aa21b44d989fb56351a6ab5448bff
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b04cb475579c73a26ec5977ce52b9521ce69552a
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482280"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642654"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -222,8 +222,8 @@ ms.locfileid: "97482280"
 
 |Новые функции или обновления | Сведения |
 |:---|:---| 
-|Новые параметры настройки памяти | Задает конфигурации *минимальной памяти сервера (МБ)* и *максимальной памяти сервера (МБ)* во время установки. См. статью [Настройка ядра СУБД — страница ресурсов памяти](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory), а также в описаниях параметров `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` и `SQLMAXMEMORY` в разделе [Установка SQL Server из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Предложенное значение соответствует рекомендациям по настройке памяти, приведенным в разделе [Параметры конфигурации памяти сервера](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).| 
-|Новые параметры настройки параллелизма | Задает параметр *максимального уровня параллелизма* во время установки. См. статью [Настройка ядра СУБД — страница MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) и в описании параметра `SQLMAXDOP` в разделе [Установка SQL Server из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Значение по умолчанию соответствует рекомендациям по максимальной степени параллелизма, приведенным в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
+|Новые параметры настройки памяти | Задает конфигурации *минимальной памяти сервера (МБ)* и *максимальной памяти сервера (МБ)* во время установки. См. статью [Настройка ядра СУБД — страница ресурсов памяти](./install/instance-configuration.md#memory), а также в описаниях параметров `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` и `SQLMAXMEMORY` в разделе [Установка SQL Server из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Предложенное значение соответствует рекомендациям по настройке памяти, приведенным в разделе [Параметры конфигурации памяти сервера](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).| 
+|Новые параметры настройки параллелизма | Задает параметр *максимального уровня параллелизма* во время установки. См. статью [Настройка ядра СУБД — страница MaxDOP](./install/instance-configuration.md#maxdop) и в описании параметра `SQLMAXDOP` в разделе [Установка SQL Server из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Значение по умолчанию соответствует рекомендациям по максимальной степени параллелизма, приведенным в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 |Предупреждение при установке ключа продукта лицензии Server/CAL|Если вводится ключ продукта лицензии Enterprise Server или CAL и при включенной технологии Hyper-Threading на компьютере установлено более 20 физических ядер или 40 логических ядер, во время установки отобразится предупреждение. Пользователи по-прежнему могут подтвердить ограничение и продолжить установку, или ввести ключ лицензии, поддерживающий максимальное число процессоров операционной системы.|
 | &nbsp; | &nbsp; |
 

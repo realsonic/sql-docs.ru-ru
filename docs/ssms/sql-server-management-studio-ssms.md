@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 396df64c5c5be5d7ea9c5fc67d7cb1ff0a7d990f
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 1b523e86ff04de37bf0177430502c92132872e6b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243853"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641743"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Что такое SQL Server Management Studio (SSMS)?
 
@@ -43,7 +43,7 @@ ms.locfileid: "93243853"
 |**Обозреватель шаблонов** используется для создания файлов со стандартным текстом, которые можно использовать для ускорения разработки запросов и скриптов, и управления ими.|[Обозреватель шаблонов](../ssms/template/template-explorer.md)|  
 |Устаревший **обозреватель решений** используется для создания проектов, применяемых для управления такими элементами администрирования, как скрипты и запросы.|[Обозреватель решений](../ssms/solution/solution-explorer.md)|  
 |Использование инструментов для визуального проектирования, включенных в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|Использование редакторов языков [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для интерактивного написания и отладки запросов и скриптов.|[Редакторы запросов и текста](./f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
+|Использование редакторов языков [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для интерактивного написания и отладки запросов и скриптов.|[Редакторы запросов и текста](./f1-help/database-engine-query-editor-sql-server-management-studio.md)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>SQL Server Management Studio для решения задач бизнес-аналитики
 

@@ -6,7 +6,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 36c0f0d6ff5e4da43291f27c7f7bd47d1b736d1b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ff60136994d809b78cf09ebd98e4cc36ceb1a02
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719991"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641658"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85719991"
   
 -   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как службы под разными учетными записями домена (одного и того же или доверенных доменов), вам нужно создать имя входа для каждой учетной записи в базе данных **master** на каждом экземпляре сервера, а затем предоставить этому имени входа разрешение CONNECT для конечной точки.  
   
--   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как учетные записи сетевой службы, вам нужно создать в базе данных_master_ **\\** _на каждом из остальных серверов имя входа для каждой учетной записи главного компьютера (_ имя_домена **имя _ компьютера$** ), а затем предоставить этому имени входа разрешение CONNECT для конечной точки. Это обусловлено тем, что экземпляр сервера, выполняемый под учетной записью Network Service, выполняет проверку подлинности с помощью учетной записи домена главного компьютера.  
+-   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как учетные записи сетевой службы, вам нужно создать в базе данных _master_ **\\** _на каждом из остальных серверов имя входа для каждой учетной записи главного компьютера (_ имя_домена **имя _ компьютера$** ), а затем предоставить этому имени входа разрешение CONNECT для конечной точки. Это обусловлено тем, что экземпляр сервера, выполняемый под учетной записью Network Service, выполняет проверку подлинности с помощью учетной записи домена главного компьютера.  
   
 > [!NOTE]  
 >  Пример установки сеанса для зеркального отображения базы данных с помощью проверки подлинности Windows см. в разделе [Пример. Настройка зеркального отображения базы данных с помощью проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  

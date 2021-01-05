@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1930add6748d979c0a00455529ca932e8d0b43c8
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 63f185f686d21c5c9a490bee83d2c9afaf449b8f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714082"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641894"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90, приложение
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -49,5 +49,5 @@ sqlagent90
  После отображения сообщения с указанием авторских прав приложение **sqlagent90** отображает выводимые данные в окне командной строки, только если указан параметр **-v** . Чтобы остановить работу приложения **sqlagent90**, нажмите клавиши CTRL+C в командной строке. Не закрывайте окно командной строки перед остановкой работы приложения **sqlagent90**.  
   
 ## <a name="see-also"></a>См. также:  
- [Задачи автоматизированного администрирования (агент SQL Server)](../ssms/agent/automated-administration-tasks-sql-server-agent.md?view=sql-server-ver15)  
+ [Задачи автоматизированного администрирования (агент SQL Server)](../ssms/agent/automated-administration-tasks-sql-server-agent.md)  
   

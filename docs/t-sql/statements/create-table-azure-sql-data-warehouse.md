@@ -12,12 +12,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: fdadefa5b898a2b37c7e5a7f087c429ccc6b8d4f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bf8ef986da54559c5928677643f6bd99c63c2266
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438967"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643020"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -172,7 +172,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option"></a>Вариант упорядоченного кластеризованного индекса columnstore 
 
-Кластеризованный индекс columnstore включен по умолчанию для создания таблиц в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  Перед сжатием данных в сегментах columnstore данные в индексе не сортируются.  При создании индекса с ORDER данные сортируются до добавления в сегменты индекса, и производительность запросов можно улучшить. Дополнительные сведения см. в разделе [Настройка производительности с упорядоченным кластеризованным индексом columnstore](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest).  
+Кластеризованный индекс columnstore включен по умолчанию для создания таблиц в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  Перед сжатием данных в сегментах columnstore данные в индексе не сортируются.  При создании индекса с ORDER данные сортируются до добавления в сегменты индекса, и производительность запросов можно улучшить. Дополнительные сведения см. в разделе [Настройка производительности с упорядоченным кластеризованным индексом columnstore](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest&preserve-view=true).  
 
 Упорядоченный кластеризованный индекс columnstore можно создавать для столбцов любых типов данных, поддерживаемых в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], за исключением строковых столбцов.  
 
@@ -596,4 +596,4 @@ WITH
 [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
-[sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md?view=azure-sqldw-latest) 
+[sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) 

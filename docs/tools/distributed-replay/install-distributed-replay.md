@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 14f3a13e566fc56332c79fd104ef584be098cda7
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 29c96381f9781df7cb1cbedb351cce1524f440fd
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714192"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642648"
 ---
 # <a name="install-distributed-replay"></a>Установка распределенного воспроизведения
 
@@ -192,7 +192,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 -   Значения командной строки перезаписывают значения в файле конфигурации.  
   
- Дополнительные сведения см. в статье [Установка SQL Server 2016 с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md?view=sql-server-ver15).  
+ Дополнительные сведения см. в статье [Установка SQL Server 2016 с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
   
 > [!IMPORTANT]  
 >  После установки компонентов распределенного воспроизведения необходимо создать правила брандмауэра на компьютерах контроллера и клиента и предоставить каждому из клиентских компьютеров разрешения на целевом сервере. Дополнительные сведения см. в статье [Выполнение действий после установки](../../tools/distributed-replay/complete-the-post-installation-steps.md).  

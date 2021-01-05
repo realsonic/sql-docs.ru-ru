@@ -11,12 +11,12 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9dc1352570607686935b040fcc7a28853dd6644
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 705cbb8484e95ca30ffb93b91ab8d71823cfd582
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466265"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642414"
 ---
 # <a name="spatial-results-window"></a>Окно «Пространственные результаты»
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,5 +54,5 @@ ms.locfileid: "97466265"
  [Просмотр пространственных данных в обозревателе объектов](./view-spatial-data-in-object-explorer.md)   
  [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md)   
- [Редакторы запросов и текста (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
+ [Редакторы запросов и текста (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md)  
   

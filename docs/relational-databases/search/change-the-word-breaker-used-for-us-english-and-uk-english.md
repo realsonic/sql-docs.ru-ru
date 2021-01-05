@@ -11,16 +11,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 843773990f5e7e669ed16fcc698a6ae88a56c9ac
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0b836e9a86fe6b323dbcacfb3f408889f87fa6bd
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475625"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641715"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает новую версию (версию 14.0.4999.1038) средства разбиения по словам и парадигматического модуля для английского языка, заменяя предыдущую версию этих компонентов (версию 12.0.6828.0). Дополнительные сведения об изменениях в поведении новых компонентов см. в статье [Изменения в функциях полнотекстового поиска](./full-text-search.md?view=sql-server-ver15). В этом разделе описывается способ переключения из новой версии этих компонентов в предыдущую версию или обратно из предыдущей версии в новую версию. При работе с кластерными установками эти изменения необходимо вносить на всех основных и пассивных узлах.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает новую версию (версию 14.0.4999.1038) средства разбиения по словам и парадигматического модуля для английского языка, заменяя предыдущую версию этих компонентов (версию 12.0.6828.0). Дополнительные сведения об изменениях в поведении новых компонентов см. в статье [Изменения в функциях полнотекстового поиска](./full-text-search.md). В этом разделе описывается способ переключения из новой версии этих компонентов в предыдущую версию или обратно из предыдущей версии в новую версию. При работе с кластерными установками эти изменения необходимо вносить на всех основных и пассивных узлах.  
   
  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовались другие средства разбиения по словам, представленные другими идентификаторами CLSID для английского языка (США) (LCID 1033) и английского языка (Великобритания) (LCID 2057). В этом выпуске оба идентификатора LCID используют одни и те же компоненты с общими идентификаторами CLSID, как показано в следующей таблице.  
   
@@ -127,5 +127,5 @@ ms.locfileid: "97475625"
   
 ## <a name="see-also"></a>См. также:  
  [Перевод средств разбиения по словам, используемых поиском, на предыдущую версию](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Изменения в функциях полнотекстового поиска](./full-text-search.md?view=sql-server-ver15)  
+ [Изменения в функциях полнотекстового поиска](./full-text-search.md)  
   

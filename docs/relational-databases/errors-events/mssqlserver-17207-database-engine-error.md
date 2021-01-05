@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: d1c0face9315a38d4748cffef71e135401102dd0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d95f6b04265550d758064fe277c21de6be862ec5
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869468"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642450"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +81,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 1. Для устранения ошибки 17207 нужно расшифровать соответствующий код ошибки операционной системы и провести диагностику. После устранения ошибки операционной системы можно попытаться перезапустить базу данных (например, с помощью инструкции ALTER DATABASE SET ONLINE) или экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы перевести затронутую базу данных в режим "в сети". В некоторых случаях не удается устранить ошибку операционной системы, поэтому необходимо предпринять определенные корректирующие действия. Мы обсудим их в этом разделе.
 1. Если сообщение об ошибке 17207 содержит только код ошибки, а не ее описание, можно попробовать расшифровать этот код. Для этого выполните в оболочке операционной системы команду net helpmsg <error code>. Если кодом ошибки является 8-значный код состояния, ознакомьтесь с инструкциями на [этой странице](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133), чтобы декодировать код состояния в ошибку ОС.
 1. В случае возникновения ошибки операционной системы 5 (```Access is Denied```), рассмотрите следующие методы устранения:
-   -  Проверьте разрешения, заданные в файле, просмотрев свойства файла в проводнике Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует группы Windows, чтобы подготовить службу контроля доступа для различных файловых ресурсов. Убедитесь, что соответствующая группа (с именем SQLServerMSSQLUser$ComputerName$MSSQLSERVER или SQLServerMSSQLUser$ComputerName$InstanceName) имеет необходимые разрешения для файла базы данных, указанного в сообщении об ошибке. Дополнительные сведения см. в статье [Настройка разрешений файловой системы для доступа к компоненту ядра СУБД](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014). Убедитесь, что группа Windows содержит учетную запись запуска службы или идентификатор безопасности службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+   -  Проверьте разрешения, заданные в файле, просмотрев свойства файла в проводнике Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует группы Windows, чтобы подготовить службу контроля доступа для различных файловых ресурсов. Убедитесь, что соответствующая группа (с именем SQLServerMSSQLUser$ComputerName$MSSQLSERVER или SQLServerMSSQLUser$ComputerName$InstanceName) имеет необходимые разрешения для файла базы данных, указанного в сообщении об ошибке. Дополнительные сведения см. в статье [Настройка разрешений файловой системы для доступа к компоненту ядра СУБД](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014&preserve-view=true). Убедитесь, что группа Windows содержит учетную запись запуска службы или идентификатор безопасности службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
    -  Проверьте учетную запись пользователя, от имени которой сейчас запущена служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для получения этих сведений можно использовать диспетчер задач Windows. Найдите значение "Имя пользователя" для исполняемого файла "sqlservr.exe". Если вы недавно изменили учетную запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемым способом выполнения этой операции является использование служебной программы "Диспетчер конфигурации SQL Server". Дополнительные сведения см. в статье [Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md). 
    -  В зависимости от типа операции — открытие баз данных во время запуска сервера, присоединение базы данных, восстановление базы данных и т. д. — учетная запись, используемая для олицетворения и получения доступа к файлу базы данных, может варьироваться. Сведения о том, какая операция позволяет задавать разрешения к каким учетным записям, см. в статье [Защита данных и файлов журналов](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)). Используйте такие средства, как [Process Monitor](/sysinternals/downloads/procmon) из пакета Windows SysInternals, чтобы узнать, каким образом предоставляется доступ к файлу: в контексте безопасности учетной записи запуска службы экземпляра SQL Server или через олицетворенную учетную запись.
 

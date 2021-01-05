@@ -4,7 +4,7 @@ description: Сведения о том, как обновить экземпл�
 ms.date: 06/15/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords:
 - upgrading failover clusters
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8077a17676d38937d82241c2e58b556bd322f8a2
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 90ab761cdc9a84008803ebb4bc5493eb87778f20
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96120975"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642680"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012
 

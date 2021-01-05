@@ -12,12 +12,12 @@ ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4b2bc951f8cd2fe11a222ad6c935ae81279a9e4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ce9244502282e90dfee5cef5f5b9d2abf0842ff3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476895"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642399"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (среда SQL Server Management Studio)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,5 +38,5 @@ ms.locfileid: "97476895"
 |Описывает условия, при которых IntelliSense может не работать.|Устранение сбоев в работе IntelliSense (среда SQL Server Management Studio)|  
   
 ## <a name="see-also"></a>См. также:  
- [Редакторы запросов и текста (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
+ [Редакторы запросов и текста (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md)  
   

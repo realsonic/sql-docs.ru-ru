@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfa0d24ece55d9251493bf2b084ac303eaa84de4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e7df0828f34387af4d7fc1343038fba4dbc35467
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476855"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642350"
 ---
 # <a name="transact-sql-code-snippets"></a>Фрагменты кода [Transact-SQL]
 
@@ -35,4 +35,4 @@ ms.locfileid: "97476855"
   
 ## <a name="see-also"></a>См. также:
 
-[Редакторы запросов и текста (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
+[Редакторы запросов и текста (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md)

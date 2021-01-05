@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: d3b8bc77f5d4fd2bd549c253b8a64cfa86c6132c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 09a6d7f612e9a66ad98849ec1c7672b44387d43e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713772"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641949"
 ---
 # <a name="run-sql-server-profiler"></a>Выполнение приложения SQL Server Profiler
 
@@ -55,4 +55,4 @@ ms.locfileid: "88713772"
 
 ## <a name="next-steps"></a>Дальнейшие действия  
  [Обзор SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [Использование среды SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md?view=sql-server-ver15)
+ [Использование среды SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)

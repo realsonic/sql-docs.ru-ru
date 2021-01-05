@@ -17,12 +17,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0972ef38fd5af52b1141e0b14b65b1d08e2c675b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 54297946ffc20ec7699536e5bd5c0504497d1f84
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476935"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642417"
 ---
 # <a name="database-engine-scripting"></a>Работа со сценариями компонента Database Engine
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "97476935"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает порядок использования редактора кода и текстового редактора в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для интерактивной разработки, отладки и выполнения скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Редакторы запросов и текста (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)|  
+|Описывает порядок использования редактора кода и текстового редактора в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для интерактивной разработки, отладки и выполнения скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Редакторы запросов и текста (SQL Server Management Studio)](../f1-help/database-engine-query-editor-sql-server-management-studio.md)|  
 |Описывает порядок использования программы **sqlcmd** для выполнения скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] из командной строки, включая возможность интерактивной разработки скриптов.|[Связанные инструкции по sqlcmd](./sqlcmd-start-the-utility.md)|  
 |Описывает порядок интеграции компонентов SQL Server в среду Windows PowerShell с последующей сборкой скриптов PowerShell для управления экземплярами и объектами SQL Server.|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |Описывает порядок использования мастера **формирования и публикации скриптов** для создания скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые повторно создают один или несколько объектов из базы данных.|[Формирование скриптов (среда SQL Server Management Studio)](./generate-scripts-sql-server-management-studio.md)|  
