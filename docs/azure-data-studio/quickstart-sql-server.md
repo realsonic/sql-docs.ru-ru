@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: f49d322e664bce35f7d9a47ab5c8f3b197468377
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6a637791eac7858e905f766126ca93d9277b65c1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766363"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637630"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>Краткое руководство. Использование Azure Data Studio для подключения и запросов к SQL Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "88766363"
 
 Для работы с этим кратким руководством требуется Azure Data Studio и доступ к SQL Server.
 
-- [Установите Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
+- [Установите Azure Data Studio](./download-azure-data-studio.md).
 
 Если у вас нет доступа к SQL Server, выберите платформу по следующим ссылкам (обязательно запомните имя для входа и пароль SQL):
 

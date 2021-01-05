@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f0e1d76ae7977eac4d761c76a27e10619f300ca1
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f33a5a6890d12628faf3144a0ca6e8471a15c73d
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115697"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559286"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Экспорт и импорт базы данных в Linux с помощью SSMS или SqlPackage.exe в Windows
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-В этой статье показано, как использовать [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) и [SqlPackage.exe](../tools/sqlpackage.md) для экспорта и импорта базы данных в SQL Server на базе Linux. SSMA и SqlPackage.exe — это приложения Windows, поэтому используйте эту методику при наличии компьютера Windows, который может подключаться к удаленному экземпляру SQL Server в Linux.
+В этой статье показано, как использовать [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) и [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) для экспорта и импорта базы данных в SQL Server на базе Linux. SSMA и SqlPackage.exe — это приложения Windows, поэтому используйте эту методику при наличии компьютера Windows, который может подключаться к удаленному экземпляру SQL Server в Linux.
 
 Всегда следует устанавливать и использовать самую последнюю версию SQL Server Management Studio (SSMS), как описано в статье [Использование SSMS в Windows для подключения к SQL Server на Linux](sql-server-linux-manage-ssms.md).
 
@@ -64,7 +64,7 @@ BACPAC-файл импортируется для создания базы да
 
 ## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> Параметр командной строки SqlPackage
 
-Для экспорта и импорта BACPAC-файлов также можно использовать программу командной строки SQL Server Data Tools (SSDT) — [SqlPackage.exe](../tools/sqlpackage.md).
+Для экспорта и импорта BACPAC-файлов также можно использовать программу командной строки SQL Server Data Tools (SSDT) — [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).
 
 В следующем примере команда экспортирует BACPAC-файл.
 
@@ -80,4 +80,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>См. также раздел
-Дополнительные сведения об использовании SSMS см. в разделе [Использование SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md). Дополнительные сведения о SqlPackage.exe см. в [справочной документации по SqlPackage](../tools/sqlpackage.md).
+Дополнительные сведения об использовании SSMS см. в разделе [Использование SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md). Дополнительные сведения о SqlPackage.exe см. в [справочной документации по SqlPackage](../tools/sqlpackage/sqlpackage.md).

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bdeaca276e64ec436b3ee39cc97439bbdc25aa98
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7c50a2e201bcba99299998dc232e1246005eb168
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719530"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639503"
 ---
 # <a name="ole-db-connection-manager"></a>Диспетчер соединений OLE DB
 
@@ -112,7 +112,7 @@ ms.locfileid: "91719530"
     
 1. [Подготовьте администратора Azure Active Directory](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) для своего управляемого экземпляра на портале Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 2–4. Администратор будет иметь полный доступ к базе данных.
 
-1. [Создайте имена входа](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current) для управляемого удостоверения фабрики данных. В SQL Server Management Studio (SSMS) подключитесь к управляемому экземпляру с помощью учетной записи SQL Server с ролью **sysadmin**. Запустите следующий код T-SQL для базы данных **master**:
+1. [Создайте имена входа](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) для управляемого удостоверения фабрики данных. В SQL Server Management Studio (SSMS) подключитесь к управляемому экземпляру с помощью учетной записи SQL Server с ролью **sysadmin**. Запустите следующий код T-SQL для базы данных **master**:
 
     ```sql
     CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
@@ -124,7 +124,7 @@ ms.locfileid: "91719530"
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Предоставьте управляемому удостоверению фабрики данных необходимые разрешения, как обычно делаете это для пользователей SQL и других лиц. Выполните следующий код. Дополнительные параметры см. в [этом документе](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current).
+1. Предоставьте управляемому удостоверению фабрики данных необходимые разрешения, как обычно делаете это для пользователей SQL и других лиц. Выполните следующий код. Дополнительные параметры см. в [этом документе](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true).
 
     ```sql
     ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];

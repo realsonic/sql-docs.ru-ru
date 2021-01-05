@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 24fef9f2290a85a8e87e8b3b3dd2098b31a9d792
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 868c7685c59ae1ccf43057fdd03dfbb0b5bdaf21
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489621"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637428"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Развертывание кластера больших данных SQL Server с помощью записной книжки Azure Data Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "97489621"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] предоставляет расширение для Azure Data Studio, включающее в себя записные книжки для развертывания. Записная книжка для развертывания содержит документацию и код, которые можно использовать в Azure Data Studio для создания кластеров больших данных SQL Server.
 
-[Записные книжки](../azure-data-studio/notebooks/notebooks-guidance.md), которые изначально были реализованы как проект с открытым кодом, теперь интегрированы в [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). Вы можете использовать разметку Markdown для текста в текстовых ячейках и одно из доступных ядер для написания кода в ячейках кода.
+[Записные книжки](../azure-data-studio/notebooks/notebooks-guidance.md), которые изначально были реализованы как проект с открытым кодом, теперь интегрированы в [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). Вы можете использовать разметку Markdown для текста в текстовых ячейках и одно из доступных ядер для написания кода в ячейках кода.
 
 С помощью записных книжках можно развертывать кластеры больших данных для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
