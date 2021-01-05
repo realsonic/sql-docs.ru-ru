@@ -2,7 +2,7 @@
 description: backupset (Transact-SQL)
 title: Backup (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 12/24/2020
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3271963cf5a07e88b6209bd2b7316ab40f43bc05
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7653ad7ed1d69e7de97e66d1003d6f131be45142
+ms.sourcegitcommit: d8a9ad86401bff422d506078c6200494c795e7c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461535"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765202"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "97461535"
   
  Эта таблица хранится в базе данных **msdb** .  
 
-  
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Уникальный идентификационный номер резервного набора, который определяет резервный набор. Удостоверение, первичный ключ.|  
@@ -102,10 +101,10 @@ ms.locfileid: "97461535"
 |**encryptor_thumbprint**|**varbinary(20)**|Отпечаток шифратора, который будет использоваться для поиска сертификата или асимметричного ключа в базе данных. Если резервная копия не была зашифрована, это значение равно NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Тип используемого шифратора: сертификат или асимметричный ключ. . Если резервная копия не была зашифрована, это значение равно NULL.|  
   
-## <a name="remarks"></a>Комментарии  
- Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбец таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
-  
- Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
+## <a name="remarks"></a>Remarks
+- Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбец таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
+- Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
+- Для SQL Управляемый экземпляр, в таблице резервных копий отображается только журнал резервного копирования для инициированных пользователем [резервных копий только для копирования](../../relational-databases/backup-restore/copy-only-backups-sql-server.md). Таблица резервных копий не отображает журнал резервного копирования для автоматических резервных копий, выполняемых службой. 
   
 ## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   

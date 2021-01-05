@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d94afd3698b8911288ee7794d8ee32cdc1b0f3f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a9fc87cef0244afc4459c789f94855c0c0530ddd
+ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480155"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697117"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "97480155"
 |Указание индекса columnstore при создании таблицы|||да|да|да|да|да|  
 |AlwaysOn поддерживает индексы columnstore|да|да|да|да|да|да|да| 
 |Вторичная реплика для чтения AlwaysOn поддерживает некластеризованные индексы columnstore только для чтения|да|да|да|да|да|да|да|  
-|Вторичная реплика для чтения AlwaysOn поддерживает обновляемые индексы columnstore|||да||дада|||  
+|Вторичная реплика для чтения AlwaysOn поддерживает обновляемые индексы columnstore|||да||да|||  
 |Некластеризованный индекс columnstore только для чтения в куче или сбалансированном дереве|да|да|да <sup>1</sup>|да <sup>1</sup>|да <sup>1</sup>|да <sup>1</sup>|да <sup>1</sup>|  
 |Обновляемый некластеризованный индекс columnstore в куче или сбалансированном дереве|||да|да|да|да|да|  
 |Разрешены дополнительные индексы сбалансированного дерева в куче или сбалансированном дереве с некластеризованным индексом columnstore|да|да|да|да|да|да|да|  
-|Обновляемый кластеризованный индекс columnstore||да|да|да||дада|да|  
-|Индекс сбалансированного дерева в кластеризованном индексе columnstore|||да|да||дада|да|  
-|Индекс columnstore в таблице, оптимизированной для памяти|||да|да||дада|да|  
+|Обновляемый кластеризованный индекс columnstore||да|да|да||да|да|  
+|Индекс сбалансированного дерева в кластеризованном индексе columnstore|||да|да||да|да|  
+|Индекс columnstore в таблице, оптимизированной для памяти|||да|да||да|да|  
 |Определение некластеризованного индекса columnstore поддерживает использование отфильтрованных условий|||да|да|да|да|да|  
 |Параметр задержки сжатия для индексов columnstore в инструкциях `CREATE TABLE` и `ALTER TABLE`|||да|да|да|да|да|
 |Индекс columnstore может содержать нематериализованный вычисляемый столбец||||да|да|||   

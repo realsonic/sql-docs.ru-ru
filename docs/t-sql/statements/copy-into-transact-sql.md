@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 43a5cc755eb07fe80a0d33d6b5b892e2a65ab21e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460787"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638830"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -131,7 +131,7 @@ WITH
 >Тип файла "текст с разделителями" в Polybase заменен форматом CSV-файла, в котором разделитель-запятую по умолчанию можно настроить с помощью параметра FIELDTERMINATOR. 
 
 *FILE_FORMAT = external_file_format_name*</br>
-*FILE_FORMAT* применяется только к файлам Parquet и ORC и задает имя объекта формата внешнего файла, который хранит тип файла и метод сжатия внешних данных. Чтобы создать формат внешнего файла, используйте [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest).
+*FILE_FORMAT* применяется только к файлам Parquet и ORC и задает имя объекта формата внешнего файла, который хранит тип файла и метод сжатия внешних данных. Чтобы создать формат внешнего файла, используйте [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md).
 
 *CREDENTIAL (IDENTITY = ", SECRET = ")*</br>
 *CREDENTIAL* задает механизм проверки подлинности для доступа к внешней учетной записи хранения. Ниже приведены методы проверки подлинности.
@@ -256,7 +256,7 @@ ROW TERMINATOR = "row_terminator"</br>
 *FIRSTROW* применяется к CSV-файлам и указывает номер строки, которая считывается первой во всех файлах для команды COPY. Значения начинаются с 1. 1 — значение по умолчанию. Если задано значение 2, первая строка в каждом файле (строка заголовка) при загрузке данных пропускается. Строки пропускаются по признакам конца строк.
 
 *DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
-DATEFORMAT применяется только к CSV-файлам и задает формат даты для сопоставления с форматами дат SQL Server. Обзор всех типов данных и функций даты и времени в языке Transact-SQL см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15). Параметр DATEFORMAT в команде COPY имеет более высокий приоритет, чем [параметр DATEFORMAT, настроенный на уровне сеанса](set-dateformat-transact-sql.md?view=sql-server-ver15).
+DATEFORMAT применяется только к CSV-файлам и задает формат даты для сопоставления с форматами дат SQL Server. Обзор всех типов данных и функций даты и времени в языке Transact-SQL см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md). Параметр DATEFORMAT в команде COPY имеет более высокий приоритет, чем [параметр DATEFORMAT, настроенный на уровне сеанса](set-dateformat-transact-sql.md).
 
 *ENCODING = "UTF8" | "UTF16"*</br>
 *ENCODING* применяется только к CSV-файлам. По умолчанию используется UTF8. Задает стандарт кодирования данных для файлов, загруженных командой COPY. 
@@ -275,8 +275,8 @@ IDENTITY_INSERT указывает, будет ли значение или зн
 
 Пользователь, выполняющий команду Copy, должен иметь следующие разрешения: 
 
-- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
-- [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
+- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
+- [INSERT ](grant-database-permissions-transact-sql.md#remarks)
 
 Требует разрешений INSERT и ADMINISTER BULK OPERATIONS. В [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] требуются разрешения INSERT и ADMINISTER DATABASE BULK OPERATIONS.
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41b139d2f22a9cb3137879d96224b02eafc24bab
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 783fad79522c52685349defca93360c4ea8c80c9
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761502"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771653"
 ---
 # <a name="connection-pooling"></a>Организация пулов соединений
 
@@ -25,7 +25,7 @@ ms.locfileid: "96761502"
 
 На соединение с источником данных может требоваться значительное время. Чтобы свести к минимуму затраты на открытие подключений, в ADO.NET используется техника *объединения подключений в пул*, которая позволяет минимизировать затраты на часто открываемые и закрываемые подключения.
 
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
 
 [Объединение подключений в пул в SQL Server (ADO.NET)](sql-server-connection-pooling.md)  
 Общие сведения о пулах соединений и описание принципов работы пулов соединений в SQL Server.
