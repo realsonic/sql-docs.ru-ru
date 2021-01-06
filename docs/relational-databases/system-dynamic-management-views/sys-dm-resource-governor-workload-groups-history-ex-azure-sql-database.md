@@ -2,7 +2,7 @@
 description: sys.dm_resource_governor_workload_groups_history_ex (база данных SQL Azure)
 title: sys.dm_resource_governor_workload_groups_history_ex (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 01/05/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: d761d1ca80037e26f8757ec681929dd5356b182f
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 69f310b699e59845dbd62a908a6a49bfb6efb42f
+ms.sourcegitcommit: 11ca2305a8d7e420daf772eb97861706c9e08e31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834403"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97928453"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Возвращает моментальный снимок с интервалом 20 секунд за последние 32 минут (всего 128) для статистики пулов ресурсов для базы данных SQL Azure.
+Каждая строка представляет периодический моментальный снимок статистики группы рабочей нагрузки в базе данных SQL Azure. Моментальный снимок создается, когда ядро СУБД запускается и каждые несколько секунд после этого. Интервал между текущим и предыдущим снимками может быть разным и указан в `duration_ms` столбце. Возвращаются последние доступные моментальные снимки, до 128 моментальных снимков для каждой группы рабочей нагрузки.
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "91834403"
 
 Для этого представления требуется разрешение VIEW SERVER STATE.
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 
 Пользователи могут получить доступ к этому динамическому административному представлению, чтобы отслеживать потребление ресурсов практически в реальном времени для пула рабочей нагрузки пользователей, а также системных внутренних пулов экземпляра базы данных SQL Azure.
 
