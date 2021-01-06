@@ -6,7 +6,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - states [SQL Server], database mirroring
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbac0c31618e419c7d67c3feba861e5e69008ee8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f5a1f7b47fd41d866733b844321d46a32cd677f3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758208"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643482"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>Просмотр состояния зеркального отображения базы данных (среда SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "85758208"
   
 1.  После подключения к экземпляру основного сервера в обозревателе объектов щелкните имя сервера, чтобы развернуть дерево сервера.  
   
-2.  Раскройте узел **Базы данных**и выберите базу данных для зеркального отображения.  
+2.  Раскройте узел **Базы данных** и выберите базу данных для зеркального отображения.  
   
 3.  Щелкните базу данных правой кнопкой мыши, выберите **Задачи**, а затем **Зеркальное отображение**. Откроется страница **Зеркальное отображение** диалогового окна **Свойства базы данных** .  
   

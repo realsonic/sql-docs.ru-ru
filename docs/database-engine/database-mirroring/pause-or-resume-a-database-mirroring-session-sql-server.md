@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - resuming database mirroring
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0104928ede91b1130636bd4d29cc7329b4e63c86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dad800c08e44975716c9bd4f32d0e716400a1ae7
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643436"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644308"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "85643436"
   
 1.  Во время сеанса зеркального отображения базы данных установите соединение с экземпляром главного сервера, в обозревателе объектов щелкните имя сервера и разверните дерево сервера.  
   
-2.  Разверните **Базы данных**и выберите нужную базу данных.  
+2.  Разверните **Базы данных** и выберите нужную базу данных.  
   
 3.  Щелкните базу данных правой кнопкой мыши, выберите **Задачи**, а затем **Зеркальное отображение**. Откроется страница **Зеркальное отображение** диалогового окна **Свойства базы данных** .  
   

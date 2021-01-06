@@ -11,12 +11,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: a7a2170c14502be9ffcae478839657abc39974ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59c377d5055e8eb3858e1005c50d9c4dfb8334ab
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438676"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771572"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>Руководство по Разработка приложения .NET с помощью Always Encrypted с безопасными анклавами
 
@@ -129,7 +129,7 @@ ms.locfileid: "88438676"
 
 2. Выполните сборку и запустите приложение.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - [Использование Always Encrypted с поставщиком данных Microsoft .NET для SQL Server](sqlclient-support-always-encrypted.md)
 - [Example demonstrating use of Azure Key Vault provider with Always Encrypted](azure-key-vault-example.md) (Пример использования поставщика Azure Key Vault с поддержкой Always Encrypted)

@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d581d8dcf038b56a6b3df5b5ecc67a9a32b4255f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0d28550dba1a4703bab01324910436b7256597bb
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485236"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643873"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Пример базы данных для выполняющейся в памяти OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "97485236"
  Этот пример демонстрирует возможности выполняющейся в памяти OLTP. Он показывает оптимизированные для памяти таблицы и скомпилированные в собственном коде хранимые процедуры. С его помощью можно также продемонстрировать преимущества выполняющейся в памяти OLTP.  
   
 > [!NOTE]  
->  Этот раздел о [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]можно найти в статье [Расширения AdventureWorks для демонстрации выполняющейся в памяти OLTP](./overview-and-usage-scenarios.md?view=sql-server-ver15#in-memory-oltp-overview).  
+>  Этот раздел о [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]можно найти в статье [Расширения AdventureWorks для демонстрации выполняющейся в памяти OLTP](./overview-and-usage-scenarios.md#in-memory-oltp-overview).  
   
  Пример выполняет преобразование 5 таблиц в базе данных AdventureWorks в оптимизированные для памяти таблицы. В нем также есть демонстрационная рабочая нагрузка в форме обработки заказа на продажу. С помощью этой демонстрационной рабочей нагрузки можно оценить выигрыш по производительности, который формируется при использовании выполняющейся в памяти OLTP на сервере.  
   

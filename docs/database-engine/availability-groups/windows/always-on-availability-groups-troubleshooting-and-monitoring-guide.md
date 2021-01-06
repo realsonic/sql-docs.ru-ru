@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: reference
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3ca428410760ac224cccf513aa8e8ed2a3060e4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5594a39b6ab4f8c9c6bd2edaadbe64e99c983229
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726551"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643697"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Мониторинг и устранение неполадок групп доступности
  Это руководство поможет вам приступить к мониторингу групп доступности AlwaysOn и устранению некоторых распространенных проблем с ними. Оно предоставляет исходное содержимое, а также целевую страницу с полезной информацией, опубликованной в другом месте. Хотя это руководство не может полностью охватить все возможные проблемы с группами доступности, оно способно указать вам правильное направление для анализа первопричин и разрешения проблем. 

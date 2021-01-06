@@ -6,7 +6,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d62bfb55e8024e70f94f23eb1f9273fb91f3caa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01e95d971af1a9eeea18bbf699cb19014065fb18
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763941"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643652"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (язык Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "85763941"
   
      Чтобы указать сетевой адрес сервера, используйте следующий синтаксис:  
   
-     TCP<b>://</b> _\<system-address>_ <b>:</b> _\<port>_ ,  
+     TCP <b>://</b> _\<system-address>_ <b>:</b> _\<port>_ ,  
   
      где \<*system-address>* — строка, однозначно идентифицирующая целевой компьютер, а \<*port>* — номер порта, используемого конечной точкой зеркального отображения экземпляра сервера-участника. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   

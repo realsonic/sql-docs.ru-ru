@@ -36,12 +36,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016'
-ms.openlocfilehash: 73ebe8f968cb3cf91c909ca404c5475f983e2ca6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 705cd4be70b642a6436bdecf58ae8c18adaff281
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438822"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644030"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Нерекомендуемые функции ядра СУБД в SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "97438822"
 
 - Подсистема ActiveX не поддерживается. Используйте вместо нее командную строку или скрипты PowerShell.
 
-- Параметры запуска **-h** и **-g**. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
+- Параметры запуска **-h** и **-g**. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014&preserve-view=true).
 
 - Использование шифрования по протоколу SSL прекращено. Используйте вместо него протокол TLS. Дополнительные сведения см. в статье [Включение шифрования соединений в компоненте Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
 ## <a name="previous-versions"></a>Предыдущие версии
 
-- [Неподдерживаемые функции ядра СУБД в SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [Неподдерживаемые функции ядра СУБД в SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true)
 
 ### <a name="see-also"></a>См. также раздел
 

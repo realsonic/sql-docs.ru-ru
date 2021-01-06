@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring database mirroring [SQL Server]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a34829894a9d4a402749ffd167b8adbfc7951ba6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c323c5915752e68505e7e1e512843ae03c8197e4
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651032"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643496"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  В этом разделе содержатся сведения о событиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которых можно настраивать пороговые значения предупреждений и управлять ими для зеркального отображения базы данных. Это можно сделать с помощью монитора зеркального отображения баз данных или хранимых процедур **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**и **sp_dbmmonitordropalert** . В этом разделе содержатся также сведения о настройке предупреждений о событиях зеркального отображения баз данных.  
+  В этом разделе содержатся сведения о событиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которых можно настраивать пороговые значения предупреждений и управлять ими для зеркального отображения базы данных. Это можно сделать с помощью монитора зеркального отображения баз данных или хранимых процедур **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert** и **sp_dbmmonitordropalert** . В этом разделе содержатся также сведения о настройке предупреждений о событиях зеркального отображения баз данных.  
   
  После того как установлено наблюдение в зеркальной базе данных, системный администратор может настроить пороговые значения предупреждений по нескольким метрикам производительности, а также предупреждения для этих и других событий зеркального отображения базы данных.  
   

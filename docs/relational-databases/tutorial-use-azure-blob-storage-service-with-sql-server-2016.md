@@ -15,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5b565d7d62b1e189ec9d187c6a585449713f0df0
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 31407e6d056ce8ec847f52346b8aa3ddf8e621f3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384636"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644190"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Учебник. Использование службы хранилища больших двоичных объектов Azure с базами данных SQL Server 2016
 
@@ -181,7 +181,7 @@ ms.locfileid: "94384636"
 В этом разделе вы выполните резервное копирование базы данных AdventureWorks2016, размещенной в локальном экземпляре SQL Server 2016, в контейнер Azure, созданный в [разделе 1](#1---create-stored-access-policy-and-shared-access-storage).
   
 > [!NOTE]  
-> Если необходимо выполнить резервное копирование базы данных SQL Server 2012 с пакетом обновления 1 (SP1) и накопительным пакетом обновления 2 или более поздней версии либо базы данных SQL Server 2014 в этот контейнер Azure, можно воспользоваться устаревшим синтаксисом, который описывается [здесь](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) . Таким образом можно выполнить резервное копирование по URL-адресу с помощью синтаксиса WITH CREDENTIAL.  
+> Если необходимо выполнить резервное копирование базы данных SQL Server 2012 с пакетом обновления 1 (SP1) и накопительным пакетом обновления 2 или более поздней версии либо базы данных SQL Server 2014 в этот контейнер Azure, можно воспользоваться устаревшим синтаксисом, который описывается [здесь](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014&preserve-view=true) . Таким образом можно выполнить резервное копирование по URL-адресу с помощью синтаксиса WITH CREDENTIAL.  
   
 Чтобы выполнить резервное копирование в хранилище BLOB-объектов, выполните указанные ниже действия.  
   

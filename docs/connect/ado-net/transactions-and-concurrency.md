@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: a30a3d3184c411fc0b54c0e26330a8fb138ffdae
-ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
+ms.openlocfilehash: 2a00ef1ec1f2f5d8ee892289021f42cb139b5a12
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97051365"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771337"
 ---
 # <a name="transactions-and-concurrency"></a>Транзакции и параллельность
 
@@ -35,16 +35,16 @@ ms.locfileid: "97051365"
 
 ## <a name="in-this-section"></a>В этом разделе
 
- [Локальные транзакции](local-transactions.md)  
- Демонстрирует выполнение транзакций на базе данных.  
+[Локальные транзакции](local-transactions.md)  
+Демонстрирует выполнение транзакций на базе данных.  
   
- [Распределенные транзакции](distributed-transactions.md)  
- Описывает выполнение распределенных транзакций в ADO.NET.  
+[Распределенные транзакции](distributed-transactions.md)  
+Описывает выполнение распределенных транзакций в ADO.NET.  
   
- [Интеграция System.Transactions с SQL Server](system-transactions-integration-with-sql-server.md)  
- Описывает интеграцию <xref:System.Transactions> с SQL Server для работы с распределенными транзакциями.  
+[Интеграция System.Transactions с SQL Server](system-transactions-integration-with-sql-server.md)  
+Описывает интеграцию <xref:System.Transactions> с SQL Server для работы с распределенными транзакциями.  
   
- [Оптимистический параллелизм](optimistic-concurrency.md) описывает оптимистический и пессимистический параллелизм, а также способ проверки нарушений параллелизма.  
+[Оптимистический параллелизм](optimistic-concurrency.md) описывает оптимистический и пессимистический параллелизм, а также способ проверки нарушений параллелизма.  
 
 ## <a name="see-also"></a>См. также раздел
 
@@ -52,4 +52,5 @@ ms.locfileid: "97051365"
 - [Подключение к источнику данных](connecting-to-data-source.md)
 - [Команды и параметры](commands-parameters.md)
 - [Объекты DataAdapter и DataReader](dataadapters-datareaders.md)
+- [DbProviderFactories](dbproviderfactories.md)
 - [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

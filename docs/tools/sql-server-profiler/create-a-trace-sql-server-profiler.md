@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 08/01/2016
-ms.openlocfilehash: e31f01bb380c84cf3391cc3feebb432b388317ee
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: e8c60ee409fdb391776e0265422c2b975e3c5a4f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713732"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643437"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>создать трассировку (приложение SQL Server Profiler)
 
@@ -45,7 +45,7 @@ ms.locfileid: "88713732"
   
     -   Выберите **Сохранить в таблицу** для сохранения результатов трассировки в таблицу базы данных.  
   
-         При необходимости установите флажок **Установить максимальное число строк**и укажите значение.  
+         При необходимости установите флажок **Установить максимальное число строк** и укажите значение.  
   
     > **ВНИМАНИЕ!** Если результаты трассировки не сохраняются в файлы или таблицы, их можно просмотреть, пока открыто приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Однако результаты трассировки исчезнут после того, как будет остановлена трассировка и закрыто приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Чтобы избежать потерю данных трассировки, выберите **Сохранить** в меню **Файл** для сохранения результатов перед закрытием [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
@@ -59,5 +59,5 @@ ms.locfileid: "88713732"
  [Разрешения, необходимые для запуска приложения SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [Сопоставить трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)](./correlate-a-trace-with-windows-performance-log-data.md?view=sql-server-ver15)  
+ [Сопоставить трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)](./correlate-a-trace-with-windows-performance-log-data.md)  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 0fdf91c5a4da33b585f10939cd6a801a46b236b3
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 65bbd662c7eeab5114262efa96c009d1ebbf0323
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761522"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771663"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Подключение к источнику данных в ADO.NET
 
@@ -27,7 +27,7 @@ ms.locfileid: "96761522"
 
 Поставщик данных Microsoft SqlClient для SQL Server включает тип <xref:Microsoft.Data.SqlClient.SqlConnection>, который получен из класса <xref:System.Data.Common.DbConnection>.
 
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
 
 [Установка подключения](establishing-connection.md)\
 Описывает использование объекта **Connection** для установки подключения с источником данных.
@@ -41,3 +41,5 @@ ms.locfileid: "96761522"
 - [Организация пулов соединений](connection-pooling.md)
 - [Команды и параметры](commands-parameters.md)
 - [Объекты DataAdapter и DataReader](dataadapters-datareaders.md)
+- [Транзакции и параллельность](transactions-and-concurrency.md)
+- [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

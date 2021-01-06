@@ -28,12 +28,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26284d43476c4d0777a6adcefc5b39d6a5a1ae75
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 2fe84db5d96e21f9d6bf107f87624de4d5953b89
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97488864"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643975"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -52,13 +52,13 @@ CREATE LOGIN участвует в транзакциях. Если откат �
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -288,10 +288,10 @@ CHECK_EXPIRATION = OFF ;
         **_\* База данных SQL Azure \*_**
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -403,13 +403,13 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Управляемый экземпляр<br />SQL Azure\*_**
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -602,10 +602,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -730,13 +730,13 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**

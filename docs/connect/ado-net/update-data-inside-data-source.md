@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41b81d0adedf48f0e33efe6c60d83dd4ed7b597a
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: aca7b1adb8ce91a12832bccfd6cbd27b07229d22
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428301"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771486"
 ---
 # <a name="updating-data-in-a-data-source"></a>Обновление данных в источнике данных
 
@@ -43,4 +43,6 @@ ms.locfileid: "96428301"
 ## <a name="see-also"></a>См. также
 
 - [Использование команд для изменения данных](use-commands-to-modify-data.md)
+- [Обновление источников данных с помощью DataAdapter](update-data-sources-with-dataadapters.md)
 - [Команды и параметры](commands-parameters.md)
+- [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)
