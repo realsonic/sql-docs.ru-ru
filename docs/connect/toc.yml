@@ -136,6 +136,25 @@
               href: ../connect/ado-net/common-schema-collections.md
             - name: "Коллекции схем SQL\_Server"
               href: ../connect/ado-net/sql-server-schema-collections.md
+        - name: DbProviderFactories
+          href: ../connect/ado-net/dbproviderfactories.md
+          items:
+            - name: Получение SqlClientFactory
+              href: ../connect/ado-net/obtain-sqlclientfactory.md
+        - name: Извлечение значений идентификаторов или автонумерации
+          href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
+        - name: Извлечение двоичных данных
+          href: ../connect/ado-net/retrieve-binary-data.md
+        - name: Изменение данных с помощью хранимых процедур
+          href: ../connect/ado-net/modify-data-with-stored-procedures.md
+        - name: Трассировка данных в SqlClient
+          href: ../connect/ado-net/data-tracing.md
+        - name: Счетчики производительности в SqlClient
+          href: ../connect/ado-net/performance-counters.md
+        - name: Асинхронное программирование
+          href: ../connect/ado-net/asynchronous-programming.md
+        - name: Поддержка потоковой передачи в SqlClient
+          href: ../connect/ado-net/sqlclient-streaming-support.md
     - name: SQL Server и ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
