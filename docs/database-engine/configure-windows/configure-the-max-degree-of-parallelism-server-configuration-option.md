@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
-ms.custom: contperfq4
-ms.openlocfilehash: 5b07fbe64b4625fdddbf35189d210ae240f4348f
-ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
+ms.custom: contperf-fy20q4
+ms.openlocfilehash: e42d6b716202a5080e5d6330bc0a674f0c627878
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97038982"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878937"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Настройка параметра конфигурации сервера max degree of parallelism
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

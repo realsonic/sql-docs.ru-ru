@@ -1,7 +1,7 @@
 ---
 title: Docker. Установка контейнеров для SQL Server на Linux
 description: Это краткое руководство описывает, как использовать Docker для запуска образов контейнеров SQL Server 2017 и 2019. Затем мы создадим базу данных и выполним запрос с помощью sqlcmd.
-ms.custom: seo-lt-2019, contperfq1
+ms.custom: seo-lt-2019, contperf-fy21q1
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 monikerRange: '>= sql-server-linux-2017 || >= sql-server-2017'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 94ca368b7eaf9b9ad37107c01eb84e239d5fb3c0
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 615e3d2ec9c64be70535c9a45a9f31e94d34b139
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97490034"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878792"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Краткое руководство. Запуск образов контейнеров SQL Server в Docker
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "97490034"
 Это краткое руководство описывает использование Docker для извлечения и запуска образа контейнера SQL Server 2017, [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server). Затем мы подключимся при помощи **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 > [!TIP]
-> Если вы предпочитаете выполнять контейнеры SQL Server 2019, см. [вариант этой статьи для SQL Server 2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15).
+> Если вы предпочитаете выполнять контейнеры SQL Server 2019, см. [вариант этой статьи для SQL Server 2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true).
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -87,7 +87,7 @@ any changes to one section should be duplicated in the other-->
    ::: zone-end
 
    > [!TIP]
-   > Если вы предпочитаете выполнять контейнеры SQL Server 2019, см. [вариант этой статьи для SQL Server 2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
+   > Если вы предпочитаете выполнять контейнеры SQL Server 2019, см. [вариант этой статьи для SQL Server 2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true#pullandrun2019).
 
    Предыдущая команда извлекает последнюю версию образа контейнера с SQL Server 2017. Если вы хотите извлечь конкретный образ, добавьте метку после двоеточия (например, `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`). Список всех доступных образов см. на странице [mssql-server](https://hub.docker.com/r/microsoft/mssql-server) Docker Hub.
 

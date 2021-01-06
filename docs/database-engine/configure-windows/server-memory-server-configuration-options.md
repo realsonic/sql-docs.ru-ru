@@ -1,6 +1,6 @@
 ---
 title: Параметры конфигурации памяти сервера | Документация Майкрософт
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 08/14/2019
 ms.prod: sql
 ms.prod_service: high-availability
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 71cab9c11aaa4f3dc569761fdfef407601162b1c
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442809"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878922"
 ---
 # <a name="server-memory-configuration-options"></a>Параметры конфигурации памяти сервера
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "87442809"
   
 2.  Щелкните узел **Память** .  
   
-3.  В пункте **Параметры памяти сервера**введите нужные значения в поля **Минимальный размер памяти сервера** и **Максимальный размер памяти сервера**.  
+3.  В пункте **Параметры памяти сервера** введите нужные значения в поля **Минимальный размер памяти сервера** и **Максимальный размер памяти сервера**.  
   
      Оставьте параметры по умолчанию, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] изменял требования к памяти динамически, исходя из доступности системных ресурсов. Рекомендуется задать для параметра **Макс. памяти сервера** значение, [указанное выше](#max_server_memory). 
 
@@ -106,7 +106,7 @@ ms.locfileid: "87442809"
   
 2.  В консоли **Групповая политика** разверните узел **Конфигурация компьютера**, затем узел **Конфигурация Windows**.  
   
-3.  Разверните узлы **Настройки безопасности**и **Локальные политики**.  
+3.  Разверните узлы **Настройки безопасности** и **Локальные политики**.  
   
 4.  Выберите папку **Назначение прав пользователя** .  
   

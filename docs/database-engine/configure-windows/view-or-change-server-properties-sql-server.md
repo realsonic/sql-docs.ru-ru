@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: markingmyname
 ms.author: maghan
-ms.custom: contperfq4
-ms.openlocfilehash: 846d393640e02365348f5ffd7057c0142163f5d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.custom: contperf-fy20q4
+ms.openlocfilehash: aabe0f1c418440053998ce1a1b388e82d74b06c9
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763976"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878867"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Просмотр или изменение свойств сервера (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -135,9 +135,9 @@ GO
   
 ### <a name="to-view-or-change-server-properties"></a>Просмотр или изменение свойств сервера  
   
-1.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**и щелкните **Диспетчер конфигурации SQL Server**.  
+1.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки** и щелкните **Диспетчер конфигурации SQL Server**.  
   
-2.  В **диспетчере конфигурации SQL Server**выберите **Службы SQL Server**.  
+2.  В **диспетчере конфигурации SQL Server** выберите **Службы SQL Server**.  
   
 3.  В области сведений щелкните правой кнопкой мыши **SQL Server (\<**_instancename_**>)** и выберите пункт **Свойства**.  
   
