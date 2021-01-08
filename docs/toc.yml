@@ -154,7 +154,7 @@
               href: big-data-cluster/manage-user-access.md
         - name: Частный кластер
           items:
-            - name: Развертывание
+            - name: Развернуть
               href: big-data-cluster/private-deploy.md
             - name: Управление
               href: big-data-cluster/private-manage.md
@@ -348,7 +348,7 @@
               href: big-data-cluster/notebooks-tutorial-spark.md
             - name: Список записных книжек для определенных операций
               href: big-data-cluster/cluster-manage-notebooks.md
-        - name: Монитор
+        - name: Azure Monitor
           items:
             - name: Выполнение мониторинга с помощью Azure Data Studio
               href: big-data-cluster/cluster-monitor-ads.md
@@ -2734,7 +2734,7 @@
               href: language-extensions/language-extensions-whats-new.md
         - name: Установка
           items:
-            - name: Установка расширения языка в Windows
+            - name: Установка расширения языка Java в Windows
               href: language-extensions/install/windows-java.md
         - name: Учебники
           items:
