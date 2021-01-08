@@ -1,8 +1,6 @@
 ---
+title: sys.database_query_store_options (Transact-SQL)
 description: sys.database_query_store_options (Transact-SQL)
-title: sys.database_query_store_options (Transact-SQL) | Документация Майкрософт
-ms.custom: ''
-ms.date: 05/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,18 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
-ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 05/27/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6b346496eb08e9121abac463b3e87f6e27362e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f8fce0932d546470206bbc7752429090c0212158
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484786"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005419"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Возвращает параметры хранилища запросов для этой базы данных.  
@@ -41,7 +41,7 @@ ms.locfileid: "97484786"
 |**desired_state**|**smallint**|Указывает режим требуемой операции хранилища запросов, явно заданный пользователем.<br /> 0 = выключен. <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE|  
 |**desired_state_desc**|**nvarchar(60)**|Текстовое описание требуемого режима работы хранилища запросов:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|Указывает режим работы хранилища запросов. В дополнение к списку требуемых состояний, требуемых для пользователя, фактическое состояние может быть состоянием ошибки.<br /> 0 = выключен. <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = ОШИБКА|  
-|**actual_state_desc**|**nvarchar(60)**|Текстовое описание реального режима работы хранилища запросов.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />ОШИБКА<br /><br /> Существуют ситуации, когда фактическое состояние отличается от желаемого состояния:<br />— Если база данных имеет режим "только для чтения" или размер хранилища запросов превышает настроенную квоту, хранилище запросов может действовать в режиме только для чтения, даже если пользователь указал параметр "чтение и запись".<br />— В экстремальных сценариях хранилище запросов может вводить состояние ошибки из-за внутренних ошибок. Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] , если это происходит, хранилище запросов можно восстановить, выполнив `sp_query_store_consistency_check` хранимую процедуру в затронутой базе данных. Если работа `sp_query_store_consistency_check` не работает или используется [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , необходимо очистить данные, выполнив `ALTER DATABASE [YourDatabaseName] SET QUERY_STORE CLEAR ALL;`|  
+|**actual_state_desc**|**nvarchar(60)**|Текстовое описание реального режима работы хранилища запросов.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />ошибка<br /><br /> Существуют ситуации, когда фактическое состояние отличается от желаемого состояния:<br />— Если база данных имеет режим "только для чтения" или размер хранилища запросов превышает настроенную квоту, хранилище запросов может действовать в режиме только для чтения, даже если пользователь указал параметр "чтение и запись".<br />— В экстремальных сценариях хранилище запросов может вводить состояние ошибки из-за внутренних ошибок. Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] , если это происходит, хранилище запросов можно восстановить, выполнив `sp_query_store_consistency_check` хранимую процедуру в затронутой базе данных. Если работа `sp_query_store_consistency_check` не работает или используется [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , необходимо очистить данные, выполнив `ALTER DATABASE [YourDatabaseName] SET QUERY_STORE CLEAR ALL;`|  
 |**readonly_reason**|**int**|Если **desired_state_desc** READ_WRITE и **actual_state_desc** READ_ONLY, **readonly_reason** возвращает битовую карту, чтобы указать, почему хранилище запросов находится в режиме только для чтения.<br /><br /> **1** — база данных находится в режиме только для чтения<br /><br /> **2** — база данных находится в однопользовательском режиме<br /><br /> **4** . база данных находится в аварийном режиме<br /><br /> **8** — база данных является вторичной репликой (применяется для Always on и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] георепликации). Это значение можно эффективно наблюдать только на вторичных репликах, доступных **для чтения**<br /><br /> **65536** -хранилище запросов достигло предельного размера, установленного `MAX_STORAGE_SIZE_MB` параметром. Дополнительные сведения об этом параметре см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).<br /><br /> **131072** -количество различных инструкций в хранилище запросов достигло предела внутренней памяти. Рассмотрите возможность удаления ненужных запросов или обновления до более высокого уровня служб, чтобы обеспечить передачу хранилища запросов в режим чтения и записи.<br /><br /><br /> **262144** -размер элементов в памяти, ожидающих сохранения на диске, достигло предела внутренней памяти. Хранилище запросов будет временно работать в режиме только для чтения, пока элементы в памяти не будут сохранены на диске. <br /><br /><br /> **524288** -база данных достигла предельного размера диска. Хранилище запросов является частью пользовательской базы данных, поэтому, если для базы данных больше нет свободного места, это означает, что хранилище запросов больше не может расти.<br /><br /> <br /> Сведения о том, как переключить режим операций хранилища запросов на чтение и запись, см. в разделе **Проверка хранилища запросов на сбор данных о запросах** [с использованием хранилища запросов](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify).|  
 |**current_storage_size_mb**|**bigint**|Размер хранилища запросов на диске в мегабайтах.|  
 |**flush_interval_seconds**|**bigint**|Период регулярного сброса данных хранилища запросов на диск за считанные секунды. Значение по умолчанию — **900** (15 минут).<br /><br /> Измените с помощью `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` инструкции.|  

@@ -1,25 +1,27 @@
 ---
+title: sp_data_source_table_columns
 description: sp_data_source_table_columns (Transact-SQL)
-title: sp_data_source_table_columns | Документация Майкрософт
-ms.custom: ''
-ms.date: 11/10/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords:
-- sp_data_source_table_columns
+- sp_data_source_table_columns_TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4153b7546dfce226cb056b7a548efb69f5175e06
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.custom: ''
+ms.date: 11/10/2020
+ms.openlocfilehash: 30205befcdd9da78f4f9a3f002ddd398f49abc55
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96128773"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005389"
 ---
 # <a name="sp_data_source_table_columns-transact-sql"></a>sp_data_source_table_columns (Transact-SQL)
 
