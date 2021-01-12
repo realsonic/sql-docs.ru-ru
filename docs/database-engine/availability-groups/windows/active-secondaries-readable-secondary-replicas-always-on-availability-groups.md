@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: c8f93191b689599a24ad960d316a02901de2e6e0
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584866"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643826"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Перенос нагрузки только для чтения на вторичную реплику в группе доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -162,7 +162,7 @@ ms.locfileid: "94584866"
   
  Только [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может создавать и обновлять временную статистику. Тем не менее можно удалять временную статистику и наблюдать за ее свойствами с помощью тех же средств, которые используются для работы с постоянной статистикой.  
   
--   Удаление временной статистики осуществляется с использованием инструкции [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+-   Удаление временной статистики осуществляется с использованием инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md).  
   
 -   Наблюдение за статистикой ведется с помощью представлений каталога **sys.stats** и **sys.stats_columns** . **sys_stats** включает столбец **is_temporary** для указания того, какая статистика является постоянной, а какая — временной.  
   

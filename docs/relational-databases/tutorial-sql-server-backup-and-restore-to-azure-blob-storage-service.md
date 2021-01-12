@@ -2,27 +2,35 @@
 title: Краткое руководство. Резервное копирование и восстановление в службе хранилища BLOB-объектов Azure
 description: Краткое руководство о том, как создавать и восстанавливать резервные копии, используя службу Хранилища BLOB-объектов Azure. Создание контейнера BLOB-объектов Azure, запись резервной копии и последующее восстановление.
 ms.custom: seo-dt-2019
-ms.date: 04/09/2018
+ms.date: 12/21/2020
 ms.prod: sql
-ms.prod_service: database-engine
+ms.technology: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.technology: performance
 ms.topic: quickstart
-ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.openlocfilehash: faf3ccecd17ece2b66371d81a68589f184fe48a0
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d27f53f80c8f987106f90816a4566339d777e6f6
+ms.sourcegitcommit: bb54e4c9dd8c97365b7a96dfcd557b8b86d06978
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506411"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97736902"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Краткое руководство. Резервное копирование и восстановление SQL с помощью службы хранилища BLOB-объектов Azure
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdbmi](../includes/applies-to-version/sqlserver2016-asdbmi.md)]
+
 С помощью этого краткого руководства вы научитесь создавать и восстанавливать резервные копии, используя службу хранилища BLOB-объектов Azure.  В этой статье описывается создание контейнера больших двоичных объектов Azure, запись резервной копии в службу BLOB-объектов и выполнение восстановления.
+
+> [!NOTE]
+> В SQL Server 2012 SP1 CU2 добавлена поддержка создания резервных копий Хранилища BLOB-объектов Azure. SQL Server 2014 и более ранних версий не поддерживают подписанный URL-адрес, описанный в этом кратком руководстве.
+>
+> Если вы используете SQL Server 2014 и более ранних версий, изучите документ [Учебник. Резервное копирование и восстановление SQL Server 2014 с помощью Хранилища BLOB-объектов Microsoft Azure](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url).
+>
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования
+
 Чтобы выполнить задания этого руководства, необходимо владеть основными понятиями резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и синтаксисом T-SQL.  Вам потребуется учетная запись хранения Azure, среда SQL Server Management Studio (SSMS) и доступ к серверу SQL Server или Управляемому экземпляру SQL Azure. Кроме того, учетная запись, используемая для выдачи команд резервного копирования и восстановления, должна находиться в роли базы данных **db_backupoperator** с разрешениями **изменение любых учетных данных**. 
 
 - Получите бесплатную [учетную запись Azure](https://azure.microsoft.com/offers/ms-azr-0044p/).
@@ -214,12 +222,12 @@ GO
 
    ![Выбор файла восстановления](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
 
-1. Снова нажмите **ОК** в диалоговом окне **Выбор устройств резервного копирования**, чтобы закрыть его. 
-1. Чтобы восстановить базу данных, нажмите кнопку **ОК**. 
+1. Снова нажмите **ОК** в диалоговом окне **Выбор устройств резервного копирования**, чтобы закрыть его.
+1. Чтобы восстановить базу данных, нажмите кнопку **ОК**.
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
-Чтобы восстановить локальную базу данных из хранилища BLOB-объектов Azure, измените следующую команду Transact-SQL для использования собственной учетной записи хранения, а затем выполните команду в новом окне запроса. 
+Чтобы восстановить локальную базу данных из хранилища BLOB-объектов Azure, измените следующую команду Transact-SQL для использования собственной учетной записи хранения, а затем выполните команду в новом окне запроса.
 
 ```sql
 USE [master]

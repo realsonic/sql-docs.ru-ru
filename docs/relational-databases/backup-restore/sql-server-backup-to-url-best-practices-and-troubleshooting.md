@@ -11,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4212c397c712351e951060032f6e7a2ece6a5c3f
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: dc7532aaead7b2257755f2db689c2cbbbd05d3c3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129032"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639275"
 ---
-# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
+# <a name="sql-server-back-up-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
@@ -52,86 +52,118 @@ ms.locfileid: "96129032"
 -   При создании резервных копий больших файлов очень важно использовать параметр `WITH COMPRESSION` в соответствии с рекомендациями, приведенными в разделе [Управление резервным копированием](#managing-backups-mb1).  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Устранение неполадок при резервном копирование или восстановлении по URL-адресу  
- Ниже приведено несколько простых способов устранения неполадок при создании резервной копии или восстановлении из службы хранилища BLOB-объектов Azure.  
-  
- Чтобы избежать ошибок из-за неподдерживаемых параметров или ограничений, просмотрите список ограничений и информацию о поддержке для команд BACKUP и RESTORE в статье [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) .  
-  
- **Ошибки проверки подлинности:**  
-  
--   `WITH CREDENTIAL` — это новый параметр, который нужно использовать при создании резервных копий или восстановлении с помощью службы хранилища BLOB-объектов Azure. Ниже приводятся возможные ошибки, связанные с учетными данными.  
-  
-     Учетные данные, заданные в команде **BACKUP** или **RESTORE** , не существуют. Чтобы избежать этой проблемы, можно включить инструкцию T-SQL для создания учетных данных, если она отсутствует в инструкции резервного копирования. Ниже приводится пример, который можно использовать.  
-  
-    ```sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE credential_identity = 'mycredential')  
-    CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    , SECRET = '<storage access key>' ;  
-    ```  
-  
--   Учетные данные существуют, но учетная запись, которая используется для запуска команды резервного копирования, не имеет разрешения доступа к учетным данным. Используйте учетную запись для входа в роль **db_backupoperator** с разрешением **_Изменение любых учетных данных_* _.  
-  
--   Проверьте имя учетной записи хранилища и значение ключа. Информация, которая хранится в учетных данных, должна соответствовать значениям свойств учетной записи хранения Azure, используемым в операциях резервного копирования и восстановления.  
-  
- _ *Ошибки и сбои резервного копирования:* *  
-  
--   Параллельное выполнение резервного копирования в один большой двоичный объект вызывает сбой одной из резервных копий с ошибкой **Ошибка инициализации** .  
-  
--   Если вы используете страничные BLOB-объекты, например `BACKUP... TO URL... WITH CREDENTIAL`, используйте следующие журналы об ошибке, чтобы устранить ошибки при резервном копировании:  
-  
-    -   Установите флаг трассировки 3051, чтобы включить ведение записей в конкретном журнале ошибок в следующем формате:  
-  
-        `BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log` где `\<action>` является одним из следующих:  
-  
-        -   **DB**  
-        -   **FILELISTONLY**  
-        -   **LABELONLY**  
-        -   **HEADERONLY**  
-        -   **VERIFYONLY**  
-  
-    -   Дополнительную информацию можно найти в журнале событий Windows или в журналах приложений с именем `SQLBackupToUrl`.  
 
-    -   При резервном копировании больших баз данных используйте функции COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE и несколько аргументов URL-адресов.  Дополнительные сведения см. в записи блога [Backing up a VLDB to Azure Blob Storage](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage) (Копирование сверхбольшой базы данных в хранилище BLOB-объектов Azure).
+Ниже приведено несколько простых способов устранения неполадок при создании резервной копии или восстановлении из службы хранилища BLOB-объектов Azure.  
   
-        ```console
-        Msg 3202, Level 16, State 1, Line 1
-        Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
-        Msg 3013, Level 16, State 1, Line 1
-        BACKUP DATABASE is terminating abnormally.
-        ```
+Чтобы избежать ошибок из-за неподдерживаемых параметров или ограничений, просмотрите список ограничений и информацию о поддержке для команд BACKUP и RESTORE в статье [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) .  
 
-        ```sql  
-        BACKUP DATABASE TestDb
-        TO URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak',
-        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_1.bak',
-        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_2.bak'
-        WITH COMPRESSION, MAXTRANSFERSIZE = 4194304, BLOCKSIZE = 65536;  
-        ```  
+**Ошибка инициализации** 
 
--   При восстановлении из сжатой резервной копии может появиться следующее сообщение об ошибке:  
+Параллельное выполнение резервного копирования в один большой двоичный объект вызывает сбой одной из резервных копий с ошибкой **Ошибка инициализации** . 
+
+Если вы используете страничные BLOB-объекты, например `BACKUP... TO URL... WITH CREDENTIAL`, используйте следующие журналы об ошибке, чтобы устранить ошибки при резервном копировании:  
   
-    -   `SqlException 3284 occurred. Severity: 16 State: 5  
-        Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.`  
+Установите флаг трассировки 3051, чтобы включить ведение записей в конкретном журнале ошибок в следующем формате:  
   
-        Чтобы устранить эту ошибку, выдайте повторно инструкцию **RESTORE** и укажите в ней значение **BLOCKSIZE = 65536**.  
+`BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log` где `\<action>` является одним из следующих:  
   
--   Ошибка во время резервного копирования из-за больших двоичных объектов с активной арендой: сбой операции резервного копирования может привести к созданию больших двоичных объектов с активными арендами.  
+-   **DB**  
+-   **FILELISTONLY**  
+-   **LABELONLY**  
+-   **HEADERONLY**  
+-   **VERIFYONLY**  
   
-     Если эта инструкция резервного копирования повторяется, то операция резервного копирования может завершиться со следующей ошибкой:  
+Дополнительную информацию можно найти в журнале событий Windows или в журналах приложений с именем `SQLBackupToUrl`.  
+
+**Выполнить запрос невозможно из-за ошибки устройства ввода-вывода.**
+
+При резервном копировании больших баз данных используйте функции COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE и несколько аргументов URL-адресов.  Дополнительные сведения см. в записи блога [Backing up a VLDB to Azure Blob Storage](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage) (Копирование сверхбольшой базы данных в хранилище BLOB-объектов Azure).
+
+Ошибка: 
+
+```console
+Msg 3202, Level 16, State 1, Line 1
+Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 
+1117(The request could not be performed because of an I/O device error.)
+Msg 3013, Level 16, State 1, Line 1
+BACKUP DATABASE is terminating abnormally.
+```
+
+Пример устранения: 
+
+```sql  
+BACKUP DATABASE TestDb
+TO URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak',
+URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_1.bak',
+URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_2.bak'
+WITH COMPRESSION, MAXTRANSFERSIZE = 4194304, BLOCKSIZE = 65536;  
+```  
+
+**Метка файла сообщения на устройстве не согласована.**
+
+При восстановлении из сжатой резервной копии может появиться следующее сообщение об ошибке:  
   
-     `Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request.`  
+```
+SqlException 3284 occurred. Severity: 16 State: 5  
+Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.
+Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.  
+```
   
-     Если инструкция восстановления выполнялись в резервном файле большого двоичного объекта с активной арендой, операция резервного копирования может завершиться со следующей ошибкой:  
+Чтобы устранить эту ошибку, выдайте повторно инструкцию **RESTORE** и укажите в ней значение **BLOCKSIZE = 65536**.  
   
-     `Exception Message: The remote server returned an error: (409) Conflict..`  
+**сбой операции резервного копирования может привести к созданию больших двоичных объектов с активными арендами.**
+
+Ошибка во время резервного копирования из-за больших двоичных объектов с активной арендой: `Failed backup activity can result in blobs with active leases.`  
+
+Если эта инструкция резервного копирования повторяется, то операция резервного копирования может завершиться со следующей ошибкой:  
+
+```
+Backup to URL received an exception from the remote endpoint. Exception Message: 
+The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request. 
+```
+
+Если инструкция восстановления выполнялись в резервном файле большого двоичного объекта с активной арендой, операция резервного копирования может завершиться со следующей ошибкой:  
   
-     Если возникает такая ошибка, файлы больших двоичных объектов следует удалить. Дополнительные сведения об этом сценарии и устранении этой проблемы см. в разделе [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md).  
+`Exception Message: The remote server returned an error: (409) Conflict..`  
+  
+Если возникает такая ошибка, файлы больших двоичных объектов следует удалить. Дополнительные сведения об этом сценарии и устранении этой проблемы см. в разделе [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md).  
+
+**Ошибка ОС 50: запрос не поддерживается**
+ 
+При создании резервной копии базы данных может появиться сообщение об ошибке `Operating system error 50(The request is not supported)` по следующим причинам: 
+
+   - Указанная учетная запись хранения не является учетной записью хранения общего назначения версии 1 или 2.
+   - Длина маркера SAS превышает 128 символов.
+   - Маркер SAS содержал в начале символ `?` при создании учетных данных. Если это так, удалите символ.
+   - Текущее подключение не позволяет подключиться к учетной записи хранения с текущего компьютера с помощью Обозревателя службы хранилища или SSMS. 
+   - Просрочена политика, назначенная маркеру SAS. С помощью Обозревателя службы хранилища Azure создайте новую политику и либо создайте новый маркер SAS с этой политикой, либо измените учетные данные и повторите попытку резервного копирования. 
+
+**Ошибки проверки подлинности**
+  
+`WITH CREDENTIAL` — это новый параметр, который нужно использовать при создании резервных копий или восстановлении с помощью службы хранилища BLOB-объектов Azure.
+
+Ошибка, связанная с учетными данными, может быть следующей: `The credential specified in the **BACKUP** or **RESTORE** command does not exist. `
+
+Чтобы избежать этой проблемы, можно включить инструкцию T-SQL для создания учетных данных, если она отсутствует в инструкции резервного копирования. Ниже приводится пример, который можно использовать.  
+
+  
+```sql  
+IF NOT EXISTS  
+(SELECT * FROM sys.credentials   
+WHERE credential_identity = 'mycredential')  
+CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
+, SECRET = '<storage access key>' ;  
+```  
+  
+Учетные данные существуют, но учетная запись, которая используется для запуска команды резервного копирования, не имеет разрешения доступа к учетным данным. Используйте учетную запись для входа в роль **db_backupoperator** с разрешением **_Изменение любых учетных данных_* _.  
+  
+Проверьте имя учетной записи хранилища и значение ключа. Информация, которая хранится в учетных данных, должна соответствовать значениям свойств учетной записи хранения Azure, используемым в операциях резервного копирования и восстановления.  
+  
   
 ## <a name="proxy-errors"></a>Ошибки прокси-сервера  
  При использовании прокси-серверов для доступа к Интернету возможны следующие проблемы.  
   
- **Регулирование соединений прокси-серверами.**  
+ _ *Регулирование подключений прокси-серверами**  
   
  Прокси-серверы могут иметь параметры, ограничивающие количество соединений в минуту. Процесс резервного копирования на URL-адрес является многопоточным, в связи с чем заданное ограничение может быть превышено. В этом случае прокси-сервер разрывает соединение. Чтобы устранить эту проблему, измените параметры прокси-сервера таким образом, чтобы SQL Server его не использовал. Далее приведено несколько примеров типов или сообщений об ошибках, которые можно встретить в журнале ошибок.  
   

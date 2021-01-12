@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: d72660a55fa047864148c90ae4087782302adc22
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 90985f155392a78da408ffbda3e1d2c0b12d4648
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772287"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771606"
 ---
 # <a name="dataadapter-parameters"></a>Параметры DataAdapter
 
@@ -75,5 +75,6 @@ UPDATE Customers SET CompanyName = @CompanyName
 - [Объекты DataAdapter и DataReader](dataadapters-datareaders.md)
 - [Команды и параметры](commands-parameters.md)
 - [Обновление источников данных с помощью DataAdapter](update-data-sources-with-dataadapters.md)
+- [Изменение данных с помощью хранимых процедур](modify-data-with-stored-procedures.md)
 - [Сопоставления типов данных в ADO.NET](data-type-mappings-ado-net.md)
 - [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

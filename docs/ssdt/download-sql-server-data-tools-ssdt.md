@@ -13,12 +13,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
-ms.openlocfilehash: b69137a197cab3054eeae2ee180a2624e7d564e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8913e553460c9fae3d008783d571aca81b5c21a4
+ms.sourcegitcommit: 44eebb659f9b226c08aea6c31a909b22ad4fec60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474445"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860574"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачать SQL Server Data Tools (SSDT) для Visual Studio
 
@@ -93,10 +93,10 @@ ms.locfileid: "97474445"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT для VS 2017 (автономный установщик)
 
-:::image type="icon" source="media/download.png" border="false"::: **[Скачать SSDT для Visual Studio 2017 (15.9.6)](https://go.microsoft.com/fwlink/?linkid=2139376)**
+:::image type="icon" source="media/download.png" border="false"::: **[Скачать SSDT для Visual Studio 2017 (15.9.7)](https://go.microsoft.com/fwlink/?linkid=2151759)**
 
 > [!IMPORTANT]
-> * Перед установкой SSDT для Visual Studio 2017 (15.9.6) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio. 
+> * Перед установкой SSDT для Visual Studio 2017 (15.9.7) удалите расширения *Проекты служб Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio. 
 > * Источник Power Query для SQL Server 2017 удален из списка стандартных компонентов. Теперь мы объявили источник Power Query для SQL Server 2017 и 2019 как отдельный компонент, который можно скачать [здесь](https://www.microsoft.com/download/details.aspx?id=100619).
 > * Чтобы спроектировать пакеты с помощью соединителей Oracle и Teradata, а также задать в качестве целевой версию SQL Server, выпущенную до SQL 2019, помимо [соединителя Microsoft Oracle для SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) и [соединителя Microsoft Teradata для SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599) необходимо установить соответствующую версию соединителя Майкрософт для Oracle и Teradata от Attunity.
 >    * [Соединитель версии 5.0 для Oracle и Teradata от Attunity, предназначенный для SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -116,17 +116,17 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 Этот выпуск **SSDT для Visual Studio 2017** можно установить на следующих языках:
 
-* [Китайский (упрощенный)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x804)
-* [Китайский (традиционный)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x404)
-* [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x409)
-* [Французский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40c)
-* [Немецкий](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x407)
-* [Итальянский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x410)
-* [Японский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x411)
-* [Корейский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x412)
-* [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x416)
-* [Русский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x419)
-* [Испанский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40a)
+* [Китайский (упрощенный)](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x804)
+* [Китайский (традиционный)](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x404)
+* [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x409)
+* [Французский](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x40c)
+* [Немецкий](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x407)
+* [Итальянский](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x410)
+* [Японский](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x411)
+* [Корейский](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x412)
+* [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x416)
+* [Русский](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x419)
+* [Испанский](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>Рекомендации и ограничения
 

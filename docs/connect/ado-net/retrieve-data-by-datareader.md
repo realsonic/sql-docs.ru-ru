@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: dfbe41fe29a3dadc69a2a428f1bf8b606a2a7050
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97559206"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771359"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>Извлечение данных с помощью DataReader
 
@@ -42,9 +42,9 @@ reader = command.ExecuteReader();
 
 [!code-csharp[DataWorks SqlClient.HasRows#1](~/../sqlclient/doc/samples/SqlDataReader_HasRows.cs#1)]
 
-## <a name="closing-the-datareader"></a>Закрытие DataReader  
+## <a name="close-the-datareader"></a>Закрытие DataReader  
 
-По окончании использования объекта **DataReader** всегда вызывайте метод **Close**.
+По окончании использования объекта `DataReader` всегда вызывайте метод `Close()`.
 
 > [!NOTE]
 > Если метод **Command** содержит выходные параметры или возвращаемые значения, они будут недоступны до закрытия объекта **DataReader**.  
@@ -71,4 +71,5 @@ reader = command.ExecuteReader();
 
 - [Объекты DataAdapter и DataReader](dataadapters-datareaders.md)
 - [Команды и параметры](commands-parameters.md)
+- [Извлечение сведений о схеме базы данных](retrieving-database-schema-information.md)
 - [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

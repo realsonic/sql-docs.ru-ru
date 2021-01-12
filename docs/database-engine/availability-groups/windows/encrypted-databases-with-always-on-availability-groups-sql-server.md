@@ -5,7 +5,7 @@ ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords:
 - Transparent Data Encryption, AlwaysOn Availability Groups
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 2569f44e4642df714c8108b6540b81d013d30b82
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: 8001dbf4a5799d275bced4f565ee00a7a70d6c61
+ms.sourcegitcommit: 44eebb659f9b226c08aea6c31a909b22ad4fec60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584311"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860597"
 ---
 # <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>Добавление зашифрованной базы данных в группу доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,15 +33,13 @@ ms.locfileid: "94584311"
   
      Чтобы сделать расшифрованную базу данных доступной для добавления в группу доступности с помощью мастера, выполните следующие шаги.  
   
-    1.  Создайте резервную копию журнала базы данных-источника.  
+    1.  Создайте полную резервную копию базы данных-источника. 
   
-    2.  Создайте полную резервную копию базы данных-источника.  
+    2.  Создайте резервную копию журнала базы данных-источника.  
   
     3.  Восстановите резервную копию базы данных на экземпляре сервера, на котором размещается вторичная реплика.  
-  
-    4.  Создайте новую резервную копию журнала базы данных-источника.  
-  
-    5.  Восстановите эту резервную копию журнала в базе данных-получателе.  
+    
+    4.  Восстановите резервную копию журналов в базе данных-получателе.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   

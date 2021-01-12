@@ -1,7 +1,7 @@
 ---
 title: Жизненный цикл поддержки драйвера SqlClient
 description: Страница с информацией о жизненном цикле поддержки продукта.
-ms.date: 11/19/2020
+ms.date: 01/04/2020
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: eef9e81c94c930b9f00689b41339d54a0f0302be
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 200e600448f1f93cca3d566be10d6065ffd537e7
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442718"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878587"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Жизненный цикл поддержки драйвера SqlClient
 
@@ -36,7 +36,7 @@ ms.locfileid: "96442718"
 
 | Версия | Дата официального выпуска | Последняя версия исправления | Дата выпуска исправления | Уровень поддержки  | Окончание поддержки |
 | -- | -- | -- | -- | -- | -- |
-| 2.1 | 19 ноября 2020 г. | 2.1.0 | 19 ноября 2020 г. | Текущий | |
+| 2.1 | 19 ноября 2020 г. | 2.1.1 | 18 декабря 2020 г. | Текущий | |
 | 2.0 | 16 июня 2020 г. | 2.0.1 | 25 августа 2020 г. | Текущий | 19 февраля 2021 г. |
 | 1.1 | 20 ноября 2019 г. | 1.1.3 | 15 мая 2020 г. | LTS | 21 ноября 2022 г. |
 

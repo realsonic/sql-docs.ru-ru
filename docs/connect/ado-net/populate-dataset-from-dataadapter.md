@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c632d83b092f5f68ce5bbca32d4315821252603c
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e6c50bf7255dc77edfd0b93e03dedeec83ed4c4d
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772299"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771506"
 ---
 # <a name="populate-a-dataset-from-a-dataadapter"></a>Заполнение набора данных DataSet с помощью DataAdapter
 
@@ -52,13 +52,13 @@ ms.locfileid: "96772299"
 
 Если объект `DataAdapter` обнаруживает несколько результирующих наборов, то создает несколько таблиц в `DataSet`. Таблицы получают добавочное имя по умолчанию Table *N*, для Table0 начинающееся с «Table». Если имя таблицы передается в качестве аргумента методу `Fill` , то таблицы получают по умолчанию имя TableName *N* с последовательно увеличивающимся суффиксом, но начиная с «TableName», а не с TableName0.  
   
-## <a name="populating-a-dataset-from-multiple-dataadapters"></a>Заполнение DataSet из нескольких DataAdapter  
+## <a name="populate-a-dataset-from-multiple-dataadapters"></a>Заполнение DataSet из нескольких объектов DataAdapter  
 
- С `DataSet` можно использовать любое количество объектов `DataAdapter`. Каждый объект `DataAdapter` может использоваться для заполнения одного или более объектов `DataTable` и разрешения обновлений в соответствующем источнике данных. Объекты`DataRelation` и `Constraint` могут быть добавлены к `DataSet` локально, что позволяет связывать данные из разнородных источников данных. Например, `DataSet` может содержать данные из базы данных Microsoft SQL Server, из базы данных IBM DB2, доступ к которой предоставляется с помощью OLE DB, и источника данных, предназначенного для получения XML-данных в виде потока. Один или несколько объектов `DataAdapter` могут обрабатывать соединение с каждым источником данных.  
+С `DataSet` можно использовать любое количество объектов `DataAdapter`. Каждый объект `DataAdapter` может использоваться для заполнения одного или более объектов `DataTable` и разрешения обновлений в соответствующем источнике данных. Объекты`DataRelation` и `Constraint` могут быть добавлены к `DataSet` локально, что позволяет связывать данные из разнородных источников данных. Например, `DataSet` может содержать данные из базы данных Microsoft SQL Server, из базы данных IBM DB2, доступ к которой предоставляется с помощью OLE DB, и источника данных, предназначенного для получения XML-данных в виде потока. Один или несколько объектов `DataAdapter` могут обрабатывать соединение с каждым источником данных.  
   
 ### <a name="example"></a>Пример  
 
- В следующем примере кода заполняется список клиентов из базы данных `Northwind` Microsoft SQL Server и список заказов из базы данных `Northwind` , который хранится в Microsoft Access 2000. Заполненные таблицы связываются с помощью `DataRelation`, и список клиентов отображает заказы данного клиента.
+Следующий пример кода заполняет список клиентов из базы данных `Northwind` Microsoft SQL Server и список заказов из базы данных `Northwind`, который хранится в Microsoft Access. Заполненные таблицы связываются с помощью `DataRelation`, и список клиентов отображает заказы данного клиента.
 
 [!code-csharp[SqlDataAdapter_FillDataSet#2](~/../sqlclient/doc/samples/SqlDataAdapter_FillDataSet.cs#2)]
 

@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf8d7e1455e437549dc86c691b55559fce486827
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: ee679df659d35817f97fb9f11471bde1c5ffdebf
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808770"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878457"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Драйвер Node.js для SQL Server
 
 ![Стрелка скачивания в круге](../../ssms/media/download-icon.png)[Скачать драйвер SQL для Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Модуль tedious — это реализация протокола TDS на языке JavaScript, который поддерживают все современные версии SQL Server. Драйвер является проектом с открытым исходным кодом и доступен на сайте GitHub.  
+Модуль `tedious` — это реализация протокола TDS на языке JavaScript, который поддерживают все современные версии SQL Server. Драйвер является проектом с открытым исходным кодом и доступен на сайте GitHub.  
   
 Вы можете подключиться к Базе данных SQL с помощью Node.js в ОС Windows, Linux или macOS.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "91808770"
 
 ## <a name="support"></a>Поддержка
 
-Tedious для Node.js — это поддерживаемое сообществом программное обеспечение. Корпорация Майкрософт участвует в сообществе tedious с открытым исходным кодом и является активным участником в репозитории на [https://github.com/tediousjs/tedious](https://github.com/tediousjs/tedious). Однако Майкрософт не оказывает поддержку по этому программному обеспечению.
+`Tedious` для Node.js — это поддерживаемое сообществом программное обеспечение. Корпорация Майкрософт участвует в сообществе `tedious` с открытым исходным кодом и является активным участником в репозитории на [https://github.com/tediousjs/tedious](https://github.com/tediousjs/tedious). Однако Майкрософт не оказывает поддержку по этому программному обеспечению.
 
 Чтобы получить помощь, сообщите об ошибке в [репозитории tedious на GitHub](https://github.com/tediousjs/tedious/issues) или посетите другие ресурсы сообщества Node.js.
 

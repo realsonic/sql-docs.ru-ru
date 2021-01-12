@@ -2,7 +2,7 @@
 title: Рекомендации по хранилищу запросов | Документация Майкрософт
 description: Сведения о рекомендациях по использованию хранилища запросов SQL Server с рабочей нагрузкой, например по использованию актуальных версий SQL Server Management Studio и анализа производительности запросов.
 ms.custom: ''
-ms.date: 09/02/2020
+ms.date: 12/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.technology: performance
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d71da2a6d0bcc0cb43529331116acdbb4a6d8136
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a973fd5ec66f101c162e35baec0269f7b6d3d601
+ms.sourcegitcommit: d8a9ad86401bff422d506078c6200494c795e7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97418778"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765213"
 ---
 # <a name="best-practices-with-query-store"></a>Рекомендации по хранилищу запросов
 
@@ -124,7 +124,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
 ```
 
-**Режим очистки на основе размера**. Указывает, должна ли происходить автоматическая очистка, когда объем данных в хранилище запросов достигает предельного значения. Активируйте очистку на основе размера, чтобы хранилище запросов всегда работало в режиме чтения и записи и собирало последние данные.
+**Режим очистки на основе размера**. Указывает, должна ли происходить автоматическая очистка, когда объем данных в хранилище запросов достигает предельного значения. Активируйте очистку на основе размера, чтобы хранилище запросов всегда работало в режиме чтения и записи и собирало последние данные.  Обратите внимание, что при больших рабочих нагрузках не гарантируется, что очистка хранилища запросов будет поддерживать размер данных в рамках ограничения. Возможно, что автоматическая очистка данных не будет успевать с обработкой и переключится (временно) в режим только для чтения.
 
 ```sql
 ALTER DATABASE [QueryStoreDB]

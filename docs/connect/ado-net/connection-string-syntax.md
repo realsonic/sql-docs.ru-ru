@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: f61b867b70825595a012b2167d2c63b13409a8e2
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 42b1f8704be721c0b52b3c42946c9abbf7efd7db
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442816"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771637"
 ---
 # <a name="connection-string-syntax"></a>Синтаксис строки подключения
 
@@ -41,7 +41,7 @@ ms.locfileid: "96442816"
 |--------------|------------|  
 |`SqlClient`|`Integrated Security=true;`<br /><br /> `-- or --`<br /><br /> `Integrated Security=SSPI;`|  
 
-## <a name="sqlclient-connection-strings"></a>Строки подключения SqlClient
+## <a name="sqlclient-connection-strings"></a>Строки подключений SqlClient
 
 Синтаксис для строки подключения <xref:Microsoft.Data.SqlClient.SqlConnection> документирован в свойстве <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. Свойство <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> используется для возврата или задания строки подключения для базы данных SQL Server. Кроме того, ключевые слова строки подключения сопоставляются со свойствами в <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>.
 
@@ -84,17 +84,17 @@ ms.locfileid: "96442816"
 
 Кроме того, в свойстве <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> объекта `SqlConnectionStringBuilder` можно задать имя экземпляра при построении строки подключения. Свойство <xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> объекта <xref:Microsoft.Data.SqlClient.SqlConnection> доступно только для чтения.
 
-### <a name="type-system-version-changes"></a>Изменения версий системы типов
+### <a name="type-system-version-changes"></a>Изменения в версии системы типов
 
 Ключевое слово `Type System Version` в <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> указывает клиентское представление типов SQL Server. Дополнительные сведения о ключевом слове <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> см. в разделе `Type System Version`.
 
-## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Подключение и присоединение к пользовательским экземплярам SQL Server Express
+## <a name="connect-and-attach-to-sql-server-express-user-instances"></a>Подключение к пользовательским экземплярам SQL Server Express и их присоединение
 
 Пользовательские экземпляры являются одной из возможностей SQL Server Express. Они дают пользователям под учетной записью с минимальными правами возможность присоединить и запустить базу данных SQL Server без прав администратора. Пользовательский экземпляр выполняется с учетными данными пользователя Windows, а не службы.
 
 Дополнительные сведения см. в статье [Пользовательские экземпляры SQL Server Express](./sql/sql-server-express-user-instances.md).
 
-## <a name="using-trustservercertificate"></a>Использование ключевого слова TrustServerCertificate
+## <a name="use-trustservercertificate"></a>Использование TrustServerCertificate
 
 Ключевое слово `TrustServerCertificate` применяется только при подключении к экземпляру SQL Server с допустимым сертификатом. Если `TrustServerCertificate` имеет значение `true`, на транспортном уровне будет использоваться протокол TLS/SSL для шифрования канала и не будет проверяться цепочка сертификатов для проверки доверия.
 
@@ -105,7 +105,7 @@ ms.locfileid: "96442816"
 > [!NOTE]
 > Если ключевому слову `TrustServerCertificate` присвоено значение `true` и включено шифрование, то будет использоваться уровень шифрования, заданный на сервере, даже если в строке подключения `Encrypt` задано значение `false`. В противном случае соединение не будет установлено.
 
-### <a name="enabling-encryption"></a>Включение шифрования
+### <a name="enable-encryption"></a>Включение шифрования
 
 Чтобы включить шифрование, когда на сервере не представлен сертификат, в диспетчере конфигурации SQL Server необходимо настроить параметры **Принудительное шифрование протокола** и **Доверять сертификату сервера**. В этом случае шифрование будет использовать самозаверяющий сертификат сервера, не проверяя наличия подтверждаемого сертификата сервера.
 
@@ -129,3 +129,4 @@ ms.locfileid: "96442816"
 
 - [Строки подключения](connection-strings.md)
 - [подключение к источнику данных](connecting-to-data-source.md);
+- [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

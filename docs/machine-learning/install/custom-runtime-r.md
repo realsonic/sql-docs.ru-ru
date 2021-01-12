@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 554c3a08cc29cfbc6addef598698c40df31f9990
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9029dd87712ee7128504a9b495b699c9c58e000d
+ms.sourcegitcommit: 5b2c47ce88f7e56552fd415c32b319009d043b56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471235"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97804346"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Установка настраиваемой среды выполнения R для SQL Server
 
@@ -62,9 +62,9 @@ ms.locfileid: "97471235"
 
     - **Службы машинного обучения и расширения языка**
 
-       Выберите **Службы машинного обучения и расширения языка**. Нет необходимости выбирать R.
+        Выберите **Службы машинного обучения и расширения языка**. Нет необходимости выбирать R.
 
-    ![Возможности установки SQL Server 2019 с накопительным обновлением 3 или более поздней версии](../install/media/sql-feature-selection.png)
+        :::image type="content" source="media/2019-setup-language-extensions.png" alt-text="Установка расширений языка для SQL Server 2019.":::
 
 1. На странице **Все готово для установки** проверьте, включены ли указанные ниже компоненты, и нажмите **Установить**.
 

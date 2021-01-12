@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 0be62b3c2a63f7b25889e25f88969aa5aaa9b50e
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 6f2feb876d0f232f4d7951de8ee1cc84587e6486
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772296"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771388"
 ---
 # <a name="update-data-sources-with-dataadapters"></a>Обновление источников данных с помощью DataAdapter
 
@@ -75,7 +75,7 @@ ms.locfileid: "96772296"
 
 ## <a name="autoincrement-columns"></a>AutoIncrement - столбцы
 
-Если в таблицах из применяемого источника данных имеются столбцы с автоматическим увеличением значений, то можно обеспечить заполнение столбцов в применяемом `DataSet` путем возврата автоматически увеличивающегося значения как выходного параметра хранимой процедуры и сопоставления его со столбцом таблицы; возврата автоматически увеличивающегося значения в первой строке результирующего набора, возвращенного хранимой процедурой или инструкцией SQL; а также использование события `RowUpdated` объекта `DataAdapter` для выполнения дополнительной инструкции SELECT.
+Если в таблицах из применяемого источника данных имеются столбцы с автоматическим увеличением значений, то можно обеспечить заполнение столбцов в применяемом `DataSet` путем возврата автоматически увеличивающегося значения как выходного параметра хранимой процедуры и сопоставления его со столбцом таблицы; возврата автоматически увеличивающегося значения в первой строке результирующего набора, возвращенного хранимой процедурой или инструкцией SQL; а также использование события `RowUpdated` объекта `DataAdapter` для выполнения дополнительной инструкции SELECT. Дополнительные сведения и пример см. в статье [Извлечение значений идентификаторов или автонумерации](retrieve-identity-or-autonumber-values.md).
 
 ## <a name="ordering-of-inserts-updates-and-deletes"></a>Порядок в операциях вставки, обновления и удаления
 
@@ -172,4 +172,5 @@ GO
 ## <a name="see-also"></a>См. также
 
 - [Объекты DataAdapter и DataReader](dataadapters-datareaders.md)
+- [Извлечение значений идентификаторов или автонумерации](retrieve-identity-or-autonumber-values.md)
 - [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

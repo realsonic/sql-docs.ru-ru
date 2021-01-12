@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: b1427fa78e52c985478996bfb41cb7a20e1ee608
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 772ecef470b69a34e4bd4b0eba2ca60255657eaf
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428297"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771427"
 ---
 # <a name="executing-a-command"></a>Выполнение команды
 
@@ -34,7 +34,7 @@ ms.locfileid: "96428297"
 |`ExecuteNonQuery`|Выполняет команду, которая не возвращает строк.|  
 |`ExecuteXMLReader`|Возвращает значение типа <xref:System.Xml.XmlReader>. Этот метод предусмотрен только для объекта `SqlCommand`.|
 
- Каждый строго типизированный объект команды поддерживает также перечисление <xref:System.Data.CommandType>, которое указывает способ интерпретации строки команды, как описано в следующей таблице.
+Каждый строго типизированный объект команды поддерживает также перечисление <xref:System.Data.CommandType>, которое указывает способ интерпретации строки команды, как описано в следующей таблице.
 
 |CommandType|Описание|
 |-----------------|-----------------|  
@@ -51,12 +51,14 @@ ms.locfileid: "96428297"
 
 [!code-csharp[DataWorks SqlClient.StoredProcedure#1](~/../sqlclient/doc/samples/SqlCommand_StoredProcedure.cs#1)]
 
-### <a name="troubleshooting-commands"></a>Команды устранения неполадок
+### <a name="troubleshooting-commands"></a>Устранение неполадок с командами
 
 [!INCLUDE[appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
 
-Поставщик данных Microsoft SqlClient для SQL Server добавляет **счетчики производительности**, позволяющие обнаружить временные проблемы, связанные с невыполненными командами.
+Поставщик данных Microsoft SqlClient для SQL Server добавляет **счетчики производительности**, позволяющие обнаружить временные проблемы, связанные с невыполненными командами. Дополнительные сведения см. в статье [Счетчики производительности в SqlClient](performance-counters.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Команды и параметры](commands-parameters.md)
+- [Объекты DataAdapter и DataReader](dataadapters-datareaders.md)
+- [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

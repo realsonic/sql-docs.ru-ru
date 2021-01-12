@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: bdb4294fda1f26ec346f786ec29061f8d4f9ee27
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 38c1ad34fb4819460c08f00da4c1dbd31749b7cb
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419805"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771440"
 ---
 # <a name="connection-string-builders"></a>Построители строк подключения
 
@@ -27,7 +27,7 @@ ms.locfileid: "96419805"
 
 В ранних версиях ADO.NET проверка строк подключения со сцепленными строковыми значениями во время компиляции не выполнялась, поэтому во время выполнения неправильное ключевое слово приводило к вызову <xref:System.ArgumentException>. Поставщик данных Microsoft SqlClient для SQL Server содержит строго типизированный класс построителя строк подключения <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType>, наследующий от <xref:System.Data.Common.DbConnectionStringBuilder>.
 
-## <a name="connection-string-injection-attacks"></a>Атаки путем внедрения данных в строку подключения
+## <a name="connection-string-injection-attacks"></a>Атаки путем внедрения кода в строку подключения
 
 Атака путем внедрения данных в строку соединения может произойти при использовании динамического объединения строк для построения строк соединения, основанных на входных данных пользователя. Если строка не проверяется, а вредоносный текст или символы не экранируются, злоумышленник может получить потенциальный доступ к конфиденциальным данным или другим ресурсам сервера. Например, злоумышленник может осуществить атаку, установив точку с запятой и добавив дополнительное значение. Строка подключения анализируется по алгоритму **побеждает последний**, и недопустимые входные данные заменяются допустимыми значениями.
 
@@ -44,7 +44,7 @@ data source=(local);Integrated Security=True;
 initial catalog="AdventureWorks;NewValue=Bad"
 ```
 
-## <a name="building-connection-strings-from-configuration-files"></a>Построение строк соединения из файлов конфигурации
+## <a name="build-connection-strings-from-configuration-files"></a>Создание строк подключения из файлов конфигурации
 
 Если некоторые элементы строки соединения известны заранее, их можно сохранить в файле конфигурации и во время выполнения получить для построения полной строки соединения. Например, в отличие от имени сервера, имя базы данных может быть известно заранее. Также можно принудительно задать ввод пользователем имени и пароля во время выполнения, чтобы исключить возможность внедрения других значений в строку соединения.
 
@@ -74,3 +74,4 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ## <a name="see-also"></a>См. также
 
 - [Строки подключения](connection-strings.md)
+- [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

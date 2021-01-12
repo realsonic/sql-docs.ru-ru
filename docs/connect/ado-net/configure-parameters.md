@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: a24241d3ef66739a85422397426278738987bf15
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 14442892bc59fc733c6a67153832b95c3f368b95
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428320"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771464"
 ---
 # <a name="configuring-parameters"></a>Настройка параметров
 
@@ -31,7 +31,7 @@ ms.locfileid: "96428320"
 
 Объект <xref:System.Data.Common.DbParameter> можно создать при помощи конструктора или путем добавления его в коллекцию <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> с помощью метода `Add` коллекции <xref:System.Data.Common.DbParameterCollection> . Метод `Add` принимает в качестве входных данных либо аргументы конструктора, либо существующий объект параметра - в зависимости от поставщика данных.
 
-## <a name="supplying-the-parameterdirection-property"></a>Указание свойства ParameterDirection
+## <a name="supply-the-parameterdirection-property"></a>Указание свойства ParameterDirection
 
 При добавлении параметров необходимо указать свойство <xref:System.Data.ParameterDirection> для параметров, не являющихся входными. В следующей таблице показаны значения `ParameterDirection` , которые можно использовать с перечислением <xref:System.Data.ParameterDirection> .
 
@@ -42,11 +42,11 @@ ms.locfileid: "96428320"
 |<xref:System.Data.ParameterDirection.Output>|Параметр является выходным.|
 |<xref:System.Data.ParameterDirection.ReturnValue>|Параметр представляет значение, возвращаемое как результат операции, например хранимой процедуры, встроенной функции или определяемой пользователем функции.|
 
-## <a name="working-with-parameter-placeholders"></a>Работа с заполнителями параметров
+## <a name="work-with-parameter-placeholders"></a>Работа с заполнителями параметров
 
 Синтаксис местозаполнителей параметров зависит от источника данных. Поставщик данных Microsoft SqlClient для SQL Server обрабатывает именование, а также установку параметров и заполнителей параметров по-разному. Поставщик данных SqlClient использует именованные параметры в формате `@`*имя_параметра*.
 
-## <a name="specifying-parameter-data-types"></a>Указание типов данных параметров
+## <a name="specify-parameter-data-types"></a>Указание типов данных параметров
 
 Тип данных параметра зависит от поставщика данных Microsoft SqlClient для SQL Server. При указании типа значение `Parameter` преобразуется в поставщик данных типа Microsoft SqlClient для SQL Server перед передачей значения в источник данных. Можно также указать тип `Parameter` универсальным способом, задав свойству `DbType` объекта `Parameter` определенное значение <xref:System.Data.DbType>.
 
@@ -89,7 +89,7 @@ ms.locfileid: "96428320"
 > [!NOTE]
 > Во время отправки значения параметра NULL на сервер нужно указать <xref:System.DBNull>, а не `null` (`Nothing` в Visual Basic). В системе значение null - это пустой объект, не имеющий значения. Для представления значений null используется тип<xref:System.DBNull> .
 
-## <a name="deriving-parameter-information"></a>Выведение сведений о параметрах
+## <a name="derive-parameter-information"></a>Получение сведений о параметрах
 
 Информацию о параметрах можно вывести из хранимой процедуры с помощью класса `DbCommandBuilder` . Класс `SqlCommandBuilder` предоставляет статический метод `DeriveParameters`, который обеспечивает автоматическое заполнение коллекции параметров объекта команды, использующего сведения о параметрах из хранимой процедуры. Обратите внимание, что метод `DeriveParameters` перезаписывает существующую информацию о параметрах для команды.
 
@@ -123,4 +123,6 @@ CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
 ## <a name="see-also"></a>См. также
 
 - [Команды и параметры](commands-parameters.md)
+- [Объекты DataAdapter и DataReader](dataadapters-datareaders.md)
 - [Сопоставления типов данных в ADO.NET](data-type-mappings-ado-net.md)
+- [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

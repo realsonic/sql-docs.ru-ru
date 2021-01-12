@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c07ce738ea3364cba27cd2872894ff4701f41dfe
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5dd2c6c6f33f9a115196d9a2afc3ca700b3a4631
+ms.sourcegitcommit: a81823f20262227454c0b5ce9c8ac607aaf537e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476685"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684208"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT — предложение OVER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -110,15 +110,95 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Аргументы
- PARTITION BY  
+
+Оконные функции могут иметь следующие аргументы в предложении `OVER`:
+- [PARTITION BY](#partition-by) — разделяет результирующий набор запроса на секции.
+- [ORDER BY](#order-by) — определяет логический порядок строк в каждой секции результирующего набора. 
+- [ROWS/RANGE](#rows-or-range) — ограничивает строки в пределах секции, указывая начальную и конечную точки. Он требует аргумента `ORDER BY`, а по умолчанию будет охватывать интервал от начала секции до текущего элемента, если указан аргумент `ORDER BY`.
+
+Если аргументы не указаны, оконные функции будут применены ко всему результирующему набору.
+```sql
+select 
+      object_id
+    , [min] = min(object_id) over()
+    , [max] = max(object_id) over()
+from sys.objects
+```
+ 
+|object_id | мин | max |
+|---|---|---|
+| 3 | 3 | 2139154666 |
+| 5 | 3 | 2139154666 |
+| ... | ... | ... |
+| 2123154609 |  3 | 2139154666 |
+| 2139154666 |  3 | 2139154666 |
+
+### <a name="partition-by"></a>PARTITION BY  
  Разделяет результирующий набор запроса на секции. Оконная функция применяется к каждой секции отдельно, и вычисление начинается заново для каждой секции.  
+
+```sqlsyntax
+PARTITION BY *value_expression* 
+```
+ 
+ Если аргумент PARTITION BY не указан, функция обрабатывает все строки результирующего набора запроса как одну секцию.
+Функция будет применена ко всем строкам в секции, если не указано предложение `ORDER BY`.
   
- *value_expression*  
- Определяет столбец, по которому секционируется набор строк. Аргумент *value_expression* может ссылаться только на столбцы, сделанные доступными с помощью предложения FROM. Аргумент *value_expression* не может ссылаться на выражения или псевдонимы в списке выбора. Выражение *value_expression* может быть выражением столбца, скалярным вложенным запросом, скалярной функцией или пользовательской переменной.  
+#### <a name="partition-by-value_expression"></a>PARTITION BY *value_expression*  
+ Определяет столбец, по которому секционируется набор строк. Аргумент *value_expression* может ссылаться только на столбцы, сделанные доступными с помощью предложения FROM. Аргумент *value_expression* не может ссылаться на выражения или псевдонимы в списке выбора. Выражение *value_expression* может быть выражением столбца, скалярным вложенным запросом, скалярной функцией или пользовательской переменной. 
+ 
+ ```sql
+ select 
+      object_id, type
+    , [min] = min(object_id) over(partition by type)
+    , [max] = max(object_id) over(partition by type)
+from sys.objects
+```
+
+|object_id | type | мин | max |
+|---|---|---|---|
+| 68195293  | PK    | 68195293  | 711673583 |
+| 631673298 | PK    | 68195293  | 711673583 |
+| 711673583 | PK    | 68195293  | 711673583 |
+| ... | ... | ... |
+| 3 | S | 3 | 98 |
+| 5 | S |   3   | 98 |
+| ... | ... | ... |
+| 98    | S |   3   | 98 |
+| ... | ... | ... |
   
- \<ORDER BY clause>  
- Определяет логический порядок строк в каждой секции результирующего набора. То есть он указывает логический порядок, в котором выполняется вычисление оконной функции.  
-  
+### <a name="order-by"></a>ORDER BY  
+
+```sqlsyntax
+ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]  
+```
+
+ Определяет логический порядок строк в каждой секции результирующего набора. То есть он указывает логический порядок, в котором выполняется вычисление оконной функции. 
+ - Если он не указан, то порядок по умолчанию — `ASC`, а оконная функция будет использовать все строки в секции.
+ - Если он указан, а аргумент ROWS/RANGE не указан, то по умолчанию используется `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` для фрейма окна теми функциями, которые могут принимать дополнительную спецификацию ROWS/RANGE (например, `min` или `max`). 
+ 
+```sql
+select 
+      object_id, type
+    , [min] = min(object_id) over(partition by type order by object_id)
+    , [max] = max(object_id) over(partition by type order by object_id)
+from sys.objects
+```
+
+|object_id | type | мин | max |
+|---|---|---|---|
+| 68195293  | PK    | 68195293  | 68195293 |
+| 631673298 | PK    | 68195293  | 631673298 |
+| 711673583 | PK    | 68195293  | 711673583 |
+| ... | ... | ... |
+| 3 | S | 3 | 3 |
+| 5 | S |   3 | 5 |
+| 6 | S |   3 | 6 |
+| ... | ... | ... |
+| 97    | S |   3 | 97 |
+| 98    | S |   3 | 98 |
+| ... | ... | ... |
+
+
  *order_by_expression*  
  Указывает столбец или выражение, по которому производится сортировка. Аргумент *order_by_expression* может ссылаться только на столбцы, сделанные доступными с помощью предложения FROM. Нельзя указывать целое число для обозначения имени или псевдонима столбца.  
   
@@ -128,17 +208,40 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  **ASC** | DESC  
  Указывает порядок сортировки значений в указанном столбце — по возрастанию или по убыванию. Порядок сортировки по умолчанию — ASC. Значения NULL рассматриваются как минимально возможные значения.  
   
- ROWS | RANGE  
+### <a name="rows-or-range"></a>ROWS или RANGE  
 **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  Еще больше ограничивает строки в пределах секции, указывая начальную и конечную точки. Это достигается путем указания диапазона строк в отношении текущей строки с помощью логических или физических взаимосвязей. Физическая взаимосвязь достигается с помощью предложения ROWS.  
   
  Предложение ROWS ограничивает строки внутри секции путем указания фиксированного числа строк, предшествующих или следующих после текущей строки. В качестве альтернативы предложение RANGE логически ограничивает строки внутри секции путем указания диапазона значений в отношении к значению текущей строки. Предшествующие и последующие строки определяются на основании порядка, заданного в предложении ORDER BY. Рамка окна "RANGE … CURRENT ROW ..." содержит все строки, которые имеют те же значения в выражении ORDER BY, что и в текущей строке. Например, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW означает, что окно строк, с которым работает функция, содержит всего три строки, при этом текущей строке предшествуют 2 строки (включая текущую).  
+ 
+```sql
+select
+      object_id
+    , [preceding]   = count(*) over(order by object_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW )
+    , [central] = count(*) over(order by object_id ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING )
+    , [following]   = count(*) over(order by object_id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
+from sys.objects
+order by object_id asc
+```
+
+|object_id | preceding | central | following |
+|---|---|---|---|
+| 3 | 1 | 3 | 156 |
+| 5 | 2 | 4 | 155 |
+| 6 | 3 | 5 | 154 |
+| 7 | 4 | 5 | 153 |
+| 8 | 5 | 5 | 152 |
+| ...   | ...   | ...   | ... |
+| 2112726579    | 153   | 5 | 4 |
+| 2119678599    | 154   | 5 | 3 |
+| 2123154609    | 155   | 4 | 2 |
+| 2139154666    | 156   | 3 | 1 | 
   
 > [!NOTE]  
 >  Предложения ROWS и RANGE требуют, чтобы было указано предложение ORDER BY. Если предложение ORDER BY содержит несколько выражений порядка, то CURRENT ROW FOR RANGE при определении текущей строки учитывает все столбцы в списке ORDER BY.  
   
- UNBOUNDED PRECEDING  
+#### <a name="unbounded-preceding"></a>UNBOUNDED PRECEDING  
 **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Указывает, что окно начинается с первой строки секции. UNBOUNDED PRECEDING может быть указано только как начальная точка окна.  
@@ -146,17 +249,20 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<unsigned value specification> PRECEDING  
  Указывается с \<unsigned value specification> для обозначения числа строк или значений перед текущей строкой. Эта спецификация не допускается в предложении RANGE.  
   
- CURRENT ROW  
+#### <a name="current-row"></a>CURRENT ROW  
 **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  Указывает, что окно начинается или заканчивается на текущей строке при использовании совместно с предложением ROWS или что окно заканчивается на текущем значении при использовании с предложением RANGE. CURRENT ROW может быть задана и как начальная, и как конечная точка.  
   
- BETWEEN \<window frame bound > AND \<window frame bound >  
+#### <a name="between-and"></a>BETWEEN AND  
 **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
+```sqlsyntax
+BETWEEN <window frame bound > AND <window frame bound >  
+```
  Используется совместно с предложением ROWS или RANGE для указания нижней (начальной) или верхней (конечной) граничной точки окна. \<window frame bound> определяет граничную начальную точку, а \<window frame bound> определяет граничную конечную точку. Верхняя граница не может быть меньше нижней границы.  
   
- UNBOUNDED FOLLOWING  
+#### <a name="unbounded-following"></a>UNBOUNDED FOLLOWING  
 **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  Указывает, что окно заканчивается на последней строке секции. UNBOUNDED FOLLOWING может быть указано только как конечная точка окна. Например, RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING определяет, что окно начинается на текущей строке и заканчивается на последней строке секции.  

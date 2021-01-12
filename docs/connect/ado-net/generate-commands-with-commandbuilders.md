@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 091f7c2736c240951beb0f434fdcd2efb39a9b59
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d738650db9dbb7b0b2ed3f9411945173f73f748f
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428304"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771329"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Создание команд с помощью CommandBuilder
 
@@ -39,9 +39,9 @@ ms.locfileid: "96428304"
 
 При наличии связи с `DataAdapter` объект <xref:System.Data.Common.DbCommandBuilder> автоматически создает свойства `InsertCommand`, `UpdateCommand` и `DeleteCommand` объекта `DataAdapter`, если они являются пустыми ссылками. Если для свойства уже существует `Command`, используется существующая `Command`.
 
-Представления базы данных, созданные соединением двух или более таблиц, не считаются одной таблицей базы данных. В этом экземпляре нельзя использовать <xref:System.Data.Common.DbCommandBuilder> для автоматического создания команд. Вам нужно явно указать свои команды.
+Представления базы данных, созданные соединением двух или более таблиц, не считаются одной таблицей базы данных. В этом экземпляре нельзя использовать <xref:System.Data.Common.DbCommandBuilder> для автоматического создания команд. Вам нужно явно указать свои команды. Сведения о явном задании команд для внесения обновлений, выполненных для `DataSet`, обратно в источник данных см. в статье [Обновление источников данных с помощью объектов DataAdapter](update-data-sources-with-dataadapters.md).
 
-Может потребоваться сопоставить выходные параметры с обновленной строкой `DataSet`. Одной общей задачей будет извлечение значения автоматически созданного поля идентификатора или временной метки из источника данных. <xref:System.Data.Common.DbCommandBuilder> по умолчанию не будет сопоставлять выходные параметры со столбцами обновленной строки. В этом экземпляре нужно явно указать команду.
+Может потребоваться сопоставить выходные параметры с обновленной строкой `DataSet`. Одной общей задачей будет извлечение значения автоматически созданного поля идентификатора или временной метки из источника данных. <xref:System.Data.Common.DbCommandBuilder> по умолчанию не будет сопоставлять выходные параметры со столбцами обновленной строки. В этом экземпляре нужно явно указать команду. Пример сопоставления автоматически созданного поля идентификатора со столбцом вставленной строки см. в статье [Получение значений идентификатора или автонумерации](retrieve-identity-or-autonumber-values.md).
 
 ## <a name="rules-for-automatically-generated-commands"></a>Правила для автоматически создаваемых команд
 
@@ -74,13 +74,13 @@ ms.locfileid: "96428304"
 
 Логика автоматического создания команд может дать сбой при наличии в именах столбцов или таблиц любых специальных символов, например пробелов, точек, двойных кавычек или других символов, отличных от буквенно-цифровых, даже отделенных квадратными скобками. В зависимости от поставщика, задавая параметры QuotePrefix и QuoteSuffix, можно дать возможность логике создания обрабатывать пробелы, но для специальных символов это не сработает. Поддерживаются полностью указанные имена таблиц в виде *catalog.schema.table*.
 
-## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Использование CommandBuilder для автоматического создания инструкции SQL
+## <a name="use-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Использование CommandBuilder для автоматического создания инструкции SQL
 
 Чтобы автоматически создать инструкции SQL для `DataAdapter`, сначала следует установить его свойство `SelectCommand`, затем создать объект `DataAdapter` и в качестве аргумента, для которого `CommandBuilder` автоматически создаст инструкции SQL, указать `DataAdapter`.
 
 [!code-csharp[SqlCommandBuilder_Create#1](~/../sqlclient/doc/samples/SqlCommandBuilder_Create.cs#1)]
 
-## <a name="modifying-the-selectcommand"></a>Изменение SelectCommand
+## <a name="modify-the-selectcommand"></a>Изменение SelectCommand
 
 При изменении свойства `CommandText`, принадлежащего свойству `SelectCommand`, после автоматического создания команд INSERT, UPDATE или DELETE может возникнуть исключение. Если измененное свойство `SelectCommand.CommandText` содержит сведения о схеме, которые не согласованы с используемыми `SelectCommand.CommandText` сведениями при автоматическом создании команд INSERT, UPDATE или DELETE, то последующие вызовы к методу `DataAdapter.Update` могут содержать попытки обращения к столбцам, которых больше нет в текущей таблице, на которую ссылается `SelectCommand`, и в этом случае возникнет исключение.
 
@@ -100,3 +100,4 @@ ms.locfileid: "96428304"
 
 - [Команды и параметры](commands-parameters.md)
 - [Выполнение команды](execute-command.md)
+- [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

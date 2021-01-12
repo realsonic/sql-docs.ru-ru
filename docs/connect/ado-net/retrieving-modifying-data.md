@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c3cf3766ffc6c8acf6025b58aa0adbaafafa2188
-ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
+ms.openlocfilehash: 4275b7de0f31d03aa36ef31d8801fcdc0e9ec853
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97038962"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771560"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Извлечение и изменение данных в ADO.NET
 
@@ -42,9 +42,35 @@ ms.locfileid: "97038962"
 [Объекты DataAdapter и DataReader](dataadapters-datareaders.md)  
 Содержит разделы, в которых описываются объекты DataReader, DataAdapter, параметры, обработка событий объекта и выполнение пакетных операций.
 
-[Транзакции и параллелизм](transactions-and-concurrency.md) Содержит разделы, в которых описывается выполнение локальных транзакций, распределенных транзакций и работа с оптимистичным параллелизмом.
+[Транзакции и параллельность](transactions-and-concurrency.md)  
+Содержит разделы, в которых описывается выполнение локальных транзакций, распределенных транзакций и работа с оптимистичным параллелизмом.
 
-[Извлечение сведений о схеме базы данных](retrieving-database-schema-information.md) Описывает получение доступных баз данных или каталогов, таблиц и представлений в базе данных, ограничений, существующих для таблиц, а также других сведений о схеме из источника данных.
+[Извлечение сведений о схеме базы данных](retrieving-database-schema-information.md)  
+Описывает получение доступных баз данных или каталогов, таблиц и представлений базы данных, существующих ограничений для таблиц и других сведений о схеме из источника данных.
+
+[DbProviderFactories](dbproviderfactories.md)  
+Описывается модель фабрики поставщика и демонстрируется использование базовых классов в пространстве имен `System.Data.Common`.  
+
+[Извлечение значений идентификаторов или автонумерации](retrieve-identity-or-autonumber-values.md)  
+Содержит пример сопоставления значений, созданных для столбца **identity** таблицы SQL Server, для столбца строки, вставленной в таблицу. Рассматривается слияние значений идентификаторов в объекте `DataTable`.  
+  
+[Извлечение двоичных данных](retrieve-binary-data.md)  
+Описание извлечения двоичных данных или крупных структур данных с помощью метода `CommandBehavior`.`SequentialAccess` для изменения поведения по умолчанию объекта `DataReader`.  
+  
+[Изменение данных с помощью хранимых процедур](modify-data-with-stored-procedures.md)  
+Описывается использование входных и выходных параметров хранимой процедуры для вставки строки в базу данных с возвратом нового значения идентификатора.  
+
+[Трассировка данных в SqlClient](data-tracing.md)  
+Описание того, как поставщик данных Microsoft SqlClient для SQL Server предоставляет встроенные функции трассировки данных.  
+  
+[Счетчики производительности в SqlClient](performance-counters.md)  
+Описание счетчиков производительности, доступных для поставщика данных Microsoft SqlClient для SQL Server.  
+  
+[Асинхронное программирование](asynchronous-programming.md)  
+Описание поддержки поставщика данных Microsoft SqlClient для SQL Server для асинхронного программирования.  
+  
+[Поддержка потоковой передачи в SqlClient](sqlclient-streaming-support.md)  
+Описывает, как создавать приложения, которые выполняют потоковую передачу данных из SQL Server без их полной загрузки в память.  
 
 ## <a name="see-also"></a>См. также
 

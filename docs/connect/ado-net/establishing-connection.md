@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: cb77d01ede16a6fa68aac6dcb49612ad8fd9a191
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: b3d92f49fb4eae6184a673ffc25ff6bbdf521626
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563089"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771596"
 ---
 # <a name="establishing-connection"></a>Установка подключения
 
@@ -27,7 +27,7 @@ ms.locfileid: "96563089"
 
 Для создания подключения к Microsoft SQL Server используется объект <xref:Microsoft.Data.SqlClient.SqlConnection> поставщика данных Microsoft SqlClient для SQL Server. Сведения о безопасном хранении и извлечении строк подключения см. в статье [Защита сведений о подключении](protecting-connection-information.md).
 
-## <a name="closing-connections"></a>Закрытие соединений
+## <a name="closing-connections"></a>Закрытие подключений
 
 Рекомендуется всегда закрывать соединение после использования, чтобы обеспечить его возврат в пул. Блок `Using` в Visual Basic или C# автоматически удаляет соединение при выходе в коде из блока даже при наличии необработанного исключения. Дополнительные сведения об операторе using см. [здесь](/dotnet/csharp/language-reference/keywords/using-statement) и [здесь](/dotnet/visual-basic/language-reference/statements/using-statement).
 
@@ -47,7 +47,7 @@ ms.locfileid: "96563089"
 
 [!code-csharp[SqlConnection.Open#1](~/../sqlclient/doc/samples/SqlConnection_Open.cs#1)]
 
-### <a name="integrated-security-and-aspnet"></a>Встроенная безопасность и ASP.NET
+### <a name="integrated-security-and-aspnet"></a>Встроенные функции безопасности и ASP.NET
 
 Встроенные функции безопасности (доверенные соединения) SQL Server помогают обеспечить защиту при подключении к SQL Server, позволяя не передавать идентификатор пользователя и пароль в строке подключения, поэтому именно этот метод проверки подлинности подключения рекомендуется к использованию. Встроенная безопасность основана на использовании текущего идентификатора безопасности, или маркера выполняемого процесса. Для классических приложений этим удостоверением обычно является идентификатор выполнившего вход пользователя.
 
@@ -57,3 +57,4 @@ ms.locfileid: "96563089"
 
 - [подключение к источнику данных](connecting-to-data-source.md);
 - [Строки подключения](connection-strings.md)
+- [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)

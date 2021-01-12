@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: e37d77304644d1adb50bb195dd32d4c4e1222c09
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 257ed7d43f8ab204c7c7e7575c69251be6f2efdf
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126499"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771639"
 ---
 # <a name="connection-strings-in-adonet"></a>Строки подключения в ADO.NET
 
@@ -69,9 +69,9 @@ Keyword=a=b=c
 
 Опечатки могут привести к ошибкам при подключении. Например, `Integrated Security=true` считается допустимым, а `IntegratedSecurity=true` вызовет ошибку.
 
-Строки соединения, создаваемые вручную во время выполнения по данным из непроверенных источников, вызывают уязвимость к атакам путем внедрения данных в строку и подвергают риску безопасность источника данных. Чтобы устранить эти проблемы, разработан [построитель строк подключения](connection-string-builders.md). Построитель строк подключения предоставляет параметры в виде строго типизированных свойств и позволяет проверить строку подключения перед отправкой в источник данных.
+Строки подключения, создаваемые вручную во время выполнения по данным из непроверенных источников, вызывают уязвимость к атакам путем внедрения данных в строку и подвергают риску безопасность источника данных. Для решения этих проблем был создан класс <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>. [Построитель строк подключения](connection-string-builders.md) предоставляет параметры в виде строго типизированных свойств и позволяет проверить строку подключения перед отправкой в источник данных.
 
-## <a name="in-this-section"></a>в этом разделе
+## <a name="in-this-section"></a>В этом разделе
 
 [Построитель строк подключения](connection-string-builders.md)\
 Здесь демонстрируется использование класса `ConnectionStringBuilder` для создания допустимых строк подключения во время выполнения.
@@ -84,3 +84,7 @@ Keyword=a=b=c
 
 [Защита сведений о подключении](protecting-connection-information.md)\
 Демонстрирует методы защиты сведений, используемых для подключения к источнику данных.
+
+## <a name="see-also"></a>См. также раздел
+
+- [Microsoft ADO.NET для SQL Server](microsoft-ado-net-sql-server.md)
