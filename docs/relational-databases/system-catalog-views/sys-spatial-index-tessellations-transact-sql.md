@@ -1,6 +1,6 @@
 ---
 description: sys.spatial_index_tessellations (Transact-SQL)
-title: sys. spatial_index_tessellations (Transact-SQL) | Документация Майкрософт
+title: sys.spatial_index_tessellations (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.spatial_index_tessellations catalog view
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 783c73ba514e348cd515929ae988c4097225ec5b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ddf7b9cd75999da6cc48f6e7a83bab7a733f822b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539501"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095425"
 ---
 # <a name="sysspatial_index_tessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89539501"
 
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|Идентификатор объекта, на котором определен индекс. Каждая пара (object_id, index_id) имеет соответствующую запись в [sys. spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md).|  
+|object_id|**int**|Идентификатор объекта, на котором определен индекс. Каждая пара (object_id, index_id) имеет соответствующую запись в [sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md).|  
 |index_id|**int**|Идентификатор пространственного индекса, в котором определен столбец.|  
 |tessellation_scheme|**sysname**|Имя схемы тесселяции, одно из следующих: GEOMETRY_GRID, GEOGRAPHY_GRID|  
 |bounding_box_xmin|**float(53)**|Координата по оси x левого нижнего угла ограничивающего прямоугольника: значение NULL = неприменимо для данной схемы тесселяции (например, GEOGRAPHY_GRID) *n* = если tessellation_scheme GEOMETRY_GRID, значение координаты x-min.                     **Примечание.** Координаты, определенные параметрами ограничивающего прямоугольника, обрабатываются для каждого объекта в соответствии с его [идентификатором пространственной ссылки (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).|  
@@ -58,7 +58,7 @@ ms.locfileid: "89539501"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysarticlecolumns system table
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 142ed0bfaad34607422b69929450ae9f7b09bd9e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8e6a7f9bcc3a7c300366a761564c45465988d60a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540234"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094705"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89540234"
 |**is_xml**|**bit**|Указывает, является ли столбец **XML-** столбцом. Значение **1** указывает на XML-столбец.|  
 |**is_max**|**bit**|Указывает, является ли столбец столбцом типа данных больших значений, **varchar (max)**, **nvarchar (max)** и **varbinary (max)**. Значение **1** указывает на столбец с большим значением.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

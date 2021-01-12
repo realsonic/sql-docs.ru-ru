@@ -1,6 +1,6 @@
 ---
 description: sys.dm_repl_articles (Transact-SQL)
-title: sys. dm_repl_articles (Transact-SQL) | Документация Майкрософт
+title: sys.dm_repl_articles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ab0bd4b6ff2f862b292f78d9927536c2f9d2be6b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 34151e89476ae62cdcce719b676477b9659ae3b4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537028"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096480"
 ---
 # <a name="sysdm_repl_articles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,12 +66,12 @@ ms.locfileid: "89537028"
 |**intPublicationOptions**|**bigint**|Битовая карта, указывающая дополнительные параметры публикации, со следующими необязательными значениями битов:<br /><br /> **0x1** — включается для одноранговой репликации.<br /><br /> **0x2** — публиковать только локальные изменения.<br /><br /> **0x4** — включено для подписчиков, отличных от SQL Server.|  
   
 ## <a name="permissions"></a>Разрешения  
- Для вызова **dm_repl_articles**требуется разрешение на просмотр состояния базы данных публикации.  
+ Для вызова **dm_repl_articles** требуется разрешение на просмотр состояния базы данных публикации.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Возвращаются сведения только по реплицируемым объектам базы данных, которые загружены в кэш статей репликации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с репликацией &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   

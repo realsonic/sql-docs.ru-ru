@@ -22,14 +22,14 @@ helpviewer_keywords:
 - compatibility [SQL Server], system tables
 - user IDs [SQL Server]
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 3eb92654dfb25a0e66d2e071040e487e6a404366
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7ba0c3b5c023d1d2b6a3d025de7f96f49a4b3c1a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482059"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095311"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Системные представления совместимости (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88482059"
   
  Пример. Если пользователь создает пользовательскую таблицу с именем **syslanguages** в пользовательской базе данных, в SQL Server 2008 инструкция `SELECT * from dbo.syslanguages;` в этой базе данных будет возвращать значения из пользовательской таблицы. Начиная с SQL Server 2012, такой подход возвратит данные из системного представления **sys.sysязыков**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   

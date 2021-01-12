@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshotdeliveryprogress system table
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 733f82a23c61d41691c3845b2482a0aa0c3c2bcc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b95ea6af571cc4691850ae73619a765668aa6669
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540216"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094764"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89540216"
 |**progress_token**|**nvarchar (500)**|Определяет успешно доставленный файл; значение является сочетанием имени файла и пути.|  
 |**progress_timestamp**|**datetime**|Значение **типа DateTime** , указывающее, когда файл моментального снимка был успешно доставлен.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

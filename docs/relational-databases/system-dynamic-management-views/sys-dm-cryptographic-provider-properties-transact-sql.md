@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_properties dynamic management view
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 419793e94cc85a8dba1e29f4b79694820518eaad
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: bf565e0ace07c592a5ae345b7e9b2d04c3aff23d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384682"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095231"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "94384682"
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|Идентификационный номер поставщика служб шифрования.|  
 |guid|**uniqueidentifier**|Глобальный уникальный идентификатор поставщика (GUID).|  
-|provider_version|**nvarchar(256)**|Версия поставщика в формате " *AA.BB.CCCC.dd* ".|  
-|sqlcrypt_version|**nvarchar(256)**|Основной номер версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API шифрования в формате " *AA.BB.CCCC.dd* ".|  
+|provider_version|**nvarchar(256)**|Версия поставщика в формате "*AA.BB.CCCC.dd*".|  
+|sqlcrypt_version|**nvarchar(256)**|Основной номер версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API шифрования в формате "*AA.BB.CCCC.dd*".|  
 |friendly_name|**nvarchar (2048)**|Имя введено поставщиком.|  
 |authentication_type|**nvarchar(256)**|WINDOWS, BASIC или OTHER.|  
 |symmetric_key_support|**tinyint**|0 (не поддерживается)<br /><br /> 1 (поддерживается)|  

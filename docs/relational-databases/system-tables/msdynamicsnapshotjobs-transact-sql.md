@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdynamicsnapshotjobs system table
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2767813f713d8970693789add7e4ab7baa451620
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: aadba278ff96ed4b9102ad748f86865e6072c2f0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547146"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094797"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89547146"
 |**dynamic_snapshot_location**|**nvarchar(255)**|Путь к папке, откуда будут считываться файлы моментального снимка, если используется моментальный снимок отфильтрованных данных.|  
 |**partition_id**|**int**|Идентификатор секции данных, которой принадлежит задание.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xtp_system_memory_consumers (Transact-SQL)
-title: sys. dm_xtp_system_memory_consumers (Transact-SQL) | Документация Майкрософт
+title: sys.dm_xtp_system_memory_consumers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e998b531c867d78bbf27bff516aaecda6f7f9f88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 20edce0accbe4549b5c109b8d6958fd742cd4ede
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543799"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096411"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,10 +49,10 @@ select * from sys.dm_xtp_system_memory_consumers
 |allocated_bytes|**bigint**|Число байтов, зарезервированных для этого потребителя памяти.|  
 |used_bytes|**bigint**|Число байтов, используемых этим потребителем. Применимо только для потребителей памяти varheap.|  
 |allocation_count|**int**|Количество выделений.|  
-|partition_count|**int**|Только для внутреннего применения.|  
-|sizeclass_count|**int**|Только для внутреннего применения.|  
-|min_sizeclass|**int**|Только для внутреннего применения.|  
-|max_sizeclass|**int**|Только для внутреннего применения.|  
+|partition_count|**int**|Только для внутреннего использования.|  
+|sizeclass_count|**int**|Только для внутреннего использования.|  
+|min_sizeclass|**int**|Только для внутреннего использования.|  
+|max_sizeclass|**int**|Только для внутреннего использования.|  
 |memory_consumer_address|**varbinary**|Внутренний адрес потребителя памяти.|  
   
 ## <a name="permissions"></a>Разрешения  

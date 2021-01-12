@@ -17,14 +17,14 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e59789c2d4de9174a43b34881e7b45a914cfd2c3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8c9086ca4c3c97b9a10cd9d460eaf69408373551
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525650"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096321"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89525650"
 |**first_media_number**|**smallint**|Номер носителя для первого носителя, содержащего данный файл резервной копии. Может иметь значение NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Имя файловой группы, содержащей резервную копию файла базы данных. Может иметь значение NULL.|  
 |**page_size**|**int**|Размер страницы в байтах.|  
-|**file_number**|**numeric (10, 0)**|Идентификационный номер файла уникален в пределах базы данных (соответствует **sys. database_files**.** file_id**).|  
+|**file_number**|**numeric (10, 0)**|Идентификационный номер файла, уникальный в пределах базы данных (соответствует **sys.database_files**.**file_id**).|  
 |**backed_up_page_count**|**numeric (10, 0)**|Количество страниц, для которых были созданы резервные копии. Может иметь значение NULL.|  
 |**file_type**|**char(1)**|Была создана резервная копия одного из файлов:<br /><br /> D = файл данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];<br /><br /> L = журнал [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];<br /><br /> F = полнотекстовый каталог.<br /><br /> Может иметь значение NULL.|  
 |**source_file_block_size**|**numeric (10, 0)**|Устройство, на котором во время создания резервной копии хранились первоначальные данные или журнальный файл. Может иметь значение NULL.|  
@@ -60,12 +60,12 @@ ms.locfileid: "89525650"
 |**is_readonly**|**bit**|1 = файл только для чтения.|  
 |**is_present**|**bit**|1 = файл содержится в резервном наборе данных.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбцы таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   

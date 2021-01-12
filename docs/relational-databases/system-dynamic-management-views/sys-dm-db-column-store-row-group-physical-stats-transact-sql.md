@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - dm_db_column_store_row_group_physical_stats
 - sys.dm_db_column_store_row_group_physical_stats dynamic management view
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddbed928d4d7ef379b7d4c164ffcc150f035b8d4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0c1b5bd85e22c4876004b000c5cc41f9f120d681
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475045"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095209"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
@@ -53,7 +53,7 @@ ms.locfileid: "97475045"
 |**trim_reason_desc**|**nvarchar(60)**|Описание *trim_reason*.<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION: произошла ошибка при обновлении предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> 1 — NO_TRIM: группа строк не обрезается. Группа строк была сжата до 1 048 576 строк.  Число строк может быть меньше, если подмножество строк было удалено после закрытия разностного группы строк<br /><br /> 2 — BULKLOAD: размер пакета массовой загрузки ограничен количеством строк.<br /><br /> 3 — REORG: принудительное сжатие в составе команды REORG.<br /><br /> 4 — DICTIONARY_SIZE: размер словаря слишком велик для сжатия всех строк вместе.<br /><br /> 5 — MEMORY_LIMITATION: недостаточно свободной памяти для сжатия всех строк.<br /><br /> 6-RESIDUAL_ROW_GROUP: закрывается как часть последней группы строк со строками < 1 000 000 во время операции построения индекса<br /><br /> 7 — STATS_MISMATCH: только для columnstore в таблице в памяти. Если статистика неправильно указывает >= 1 000 000 уточняющих строк в заключительном фрагменте, но было обнаружено меньшее число, сжатая группы строк будет содержать < 1 000 000 строк.<br /><br /> 8-ПЕРЕБРОСКИ: только для columnstore в таблице в памяти. Если в хвосте имеется > 1 000 000 подходящих строк, то оставшиеся строки оставшихся пакетов сжимаются, если число составляет от 100 КБ до 1 000 000<br /><br /> 9 — AUTO_MERGE: операция слияния кортежей, выполняемая в фоновом режиме, объединяет один или несколько групп строк в этот группы строк.|  
 |**transition_to_compressed_state**|tinyint|Показывает, как этот группы строк был перемещен из deltastore в сжатое состояние в columnstore.<br /><br /> 1 — NOT_APPLICABLE<br /><br /> 2 — INDEX_BUILD<br /><br /> 3 — TUPLE_MOVER<br /><br /> 4 — REORG_NORMAL<br /><br /> 5 — REORG_FORCED<br /><br /> 6 — BULKLOAD<br /><br /> 7. СЛИЯНИЕ|  
 |**transition_to_compressed_state_desc**|nvarchar(60)| 1 — NOT_APPLICABLE — операция не применяется к deltastore. Или группы строк был сжат до обновления до, в этом [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] случае журнал не сохраняется.<br /><br /> 2 — INDEX_BUILD — при создании индекса или перестроении индекса сжат группы строк.<br /><br /> 3 — TUPLE_MOVER — компонент перемещения кортежей, работающий в фоновом режиме, сжимает группы строк. Перемещение кортежей происходит после того, как состояние группы строк изменится с OPEN на CLOSED.<br /><br /> 4 — REORG_NORMAL — операция реорганизации, ALTER INDEX... REORG, перемещен закрытый группы строк из deltastore в columnstore. Это произошло до того, как в процессе перемещения по кортежам пришло время на перемещение группы строк.<br /><br /> 5 — REORG_FORCED — этот группы строк был открыт в deltastore и был принудительно передан в columnstore до того, как он имел полное число строк.<br /><br /> 6. BULKLOAD. операция массовой загрузки сжимает группы строк напрямую без использования deltastore.<br /><br /> 7 — MERGE — операция слияния объединяет один или несколько групп строк в этот группы строк, а затем выполняет сжатие columnstore.|  
-|**has_vertipaq_optimization**|bit|Оптимизация VertiPaq улучшает сжатие columnstore путем изменения порядка строк в группы строк для достижения более высокого сжатия. В большинстве случаев такая оптимизация выполняется автоматически. В двух случаях оптимизация VertiPaq не используется:<br/>  а. Если Дельта-группы строк перемещается в columnstore и имеется один или несколько некластеризованных индексов в индексе columnstore, то оптимизация VertiPaq пропускается для сворачивания изменений в индексе сопоставления.<br/> b. для индексов columnstore в таблицах, оптимизированных для памяти. <br /><br /> 0 = нет<br /><br /> 1 = да|  
+|**has_vertipaq_optimization**|bit|Оптимизация VertiPaq улучшает сжатие columnstore путем изменения порядка строк в группы строк для достижения более высокого сжатия. В большинстве случаев такая оптимизация выполняется автоматически. В двух случаях оптимизация VertiPaq не используется:<br/>  a. Если Дельта-группы строк перемещается в columnstore и имеется один или несколько некластеризованных индексов в индексе columnstore, то оптимизация VertiPaq пропускается для сворачивания изменений в индексе сопоставления.<br/> b. для индексов columnstore в таблицах, оптимизированных для памяти. <br /><br /> 0 = нет<br /><br /> 1 = да|  
 |**поколения**|BIGINT|Создание группы строк, связанной с этой группой строк.|  
 |**created_time**|datetime2|Время создания группы строк.<br /><br /> NULL — для индекса columnstore в таблице в памяти.|  
 |**closed_time**|datetime2|Время, когда группы строк был закрыт.<br /><br /> NULL — для индекса columnstore в таблице в памяти.|  

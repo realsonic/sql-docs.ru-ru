@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7f89db526d638a6e934e8db7ac791875b467e487
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: eaea0060136a928e6fab1184c9fd0c08d88df09f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544654"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094904"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Таблицы приложений уровня данных — sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89544654"
 |**dac_object_type**|**tinyint**|Идентификатор типа объекта, на который влияет действие:<br /><br /> **0** = DACPAC<br /><br /> **1** = имя входа<br /><br /> **2** = база данных|  
 |**dac_object_type_name**|**varchar (8)**|Имя типа объекта, на который влияет действие:<br /><br /> **DACPAC** = экземпляр DAC<br /><br /> **пользователей**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Код, отображающий текущее состояние действия:<br /><br /> **0** = ожидание<br /><br /> **1** = успешное завершение<br /><br /> **2** = сбой|  
-|**action_status_name**|**varchar (11)**|Текущее состояние действия:<br /><br /> **ожидание**<br /><br /> **загрузоч**<br /><br /> **Cчетчик**|  
+|**action_status_name**|**varchar (11)**|Текущее состояние действия:<br /><br /> **состоянии**<br /><br /> **загрузоч**<br /><br /> **Cчетчик**|  
 |**Обязательное**|**bit**|Используется компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] при откате операции DAC.|  
 |**dac_object_name_pretran**|**sysname**|Имя объекта до транзакции, содержащей действие, выделено. Используется только для баз данных и имен входа.|  
 |**dac_object_name_posttran**|**sysname**|Имя объекта после транзакции, содержащей действие, выделено. Используется только для баз данных и имен входа.|  
@@ -52,7 +52,7 @@ ms.locfileid: "89544654"
 |**date_created**|**datetime**|Дата и время создания записи.|  
 |**date_modified**|**datetime**|Дата и время последнего изменения записи.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Управляющие действия DAC, такие как развертывание или удаление DAC, создают несколько этапов. Каждому из действий присваивается идентификатор действия. Каждому шагу присваивается порядковый номер и строка в **sysdac_history_internal**, где записывается состояние шага. Каждая строка создается при запуске этапа действия и обновляется по мере необходимости для отражения состояния операции. Например, действие Deploy DAC может быть назначено **action_id** 12 и получать четыре строки в **sysdac_history_internal**:  
   
 | action_id | sequence_id | action_type_name | dac_object_type_name |

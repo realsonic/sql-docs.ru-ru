@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_plan (Transact-SQL)
-title: sys. dm_exec_query_plan (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_query_plan (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 741cfebb7eb50e37512a5778691ab61700f9d98e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 18d6e4e8e3c6fe097676d1bf65f337610127566a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548565"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094130"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,9 +53,9 @@ sys.dm_exec_query_plan(plan_handle)
   
 -   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -67,30 +67,30 @@ sys.dm_exec_query_plan(plan_handle)
 |**Шифрование**|**bit**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
 |**query_plan**|**xml**|Содержит представление Showplan времени компиляции для плана выполнения запроса, указанного в *plan_handle*. Представление Showplan имеет формат XML. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  При следующих условиях вывод инструкции Showplan не возвращается в столбец **query_plan** возвращаемой таблицы для функции **sys.dm_exec_query_plan**.  
   
 -   Если план запроса, указанный с помощью *plan_handle* , был исключен из кэша планов, то **query_plan** столбец возвращаемой таблицы имеет значение null. Например, такое условие может возникнуть при наличии задержки между принятием и использованием дескриптора плана функцией **sys.dm_exec_query_plan**.  
   
 -   Некоторые инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] не кэшируются, к ним относятся инструкции массовых операций, а также инструкции, содержащие строковые литералы размером более 8 КБ. Для таких инструкций нельзя получить представление Showplan в формате XML, используя функцию **sys.dm_exec_query_plan**, если пакет не выполняется в данный момент, потому что они не существуют в кэше.  
   
--   Если [!INCLUDE[tsql](../../includes/tsql-md.md)] пакет или хранимая процедура содержит вызов пользовательской функции или вызов динамического SQL, например с помощью exec (*String*), скомпилированный XML Showplan для определяемой пользователем функции не включается в таблицу, возвращенную **sys. dm_exec_query_plan** для пакета или хранимой процедуры. Вместо этого необходимо выполнить отдельный вызов **sys. dm_exec_query_plan** для маркера плана, соответствующего определяемой пользователем функции.  
+-   Если [!INCLUDE[tsql](../../includes/tsql-md.md)] пакет или хранимая процедура содержит вызов пользовательской функции или вызов динамического SQL, например с помощью exec (*String*), скомпилированный XML Showplan для определяемой пользователем функции не включается в таблицу, возвращенную **sys.dm_exec_query_plan** для пакета или хранимой процедуры. Вместо этого необходимо выполнить отдельный вызов **sys.dm_exec_query_plan** для маркера плана, соответствующего определяемой пользователем функции.  
   
  Если нерегламентированный запрос использует простую или принудительную параметризацию, столбец **query_plan** будет содержать только текст инструкции, а не фактический план запроса. Чтобы вернуть план запроса, вызовите функцию **sys.dm_exec_query_plan** для дескриптора плана подготовленного параметризированного запроса. Можно определить параметризацию запроса посредством ссылки на столбец **sql** представления [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) или текстовый столбец динамического административного представления [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
 > [!NOTE] 
-> Из-за ограничения количества вложенных уровней, разрешенных в типе данных **XML** , **sys. dm_exec_query_plan** не может возвращать планы запросов, которые соответствуют или превышают 128 уровней вложенных элементов. В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это условие предназначалось для предотвращения возврата плана запроса и формирования ошибки 6335. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пакетах обновления 2 (SP2) и более поздних версиях столбец **query_plan** возвращает значение null.   
-> Для возврата выходных данных плана запроса в текстовом формате можно использовать функцию динамического управления [&#41;Transact-SQL &#40;инструкции sys. dm_exec_text_query_plan ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) .  
+> Из-за ограничения количества вложенных уровней, разрешенных в типе данных **XML** , **sys.dm_exec_query_plan** не может возвращать планы запросов, которые соответствуют или превышают 128 уровней вложенных элементов. В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это условие предназначалось для предотвращения возврата плана запроса и формирования ошибки 6335. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пакетах обновления 2 (SP2) и более поздних версиях столбец **query_plan** возвращает значение null.   
+> Для возврата выходных данных плана запроса в текстовом формате можно использовать функцию динамического управления [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) .  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения **sys. dm_exec_query_plan**пользователь должен быть членом предопределенной роли сервера **sysadmin** или иметь `VIEW SERVER STATE` разрешение на сервере.  
+ Для выполнения **sys.dm_exec_query_plan** пользователь должен быть членом предопределенной роли сервера **sysadmin** или иметь `VIEW SERVER STATE` разрешение на сервере.  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах показано использование динамического административного представления **sys.dm_exec_query_plan**.  
   
  Чтобы просмотреть представление Showplan в формате XML, необходимо выполнить следующие запросы в редакторе запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем щелкнуть элемент **ShowPlanXML** в столбце **query_plan** таблицы, возвращаемой функцией **sys.dm_exec_query_plan**. Представление Showplan в формате XML отображается на сводной панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Чтобы сохранить XML Showplan в файл, щелкните правой кнопкой мыши **ShowPlanXML** в столбце **query_plan** , выберите команду **сохранить результаты как**, назовите файл в формате \<*file_name*> . sqlplan, например миксмлшовплан. sqlplan.  
   
-### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>А. Получение кэшированного плана запроса для медленно выполняемого запроса или пакета Transact-SQL  
+### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Получение кэшированного плана запроса для медленно выполняемого запроса или пакета Transact-SQL  
  Планы запросов для различных типов пакетов [!INCLUDE[tsql](../../includes/tsql-md.md)], в том числе нерегламентированных пакетов, хранимых процедур и определяемых пользователем функций, кэшируются в области памяти, называемой кэшем планов. Каждый кэшированный план запроса идентифицируется при помощи уникального идентификатора, дескриптора плана. Чтобы получить план выполнения для определенного запроса или пакета [!INCLUDE[tsql](../../includes/tsql-md.md)], можно указать дескриптор плана при помощи динамического административного представления **sys.dm_exec_query_plan**.  
   
  Если запрос или пакет [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняется длительное время при определенном соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то для определения причины задержки необходимо получить план выполнения для этого запроса или пакета. В следующем примере показано, как получить представление Showplan в формате XML для медленно выполняемого запроса или пакета.  
@@ -117,7 +117,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- Таблица, возвращаемая **sys. dm_exec_requests** указывает, что обработчик плана для замедляют выполнение запроса или пакета имеет значение `0x06000100A27E7C1FA821B10600` , которое можно указать в качестве аргумента *plan_handle* с `sys.dm_exec_query_plan` целью получения плана выполнения в формате XML, как показано ниже. План выполнения в формате XML для медленно выполняемых запросов или пакетов содержится в столбце **query_plan** таблицы, возвращаемой функцией `sys.dm_exec_query_plan`.  
+ Таблица, возвращаемая **sys.dm_exec_requests** указывает, что обработчик плана для замедляют выполнение запроса или пакета имеет значение `0x06000100A27E7C1FA821B10600` , которое можно указать в качестве аргумента *plan_handle* с `sys.dm_exec_query_plan` целью получения плана выполнения в формате XML, как показано ниже. План выполнения в формате XML для медленно выполняемых запросов или пакетов содержится в столбце **query_plan** таблицы, возвращаемой функцией `sys.dm_exec_query_plan`.  
   
 ```sql  
 USE master;  
@@ -163,13 +163,13 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   
- [sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 description: sys.server_event_session_fields (Transact-SQL)
-title: sys. server_event_session_fields (Transact-SQL) | Документация Майкрософт
+title: sys.server_event_session_fields (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_session_fields catalog view
 - xe
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 18849b0e5a3911022e90a6f9a768fbbb7e921729
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 3f4ba8d7351e0db020a66b35ea9ad1a9048791e2
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551414"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094482"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "89551414"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Это представление имеет следующее количество элементов связей.  
   
-| Исходный тип | Кому | Связь |
+| От | Кому | Relationship |
 | ---- | -- | ------------ |
-|sys.server_event_session_actions.event_session_id|sys. server_event_sessions. event_session_id|Многие к одному|  
+|sys.server_event_session_actions.event_session_id|sys.server_event_sessions sys.server_event_sessions.event_session_id|Многие к одному|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.object_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|Многие к одному|  
 |sys.server_event_session_actions.event_session_id<br /><br /> sys.server_event_session_actions.object_id|sys.server_event_session_targets.event_session_id<br /><br /> sys.server_event_session_targets.target_id|Многие к одному|  
   

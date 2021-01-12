@@ -1,6 +1,6 @@
 ---
 description: sys.tcp_endpoints (Transact-SQL)
-title: sys. tcp_endpoints (Transact-SQL) | Документация Майкрософт
+title: sys.tcp_endpoints (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.tcp_endpoints catalog view
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0b6a262bad2d897725d625df592f5a6a8b712a6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f5717389606bb3b73dc95c6a7eaedd6e03312cfd
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545014"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094434"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Содержит по одной строке для каждой из конечных точек TCP, имеющихся в системе. Конечные точки, описанные в статье **sys. tcp_endpoints** , предоставляют объект для предоставления и отзыва привилегий подключения. Отображаемые сведения о портах и IP-адресах не используются для настройки протоколов и могут не соответствовать фактической конфигурации протоколов. Для просмотра и настройки протоколов следует использовать диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Содержит по одной строке для каждой из конечных точек TCP, имеющихся в системе. Конечные точки, описанные **sys.tcp_endpoints** , предоставляют объект для предоставления и отзыва привилегий подключения. Отображаемые сведения о портах и IP-адресах не используются для настройки протоколов и могут не соответствовать фактической конфигурации протоколов. Для просмотра и настройки протоколов следует использовать диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
 |Имя столбца|Тип данных|Описание|  
@@ -40,7 +40,7 @@ ms.locfileid: "89545014"
 |**is_dynamic_port**|bit|1 = Номер порта назначается динамически.<br /><br /> Не допускает значение NULL.|  
 |**ip_address**|**nvarchar (45)**|IP-адрес средства прослушивания, указанный в предложении LISTENER_IP. Допускает значение NULL.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Выполните следующий запрос для сбора сведений о конечных точках и соединениях. Конечные точки без текущих соединений или соединений TCP будут отображены со значениями NULL. Добавьте предложение **WHERE** , `WHERE des.session_id = @@SPID` чтобы получить сведения о текущем соединении.  
   
 ```  
@@ -59,7 +59,7 @@ LEFT JOIN sys.dm_exec_connections AS dec
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога конечных точек (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   

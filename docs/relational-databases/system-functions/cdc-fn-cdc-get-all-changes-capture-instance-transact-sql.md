@@ -1,6 +1,6 @@
 ---
-description: CDC. fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (TRANSACT-SQL)
-title: CDC. fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (TRANSACT-SQL) | Документация Майкрософт
+description: '&lt;capture_instance CDC.fn_cdc_get_all_changes_ &gt; (TRANSACT-SQL)'
+title: cdc.fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (TRANSACT-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_all_changes_<capture_instance>
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: aa461859dcc7d2adc359139e4740ea9272161bf8
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8bb04e74ab2dd613173bf194fe4ca5412d79ac7e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989947"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095044"
 ---
-# <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>CDC. fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (TRANSACT-SQL)
+# <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>&lt;capture_instance CDC.fn_cdc_get_all_changes_ &gt; (TRANSACT-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает одну строку для каждого изменения в исходной таблице в заданном диапазоне номеров LSN. Если за истекший период исходная строка претерпевала несколько изменений, в результирующем наборе отображается каждое из них. Помимо данных об изменениях, результирующий набор содержит четыре столбца метаданных, предоставляющих информацию, необходимую для применения изменений к другим источникам данных. Параметры фильтрации строк управляют как содержимым столбцов метаданных, так и строк, возвращаемых в результирующем наборе. Если параметру фильтрации строк присвоено значение «all», то каждое изменение фиксируется в виде отдельной строки. Если указан параметр «all update old», операции обновления представлены в виде двух строк: одна содержит значения отслеживаемых столбцов до обновления, другая содержит значения отслеживаемых столбцов после обновления.  
   
- Данная функция перечисления создается, если для исходной таблицы включена система отслеживания измененных данных. Имя функции является производным и использует формат **CDC. fn_cdc_get_all_changes_**_capture_instance_ , где *capture_instance* — значение, заданное для экземпляра системы отслеживания, когда в исходной таблице включена система отслеживания измененных данных.  
+ Данная функция перечисления создается, если для исходной таблицы включена система отслеживания измененных данных. Имя функции является производным и использует формат **cdc.fn_cdc_get_all_changes_**_capture_instance_ где *capture_instance* — значение, заданное для экземпляра системы отслеживания, когда в исходной таблице включена система отслеживания измененных данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,10 +80,10 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** . Всем остальным пользователям необходимо разрешение SELECT для всех отслеживаемых столбцов в исходной таблице. Кроме того, если для экземпляра отслеживания была определена шлюзовая роль, требуется членство в этой роли базы данных. Если вызывающий объект не имеет разрешения на просмотр исходных данных, функция возвращает ошибку 229 ("разрешение SELECT было отклонено для объекта" fn_cdc_get_all_changes_... ", база данных" \<DatabaseName> ", схема" CDC ".").  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если указанный диапазон номеров LSN выходит за пределы временной шкалы отслеживания изменений в экземпляре системы отслеживания, то функция возвращает ошибку 208 (Для процедуры или функции cdc.fn_cdc_get_all_changes указано недостаточное количество аргументов).  
   
- Столбцам типа данных **Image**, **Text**и **ntext** всегда присваивается значение null, если **__ $ operation** = 1 или **__ $ operation** = 3. Столбцам типа данных **varbinary (max)**, **varchar (max)** или **nvarchar (max)** присваивается значение null, если **__ $ operation** = 3, если столбец не изменился во время обновления. Когда **__ $ operation** = 1, этим столбцам присваиваются значения во время удаления. Вычисляемые столбцы, которые включены в экземпляр системы отслеживания, всегда имеют значение NULL.  
+ Столбцам типа данных **Image**, **Text** и **ntext** всегда присваивается значение null, если **__ $ operation** = 1 или **__ $ operation** = 3. Столбцам типа данных **varbinary (max)**, **varchar (max)** или **nvarchar (max)** присваивается значение null, если **__ $ operation** = 3, если столбец не изменился во время обновления. Когда **__ $ operation** = 1, этим столбцам присваиваются значения во время удаления. Вычисляемые столбцы, которые включены в экземпляр системы отслеживания, всегда имеют значение NULL.  
   
 ## <a name="examples"></a>Примеры  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Доступно несколько шаблонов, демонстрирующих использование функций запросов системы отслеживания измененных данных. Эти шаблоны доступны в меню **вид** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Дополнительные сведения см. в разделе [Обозреватель шаблонов](../../ssms/template/template-explorer.md).  
@@ -106,11 +106,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys. fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys. sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
- [sys. sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
+ [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [Об отслеживании измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

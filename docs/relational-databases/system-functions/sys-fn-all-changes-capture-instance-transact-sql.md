@@ -1,6 +1,6 @@
 ---
-description: sys. fn_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
-title: sys. fn_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Документация Майкрософт
+description: '&lt;capture_instance sys.fn_all_changes_ &gt; (TRANSACT-SQL)'
+title: sys.fn_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - fn_all_changes_<capture_instance>
 - sys.fn_all_changes_<capture_instance>
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: e091db783b29a767a5f1f762dbbc037a878ce8a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c1b411daa6ccdfdb34da1a9560520416e26e1191
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486347"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096485"
 ---
-# <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
+# <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>&lt;capture_instance sys.fn_all_changes_ &gt; (TRANSACT-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Оболочки для всех функций запроса **изменений** . Скрипты, необходимые для создания этих функций, создаются хранимой процедурой sys.sp_cdc_generate_wrapper_function.  
@@ -59,7 +59,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
  *end_time*  
  Значение **DateTime** , представляющее верхнюю конечную точку диапазона записей таблицы изменений, включаемых в результирующий набор.  
   
- Этот параметр может принимать одно из двух возможных значений в зависимости от значения, выбранного @closed_high_end_point при вызове sys. sp_cdc_generate_wrapper_function для создания скрипта создания для функции-оболочки:  
+ Этот параметр может принимать одно из двух возможных значений в зависимости от значения, выбранного для, @closed_high_end_point когда вызывается sys.sp_cdc_generate_wrapper_function для создания скрипта создания для функции-оболочки:  
   
 -   @closed_high_end_point = 1  
   
@@ -67,7 +67,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 -   @closed_high_end_point = 0  
   
-     В результирующий набор включаются только строки в таблице изменений CDC. capture_instance_CT, имеющие связанное время фиксации строго меньше end_time.  
+     В результирующий набор включаются только строки в таблице изменений cdc.capture_instance_CT, которые имеют связанное время фиксации строго меньше end_time.  
   
  Если для этого аргумента задано значение NULL, верхняя конечная точка диапазона запроса будет соответствовать верхней конечной точке допустимого диапазона для экземпляра системы отслеживания.  
   
@@ -88,12 +88,12 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|Номер LSN-фиксации транзакции, связанный с этим изменением. Все изменения, зафиксированные в одной транзакции, имеют общий номер LSN-фиксации.|  
 |__CDC_SEQVAL|**binary(10)**|Значение последовательности, используемое для упорядочивания изменений строк в пределах транзакции.|  
-|\<columns from @column_list>|**непостоянно**|Столбцы, определенные в аргументе *column_list* , для sp_cdc_generate_wrapper_function при вызове для создания скрипта, создающего функцию-оболочку.|  
+|\<columns from @column_list>|**различать**|Столбцы, определенные в аргументе *column_list* , для sp_cdc_generate_wrapper_function при вызове для создания скрипта, создающего функцию-оболочку.|  
 |__CDC_OPERATION|**nvarchar (2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Он будет изменяться в зависимости от значения аргумента *row_filter_option* , переданного в вызове:<br /><br /> *row_filter_option* = ' ALL '<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> *row_filter_option* = "все обновление Old"<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> «UO» — старые значения операции обновления|  
 |\<columns from @update_flag_list>|**bit**|Битовый флаг, имя которого образуется добавлением «_uflag» к имени столбца. Флаг всегда имеет значение NULL, если \_ _CDC_OPERATION равно "," I ", из" «UO» ". Если значение \_ _CDC_OPERATION "UN", оно устанавливается в значение 1, если обновление вызвало изменение в соответствующем столбце. В противном случае флагу присваивается значение 0.|  
   
 ## <a name="remarks"></a>Комментарии  
- Функция fn_all_changes_<capture_instance> служит оболочкой для функции запроса CDC. fn_cdc_get_all_changes_<capture_instance>. Хранимая процедура sys.sp_cdc_generate_wrapper формирует скрипт для создания оболочки.  
+ Функция fn_all_changes_<capture_instance> служит оболочкой для функции запроса cdc.fn_cdc_get_all_changes_<capture_instance>. Хранимая процедура sys.sp_cdc_generate_wrapper формирует скрипт для создания оболочки.  
   
  Функции-оболочки не создаются автоматически. Чтобы создать функции-оболочки, нужно выполнить две операции:  
   
@@ -105,14 +105,14 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Используя параметр @closed_high_end_point при создании скрипта, можно формировать оболочки для поддержки закрытой или открытой верхней границы в заданном окне запроса. Таким образом, можно решить, включаются ли в интервал записи, для которых время фиксации совпадает с верхней границей интервала извлекаемых данных. По умолчанию верхняя граница включается в интервал.  
   
- Результирующий набор, возвращаемый функцией-оболочкой **All Changes** , возвращает __ $ start_lsn и \_ \_ $seqval столбцы таблицы изменений в виде столбцов \_ _CDC_STARTLSN и \_ _CDC_SEQVAL соответственно. В нем следуют только те столбцы, которые были записаны в параметре * \@ column_list* при создании оболочки. Если * \@ column_list* имеет значение null, возвращаются все отслеживания исходных столбцов. За исходными столбцами следует столбец операции, \_ _CDC_OPERATION, который является столбцом из одного или двух символов, идентифицирующим операцию.  
+ Результирующий набор, возвращаемый функцией-оболочкой **All Changes** , возвращает __ $ start_lsn и \_ \_ $seqval столбцы таблицы изменений в виде столбцов \_ _CDC_STARTLSN и \_ _CDC_SEQVAL соответственно. В нем следуют только те столбцы, которые были записаны в параметре *\@ column_list* при создании оболочки. Если *\@ column_list* имеет значение null, возвращаются все отслеживания исходных столбцов. За исходными столбцами следует столбец операции, \_ _CDC_OPERATION, который является столбцом из одного или двух символов, идентифицирующим операцию.  
   
  Затем к результирующему набору добавляются битовые флаги для каждого столбца, указанного параметром @update_flag_list. Для оболочки **All Changes** битовые флаги всегда будут иметь значение null, если __CDC_OPERATION равно "," I "или" «UO» ". Если \_ _CDC_OPERATION имеет значение "UN", флаг будет установлен в 1 или 0 в зависимости от того, привело ли операция обновления к изменению столбца.  
   
  Шаблон конфигурации системы отслеживания измененных данных "Создание экземпляра оболочки CDC возвращающие табличное для схемы" показывает, как использовать хранимую процедуру sp_cdc_generate_wrapper_function, чтобы получить скрипты создания для всех функций-оболочек для функций запросов, определенных схемой. Затем шаблон создает эти скрипты. Дополнительные сведения о шаблонах см. в разделе [Обозреватель шаблонов](../../ssms/template/template-explorer.md).  
   
-## <a name="see-also"></a>См. также  
- [sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

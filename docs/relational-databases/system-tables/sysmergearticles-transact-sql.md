@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticles system table
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 40701192048b83cae153b06bb5b4a3fdeeac2abf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 50d2129741447444b1da2adc82521966a7045530
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538229"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096134"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "89538229"
 |**select_proc**|**sysname**|Имя автоматически сформированной хранимой процедуры, с помощью которой агент слияния выполняет блокировку, а также поиск столбцов и строк для статьи.|  
 |**metadata_select_proc**|**sysname**|Имя автоматически сформированной хранимой процедуры, используемой для доступа к метаданным в системных таблицах репликации слиянием.|  
 |**delete_proc**|**sysname**|Процедура, с помощью которой сопоставитель конфликтов по умолчанию удаляет строки во время синхронизации.|  
-|**schema_option**|**Binary (8)**|Поддерживаемые значения *schema_option*см. в разделе [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**Binary (8)**|Поддерживаемые значения *schema_option* см. в разделе [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|Имя таблицы, созданной на стороне подписчика.|  
 |**destination_owner**|**sysname**|Имя владельца целевого объекта.|  
 |**resolver_clsid**|**nvarchar(50)**|Идентификатор пользовательского сопоставителя конфликтов.|  
@@ -70,8 +70,8 @@ ms.locfileid: "89538229"
 |**gen_cur**|**int**|Создает число локальных изменений для базовой таблицы статьи.|  
 |**vertical_partition**|**int**|Определяет, включен ли механизм фильтрации столбцов в статье таблицы. **0** означает отсутствие вертикальной фильтрации и публикация всех столбцов.|  
 |**identity_support**|**int**|Определяет, включена ли автоматическая обработка диапазона идентификаторов. **1** означает, что обработка диапазона идентификаторов включена, а значение **0** означает, что диапазон идентификаторов не поддерживается.|  
-|**before_image_objid**|**int**|Идентификатор объекта таблицы отслеживания. Таблица отслеживания содержит определенные значения ключевых столбцов при создании публикации с * \@ keep_partition_changes*  =  **true**.|  
-|**before_view_objid**|**int**|Идентификатор объекта таблицы представления. Представление основано на таблице, отслеживающей принадлежность строки определенному подписчику до удаления или обновления. Применяется только при создании публикации с * \@ keep_partition_changes*  =  **true.**|  
+|**before_image_objid**|**int**|Идентификатор объекта таблицы отслеживания. Таблица отслеживания содержит определенные значения ключевых столбцов при создании публикации с *\@ keep_partition_changes*  =  **true**.|  
+|**before_view_objid**|**int**|Идентификатор объекта таблицы представления. Представление основано на таблице, отслеживающей принадлежность строки определенному подписчику до удаления или обновления. Применяется только при создании публикации с *\@ keep_partition_changes*  =  **true.**|  
 |**verify_resolver_signature**|**int**|Перед использованием сопоставителя в репликации слиянием определяет, проверена ли цифровая подпись.<br /><br /> **0** = подпись не проверена.<br /><br /> **1** = подпись проверяется, чтобы узнать, не является ли он надежным источником.|  
 |**allow_interactive_resolver**|**bit**|Указывает, обрабатывается ли статья интерактивным сопоставителем. **1** указывает, что в статье используется интерактивный сопоставитель.|  
 |**fast_multicol_updateproc**|**bit**|Определяет, разрешено ли агенту слияния применять в одной инструкции UPDATE изменения к нескольким столбцам одной и той же строки.<br /><br /> **0** = выдает отдельное обновление для каждого столбца.<br /><br /> **1** = выдает инструкцию UPDATE, которая приводит к тому, что обновления происходят в несколько столбцов в одной инструкции.|  
@@ -92,7 +92,7 @@ ms.locfileid: "89538229"
 |**stream_blob_columns**|**bit**|Указывает, применяется ли оптимизация потока данных при репликации столбцов с большими двоичными объектами. **1** означает, что выполняется оптимизация.|  
 |**preserve_rowguidcol**|**bit**|Показывает, использует ли репликация существующий столбец rowguid. Значение **1** означает, что используется существующий столбец ROWGUIDCOL. значение **0** означает, что репликация добавила столбец ROWGUIDCOL.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

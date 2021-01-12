@@ -1,6 +1,6 @@
 ---
 description: sys.dm_server_audit_status (Transact-SQL)
-title: sys. dm_server_audit_status (Transact-SQL) | Документация Майкрософт
+title: sys.dm_server_audit_status (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2138e06195e8f8c34a5f8f9abde96306c2d92cc5
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: bcb3334eb564eab7a30aa544c35b74aa89c69ccb
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498167"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096514"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "91498167"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Идентификатор аудита. Сопоставляется с полем **audit_id** в представлении каталога **sys. audits** .|  
-|**name**|**sysname**|Имя аудита. То же, что и поле **Name** в представлении каталога **sys. server_audits** .|  
+|**name**|**sysname**|Имя аудита. То же, что и поле **Name (имя** ) в представлении каталога **sys.server_audits** .|  
 |**status**|**smallint**|Числовое обозначение состояния аудита сервера:<br /><br /> 0 = не запущено<br /><br /> 1 =<br />        Запуск<br /><br /> 2 =<br />      Сбой среды выполнения<br /><br /> 3 = сбой при создании целевого объекта<br /><br /> 4 = Завершение работы|  
 |**status_desc**|**nvarchar(256)**|Строка, которая показывает состояние аудита сервера:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Отметка времени в формате UTC последнего изменения состояния аудита.|  
-|**event_session_address**|**varbinary(8)**|Адрес сеанса расширенных событий, связанного с аудитом. Относится к представлению каталога **sys. dm_xe_sessions. Address** .|  
+|**event_session_address**|**varbinary(8)**|Адрес сеанса расширенных событий, связанного с аудитом. Относится к представлению каталога **sys.dm_xe_sessions. Address** .|  
 |**audit_file_path**|**nvarchar(256)**|Полный путь и имя целевого файла аудита, который используется в настоящее время. Заполняется только для аудитов файлов.|  
 |**audit_file_size**|**bigint**|Приблизительный размер файла аудита, в байтах. Заполняется только для аудитов файлов.|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "91498167"
  [sys.server_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
  [sys.database_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys. dm_server_audit_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_server_audit_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Создание аудита сервера и спецификации аудита сервера](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  

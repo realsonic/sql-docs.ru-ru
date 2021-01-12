@@ -1,6 +1,6 @@
 ---
 description: sys.internal_tables (Transact-SQL)
-title: sys. internal_tables (Transact-SQL) | Документация Майкрософт
+title: sys.internal_tables (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2019
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c46f6a7f66ff9dfba0ebf9a7b4dfe4e39eef7033
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ecc601c3eec509258cdac61a9c9216077f36f712
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548743"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094522"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +41,15 @@ ms.locfileid: "89548743"
 |**\<Columns inherited from sys.objects>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**internal_type**|**tinyint**|Тип внутренней таблицы:<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (например, пространственный индекс)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **CHANGE_TRACKING**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
 |**internal_type_desc**|**nvarchar(60)**|Описание типа внутренней таблицы:<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
-|**parent_id**|**int**|Идентификатор родителя, независимо от того, находится он в пределах области видимости схемы или нет. Принимает значение 0, если родитель отсутствует.<br /><br /> **queue_messages**  =  **object_id** очереди<br /><br /> **xml_index_nodes**  =  **object_id** XML-индекса<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** полнотекстового каталога<br /><br /> **fulltext_index_map**  =  **object_id** полнотекстового индекса<br /><br /> **query_notification**или **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** расширенного индекса, например пространственного индекса<br /><br /> **object_id** таблицы, для которой включено отслеживание таблиц = **CHANGE_TRACKING**|  
-|**parent_minor_id**|**int**|Вспомогательный идентификатор родителя.<br /><br /> **xml_index_nodes**  =  **index_id** XML-индекса<br /><br /> **extended_indexes**  =  **index_id** расширенного индекса, например пространственного индекса<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**или **CHANGE_TRACKING**|  
+|**parent_id**|**int**|Идентификатор родителя, независимо от того, находится он в пределах области видимости схемы или нет. Принимает значение 0, если родитель отсутствует.<br /><br /> **queue_messages**  =  **object_id** очереди<br /><br /> **xml_index_nodes**  =  **object_id** XML-индекса<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** полнотекстового каталога<br /><br /> **fulltext_index_map**  =  **object_id** полнотекстового индекса<br /><br /> **query_notification** или **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** расширенного индекса, например пространственного индекса<br /><br /> **object_id** таблицы, для которой включено отслеживание таблиц = **CHANGE_TRACKING**|  
+|**parent_minor_id**|**int**|Вспомогательный идентификатор родителя.<br /><br /> **xml_index_nodes**  =  **index_id** XML-индекса<br /><br /> **extended_indexes**  =  **index_id** расширенного индекса, например пространственного индекса<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map** или **CHANGE_TRACKING**|  
 |**lob_data_space_id**|**int**|Ненулевое значение — идентификатор пространства данных (файловая группа или схема секционирования), хранящего данные больших объектов (LOB) для этой таблицы.|  
 |**filestream_data_space_id**|**int**|Зарезервировано для будущего использования.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Внутренние таблицы размещаются в той же файловой группе, что и родительская сущность. С помощью запроса к каталогу, проиллюстрированного далее в примере Е, можно узнать количество страниц, занимаемых внутренними таблицами под хранение данных «в строке», «вне строки» и данных больших объектов (LOB).  
   
  Для возврата данных об использовании места для внутренних таблиц можно использовать системную процедуру [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . **sp_spaceused** сообщает внутреннее табличное пространство следующими способами:  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xtp_transaction_stats (Transact-SQL)
-title: sys. dm_xtp_transaction_stats (Transact-SQL) | Документация Майкрософт
+title: sys.dm_xtp_transaction_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_transaction_stats dynamic management view
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4ec1926e523ef388ddac159b3b2208069eb93f80
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 23913759f951d4bdb0f870ddaf73f1d0a0808520
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539222"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096408"
 ---
 # <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,36 +40,36 @@ ms.locfileid: "89539222"
 |total_aborts|**bigint**|Общее число транзакций, которые были прерваны пользователем или системой.|  
 |user_aborts|**bigint**|Количество прерываний, инициированных системой. Эти прерывания могут быть вызваны конфликтами операции записи, ошибками проверки и зависимости.|  
 |validation_failures|**bigint**|Количество раз, когда транзакция была прервана вследствие ошибки проверки.|  
-|dependencies_taken|**bigint**|Только для внутреннего применения.|  
+|dependencies_taken|**bigint**|Только для внутреннего использования.|  
 |dependencies_failed|**bigint**|Количество раз, когда транзакция была прервана, поскольку транзакция, от которой она зависела, была прервана.|  
 |savepoint_create|**bigint**|Количество созданных точек сохранения. Новая точка сохранения создается для каждого атомарного блока.|  
 |savepoint_rollbacks|**bigint**|Количество откатов к предыдущей точке сохранения.|  
-|savepoint_refreshes|**bigint**|Только для внутреннего применения.|  
+|savepoint_refreshes|**bigint**|Только для внутреннего использования.|  
 |log_bytes_written|**bigint**|Общее число байтов, записанных в записи журнала компонента In-Memory OLTP.|  
 |log_IO_count|**bigint**|Общее число транзакций, для которых требуется ввести журнал операций ввода-вывода. Учитываются только транзакции в долговечных таблицах.|  
-|phantom_scans_started|**bigint**|Только для внутреннего применения.|  
-|phatom_scans_retries|**bigint**|Только для внутреннего применения.|  
-|phantom_rows_touched|**bigint**|Только для внутреннего применения.|  
-|phantom_rows_expiring|**bigint**|Только для внутреннего применения.|  
-|phantom_rows_expired|**bigint**|Только для внутреннего применения.|  
-|phantom_rows_expired_removed|**bigint**|Только для внутреннего применения.|  
-|scans_started|**bigint**|Только для внутреннего применения.|  
-|scans_retried|**bigint**|Только для внутреннего применения.|  
-|rows_returned|**bigint**|Только для внутреннего применения.|  
-|rows_touched|**bigint**|Только для внутреннего применения.|  
-|rows_expiring|**bigint**|Только для внутреннего применения.|  
-|rows_expired|**bigint**|Только для внутреннего применения.|  
-|rows_expired_removed|**bigint**|Только для внутреннего применения.|  
-|rows_inserted|**bigint**|Только для внутреннего применения.|  
-|rows_updated|**bigint**|Только для внутреннего применения.|  
-|rows_deleted|**bigint**|Только для внутреннего применения.|  
-|write_conflicts|**bigint**|Только для внутреннего применения.|  
+|phantom_scans_started|**bigint**|Только для внутреннего использования.|  
+|phatom_scans_retries|**bigint**|Только для внутреннего использования.|  
+|phantom_rows_touched|**bigint**|Только для внутреннего использования.|  
+|phantom_rows_expiring|**bigint**|Только для внутреннего использования.|  
+|phantom_rows_expired|**bigint**|Только для внутреннего использования.|  
+|phantom_rows_expired_removed|**bigint**|Только для внутреннего использования.|  
+|scans_started|**bigint**|Только для внутреннего использования.|  
+|scans_retried|**bigint**|Только для внутреннего использования.|  
+|rows_returned|**bigint**|Только для внутреннего использования.|  
+|rows_touched|**bigint**|Только для внутреннего использования.|  
+|rows_expiring|**bigint**|Только для внутреннего использования.|  
+|rows_expired|**bigint**|Только для внутреннего использования.|  
+|rows_expired_removed|**bigint**|Только для внутреннего использования.|  
+|rows_inserted|**bigint**|Только для внутреннего использования.|  
+|rows_updated|**bigint**|Только для внутреннего использования.|  
+|rows_deleted|**bigint**|Только для внутреннего использования.|  
+|write_conflicts|**bigint**|Только для внутреннего использования.|  
 |unique_constraint_violations|**bigint**|Общее число нарушений ограничений уникальности.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

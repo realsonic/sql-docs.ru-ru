@@ -1,6 +1,6 @@
 ---
 description: cdc.lsn_time_mapping (Transact-SQL)
-title: CDC. lsn_time_mapping (Transact-SQL) | Документация Майкрософт
+title: cdc.lsn_time_mapping (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - cdc.lsn_time_mapping
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e4791eba84c89b96b03acc6011a018bab2bda4b2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: edb2732da4b3d2dba2c8dfa0947eb0c5d135ffb6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544638"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094918"
 ---
 # <a name="cdclsn_time_mapping-transact-sql"></a>cdc.lsn_time_mapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает по одной строке для каждой транзакции, имеющей строки в таблице изменений. Эта таблица используется, чтобы сопоставить значения номера LSN фиксации и время фиксации транзакции. Записи также могут регистрироваться. Для этого нет необходимости создавать таблицы изменений. Это позволяет фиксировать завершение процесса обработки номеров LSN в периоды низкой или неизменяющейся нагрузки.  
   
- Не рекомендуется непосредственно запрашивать системные таблицы. Вместо этого выполните функции [sys. fn_cdc_map_lsn_to_time &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) и [sys. fn_cdc_map_time_to_lsn &#40;transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) .  
+ Не рекомендуется непосредственно запрашивать системные таблицы. Вместо этого выполните [sys.fn_cdc_map_lsn_to_time &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) и sys.fn_cdc_map_time_to_lsn &#40;системным функциям [&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) .  
     
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

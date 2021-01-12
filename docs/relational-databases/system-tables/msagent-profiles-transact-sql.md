@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSagent_profiles system table
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2f9b44e872ef5175d07a679c330b7662ff9e5bf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 237ecf85225d5c16160ee4b04f6e0ccdc41f2e31
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540925"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094809"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89540925"
 |**profile_id**|**int**|Идентификатор профиля.|  
 |**profile_name**|**sysname**|Уникальное имя профиля для типа агента.|  
 |**agent_type**|**int**|Тип агента:<br /><br /> **1** = агент моментальных снимков<br /><br /> **2** = агент чтения журнала<br /><br /> **3** = агент распространения<br /><br /> **4** = агент слияния<br /><br /> **9** = агент чтения очереди|  
-|**type**|**int**|Тип профиля:<br /><br /> **0** = система**1** = настраиваемая|  
+|**type**|**int**|Тип профиля:<br /><br /> **0** = система **1** = настраиваемая|  
 |**description**|**nvarchar (3000)**|Описание профиля.|  
 |**def_profile**|**bit**|Указывает на использование профиля по умолчанию для данного типа агента.|  
   

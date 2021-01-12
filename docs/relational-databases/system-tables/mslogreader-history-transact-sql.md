@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ae2abdcaf4014df405ebf6dcefff8e2207530a93
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e6e3c54c859a542f5992a0e2199099e6b93bb27c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545755"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096271"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89545755"
 |**delivered_commands**|**int**|Общее число команд, переданных за время сеанса.|  
 |**average_commands**|**int**|Среднее число команд, переданных за время сеанса.|  
 |**delivery_rate**|**float**|Среднее число доставленных команд в секунду.|  
-|**delivery_latency**|**int**|Задержка между попаданием команды в публикуемую базу данных и в базу данных распространителя. В миллисекундах.|  
+|**delivery_latency**|**int**|Задержка между попаданием команды в публикуемую базу данных и в базу данных распространителя. Указывается в миллисекундах.|  
 |**error_id**|**int**|Идентификатор ошибки в системной таблице **MSrepl_error** .|  
 |**timestamp**|**timestamp**|Столбец отметок времени этой таблицы.|  
 |**updateable_row**|**bit**|Задайте значение **1** , если строка журнала может быть перезаписана.|  

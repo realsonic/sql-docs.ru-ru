@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e4d175fe42497d2a75c23d3ae49d60821952ccf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 603ad99e126f1175cce21a48933362e4ad6d7aaa
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97458502"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094182"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="arguments"></a>Аргументы  
  *database_id* \| NULL \| 0 \| по умолчанию  
- Идентификатор базы данных. *database_id* имеет **smallint**. Допустимыми входными значениями являются идентификатор базы данных, NULL, 0 или DEFAULT. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.  
+ Идентификатор базы данных. *database_id* имеет **smallint**. Допустимыми входными значениями являются идентификатор базы данных, NULL, 0 или DEFAULT. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.  
   
  Укажите значение NULL, чтобы вернуть сведения для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если для *database_id* указано значение null, необходимо также указать значение null для *object_id*, *index_id* и *partition_number*.  
   
@@ -66,7 +66,7 @@ sys.dm_db_index_physical_stats (
  *object_id* \| NULL \| 0 \| по умолчанию  
  Идентификатор объекта таблицы или представления, имеющего индекс. *object_id* имеет **тип int**.  
   
- Допустимыми входными значениями являются идентификатор таблицы, NULL, 0 или DEFAULT. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны. В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] допустимые входные данные также включают имя очереди компонента Service Broker или имя внутренней таблицы очереди. Когда применяются параметры по умолчанию (т. е. все объекты, все индексы и т. д.), сведения о фрагментации для всех очередей включаются в результирующий набор.  
+ Допустимыми входными значениями являются идентификатор таблицы, NULL, 0 или DEFAULT. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны. В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] допустимые входные данные также включают имя очереди компонента Service Broker или имя внутренней таблицы очереди. Когда применяются параметры по умолчанию (т. е. все объекты, все индексы и т. д.), сведения о фрагментации для всех очередей включаются в результирующий набор.  
   
  Укажите значение NULL, чтобы вернуть данные для всех таблиц и представлений в указанной базе данных. Если для *object_id* указано значение null, необходимо также указать значение null для *index_id* и *partition_number*.  
   
@@ -76,7 +76,7 @@ sys.dm_db_index_physical_stats (
  Укажите значение NULL, чтобы вернуть данные для всех индексов базовой таблицы или представления. Если для *index_id* указано значение null, необходимо также указать значение null для *partition_number*.  
   
  *partition_number* \| NULL \| 0 \| по умолчанию  
- Номер секции в объекте. *partition_number* имеет **тип int**. Допустимыми входными значениями являются *partion_number* индекса, КУЧИ, null, 0 или Default. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.  
+ Номер секции в объекте. *partition_number* имеет **тип int**. Допустимыми входными значениями являются *partion_number* индекса, КУЧИ, null, 0 или Default. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.  
   
  Чтобы получить сведения обо всех секциях объекта, укажите значение NULL.  
   

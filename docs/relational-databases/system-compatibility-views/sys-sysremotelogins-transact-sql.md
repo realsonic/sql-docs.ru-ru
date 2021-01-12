@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sysremotelogins system table
 - sys.sysremotelogins compatibility view
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 39cf5ae09d0857acf7d0d89b2be789162a751b64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d22ef924002c422bf74844e35a4177e91b34ec50
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482064"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095364"
 ---
 # <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "88482064"
 |**remoteserverid**|**smallint**|Идентификация удаленного сервера.|  
 |**remoteusername**|**sysname**|Имя входа пользователя на удаленном сервере.|  
 |**status**|**smallint**|Возвращает 0.|  
-|**sid**|**varbinary(85)**|Идентификатор безопасности пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
+|**трансляцию**|**varbinary(85)**|Идентификатор безопасности пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |**changedate**|**datetime**|Дата и время, когда был добавлен удаленный пользователь.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

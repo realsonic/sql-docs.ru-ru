@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sysprotects compatibility view
 - sysprotects system table
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 811bdae3c05bbb934a6f135269147c8678fa7654
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 417ef61ac045151c4ea2399d1192fdbff0519736
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482070"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095383"
 ---
 # <a name="syssysprotects-transact-sql"></a>sys.sysprotects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88482070"
 |**столбце**|**varbinary(8000)**|Битовая карта столбцов, к которым применены эти разрешения SELECT или UPDATE.<br /><br /> Бит 0 = все столбцы.<br /><br /> Бит 1 = разрешения применяются к этому столбцу.<br /><br /> NULL = нет данных.|  
 |**GRANTOR**|**smallint**|Идентификатор пользователя, который выдал разрешения GRANT или DENY. Вызывает переполнение или возвращает значение NULL, если количество пользователей и ролей превышает 32 767.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

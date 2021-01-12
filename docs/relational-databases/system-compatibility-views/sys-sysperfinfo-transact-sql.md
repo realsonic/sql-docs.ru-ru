@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sysperfinfo compatibility view
 - sysperfinfo system table
 ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 1122c224e21fa633c2c04cd156a49878fefc7daa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 477121d623733b5bafcf4385d8069715a333175e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482107"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095413"
 ---
 # <a name="syssysperfinfo-transact-sql"></a>sys.sysperfinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88482107"
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar (128)**|Имя объекта производительности, например **SQLServer: локкманажер** или **SQLServer: буфферманажер**.|  
 |**counter_name**|**nchar (128)**|Имя счетчика производительности в объекте, например **запрошенных** **запросов страниц** или блокировок.|  
-|**instance_name**|**nchar (128)**|Именованный экземпляр счетчика. Например, существуют счетчики для каждого типа блокировки, такие как **Таблица**, **страница**, **ключ**и т. д. Имя экземпляра позволяет различать похожие счетчики.|  
+|**instance_name**|**nchar (128)**|Именованный экземпляр счетчика. Например, существуют счетчики для каждого типа блокировки, такие как **Таблица**, **страница**, **ключ** и т. д. Имя экземпляра позволяет различать похожие счетчики.|  
 |**cntr_value**|**bigint**|Текущее значение счетчика. Часто оно является счетчиком уровня или счетчиком монотонно возрастающей величины, подсчитывающей наступление событий экземпляра.|  
 |**cntr_type**|**int**|Тип счетчика, как определено архитектурой производительности Windows.|  
   

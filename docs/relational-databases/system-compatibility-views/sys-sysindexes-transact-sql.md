@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sysindexes system table
 - sys.sysindexes compatibility view
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 4b78a272e9fa2ec3a0cc3d4418986078ff02f457
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: cf8982115b1a4399c327aefc66a5e99a1d46c575
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399410"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094199"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,12 +66,12 @@ ms.locfileid: "88399410"
 |**name**|**sysname**|Имя индекса или статистики. Возвращает значение NULL, если **столбец indid** = 0. Измените приложение, чтобы оно выполняло поиск кучи с именем NULL.|  
 |**statblob**|**image**|Статистический большой двоичный объект (BLOB).<br /><br /> Возвращает значение NULL.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**сквоз**|**int**|Количество строк на уровне данных, основанное на столбцах с **indid** = 0 и **indid** = 1, и значение повторяется для **indid** >1.|  
+|**rows**|**int**|Количество строк на уровне данных, основанное на столбцах с **indid** = 0 и **indid** = 1, и значение повторяется для **indid** >1.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Столбцы, определенные как зарезервированные, не должны использоваться.  
   
- Столбцы **дпажес**, **reserved**и **used** не будут возвращать точные результаты, если таблица или индекс содержат данные в единице распределения ROW_OVERFLOW. Кроме того, счетчики страниц для каждого индекса отслеживаются отдельно и не суммируются для базовой таблицы. Для просмотра количества страниц используйте представления каталога [sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) или [sys. partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) либо динамическое административное представление [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) .  
+ Столбцы **дпажес**, **reserved** и **used** не будут возвращать точные результаты, если таблица или индекс содержат данные в единице распределения ROW_OVERFLOW. Кроме того, счетчики страниц для каждого индекса отслеживаются отдельно и не суммируются для базовой таблицы. Для просмотра количества страниц используйте представления каталога [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) или [sys. partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) или динамическое административное представление [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) .  
   
  В SQL Server 2000 и более ранних версиях компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] поддерживал счетчики изменения на уровне строк. Теперь эти счетчики поддерживаются на уровне столбца. Таким образом, столбец **ровмодктр** вычисляется и выдает результаты, аналогичные результатам в предыдущих версиях, но не являются точными.  
   
