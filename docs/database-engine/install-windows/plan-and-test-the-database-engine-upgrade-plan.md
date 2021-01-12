@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 5e98874d2e5d1673a4f666de81b82e92b20bfa9f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 73c70e347de00a18f4c4ec5ce3228d6d000d16f0
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463625"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975500"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Составление и тестирование плана обновления ядра СУБД
 
@@ -27,8 +27,9 @@ ms.locfileid: "97463625"
 ## <a name="release-notes-and-known-upgrade-issues"></a>Заметки о выпуске и известные проблемы при обновлении  
  Прежде чем приступать к обновлению [!INCLUDE[ssDE](../../includes/ssde-md.md)], ознакомьтесь с разделами:
 
+- [Заметки о выпуске SQL Server 2019](../../sql-server/sql-server-version-15-release-notes.md)
 - [Заметки о выпуске SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
-- [Заметки о выпуске для SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
+- [Заметки о выпуске для SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md)
 - Статья [Обратная совместимость ядра СУБД SQL Server](../discontinued-database-engine-functionality-in-sql-server.md).  
   
 ## <a name="pre-upgrade-planning-checklist"></a>Контрольный список планирования обновления  

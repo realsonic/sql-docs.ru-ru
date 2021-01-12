@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 0fd911cd7ce60068c0d28ecd5a386a344c5ebea7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c36d6718455f85314f98219b860a801984804d9d
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481465"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975478"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Выбор метода обновления компонента Database Engine
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97481465"
 >   - [Выбор варианта SQL Server в Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview).  
   
 ## <a name="upgrade-in-place"></a>Обновление на месте  
- В этом случае программа установки SQL Server обновляет существующую установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], заменяя существующие биты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] новыми битами [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], а затем обновляет все системные и пользовательские базы данных.  Обновление на месте — это самый простой метод, подразумевающий некоторое время простоя; в случае необходимости отката он занимает больше времени, кроме того, этот вариант поддерживается не для всех сценариев. Дополнительные сведения о поддерживаемых и неподдерживаемых сценариях обновления на месте см. в разделе [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
+ В этом случае программа установки SQL Server обновляет существующую установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], заменяя существующие биты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] новыми битами [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], а затем обновляет все системные и пользовательские базы данных.  Обновление на месте — это самый простой метод, подразумевающий некоторое время простоя; в случае необходимости отката он занимает больше времени, кроме того, этот вариант поддерживается не для всех сценариев. Дополнительные сведения о поддерживаемых и неподдерживаемых сценариях обновления на месте см. в разделе [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md).  
   
  Этот подход часто используется в следующих сценариях:  
   
