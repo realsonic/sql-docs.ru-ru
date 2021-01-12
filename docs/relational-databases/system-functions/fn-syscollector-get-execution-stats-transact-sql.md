@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_stats function
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: d9d6bb073cc237fff2a859c37316a981e4b5d88f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 47a90958d7de27e087df3768949a5defa148c8f4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447516"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097502"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ fn_syscollector_get_execution_stats ( log_id )
 |max_duration|**int**|Максимальное время (в миллисекундах), затраченное компонентом потока данных пакета.|  
   
 ## <a name="permissions"></a>Разрешения  
- Для **dc_operator**требуется SELECT.  
+ Для **dc_operator** требуется SELECT.  
   
 ## <a name="see-also"></a>См. также:  
  [syscollector_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_conflictdetectionconfigureresponse
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d402a77534b12fbb3bf880bcaac17be1dedcdde2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 02c82643c290e3b751ced451dd7415004272a2b0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545585"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097400"
 ---
 # <a name="mspeer_conflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89545585"
 |progress_phase|**nvarchar(32)**|Определяет текущую стадию обработки как одно из следующих значений:<br /><br /> Запуск<br /><br /> Собраны данные о версии однорангового узла<br /><br /> Собранные данные о состоянии|  
 |modified_date|**datetime**|Дата и время завершения стадии.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

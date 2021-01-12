@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4f079b7ea36d55f978db4c802efb3c8c4283eab3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0b2a7e7783ffb67688041a6da39ea99f945a607f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540239"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097364"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "89540239"
 |**allow_subscription_copy**|**bit**|Возможность копирования базы данных подписки. **0** означает, что копирование запрещено.|  
 |**allow_synctoalternate**|**bit**|Показывает, допустимо ли для данного издателя наличие альтернативного участника синхронизации. значение **0** означает, что участник синхронизации не разрешен.|  
 |**validate_subscriber_info**|**nvarchar (500)**|Выводит список функций, с помощью которых возвращаются сведения о подписчике, и проверяет правильность критериев параметризованной фильтрации строк на подписчике.|  
-|**ad_guidname**|**sysname**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Допустимый GUID указывает, что публикация опубликована в Active Directory, а идентификатор GUID является соответствующим **атрибутом objectGUID**объекта публикации Active Directory. Если значение равно NULL, то публикация не опубликована в Active Directory.|  
+|**ad_guidname**|**sysname**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Допустимый GUID указывает, что публикация опубликована в Active Directory, а идентификатор GUID является соответствующим **атрибутом objectGUID** объекта публикации Active Directory. Если значение равно NULL, то публикация не опубликована в Active Directory.|  
 |**backward_comp_level**|**int**|Уровень совместимости базы данных. Может иметь одно из следующих значений:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
 |**max_concurrent_merge**|**int**|Максимальное число выполняемых одновременно процессов слияния. Значение **0** для этого свойства означает отсутствие ограничения на количество одновременных процессов слияния, выполняемых в данный момент времени.  Это свойство устанавливает ограничение на число параллельных процессов слияния, которые могут быть одновременно запущены для публикации слиянием.  Если на одно и то же время назначено больше процессов моментальных снимков, чем позволяет указанное значение, лишние задачи будут помещены в очередь до завершения текущего процесса слияния.|  
 |**max_concurrent_dynamic_snapshots**|**int**|Максимальное допустимое число параллельных сеансов моментальных снимков отфильтрованных данных, которые могут быть запущены для публикации слиянием. Если значение **равно 0**, максимальное число параллельных сеансов моментальных снимков отфильтрованных данных, которые могут выполняться одновременно с публикацией в любое заданное время, не ограничено.  Это свойство устанавливает ограничение на число параллельных процессов создания моментальных снимков, которые могут быть одновременно запущены для публикации слиянием.  Если на одно и то же время назначено больше процессов моментальных снимков, чем позволяет указанное значение, лишние задачи будут помещены в очередь до завершения текущего процесса слияния.|  
@@ -87,7 +87,7 @@ ms.locfileid: "89540239"
 |**generation_leveling_threshold**|**int**|Задает число изменений в формировании. Поколение — это набор изменений, переданных издателю или подписчику.|  
 |**automatic_reinitialization_policy**|**bit**|Указывает, передаются ли изменения с подписчика перед автоматической повторной инициализацией.<br /><br /> **1** = изменения передаются с подписчика, прежде чем происходит автоматическая повторная инициализация.<br /><br /> **0** = изменения не передаются до автоматической повторной инициализации.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   

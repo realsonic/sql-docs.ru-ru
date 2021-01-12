@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sysconstraints compatibility view
 - sysconstraints system table
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 8a50f67470a91af617ae76baadf1a029bfa56b59
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 3014430aad20c74d22a72e1756503baadbe7cb68
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423338"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099152"
 ---
 # <a name="syssysconstraints-transact-sql"></a>sys.sysconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "88423338"
 |**constid**|**int**|Номер ограничения.|  
 |**id**|**int**|Идентификатор таблицы, владеющей ограничением.|  
 |**идентификатора столбца**|**smallint**|Идентификатор столбца, на котором определено ограничение.<br /><br /> 0 = ограничение таблицы|  
-|**spare1**|**tinyint**|Зарезервировано|  
+|**spare1**|**tinyint**|Зарезервированное|  
 |**status**|**int**|Псевдобитовая маска, определяющая состояние. Возможные значения:<br /><br /> 1 = ограничение PRIMARY KEY;<br /><br /> 2 = ограничение UNIQUE KEY;<br /><br /> 3 = ограничение FOREIGN KEY;<br /><br /> 4 = ограничение CHECK;<br /><br /> 5 = ограничение DEFAULT;<br /><br /> 16 = ограничение на уровне столбца;<br /><br /> 32 = ограничение уровня таблицы.|  
-|**actions**|**int**|Зарезервировано|  
-|**error**|**int**|Зарезервировано|  
+|**actions**|**int**|Зарезервированное|  
+|**error**|**int**|Зарезервированное|  
   
 ## <a name="see-also"></a>См. также:  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

@@ -1,6 +1,6 @@
 ---
 description: Динамическое административное представление sys.dm_xe_objects (Transact-SQL)
-title: sys. dm_xe_objects (Transact-SQL) | Документация Майкрософт
+title: sys.dm_xe_objects (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a0df750dd3f582e712c41a01ce1406586b2cecf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 6e54e02ec730fae0f57a8be8976d7fa694824bd0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536910"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098884"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>Динамическое административное представление sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,11 +59,11 @@ ms.locfileid: "89536910"
   
 ### <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|Исходный тип|Кому|Связь|  
+|От|Кому|Relationship|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|«многие к одному»|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

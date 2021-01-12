@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7f1357535d22306f09f8378e8e71aef6801975ae
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ae934fc3b9d8f7664e2542450ee1456298548c85
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834102"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097784"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "91834102"
 |Состояние|Описание|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запросил, чтобы среда CLR выгрузить **AppDomain**, обычно потому, что сборка, содержащая объекты управляемой базы данных, была изменена или удалена.|  
-|E_APPDOMAIN_UNLOADED|Среда CLR выгрузила **AppDomain**. Обычно это результат процедуры эскалации из-за **ThreadAbort**, **OutOfMemory**или необработанного исключения в пользовательском коде.|  
+|E_APPDOMAIN_UNLOADED|Среда CLR выгрузила **AppDomain**. Обычно это результат процедуры эскалации из-за **ThreadAbort**, **OutOfMemory** или необработанного исключения в пользовательском коде.|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** был выгружен в среде CLR и настроен для уничтожения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |E_APPDOMAIN_DESTROY|**AppDomain** находится в процессе уничтожения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |E_APPDOMAIN_ZOMBIE|**AppDomain** был уничтожен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] но не все ссылки на **домен приложения** были очищены.|  

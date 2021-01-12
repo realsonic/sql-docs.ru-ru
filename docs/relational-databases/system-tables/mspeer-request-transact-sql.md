@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_request system table
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5b4c0352e9e0b0fab04be0dbbc1ff2a62d691c48
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6bf63b8473efd3fd64b1ef19a0883c2cdb8e3f6c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545596"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098565"
 ---
 # <a name="mspeer_request-transact-sql"></a>MSpeer_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89545596"
 |sent_date|**datetime**|Дата и время инициализации запроса состояния.|  
 |description|**nvarchar(4000)**|Определяемые пользователем данные, которые могут использоваться для идентификации отдельных запросов состояния.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

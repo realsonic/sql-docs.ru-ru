@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ab48b6155e26873c22a3b951ef65705d3addd79
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d3df8f87d73ac8ca25fe2e7e83d7bbc3d0da01f2
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466925"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097973"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
@@ -55,7 +55,7 @@ ms.locfileid: "97466925"
   
 |Целое значение|Категория ожидания|Типы ожидания включают в категорию|  
 |-----------------|---------------|-----------------|  
-|**0**;|**Unknown**|Неизвестно |  
+|**0**|**Unknown**|Неизвестно |  
 |**1**|**ЦП**|SOS_SCHEDULER_YIELD|
 |**2**|**Рабочий поток**|THREADPOOL|
 |**3**|**Блокировка**|LCK_M_%|
@@ -66,7 +66,7 @@ ms.locfileid: "97466925"
 |_ *8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**Зеркальное отображение**|ДБМИРРОР%|
 |**10**|**Транзакция**|ТРАНЗАКЦИИ%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Бездействие**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
+|**11**|**Выключен**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**PreEmptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(но не BROKER_RECEIVE_WAITFOR)**|
 |**14**|**Ввод-вывод журнала транзакций**|LOGMGR, ЛОГБУФФЕР, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|

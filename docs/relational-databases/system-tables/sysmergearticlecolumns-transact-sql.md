@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticlecolumns system table
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e1e60d7bdb2b8b39d719a80b00ae5b87ab92c0da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 52b61bdb3429f5f42bd5e9012a28e06f09f2377b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540237"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098074"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89540237"
 |**artid**|**int**|Определяет статью.|  
 |**идентификатора столбца**|**smallint**|Идентифицирует столбец в статье.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
-title: sys. dm_hadr_database_replica_cluster_states (Transact-SQL) | Документация Майкрософт
+title: sys.dm_hadr_database_replica_cluster_states (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_database_replica_cluster_states dynamic management view
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 11f2e6ddb0a51170ebf9da0ed4f5f9d673359e03
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f97172a1f417b237a8e1ee4d16fc573cd94f571d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543880"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097686"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Возвращает строку с информацией, помогающей получить полезные сведения о работоспособности баз данных доступности в каждой группе доступности AlwaysOn в кластере WSFC. Выполните запрос к **sys. dm_hadr_database_replica_states** , чтобы ответить на следующие вопросы:  
+  Возвращает строку с информацией, помогающей получить полезные сведения о работоспособности баз данных доступности в каждой группе доступности AlwaysOn в кластере WSFC. Выполните запрос **sys.dm_hadr_database_replica_states** , чтобы ответить на следующие вопросы:  
   
 -   Все ли базы данных в группе доступности готовы к отработке отказа?  
   
@@ -57,7 +57,7 @@ ms.locfileid: "89543880"
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Always On динамические административные представления и функции групп доступности &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Представления каталога групп доступности AlwaysOn (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Мониторинг групп доступности &#40;&#41;Transact-SQL ](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

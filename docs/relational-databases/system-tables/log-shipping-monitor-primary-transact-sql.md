@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_primary system table
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f349cd5cfc01141ea7127847cb9006adfeaa3bad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 076398da53bf4886a0b8e3f387df949d29cb8b03
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547178"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098713"
 ---
 # <a name="log_shipping_monitor_primary-transact-sql"></a>log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89547178"
 |**last_backup_date_utc**|**datetime**|Время и дата создания последней резервной копии журнала транзакций в базе данных-источнике, выраженные в формате UTC.|  
 |**history_retention_period**|**int**|Промежуток времени в минутах, после которого записи истории доставки журнала данной базы данных-источника будут удалены.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  В дополнение к хранению на удаленном сервере мониторинга сведения, относящиеся к основному серверу, хранятся на сервере-источнике в его **log_shipping_monitor_primary** таблице.  
   
 ## <a name="see-also"></a>См. также:  

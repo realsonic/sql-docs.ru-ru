@@ -16,15 +16,15 @@ helpviewer_keywords:
 - firewall_rules
 - sys.firewall_rules
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: b7e08498a9f3867c03c2198957af0ac35f9a0a01
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 351ca530c49051b61b6f44b8dc2fbff83623cf8f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477435"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097999"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

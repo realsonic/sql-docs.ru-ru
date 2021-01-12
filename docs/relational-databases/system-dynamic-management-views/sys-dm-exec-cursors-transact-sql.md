@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_cursors (Transact-SQL)
-title: sys. dm_exec_cursors (Transact-SQL) | Документация Майкрософт
+title: sys.dm_exec_cursors (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 351f97ed08d1a6a79f8611d19842dc93138277ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8ab1ed9e722f2363c0568932e7eb337bc09dbe41
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543957"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099013"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,8 +53,8 @@ dm_exec_cursors (session_id | 0 )
 |**name**|**nvarchar(256)**|Имя курсора, определенное пользователем.|  
 |**properties**|**nvarchar(256)**|Указывает свойства курсора. Для образования значения этого столбца объединены значения следующих свойств:<br />интерфейс объявления;<br />тип курсора; <br />параллелизм курсора;<br />область курсора;<br />уровень вложенности курсора.<br /><br /> Например, значение, возвращаемое в этом столбце, может быть "TSQL &#124; Dynamic &#124; Оптимистическая &#124; Global (0)".|  
 |**sql_handle**|**varbinary (64)**|Дескриптор текста пакета, в котором объявлен курсор.|  
-|**statement_start_offset**|**int**|Количество символов в выполняемом в настоящий момент пакете или хранимой процедуре, в которой запущена текущая инструкция. Можно использовать вместе с **sql_handle**, **statement_end_offset**и функцией динамического управления [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) , чтобы получить текущую выполняемую инструкцию для запроса.|  
-|**statement_end_offset**|**int**|Количество символов в выполняемом в настоящий момент пакете или хранимой процедуре, в которой завершилась текущая инструкция. Можно использовать вместе с **sql_handle**, **statement_start_offset**и функцией динамического управления **sys. dm_exec_sql_text** , чтобы получить текущую выполняемую инструкцию для запроса.|  
+|**statement_start_offset**|**int**|Количество символов в выполняемом в настоящий момент пакете или хранимой процедуре, в которой запущена текущая инструкция. Можно использовать вместе с **sql_handle**, **statement_end_offset** и функцией динамического управления [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) , чтобы получить текущую выполняемую инструкцию для запроса.|  
+|**statement_end_offset**|**int**|Количество символов в выполняемом в настоящий момент пакете или хранимой процедуре, в которой завершилась текущая инструкция. Можно использовать вместе с **sql_handle**, **statement_start_offset** и функцией динамического управления **sys.dm_exec_sql_text** , чтобы получить текущую выполняемую инструкцию для запроса.|  
 |**plan_generation_num**|**bigint**|Порядковый номер, который может использоваться для различия экземпляров планов после рекомпиляции.|  
 |**creation_time**|**datetime**|Отметка времени создания данного курсора.|  
 |**is_open**|**bit**|Указывает, является ли курсор открытым.|  
@@ -72,7 +72,7 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Следующая таблица содержит сведения об интерфейсе объявления курсора и возможные значения для столбца свойств.  
   
 |Свойство|Описание|  
@@ -82,7 +82,7 @@ dm_exec_cursors (session_id | 0 )
   
  Следующая таблица содержит сведения о типе курсора и возможные значения для столбца свойств.  
   
-|Тип|Описание|  
+|Type|Описание|  
 |----------|-----------------|  
 |Keyset|Курсор был объявлен с типом Keyset.|  
 |Динамический|Курсор был объявлен с типом Dynamic.|  
@@ -102,7 +102,7 @@ dm_exec_cursors (session_id | 0 )
 |Область|Описание|  
 |-----------|-----------------|  
 |Локальная|Указывает, что курсор является локальным по отношению к пакету, хранимой процедуре или триггеру, в котором он был создан.|  
-|Глобальный|Указывает, что курсор является глобальным по отношению к соединению.|  
+|Глобальная|Указывает, что курсор является глобальным по отношению к соединению.|  
   
 ## <a name="examples"></a>Примеры  
   

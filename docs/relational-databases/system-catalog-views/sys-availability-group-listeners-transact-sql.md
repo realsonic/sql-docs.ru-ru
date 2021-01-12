@@ -1,6 +1,6 @@
 ---
 description: sys.availability_group_listeners (Transact-SQL)
-title: sys. availability_group_listeners (Transact-SQL) | Документация Майкрософт
+title: sys.availability_group_listeners (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sys.availability_group_listeners catalog view
 - Availability Groups [SQL Server], listeners
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 029f407b453dd4667fd888bbd1351a718173d9cf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: b052479a265bb118ed73a90ea7dea0bc3ec3d7b1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550543"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098385"
 ---
 # <a name="sysavailability_group_listeners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "89550543"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**uniqueidentifier**|Идентификатор группы доступности (**group_id**) из [sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
+|**group_id**|**uniqueidentifier**|Идентификатор группы доступности (**group_id**) из [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
 |**listener_id**|**nvarchar (36)**|Идентификатор GUID из идентификатора ресурса кластера.|  
 |**dns_name**|**nvarchar (63)**|Настроенное сетевое имя (hostname) прослушивателя группы доступности.|  
 |**port**|**int**|Номер TCP-порта, заданного для прослушивателя группы доступности.<br /><br /> NULL = прослушиватель настроен вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], его номер порта не был добавлен в группу доступности. Чтобы добавить порт, плеасеусе параметр MODIFY LISTENER инструкции [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  

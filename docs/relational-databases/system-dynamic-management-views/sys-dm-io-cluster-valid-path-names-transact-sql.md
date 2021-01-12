@@ -1,6 +1,6 @@
 ---
 description: sys.dm_io_cluster_valid_path_names (Transact-SQL)
-title: sys. dm_io_cluster_valid_path_names (Transact-SQL) | Документация Майкрософт
+title: sys.dm_io_cluster_valid_path_names (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - csv name
 - cluster shared volume names
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 18a1e01e893486a7ce32f1c3510fb52d5fd7ec0e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 24bddc071b9ad5b64ef796f16718d1465dec7eaa
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532231"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097594"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "89532231"
 |**cluster_owner_node**|**Nvarchar (64)**|Текущий владелец диска. Для кластеризованных общих томов (CSV) ― это владелец узла, на котором размещен сервер метаданных. Не допускает значение NULL.|  
 |**is_cluster_shared_volume**|**Версий**|Возвращает значение 1, если диск, на котором находится этот путь, является общим томом кластера. В противном случае возвращается значение 0.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Для хранения файлов баз данных и журналов экземпляр отказоустойчивого кластера SQL Server (FCI) должен использовать хранилище, которое является общим для всех узлов отказоустойчивого кластера. В данном представлении приведен список дисков из группы кластерных ресурсов, связанной с этим экземпляром. Только эти диски можно использовать для хранения файлов данных и журналов.  
   
 > [!NOTE]  
->  В следующем выпуске в этом представлении будет заменено представление [sys. dm_io_cluster_shared_drives &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md) .  
+>  Это представление заменит [sys.dm_io_cluster_shared_drives &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md) в следующем выпуске.  
   
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешение VIEW SERVER STATE.  
@@ -57,9 +57,9 @@ ms.locfileid: "89532231"
 SELECT * FROM sys.dm_io_cluster_valid_path_names;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys. dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys. dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [sys.dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

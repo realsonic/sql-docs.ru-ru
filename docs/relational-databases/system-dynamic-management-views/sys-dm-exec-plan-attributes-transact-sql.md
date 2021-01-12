@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c80e576bd6f2872a2486da5fd09292609f86ba60
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7fa0b60cc1c172ea8777286fda425c7714d6b363
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97331987"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096621"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 В приведенной выше таблице **атрибут** может иметь следующие значения:
 
-|Атрибут|Тип данных|Описание|  
+|attribute|Тип данных|Описание|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Показывает значения параметров, с использованием которых был скомпилирован план.|  
 |objectid|**int**|Одно из основных ключевых слов, используемое для поиска объекта в кэш-памяти. Это идентификатор объекта, хранящийся в [представлении sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) для объектов базы данных (процедуры, представления, триггеры и т. д.). Для планов типа «Нерегламентированный» или «Подготовленный» — это внутренний хэш текста пакета.|  

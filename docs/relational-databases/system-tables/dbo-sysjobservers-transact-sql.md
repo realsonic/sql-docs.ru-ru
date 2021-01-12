@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobservers system table
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fe4779593ac9197ef399120ffa99ea2af4582ba5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7ac1d8facbabb42be31a9d45e091e1106c25e0c9
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541024"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097442"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "89541024"
 |last_run_duration|**int**|Продолжительность выполнения задания в часах, минутах и секундах. Вычисляемый с использованием формулы: (*ч* \* 10000) + (*минут* \* 100) + *секунды*.|  
 
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Значение выше *4* означает, что агент SQL не знает состояние этого задания. При создании задания для *last_run_outcome* изначально устанавливается значение *5* .
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Агент SQL Serverные таблицы &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_repl_tranhash (Transact-SQL)
-title: sys. dm_repl_tranhash (Transact-SQL) | Документация Майкрософт
+title: sys.dm_repl_tranhash (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_tranhash dynamic management view
 ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 35bb540ff2b73a44de324a51937552ae7cc3ec56
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d099f878fd2507d0f491723ffc494ce335246843
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536907"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098860"
 ---
 # <a name="sysdm_repl_tranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "89536907"
 |**last_commit_lsn**|**nvarchar (64)**|Последняя фиксация номера LSN в текущем пакете.|  
   
 ## <a name="permissions"></a>Разрешения  
- Для вызова **dm_repl_tranhash**требуется разрешение на просмотр состояния базы данных публикации.  
+ Для вызова **dm_repl_tranhash** требуется разрешение на просмотр состояния базы данных публикации.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Возвращаются сведения только по реплицируемым объектам базы данных, которые загружены в кэш статей репликации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с репликацией &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   

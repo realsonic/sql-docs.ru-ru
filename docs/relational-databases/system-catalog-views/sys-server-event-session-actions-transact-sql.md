@@ -1,6 +1,6 @@
 ---
 description: sys.server_event_session_actions (Transact-SQL)
-title: sys. server_event_session_actions (Transact-SQL) | Документация Майкрософт
+title: sys.server_event_session_actions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_session_actions catalog view
 - xe
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 189e2a7f246fc231fc21c1a26d5a95d2148a430e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 79beef65fe0cd52caea3c93d5dbeb76c134ef6f0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551439"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097932"
 ---
 # <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,16 +38,16 @@ ms.locfileid: "89551439"
 |event_session_id|**int**|Идентификатор сеанса событий. Не допускает значение NULL.|  
 |event_id|**int**|Идентификатор события. Этот идентификатор уникален внутри объекта сеанса событий. Не допускает значение NULL.|  
 |name|**sysname**|Имя действия. Допускает значение NULL.|  
-|пакет|**sysname**|Имя пакета событий, который содержит событие. Допускает значение NULL.|  
+|Пакет|**sysname**|Имя пакета событий, который содержит событие. Допускает значение NULL.|  
 |module|**sysname**|Имя модуля, который содержит событие. Допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Это представление имеет следующее количество элементов связей.  
   
-| Исходный тип | Кому | Связь |
+| От | Кому | Relationship |
 | ---- | -- | ------------ |
 |sys.server_event_session_actions.event_session_id|sys.sys.server_event_sessions.event_session_id|Многие к одному|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|Многие к одному|  

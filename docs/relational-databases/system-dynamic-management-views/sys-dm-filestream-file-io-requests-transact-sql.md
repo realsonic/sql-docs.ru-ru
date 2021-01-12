@@ -1,6 +1,6 @@
 ---
 description: sys.dm_filestream_file_io_requests (Transact-SQL)
-title: sys. dm_filestream_file_io_requests (Transact-SQL) | Документация Майкрософт
+title: sys.dm_filestream_file_io_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9f4f675f0022b3afeeaccbdc6e907b5ce1c17ca7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 69b34fd2a8ec5adf393994399011cf1b2df6ea03
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543899"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097676"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89543899"
 |**request_id**|**int**|Показывает уникальный идентификатор, назначенный драйвером этому запросу. Не допускает значение NULL.|  
 |**irp_id**|**int**|Показывает уникальный идентификатор IRP. Это удобно для определения всех запросов ввода-вывода, связанных с заданным IRP. Не допускает значение NULL.|  
 |**handle_id**|**int**|Показывает идентификатор дескриптора пространства имен. Этот идентификатор зависит от NSO и уникален в пределах экземпляра. Не допускает значение NULL.|  
-|**client_thread_id**|**varbinary(8)**|Показывает идентификатор потока клиентского приложения, который является источником запроса.<br /><br /> Предупреждение это имеет смысл только в том случае, если клиентское приложение работает на том же компьютере, что и SQL Server. ** \* \* \* \* ** Когда клиентское приложение выполняется удаленно, **client_thread_id** показывает идентификатор потока процесса, который работает от имени удаленного клиента.<br /><br /> Допускает значение NULL.|  
+|**client_thread_id**|**varbinary(8)**|Показывает идентификатор потока клиентского приложения, который является источником запроса.<br /><br /> Предупреждение это имеет смысл только в том случае, если клиентское приложение работает на том же компьютере, что и SQL Server. **\* \* \* \*** Когда клиентское приложение выполняется удаленно, **client_thread_id** показывает идентификатор потока процесса, который работает от имени удаленного клиента.<br /><br /> Допускает значение NULL.|  
 |**client_process_id**|**varbinary(8)**|Показывает идентификатор процесса клиентского приложения, если оно работает на одном компьютере с SQL Server. Для удаленного клиента здесь показывается идентификатор системного процесса, который работает от имени клиентского приложения. Допускает значение NULL.|  
 |**handle_context_address**|**varbinary(8)**|Показывает адрес внутренней структуры NSO, связанной с маркером клиента. Допускает значение NULL.|  
 |**filestream_transaction_id**|**varbinary(128)**|Показывает идентификатор транзакции, связанной с заданным дескриптором, и все запросы, связанные с этим дескриптором. Это значение, возвращаемое функцией **GET_FILESTREAM_TRANSACTION_CONTEXT** . Допускает значение NULL.|  
@@ -48,7 +48,7 @@ ms.locfileid: "89543899"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления FILESTREAM и FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

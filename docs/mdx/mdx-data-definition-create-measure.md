@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d352a12a4567fc88d2d037862c4cab2f1cd20fe0
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: af9ff1465c23231637cac636bb63702e79cf054c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193966"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098337"
 ---
 # <a name="mdx-data-definition---create-measure"></a>Определение данных многомерных выражений — CREATE MEASURE
 
@@ -40,10 +40,10 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
  *DAX_Expression*  
  Допустимое выражение DAX, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  *Measure_Name* должны быть заключены в квадратные скобки.  
   
- Инструкцию CREATE MEASURE можно использовать только в определении скрипта многомерных выражений. см. [элемент MdxScript &#40;&#41;ASSL ](/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions).  
+ Инструкцию CREATE MEASURE можно использовать только в определении скрипта многомерных выражений. см. [элемент MdxScript &#40;&#41;ASSL ](/analysis-services/assl/objects/mdxscript-element-assl).  
   
  Можно также определить вычисляемый элемент для использования только в одном запросе. Для определения вычисляемого элемента, ограниченного рамками одного запроса, используется предложение WITH в инструкции SELECT. Дополнительные сведения см. [в разделе Создание мер в многомерных выражениях](/analysis-services/multidimensional-models/mdx/mdx-building-measures).  
   

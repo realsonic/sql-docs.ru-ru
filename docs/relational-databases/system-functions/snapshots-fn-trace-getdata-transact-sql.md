@@ -1,6 +1,6 @@
 ---
 description: snapshots.fn_trace_getdata (Transact-SQL)
-title: моментальные снимки. fn_trace_getdata (Transact-SQL) | Документация Майкрософт
+title: snapshots.fn_trace_getdata (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - snapshots.fn_trace_getdata function
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: f022a27c8a8e47cd12994d0d03ddb5af9a2f920c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ff9e08aefac2307811d0d4398b3af208924fd747
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464788"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097464"
 ---
 # <a name="snapshotsfn_trace_getdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 ## <a name="arguments"></a>Аргументы  
  *trace_info_id*  
- Уникальный идентификатор первичного ключа в таблице моментальных снимков. trace_info в базе данных хранилища управляющих данных. *trace_info_id* имеет **тип int**.  
+ Уникальный идентификатор первичного ключа в таблице snapshots.trace_info в базе данных хранилища управляющих данных. *trace_info_id* имеет **тип int**.  
   
  *start_time*  
  Время начала трассировки. *start_time* имеет тип **DateTime**.  
@@ -52,7 +52,7 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|\<All trace columns>|\<Varies>|Данные трассировки из таблицы snapshots.trace_data в базе данных хранилища данных управления.<br /><br /> Список столбцов для заданной трассировки можно получить, выполнив следующий запрос:<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **Примечание.** Столбцы, возвращаемые функцией моментальных снимков. fn_trace_gettable соответствуют значениям в столбце имя в системном представлении sys. trace_columns. Единственным различием является столбец GroupID, не возвращаемый функцией.|  
+|\<All trace columns>|\<Varies>|Данные трассировки из таблицы snapshots.trace_data в базе данных хранилища данных управления.<br /><br /> Список столбцов для заданной трассировки можно получить, выполнив следующий запрос:<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **Примечание.** Столбцы, возвращаемые функцией snapshots.fn_trace_gettable, соответствуют значениям в столбце имя в системном представлении sys.trace_columns. Единственным различием является столбец GroupID, не возвращаемый функцией.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для mdw_reader.  

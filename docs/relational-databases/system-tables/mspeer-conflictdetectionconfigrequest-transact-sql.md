@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_conflictdetectionconfigurerequest
 ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2ad027934c2ff0a0009512334c0d7d1a89a7bcb7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a8e6d22946599946dda10afcd1d5c46318c0342a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540344"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098576"
 ---
 # <a name="mspeer_conflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89540344"
 |progress_phase|**nvarchar(32)**|Определяет текущую стадию обработки как одно из следующих значений:<br /><br /> Запуск<br /><br /> Exploring topology (исследование топологии)<br /><br /> Exploring topology (сбор данных о состоянии)<br /><br /> Собранные данные о состоянии|  
 |phase_timed_out|**bit**|Указывает, что время ожидания текущей стадии истекло.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

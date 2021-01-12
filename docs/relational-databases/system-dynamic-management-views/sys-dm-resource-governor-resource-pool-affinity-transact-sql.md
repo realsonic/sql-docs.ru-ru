@@ -1,6 +1,6 @@
 ---
 description: Представление sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
-title: sys. dm_resource_governor_resource_pool_affinity (Transact-SQL) | Документация Майкрософт
+title: sys.dm_resource_governor_resource_pool_affinity (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - dm_resource_governor_resource_pool_affinity
 - sys.dm_resource_governor_resource_pool_affinity
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c304b552dfbf09786af4c7d61edc64c99b004adc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d5fa2993e4ae716f72ad93bc388c466e69f00da3
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546541"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097552"
 ---
 # <a name="sysdm_resource_governor_resource_pool_affinity-transact-sql"></a>Представление sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89546541"
 |Processor_group|**smallint**|Идентификатор логической группы процессоров Windows. Не допускает значение NULL.|  
 |Scheduler_mask|**bigint**|Двоичная маска, представляющая планировщики, связанные с этим пулом. Не допускает значение NULL.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Пулы, которые созданы со сходством AUTO, не будут появляться в этом представлении, поскольку не имеют сходства. Дополнительные сведения см. в статьях [Создание пула ресурсов &#40;Transact-sql&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) и [изменение пула ресурсов &#40;инструкций transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) .  
   
 ## <a name="see-also"></a>См. также:  

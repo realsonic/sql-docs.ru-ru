@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistpublishers system table
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aa3f8872775f9d82a23d9ba2eb33a892696ca792
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 296bedcc14194dbba3a8f91cb8ebbc6553b6481c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551008"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098215"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "89551008"
 |**password**|**nvarchar (524)**|Пароль (зашифрованный) для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**active**|**bit**|Показывает, используется ли локальный распространитель удаленным издателем.|  
 |**trusted**|**bit**|Показывает, использует ли удаленный издатель такой же пароль, что и локальный распространитель:<br /><br /> **0** = для подключения к распространителю на удаленном издателе требуется пароль.<br /><br /> **1** = пароль не требуется.|  
-|**third_party**|**bit**|Является ли издатель установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> Установка **равна 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .** 1** = разнородный источник данных.|  
-|**publisher_type**|**sysname**|Тип издателя:<br /><br /> **MSSQLSERVER**  =  MSSQLServer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Издателя.<br /><br /> **Oracle** = стандартный издатель Oracle.<br /><br /> **Oracle Gateway** = издатель шлюза Oracle.|  
+|**third_party**|**bit**|Является ли издатель установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> Установка **равна 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .**1** = разнородный источник данных.|  
+|**publisher_type**|**sysname**|Тип издателя:<br /><br />   =  MSSQLServer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Издателя.<br /><br /> **Oracle** = стандартный издатель Oracle.<br /><br /> **Oracle Gateway** = издатель шлюза Oracle.|  
 |**storage_connection_string**|**nvarchar (779)**|Значение строки подключения к хранилищу базы данных SQL Azure.|  
 
   

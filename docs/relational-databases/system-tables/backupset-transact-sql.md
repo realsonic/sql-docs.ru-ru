@@ -18,15 +18,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7653ad7ed1d69e7de97e66d1003d6f131be45142
-ms.sourcegitcommit: d8a9ad86401bff422d506078c6200494c795e7c0
+ms.openlocfilehash: 87d509f0a49668bd354fd1132bb3501c6d2bdbcd
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765202"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098715"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "97765202"
 |**encryptor_thumbprint**|**varbinary(20)**|Отпечаток шифратора, который будет использоваться для поиска сертификата или асимметричного ключа в базе данных. Если резервная копия не была зашифрована, это значение равно NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Тип используемого шифратора: сертификат или асимметричный ключ. . Если резервная копия не была зашифрована, это значение равно NULL.|  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 - Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбец таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
 - Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
 - Для SQL Управляемый экземпляр, в таблице резервных копий отображается только журнал резервного копирования для инициированных пользователем [резервных копий только для копирования](../../relational-databases/backup-restore/copy-only-backups-sql-server.md). Таблица резервных копий не отображает журнал резервного копирования для автоматических резервных копий, выполняемых службой. 

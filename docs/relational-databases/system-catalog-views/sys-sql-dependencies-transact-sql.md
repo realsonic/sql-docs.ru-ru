@@ -1,6 +1,6 @@
 ---
 description: sys.sql_dependencies (Transact-SQL)
-title: sys. sql_dependencies (Transact-SQL) | Документация Майкрософт
+title: sys.sql_dependencies (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_dependencies catalog view
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6dc1bb60a075f75aabb737a0eccc35b8269f8db2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7c20d20cedd1304136af2d57f599aa2797dd4eee
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548678"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099198"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89548678"
   Содержит по одной строке для каждой зависимости, связанной с упоминаемой сущностью с помощью выражения или инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], определяющих какой-либо другой ссылающийся объект.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представление [sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) .  
 
   
 |Имя столбца|Тип данных|Описание|  

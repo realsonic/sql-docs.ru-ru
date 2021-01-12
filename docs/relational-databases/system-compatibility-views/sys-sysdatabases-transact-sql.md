@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.sysdatabases compatibility view
 - sysdatabases system table
 ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebee2c9eba8870dbb3b95712d69eaa1e09e2a563
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2a5ed7033605db917f972e83bcf6c014c49f52bd
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477345"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099169"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97477345"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя базы данных|  
-|**DBID**|**smallint**|Идентификатор базы данных|  
+|**dbid**|**smallint**|Идентификатор базы данных|  
 |**трансляцию**|**varbinary(85)**|Системный идентификатор создателя базы данных.|  
 |**mode**|**smallint**|Для внутреннего применения: блокирует базу данных во время ее создания.|  
 |**status**|**int**|Биты состояния, некоторые из которых можно задать с помощью [инструкции ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) , как указано ниже.<br /><br /> 1 = **Автозакрытие** (ALTER DATABASE)<br /><br /> 4 = **Выбор в/bulkcopy** (ALTER DATABASE с помощью Set Recovery)<br /><br /> 8 = **TRUNC. log на chkpt** (ALTER DATABASE с помощью Set Recovery)<br /><br /> 16 = **обнаружение разорванных страниц** (ALTER DATABASE)<br /><br /> 32 = **Загрузка**<br /><br /> 64 = **предварительное восстановление**<br /><br /> 128 = **Восстановление**<br /><br /> 256 = **восстановление не** выполнено<br /><br /> 512 = **вне сети** (ALTER DATABASE)<br /><br /> 1024 = **только для чтения** (ALTER DATABASE)<br /><br /> 2048 = **только для использования dbo** (ALTER DATABASE с помощью Set RESTRICTED_USER)<br /><br /> 4096 = **один пользователь** (ALTER DATABASE)<br /><br /> 32768 = **аварийный режим**<br /><br /> 65536 = **контрольная сумма** (ALTER DATABASE)<br /><br /> 4194304 = **автосжатие** (ALTER DATABASE)<br /><br /> 1073741824 = **аккуратное завершение работы**<br /><br /> В одно и то же время несколько битов могут находиться в состоянии ON.|  

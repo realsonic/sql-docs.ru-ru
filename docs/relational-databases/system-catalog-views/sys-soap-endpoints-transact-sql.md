@@ -1,6 +1,6 @@
 ---
 description: sys.soap_endpoints (Transact-SQL)
-title: sys. soap_endpoints (Transact-SQL) | Документация Майкрософт
+title: sys.soap_endpoints (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.soap_endpoints catalog view
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: daba746b3bbaf198160855e6caa85fb3d7b4fd1d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a0a41f08d7600ae25541924953c407ef12a2ab20
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539506"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096737"
 ---
 # <a name="syssoap_endpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Содержит по одной строке для каждой конечной точки на сервере, которая содержит полезные данные типа SOAP. Для каждой строки в этом представлении существует соответствующая строка с тем же **endpoint_id** в представлении каталога **sys. http_endpoints** , которое содержит метаданные конфигурации HTTP.  
+ Содержит по одной строке для каждой конечной точки на сервере, которая содержит полезные данные типа SOAP. Для каждой строки в этом представлении существует соответствующая строка с тем же **endpoint_id** в представлении каталога **sys.http_endpoints** , которое содержит метаданные конфигурации HTTP.  
   
  
 |Имя столбца|Тип данных|Описание|  
@@ -53,7 +53,7 @@ ms.locfileid: "89539506"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога конечных точек (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

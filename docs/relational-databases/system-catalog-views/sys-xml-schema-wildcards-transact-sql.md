@@ -18,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_wildcards catalog view
 ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 706db88cdc82c7b67105826091f826c62e7f3311
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2cc2f255b528e07d075b29a3aabc0a110e2ba867
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548635"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097826"
 ---
 # <a name="sysxml_schema_wildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Возвращает по одной строке на каждый компонент схемы XML, являющийся подстановочным знаком атрибута (**тип** **V**) или подстановочным знаком элемента (**тип** **W**), с **symbol_space** **N**.  
+  Возвращает по одной строке на каждый компонент схемы XML, который является Attribute-Wildcard (**тип** **V**) или Element-Wildcard (тип **W**) и с **symbol_space** **N**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "89548635"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Схемы XML &#40;представления каталога системы типов XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2996d419ae22b58c065eb2b6dbcdae6786703420
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f7830e874026b9d5af250fde294c8c72294d013d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466855"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097704"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -68,7 +68,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |Порядок|Затрагиваемый объект|Действие по исправлению|  
 |-----------|---------------------|-----------------------|  
-|1|**Индексы**|Перестройте любой индекс, определенный **sys.dm_db_objects_impacted_on_version_change** например:  `ALTER INDEX ALL ON <table> REBUILD`<br />или<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Объект**|Все ограничения, обозначенные как **sys.dm_db_objects_impacted_on_version_change**, должны быть еще раз проверены после повторного вычисления данных типа Geometry и Geography в базовой таблице. Для ограничений выполните проверку с помощью инструкции ALTER TABLE. <br />Пример: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />или<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Индексы**|Перестройте любой индекс, определенный **sys.dm_db_objects_impacted_on_version_change** например:  `ALTER INDEX ALL ON <table> REBUILD`<br />или диспетчер конфигурации служб<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Объект**|Все ограничения, обозначенные как **sys.dm_db_objects_impacted_on_version_change**, должны быть еще раз проверены после повторного вычисления данных типа Geometry и Geography в базовой таблице. Для ограничений выполните проверку с помощью инструкции ALTER TABLE. <br />Пример: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />или диспетчер конфигурации служб<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

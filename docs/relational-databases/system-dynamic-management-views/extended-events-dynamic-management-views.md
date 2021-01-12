@@ -13,14 +13,14 @@ helpviewer_keywords:
 - extended events [SQL Server], dynamic management objects
 - dynamic management objects (SQL Server)
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74f926b6ad0b90af3ec04a668b1f81a762373037
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 527e6320f247a544f93df57e8f46e55fc69e04e8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544894"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096618"
 ---
 # <a name="extended-events-dynamic-management-views"></a>Динамические административные представления расширенных событий
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "89544894"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

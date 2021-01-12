@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_cluster (Transact-SQL)
-title: sys. dm_hadr_cluster (Transact-SQL) | Документация Майкрософт
+title: sys.dm_hadr_cluster (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/31/2019
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b8bc19f3e73c00c2148cba2fb0381d73a36d6eb2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: aa289a58047e1108e94a6b70f86eb366807f5af1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89533136"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097681"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Если узел отказоустойчивой кластеризации Windows Server (WSFC), на котором размещен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с включенным параметром, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] имеет кворум WSFC, **sys. dm_hadr_cluster** возвращает строку, которая предоставляет имя кластера и сведения о кворуме. Если узел WSFC не набирает кворума, строка не возвращается.  
+  Если узел отказоустойчивой кластеризации Windows Server (WSFC), на котором размещен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включенный для, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] имеет кворум WSFC, **sys.dm_hadr_cluster** возвращает строку, которая предоставляет имя кластера и сведения о кворуме. Если узел WSFC не набирает кворума, строка не возвращается.  
  > [!TIP]
  > Начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , это динамическое административное представление поддерживает Always on экземпляры отказоустойчивого кластера в дополнение к группам доступности Always on.
 
@@ -46,7 +46,7 @@ ms.locfileid: "89533136"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Always On динамические административные представления и функции групп доступности &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Представления каталога групп доступности AlwaysOn (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Мониторинг групп доступности &#40;&#41;Transact-SQL ](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

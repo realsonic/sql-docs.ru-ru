@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9358bec121704dba28739232c24dbb930cee7c30
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 6e524635d20f3d2bb669ac36d5b4b131af904ecf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195591"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099150"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Справочник по многомерным выражениям
 
@@ -30,6 +30,6 @@ ms.locfileid: "92195591"
 ## <a name="see-also"></a>См. также:  
  [Выполнение запросов к многомерным данным с помощью MDX](/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
  [Analysis Services язык скриптов &#40;ASSL для XMLA&#41;](/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Получение данных из источника аналитических данных](/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source?view=asallproducts-allversions)   
+ [Получение данных из источника аналитических данных](/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source)   
  [Определение назначений и других команд скриптов](/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   

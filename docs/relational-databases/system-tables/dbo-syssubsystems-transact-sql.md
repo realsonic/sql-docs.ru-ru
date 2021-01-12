@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - syssubsystems system table
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4124ca1df5ef49984cb8e614ece4e37461ef1974
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ebd56d0ad3847aea411c27af5852d652b84e360e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538339"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098285"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,10 +44,10 @@ ms.locfileid: "89538339"
 |**stop_entry_point**|**nvarchar(30)**|Функция, которая вызывается при завершении работы подсистемы.|  
 |**max_worker_threads**|**int**|Максимальное число одновременных шагов для заданной подсистемы.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Только члены предопределенной роли сервера **sysadmin** могут обращаться к этой таблице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [dbo.sysпроксисубсистем &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
  [dbo.sysпрокси &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
  [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  

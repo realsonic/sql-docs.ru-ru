@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 046ff4071ae4ac45338d45916afeb9d2491d2d6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9ecda7d44603636ff12eef955dd83e7659cb9dc7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419578"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097497"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88419578"
 |**1**|Возвращает полный путь UNC, начиная с `\\computer_name`.|  
   
  *\@функцию*  
- Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. * \@ параметр* может иметь одно из следующих значений:  
+ Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *\@ параметр* может иметь одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "88419578"
 |**1**|Возвращает имя сервера без преобразования, например:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Возвращает полный путь сервера, например:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
-## <a name="return-type"></a>Тип возвращаемых данных  
+## <a name="return-type"></a>Возвращаемый тип  
  **nvarchar(max)**  
   
  Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является кластеризованным экземпляром в отказоустойчивом кластере, то имя компьютера, возвращаемое в качестве части этого пути, совпадает с именем виртуального узла для кластеризованного экземпляра.  
@@ -74,7 +74,7 @@ ms.locfileid: "88419578"
   
  Этот логический путь не соответствует физическому пути NTFS. Он преобразуется в физический путь с помощью драйвера фильтра файловой системы FILESTREAM и агента FILESTREAM. Возможность отделить логический путь от физического позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реорганизовать внутренние данные таким образом, чтобы пути остались действительными.  
   
-## <a name="best-practices"></a>Советы и рекомендации  
+## <a name="best-practices"></a>Рекомендации  
  Чтобы код и приложения были независимы от текущего компьютера и базы данных, следует избегать создания кода с использованием абсолютных путей. Вместо этого получите полный путь к файлу во время выполнения, используя функции **FileTableRootPath** и **GetFileNamespacePath** вместе, как показано в следующем примере. По умолчанию функция **GetFileNamespacePath** возвращает относительный путь к файлу, находящемуся внутри корневого пути к базе данных.  
   
 ```sql  

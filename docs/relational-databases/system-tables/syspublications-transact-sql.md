@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - syspublications system table
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 20b5615cc4f0b11b05eb69f4233e20f7a7379378
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8ba6fbe6033bff1f113a0ee128357d49a1f57e7f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550988"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097333"
 ---
 # <a name="syspublications-transact-sql"></a>Таблица syspublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "89550988"
 |**alt_snapshot_folder**|**nvarchar(255)**|Указывает местоположение альтернативной папки для моментального снимка.|  
 |**pre_snapshot_script**|**nvarchar(255)**|Задает указатель на расположение **SQL** -файла. Если моментальный снимок создается для подписчика, то агент распространителя выполняет предварительный скрипт моментального снимка до запуска скриптов реплицируемых объектов.|  
 |**post_snapshot_script**|**nvarchar(255)**|Задает указатель на расположение **SQL** -файла. Агент распространителя выполняет заключительный скрипт после применения скриптов и данных всех реплицируемых объектов во время начальной синхронизации.|  
-|**compress_snapshot**|**bit**|Указывает, что моментальный снимок, записываемый в *alt_snapshot_folder* расположение, должен быть сжат в [!INCLUDE[msCoName](../../includes/msconame-md.md)] формате CAB.** 1** означает, что моментальный снимок будет сжат.|  
+|**compress_snapshot**|**bit**|Указывает, что моментальный снимок, записываемый в *alt_snapshot_folder* расположение, должен быть сжат в [!INCLUDE[msCoName](../../includes/msconame-md.md)] формате CAB.**1** означает, что моментальный снимок будет сжат.|  
 |**ftp_address**|**sysname**|Сетевой адрес службы FTP для распространителя. Указывает расположение файлов моментальных снимков публикаций, необходимых агенту распространителя.|  
 |**ftp_port**|**int**|Номер порта службы FTP для распространителя. Указывает местоположение файлов с моментальными снимками публикаций, которые требуются агенту распространителя.|  
 |**ftp_subdirectory**|**nvarchar(255)**|Указывает расположение файлов моментальных снимков для агента распространителя, если публикация поддерживает распространение моментальных снимков с помощью FTP.|  
@@ -66,7 +66,7 @@ ms.locfileid: "89550988"
 |**conflict_retention**|**int**|Задает срок хранения конфликтных записей в днях.|  
 |**conflict_policy**|**int**|Задает политику устранения конфликтов при обновлении подписчика посредством очередей. Может принимать одно из следующих значений:<br /><br /> **1** = побеждает конфликт с издателем.<br /><br /> **2** = конфликт побеждает подписчиком.<br /><br /> **3** = подписка повторно инициализирована.|  
 |**queue_type**|**int**|Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **1** = MSMQ, которая использует [!INCLUDE[msCoName](../../includes/msconame-md.md)] очередь сообщений для хранения транзакций.<br /><br /> **2** = SQL, который использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Примечание. Использование [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений устарело и больше не доступно.|  
-|**ad_guidname**|**sysname**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Допустимый глобальный уникальный идентификатор (GUID) указывает, что публикация опубликована в Active Directory, а идентификатор GUID — соответствующая Active Directory **objectGUID**объекта публикации. Если значение равно NULL, то публикация не опубликована в Active Directory.|  
+|**ad_guidname**|**sysname**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Допустимый глобальный уникальный идентификатор (GUID) указывает, что публикация опубликована в Active Directory, а идентификатор GUID — соответствующая Active Directory **objectGUID** объекта публикации. Если значение равно NULL, то публикация не опубликована в Active Directory.|  
 |**backward_comp_level**|**int**|Уровень совместимости базы данных может иметь одно из следующих значений:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> **110**  =  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br /> **120**  =  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .|  
 |**allow_initialize_from_backup**|**bit**|Показывает, может ли подписчик инициализировать подписку на данную публикацию из резервной копии, а не из исходного моментального снимка. **1** означает, что подписки можно инициализировать из резервной копии, а **0** — нет. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binary**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

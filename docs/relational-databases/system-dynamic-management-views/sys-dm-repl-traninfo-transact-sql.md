@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6369fc0d1ee2c0b70cb3e6e13fd201fd718236dc
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f8a0613d83cebfed56ba5202a6c3535ef31c8a84
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834572"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098855"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91834572"
 |**fsinfo_address**|**varbinary(8)**|Адрес в памяти структуры кэшированных данных о файловых потоках.|  
 |**begin_lsn**|**nvarchar (64)**|Регистрационный номер (LSN) начальной записи транзакции в журнале.|  
 |**commit_lsn**|**nvarchar (64)**|Номер LSN записи в журнале фиксирования транзакции.|  
-|**DBID**|**smallint**|Идентификатор базы данных.|  
+|**dbid**|**smallint**|Идентификатор базы данных.|  
 |**rows**|**int**|Идентификатор реплицированной команды в транзакции.|  
 |**xdesid**|**nvarchar (64)**|Идентификатор транзакции.|  
 |**artcache_table_address**|**varbinary(8)**|Адрес в памяти структуры кэшированной таблицы статьи, использованной в последний раз для данной транзакции.|  

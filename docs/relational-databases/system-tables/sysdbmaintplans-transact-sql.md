@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdbmaintplans system table
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 160abf3a360d18e3ba83df0f11cc9982984df049
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2aec8e8b94dc341225a5e34e35f2f168fa83e56e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89517071"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098095"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

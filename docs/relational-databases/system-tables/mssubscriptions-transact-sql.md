@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriptions system table
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 70edbd52e02904a16cd5aa6bef31d1679457e03b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cee2d6298c2136a886cba29a89bc540230746092
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545504"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098127"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89545504"
 |**subscription_seqno**|**varbinary (16)**|Порядковый номер транзакции моментального снимка памяти.|  
 |**snapshot_seqno_flag**|**bit**|Указывает источник порядкового номера транзакции моментального снимка, где значение **1** означает, что **subscription_seqno** является порядковым номером моментального снимка.|  
 |**independent_agent**|**bit**|Указывает, имеется ли для данной публикации изолированный агент распространителя.|  
-|**subscription_time**|**datetime**|Только для внутреннего применения.|  
+|**subscription_time**|**datetime**|Только для внутреннего использования.|  
 |**loopback_detection**|**bit**|Применяется к подпискам, которые являются частью двунаправленной топологии репликации транзакций. Механизм распознавания обратной связи определяет, отправляет ли агент распространителя транзакции, созданные в подписчике, обратно подписчику:<br /><br /> **1** = не отправляет обратно.<br /><br /> **0** = отправляет обратно.<br /><br />|  
 |**agent_id**|**int**|Идентификатор агента.|  
 |**update_mode**|**tinyint**|Тип обновления.|  

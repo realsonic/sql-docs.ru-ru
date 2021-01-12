@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublications system table
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 61a1845ac54b42148b468462835cf041844007bc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a97462b4224244633a945f2108370b8c4f549f63
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540963"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098259"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "89540963"
 |**conflict_retention**|**int**|Задает срок хранения конфликтных записей в днях. *Не поддерживается издателями, отличными от издателей SQL.*|  
 |**conflict_policy**|**int**|Задает политику устранения конфликтов при обновлении подписчика посредством очередей. Может принимать одно из следующих значений:<br /><br /> **1** = побеждает конфликт с издателем.<br /><br /> **2** = конфликт побеждает подписчиком.<br /><br /> **3** = подписка повторно инициализирована.<br /><br /> *Не поддерживается издателями, отличными от издателей SQL.*|  
 |**queue_type**|**int**|Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **1** = MSMQ, которая использует [!INCLUDE[msCoName](../../includes/msconame-md.md)] очередь сообщений для хранения транзакций.<br /><br /> **2** = SQL, который использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Этот столбец не используется издателями, отличными от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Примечание. Использование [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений устарело и больше не поддерживается.<br /><br /> *Этот столбец не поддерживается для издателей, отличных от SQL.*|  
-|**ad_guidname**|**sysname**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Допустимый глобальный уникальный идентификатор (GUID) указывает, что публикация опубликована в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory, а идентификатор GUID — соответствующая Active Directory **objectGUID**объекта публикации. Если это значение равно NULL, публикация в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory не публикуется. *Не поддерживается издателями, отличными от издателей SQL.*|  
+|**ad_guidname**|**sysname**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Допустимый глобальный уникальный идентификатор (GUID) указывает, что публикация опубликована в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory, а идентификатор GUID — соответствующая Active Directory **objectGUID** объекта публикации. Если это значение равно NULL, публикация в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory не публикуется. *Не поддерживается издателями, отличными от издателей SQL.*|  
 |**backward_comp_level**|**int**|Уровень совместимости базы данных может иметь одно из следующих значений:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> *Не поддерживается издателями, отличными от издателей SQL.*|  
 |**description**|**nvarchar(255)**|Описание публикации.|  
 |**independent_agent**|**bit**|Показывает наличие изолированного агента распространителя для этой публикации.<br /><br /> **0** = публикация использует общий агент распространения, а каждая пара базы данных издателя или подписчика имеет один общий агент.<br /><br /> **1** = для этой публикации существует изолированный агент распространения.|  
@@ -73,7 +73,7 @@ ms.locfileid: "89540963"
 |**replicate_ddl**|**int**|Указывает, поддерживается ли для публикации репликация схемы. значение **1** указывает, что инструкции DDL, выполняемые на издателе, реплицируются, а **0** означает, что инструкции DDL не реплицируются. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md). *Не поддерживается издателями, отличными от издателей SQL.*|  
 |**options**|**int**|Битовая карта, указывающая дополнительные параметры публикации, со следующими необязательными значениями битов:<br /><br /> **0x1** — включается для одноранговой репликации.<br /><br /> **0x2** — публиковать только локальные изменения.<br /><br /> **0x4** — включено для подписчиков, отличных от SQL Server.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   

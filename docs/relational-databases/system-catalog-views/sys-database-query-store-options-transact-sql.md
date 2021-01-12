@@ -14,19 +14,18 @@ f1_keywords:
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- database_query_store_options catalog view
 - sys.database_query_store_options catalog view
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: ''
-ms.date: 05/27/2020
+ms.date: 1/8/2021
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8fce0932d546470206bbc7752429090c0212158
-ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
+ms.openlocfilehash: 273e5c4446853c3f44d0c99535880c9c9da2aa5f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98005419"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098084"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 
@@ -49,12 +48,17 @@ ms.locfileid: "98005419"
 |**max_storage_size_mb**|**bigint**|Максимальный размер диска для хранилища запросов в мегабайтах (МБ). Значение по умолчанию — **100** МБ до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и **1 ГБ** , начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br />Для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] выпуска Premium значение по умолчанию — 1 ГБ, а для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] выпуска Basic — 10 МБ.<br /><br /> Измените с помощью `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` инструкции.|  
 |**stale_query_threshold_days**|**bigint**|Число дней, в течение которых данные запроса хранятся в хранилище запросов. Значение по умолчанию — **30**. Задайте значение 0, чтобы отключить политику хранения.<br />Для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition значение по умолчанию — семь дней.<br /><br /> Измените с помощью `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` инструкции.|  
 |**max_plans_per_query**|**bigint**|Ограничивает максимальное количество хранимых планов. Значение по умолчанию — **200**. Если достигнуто максимальное значение, хранилище запросов прекращает запись новых планов для этого запроса. Значение 0 устраняет ограничение в отношении количества захваченных планов.<br /><br /> Измените с помощью `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` инструкции.|  
-|**query_capture_mode**|**smallint**|Текущий активный режим записи запросов:<br /><br /> **1** = все — записываются все запросы. Это значение конфигурации по умолчанию для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий).<br /><br /> 2 = Автоматический сбор соответствующих запросов на основе числа выполнений и потребления ресурсов. Это значение конфигурации по умолчанию для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = NONE — отключить запись новых запросов. Хранилище запросов будет продолжать сбор статистики компиляции и времени выполнения для запросов, которые уже были записаны. Используйте эту конфигурацию с осторожностью, так как вы можете пропустить важные запросы.|  
-|**query_capture_mode_desc**|**nvarchar(60)**|Текстовое описание фактического режима записи хранилища запросов:<br /><br /> ALL (по умолчанию для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **Авто** (по умолчанию для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> None|  
+|**query_capture_mode**|**smallint**|Текущий активный режим записи запросов:<br /><br /> **1** = все — записываются все запросы. Это значение конфигурации по умолчанию для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий).<br /><br /> 2 = Автоматический сбор соответствующих запросов на основе числа выполнений и потребления ресурсов. Это значение конфигурации по умолчанию для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = NONE — отключить запись новых запросов. Хранилище запросов будет продолжать сбор статистики компиляции и времени выполнения для запросов, которые уже были записаны. Используйте эту конфигурацию с осторожностью, так как вы можете пропустить важные запросы. <br /><br /> 4 = CUSTOM — позволяет дополнительный контроль над политикой отслеживания запросов с помощью [параметров QUERY_CAPTURE_POLICY](../../t-sql/statements/alter-database-transact-sql-set-options.md#SettingOptions).<br /> **Область применения**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] и более поздних версий.|  
+|**query_capture_mode_desc**|**nvarchar(60)**|Текстовое описание фактического режима записи хранилища запросов:<br /><br /> ALL (по умолчанию для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **Авто** (по умолчанию для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> NONE <br /><br /> CUSTOM|  
+|**capture_policy_execution_count**|**int**|Параметр НАСТРАИВАЕМой политики режима записи запросов. Определяет количество выполнений запроса в течение ознакомительного периода. Значение по умолчанию равно 30.<br />**Область применения**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] и более поздних версий.| 
+|**capture_policy_total_compile_cpu_time_ms**|**bigint**|Параметр НАСТРАИВАЕМой политики режима записи запросов. Определяет общее время ЦП, затраченное на компиляцию, которое запрос использовал за ознакомительный период. Значение по умолчанию — 1000.<br /> **Область применения**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] и более поздних версий.|
+|**capture_policy_total_execution_cpu_time_ms**|**bigint**|Параметр НАСТРАИВАЕМой политики режима записи запросов. Определяет общее время ЦП, затраченное на выполнение, которое запрос использовал за ознакомительный период. Значение по умолчанию — 100.<br /> **Область применения**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] и более поздних версий.|
+|**capture_policy_stale_threshold_hours**|**int**|Параметр НАСТРАИВАЕМой политики режима записи запросов. Определяет период интервала ознакомления для определения того, нужно ли записать запрос. Значение по умолчанию — 24 часа.<br /> **Область применения**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] и более поздних версий.|
 |**size_based_cleanup_mode**|**smallint**|Определяет, будет ли автоматически активирована очистка, когда общий объем данных приблизится к верхней границе ограничения.<br /><br /> 0 = очистка на основе размера не будет автоматически активирована.<br /><br /> **1** = Очистка на основе авторазмера будет автоматически активирована, если размер на диске достигнет **90%** *max_storage_size_mb*. Это значение конфигурации по умолчанию.<br /><br />Эта очистка сначала удаляет самые дешевые и самые старые запросы. Она останавливается при достижении примерно **80%** *max_storage_size_mb* .|  
 |**size_based_cleanup_mode_desc**|**nvarchar(60)**|Текстовое описание фактического режима очистки на основе размера хранилища запросов:<br /><br /> OFF <br /> **Авто** (по умолчанию)|  
 |**wait_stats_capture_mode**|**smallint**|Определяет, выполняет ли хранилище запросов сбор статистики ожидания: <br /><br /> 0 = выключен. <br /> **1** = включено<br /> **Область применения**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и более поздних версий.|
-|**wait_stats_capture_mode_desc**|**nvarchar(60)**|Текстовое описание фактического режима записи статистики ожидания: <br /><br /> OFF <br /> **Вкл** . (по умолчанию)<br /> **Область применения**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и более поздних версий.| 
+|**wait_stats_capture_mode_desc**|**nvarchar(60)**|Текстовое описание фактического режима записи статистики ожидания: <br /><br /> OFF <br /> **Вкл** . (по умолчанию)<br /> **Область применения**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и более поздних версий.|
+|**actual_state_additional_info**|**nvarchar (8000)**|В настоящее время не используется. Может быть реализован в будущем.|
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение `VIEW DATABASE STATE`.  
@@ -71,5 +75,3 @@ ms.locfileid: "98005419"
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [Хранимые процедуры хранилища запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
-  
-  

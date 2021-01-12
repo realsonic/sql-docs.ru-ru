@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysproxysubsystem system table
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2bdfb178328b3e4974bd0ca377525db41b5c8f47
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 700d55e45dc153834cfb12aa9883f8faa6fac909
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545797"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098322"
 ---
 # <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89545797"
 |**subsystem_id**|**int**|Идентификатор подсистемы. Это значение соответствует столбцу **subsystem_id** в таблице **заполнения таблицы syssubsystems** .|  
 |**proxy_id**|**int**|Идентификатор учетной записи-посредника. Это значение соответствует столбцу **proxy_id** в таблице **sysproxies** .|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Только члены предопределенной роли сервера **sysadmin** могут обращаться к этой таблице.  
   
 ## <a name="see-also"></a>См. также:  

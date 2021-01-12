@@ -1,6 +1,6 @@
 ---
 description: sys.server_audit_specification_details (Transact-SQL)
-title: sys. server_audit_specification_details (Transact-SQL) | Документация Майкрософт
+title: sys.server_audit_specification_details (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -18,30 +18,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audit_specification_details catalog view
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 20f119f3db641ebffd61ba4465abeea3c99515e5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 714a6804a75342b732d88bd0442997fc8be362f1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550457"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097954"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Содержит сведения об элементах (действиях) спецификации аудита сервера в подсистеме аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Чтобы получить список всех audit_action_id и их имена, запросите представление [sys. dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
+  Содержит сведения об элементах (действиях) спецификации аудита сервера в подсистеме аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Чтобы получить список всех audit_action_id и их имена, [sys.dm_audit_actions запросов &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |server_specification_id|**int**|Идентификатор спецификации аудита сервера|  
 |audit_action_id|**int**|Идентификатор действия аудита|  
 |audit_action_name|**sysname**|Имя группы или имя действия аудита|  
-|class|**tinyint**|Зарезервировано|  
-|class_desc|**nvarchar(60)**|Зарезервировано|  
-|major_id|**int**|Зарезервировано|  
-|minor_id|**int**|Зарезервировано|  
-|audited_principal_id|**int**|Зарезервировано|  
+|class|**tinyint**|Зарезервированное|  
+|class_desc|**nvarchar(60)**|Зарезервированное|  
+|major_id|**int**|Зарезервированное|  
+|minor_id|**int**|Зарезервированное|  
+|audited_principal_id|**int**|Зарезервированное|  
 |audited_result|**nvarchar(60)**|Результат аудита:<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|Является ли группой объект, прошедший аудит:<br /><br /> 0 — не группа;<br /><br /> 1 — группа.|  
   

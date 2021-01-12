@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_session_space_usage dynamic management view
 ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3163e54ce0db39ac92b16584c0ca9dc57a6d2c76
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 45fc95bdfa5a1dabe3b8b50e5acb4b05a09d0998
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468495"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096664"
 ---
 # <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "97468495"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|От|Кому|Связь|  
+|От|Кому|Relationship|  
 |----------|--------|------------------|  
 |dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|"Одна к одной"|  
   

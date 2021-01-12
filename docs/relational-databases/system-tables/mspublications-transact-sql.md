@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublications system table
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0d11bb73f18dc750f32c6f7ba2ee02487324e946
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 089270c4c95b35e25f44339a7f001b5ac194ec01
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89524499"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098188"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "89524499"
 |**allow_queued_tran**|**bit**|Определяет, позволяет ли обновление публикация посредством очередей:<br /><br /> **0 =** Публикация не находится в очереди.<br /><br /> **1** = публикация поставлена в очередь.|  
 |**options**|**int**|Сведения для данного выпуска отсутствуют.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
