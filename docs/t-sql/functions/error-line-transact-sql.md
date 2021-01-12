@@ -21,14 +21,14 @@ helpviewer_keywords:
 - ERROR_LINE function
 - CATCH block
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c914c69646f99fdcb3ff4a214d37faa61feef3b6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 44402d9f0af858381041e9f5bb5ff989971f44f1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116736"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097191"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 
@@ -56,7 +56,7 @@ ERROR_LINE ( )
 -   номер строки в подпрограмме, если ошибка возникла в хранимой процедуре или триггере;  
 -   значение NULL в случае вызова вне блока CATCH.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Функцию `ERROR_LINE` можно вызывать в любом месте области действия блока CATCH.  
   
 Функция `ERROR_LINE` возвращает номер строки, в которой возникла ошибка. Это происходит вне зависимости от места вызова `ERROR_LINE` в пределах блока CATCH от числа вызовов `ERROR_LINE`. В этом отличие данной функции от таких функций, как @@ERROR. Функция @@ERROR возвращает номер ошибки в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку, или же в первой инструкции блока CATCH.  

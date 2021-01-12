@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b5cb516c1d7058d455919a3faffed5b653a1bae6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a8b60c36831622713103786727c4225ac0c351c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449884"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095676"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Функции служб Integration Services, поддерживаемые различными выпусками SQL Server
 
@@ -36,7 +36,7 @@ ms.locfileid: "88449884"
 
 Выпуск SQL Server Evaluation доступен для ознакомления в течение 180 дней.  
     
-> [![Скачать на странице центра оценки](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Скачать SQL Server 2016 на странице центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
+> [![Скачать на странице центра оценки](/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Скачать SQL Server 2016 на странице центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
 ## <a name="new-integration-services-features-in-sql-server-2017"></a><a name="ISNew"></a> Новые функции служб Integration Services в SQL Server 2017
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 409e87d937641386747ccf5210551aadb3f5b761
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 9eec7ad0a11116b1eb9e8bf1c33b57ff3bd2b419
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195566"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099301"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "92195566"
 > Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается в режиме аутентификации Windows, а затем переключается на аутентификацию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows, то имя входа **sa** будет по умолчанию отключено. Это приводит к ошибке с состоянием 7: "Ошибка входа для пользователя sa". Чтобы включить имя для входа **sa**, выполните инструкции из статьи об [изменении режима проверки подлинности сервера](~/database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Действие пользователя  
-При попытке подключения с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен в режиме смешанной проверки подлинности. Дополнительные сведения см. в статье [Изменение режима проверки подлинности сервера](https://docs.microsoft.com/sql/database-engine/configure-windows/change-server-authentication-mode).
+При попытке подключения с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен в режиме смешанной проверки подлинности. Дополнительные сведения см. в статье [Изменение режима проверки подлинности сервера](../../database-engine/configure-windows/change-server-authentication-mode.md).
   
 При попытке подключения с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] убедитесь, что имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существует и введено верно.  
   
@@ -116,4 +116,4 @@ ms.locfileid: "92195566"
   
 Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] поддерживает автономные базы данных, подтвердите, что имя входа не удалено после преобразования в пользователя автономной базы данных.  
   
-Службы, запущенные от имени **NT AUTHORITY\NETWORK SERVICE**, должны использовать для локального соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аутентификацию по полному доменному имени компьютера. Дополнительные сведения см. в разделе [Как использовать учетную запись сетевой службы для доступа к ресурсам в ASP.NET](/previous-versions/msp-n-p/ff647402(v=pandp.10))  
+Службы, запущенные от имени **NT AUTHORITY\NETWORK SERVICE**, должны использовать для локального соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аутентификацию по полному доменному имени компьютера. Дополнительные сведения см. в разделе [Как использовать учетную запись сетевой службы для доступа к ресурсам в ASP.NET](/previous-versions/msp-n-p/ff647402(v=pandp.10))

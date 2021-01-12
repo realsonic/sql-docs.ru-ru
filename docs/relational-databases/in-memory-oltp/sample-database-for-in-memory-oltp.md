@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d28550dba1a4703bab01324910436b7256597bb
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: b4cf02b18cdaef035cd27b568d5f8d84f0a25619
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643873"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094626"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Пример базы данных для выполняющейся в памяти OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -183,10 +183,10 @@ ms.locfileid: "97643873"
   
  Для дальнейшей оптимизации рабочей нагрузки можно использовать индексы HASH. Они особенно хорошо подходят для уточняющих запросов и вставки строк. Однако следует учитывать, что они не поддерживают просмотр диапазонов, упорядоченный просмотр или поиск в начальных столбцах ключа индекса. Поэтому при использовании этих индексов требуется соблюдать осторожность. Кроме того, при создании необходимо указать параметр bucket_count. Обычно его значение должно быть в 1–2 раза больше числа значение ключей индекса, однако переоценка редко создает проблему.  
   
-Дополнительные указания по [работе с индексами](/sql/relational-databases/indexes/guidelines-for-online-index-operations), а также указания по [выбору правильного значения bucket_count](https://sqlserver-help.com/tag/bucket_count/) см. в электронной документации.  
+Дополнительные указания по [работе с индексами](../indexes/guidelines-for-online-index-operations.md), а также указания по [выбору правильного значения bucket_count](https://sqlserver-help.com/tag/bucket_count/) см. в электронной документации.  
 
 В электронной документации содержатся дополнительные сведения о следующих разделах:
-- [Рекомендации по индексам](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [Рекомендации по индексам](./indexes-for-memory-optimized-tables.md) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  Индексы в перенесенных таблицах настроены для выполнения демонстрационной рабочей нагрузки по обработке заказов на продажу. Рабочая нагрузка состоит из операций вставки и уточняющих запросов, которые выполняются в таблицах Sales.SalesOrderHeader_inmem и Sales.SalesOrderDetail_inmem, а также операций уточняющих запросов, которые выполняются в столбцах первичного ключа из таблиц Production.Product_inmem и Sales.SpecialOffer_inmem.  
   

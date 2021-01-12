@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rgward
 ms.author: ramakoni
-ms.openlocfilehash: bfcd8763c649f83bb9e72881c6facda29917f7b8
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 7aa3b39996f8dc282e11d92706743a7ba42998da
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418894"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099277"
 ---
 # <a name="mssqlserver_7105"></a>MSSQLSERVER_7105
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "92418894"
 1. Как указано в сообщении, сначала следует выполнить инструкцию `DBCC CHECKDB` применительно к базе данных или `DBCC CHECKTABLE` применительно к таблице, в которой возникла проблема.
 
     - Имя базы данных указано в сообщении.
-    - Чтобы узнать, с какой таблицей связан сбой, не выполняя `DBCC CHECKDB`, необходимо выяснить, к каким таблицам обращался запрос. Одним из способов является использование профилировщика SQL для трассировки запроса. Однако в [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 запрос можно определить, используя сеанс расширенных событий system_health. Дополнительные сведения об использовании сеанса system_health см. по следующей ссылке: [Использование сеанса system_health](/sql/relational-databases/extended-events/use-the-system-health-session).
+    - Чтобы узнать, с какой таблицей связан сбой, не выполняя `DBCC CHECKDB`, необходимо выяснить, к каким таблицам обращался запрос. Одним из способов является использование профилировщика SQL для трассировки запроса. Однако в [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 запрос можно определить, используя сеанс расширенных событий system_health. Дополнительные сведения об использовании сеанса system_health см. по следующей ссылке: [Использование сеанса system_health](../extended-events/use-the-system-health-session.md).
 
     - Как и в случае с любой проблемой согласованности базы данных, эти ошибки можно устранить путем восстановления из известной исправной резервной копии, которая не содержит этой проблемы.
 

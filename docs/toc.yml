@@ -2295,7 +2295,7 @@
   items:
     - name: Кодирование клиентской программы >
       displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
-      href: connect/index.md
+      href: ./connect/homepage-sql-connection-programming.md
     - name: Приложения уровня данных
       href: relational-databases/data-tier-applications/data-tier-applications.md
       items:
@@ -4850,7 +4850,7 @@
     - name: Документации по миграции
       href: sql-server/migrate/index.yml
     - name: Службы SQL Server Integration Services (SSIS) >
-      href: integration-services/index.md
+      href: ./integration-services/sql-server-integration-services.md
     - name: Программа массового копирования (bcp)
       href: tools/bcp-utility.md
     - name: "Службы миграции Azure\_>"
@@ -5340,7 +5340,7 @@
                 - name: Фильтрация опубликованных данных
                   href: relational-databases/replication/merge/filter-published-data-for-merge-replication.md
                 - name: Просмотр сведений о конфликтах
-                  href: relational-databases/replication/view-conflict-information-for-merge-publications.md
+                  href: ./relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md
                 - name: Устранение конфликтов
                   items:
                     - name: Выбор арбитра
@@ -7062,7 +7062,7 @@
     - name: Соединения
       href: relational-databases/performance/joins.md
     - name: Написание сценариев
-      href: relational-databases/scripting/database-engine-scripting.md
+      href: ./ssms/scripting/database-engine-scripting.md
     - name: Вложенные запросы
       href: relational-databases/performance/subqueries.md
     - name: Виртуализация данных (Polybase)
@@ -7118,7 +7118,7 @@
                 - name: Виртуализация данных
                   href: relational-databases/polybase/data-virtualization.md
                 - name: "Виртуализация файла\_CSV"
-                  href: relational-databases/polybase/data-virtualization-csv.md
+                  href: ./big-data-cluster/data-virtualization-csv.md
             - name: Диагностика
               items:
                 - name: Мониторинг и устранение неполадок
@@ -7140,7 +7140,7 @@
             - name: Stack Overflow >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
             - name: "Майкрософт: вопросы и ответы\_>>"
-              href: 'https://docs.microsoft.com/answers/products/sql-server'
+              href: /answers/products/sql-server
             - name: "Отправить отзыв\_>>"
               href: 'https://feedback.azure.com/forums/908035-sql-server'
             - name: "Reddit\_>>"
@@ -7245,11 +7245,11 @@
       href: machine-learning/
     - name: "Система платформы аналитики\_>"
       displayName: 'APS, PDW, Parallel Data Warehouse'
-      href: analytics-platform-system/index.md
+      href: ./analytics-platform-system/home-analytics-platform-system-aps-pdw.md
     - name: "Службы SQL\_Server Analysis\_Services\_(SSAS)\_>"
-      href: 'https://docs.microsoft.com/analysis-services/analysis-services-overview'
+      href: /analysis-services/analysis-services-overview
     - name: "Службы SQL\_Server Reporting\_Services\_(SSRS)\_>"
-      href: reporting-services/index.md
+      href: ./reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
     - name: Службы Master Data Services
       displayName: MDS
       href: master-data-services/master-data-services-overview-mds.md
@@ -8682,7 +8682,7 @@
                     - name: 'Объекты, поддерживаемые мастером создания скриптов'
                       href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: Редакторы запросов и текста
-                  href: 'https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15'
+                  href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15
                   items:
                     - name: Редактор XML
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
@@ -9104,7 +9104,7 @@
                 - name: Редакторы запросов и текста
                   href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
                 - name: Редактор запросов компонента Database Engine
-                  href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                  href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                 - name: Редактор XML
                   href: ssms/scripting/xml-editor-sql-server-management-studio.md
                 - name: Настройка редакторов
@@ -9180,7 +9180,7 @@
                 - name: Подключение к любому компоненту сервера SQL Server из среды SQL Server Management Studio
                   href: ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
                 - name: диалоговое окно «Свойства соединения»
-                  href: ssms/f1-help/connection-properties-dialog-box.md
+                  href: ./ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
                 - name: Подключение к серверу (ядро СУБД)
                   href: ssms/f1-help/connect-to-server-database-engine.md
                 - name: "Соединение с сервером (страница \"Свойства\")\_— ядро СУБД"
@@ -9188,31 +9188,31 @@
                 - name: "Соединение с сервером\_(страница \"Вход\")\_— ядро СУБД"
                   href: ssms/f1-help/connect-to-server-login-page-database-engine.md
                 - name: Вход. Соединение с сервером SSAS
-                  href: ssms/f1-help/connect-to-server-login-page-analysis-services.md
+                  href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
                 - name: Соединение с SSAS
-                  href: ssms/f1-help/connect-to-server-analysis-services.md
+                  href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
                 - name: "Соединение с сервером\_SSAS (страница \"Свойства подключения\")"
-                  href: ssms/f1-help/connect-to-server-connection-properties-page-analysis-services.md
+                  href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
                 - name: Вход. Соединение с сервером SSRS
-                  href: ssms/f1-help/connect-to-server-login-page-reporting-services.md
+                  href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
                 - name: Соединение с сервером SSRS
-                  href: ssms/f1-help/connect-to-server-reporting-services.md
+                  href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
                 - name: "Соединение с сервером\_SSRS (страница \"Свойства подключения\")"
-                  href: ssms/f1-help/connect-to-server-connection-properties-page-reporting-services.md
+                  href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
                 - name: Выбор серверов (локальные серверы)
-                  href: ssms/f1-help/browse-for-servers-local-servers.md
+                  href: ./tools/configuration-manager/sql-server-browser-service.md
                 - name: Соединение с сервером (дополнительные параметры соединения)
-                  href: ssms/f1-help/connect-to-server-additional-connection-parameters-page.md
+                  href: ./relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
                 - name: Обзор серверов (сетевые серверы)
-                  href: ssms/f1-help/browse-for-servers-network-servers.md
+                  href: ./tools/configuration-manager/sql-server-browser-service.md
                 - name: Срок действия пароля истек
-                  href: ssms/f1-help/password-expired.md
+                  href: ./relational-databases/security/choose-an-authentication-mode.md
                 - name: Соединение с сервером SSIS
-                  href: ssms/f1-help/connect-to-server-integration-services.md
+                  href: ./integration-services/service/integration-services-service-ssis-service.md
                 - name: Соединение с сервером SSIS (страница "Вход")
-                  href: ssms/f1-help/connect-to-server-login-page-integration-services.md
+                  href: ./integration-services/service/integration-services-service-ssis-service.md
                 - name: "Соединение с сервером\_SSIS (страница \"Свойства подключения\")"
-                  href: ssms/f1-help/connect-to-server-connection-properties-page-integration-services.md
+                  href: ./integration-services/service/integration-services-service-ssis-service.md
             - name: Справка меню
               items:
                 - name: Справка меню среды SQL Server Management Studio
@@ -10051,7 +10051,7 @@
             - name: Библиотеки подключений
               href: linux/sql-server-linux-develop-connectivity-libraries.md
             - name: "Использование Visual Studio\_Code"
-              href: linux/sql-server-linux-develop-use-vscode.md
+              href: ./tools/visual-studio-code/sql-server-develop-use-vscode.md
             - name: "Использование\_SSDT"
               href: linux/sql-server-linux-develop-use-ssdt.md
         - name: Управление
@@ -10188,7 +10188,7 @@
         - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
         - name: "Майкрософт: вопросы и ответы\_>>"
-          href: 'https://docs.microsoft.com/answers/products/sql-server'
+          href: /answers/products/sql-server
         - name: "Отправить отзыв\_>>"
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: "Reddit\_>>"
@@ -10224,7 +10224,7 @@
         - name: Обучающие ресурсы
           href: sql-server/educational-sql-resources.yml
         - name: Microsoft Learn >>
-          href: 'https://docs.microsoft.com/learn/'
+          href: /learn/
         - name: "SQL на Channel\_9 >>"
           href: 'https://channel9.msdn.com/Search'
     - name: Справка
@@ -10232,7 +10232,7 @@
         - name: Получить справку
           href: sql-server/sql-server-get-help.md
         - name: "Майкрософт: вопросы и ответы\_>>"
-          href: 'https://docs.microsoft.com/answers/products/sql-server'
+          href: /answers/products/sql-server
         - name: "Stack\_Exchange\_DBA\_>>"
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >>
@@ -10246,11 +10246,11 @@
         - name: SQL Server >>
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
         - name: Ядро СУБД >>
-          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
+          href: /archive/blogs/sqlserverstorageengine/
         - name: Безопасность >>
-          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
+          href: /archive/blogs/sqlsecurity/
         - name: Data Tools >>
-          href: 'https://blogs.msdn.microsoft.com/ssdt/'
+          href: /archive/blogs/ssdt/
     - name: Отзывы
       items:
         - name: "Документация по SQL\_>>"

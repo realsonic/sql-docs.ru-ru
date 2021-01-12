@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 846ce27ff8e7d9560a6d4cc691d1523fddd913fa
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 5252cae293cd4c700f359b8168e0d5d5d10a70cf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418827"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099257"
 ---
 # <a name="mssqlserver_832"></a>MSSQLSERVER_832
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,4 +60,4 @@ ms.locfileid: "92418827"
 
 Возможно, что даже команда `DBCC CHECKDB` не сообщит об ошибке для страницы в этом состоянии после записи на диск. Причина может быть в том, что некорректные изменения могут находиться в частях страницы, которые не содержат данных или важных сведений о структуре страницы или строк, либо могут не обнаруживаться инструкцией CHECKDB.  
 
-Дополнительные сведения о сообщении 832 можно также получить в документе [Основные операции ввода-вывода в SQL Server, раздел 2](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).
+Дополнительные сведения о сообщении 832 можно также получить в документе [Основные операции ввода-вывода в SQL Server, раздел 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).

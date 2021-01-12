@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 5e4656c437e1b1a19382222107add8392e0c47e4
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: b906310eb23bd1f9416cd792d95adfa79f72302c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418794"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099370"
 ---
 # <a name="mssqlserver_17659"></a>MSSQLSERVER_17659
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,4 +62,4 @@ ms.locfileid: "92418794"
 
 ## <a name="more-information"></a>Дополнительные сведения
 
-Дополнительные сведения см. в следующей статье: [Системные базовые таблицы](/sql/relational-databases/system-tables/system-base-tables).
+Дополнительные сведения см. в следующей статье: [Системные базовые таблицы](../system-tables/system-base-tables.md).

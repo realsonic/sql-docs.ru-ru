@@ -20,15 +20,15 @@ helpviewer_keywords:
 - CATCH block
 - ERROR_SEVERITY function
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70761565d21d9a9f79634bbd0a70db71c3008e2c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b23ff01d4ae18fef4ab6092cf19a91b461e98526
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482025"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093634"
 ---
 # <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ ErrorSeverity
 
 ```  
   
-### <a name="b-using-error_severity-in-a-catch-block-with-other-error-handling-tools"></a>Б) Использование ERROR_SEVERITY в блоке CATCH с другими инструментами обработки ошибок  
+### <a name="b-using-error_severity-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование ERROR_SEVERITY в блоке CATCH с другими инструментами обработки ошибок  
 В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Хранимая процедура возвращает сведения об этой ошибке.  
 
 ```sql  

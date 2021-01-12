@@ -18,15 +18,15 @@ helpviewer_keywords:
 - errors [SQL Server], Transact-SQL
 - error numbers [SQL Server]
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90970163ac7e688bc77c90fc5f685b5371ba224c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f05c9fe20766bec9f0308a608b340b400718505b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482015"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093621"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "97482015"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>Типы возвращаемых данных
- Целое число  
+ целочисленный  
   
 ## <a name="remarks"></a>Комментарии  
  Возвращает 0, если в предыдущей инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] не возникло ошибок.  
@@ -73,7 +73,7 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>Б) Использование функции @@ERROR для выхода из процедуры по условию  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>Б. Использование функции @@ERROR для выхода из процедуры по условию  
  В приведенном ниже примере инструкции `IF...ELSE` выполняют проверку `@@ERROR` после инструкции `DELETE` в хранимой процедуре. Значение переменной `@@ERROR` определяет код возврата, который отправляется вызывающей программе и указывает на успешное или неуспешное выполнение процедуры.  
   
 ```sql  
@@ -171,7 +171,7 @@ GO
 ```  
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   

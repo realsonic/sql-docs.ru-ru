@@ -21,14 +21,14 @@ helpviewer_keywords:
 - sequence object
 - number, sequence
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8eb9c50b7c30a53265c22b29d616ef3471515ea3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 57dc922f5be1aac4a3a2fce713894353728a0e1c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547859"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097018"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 
@@ -158,7 +158,7 @@ INCREMENT BY \<constant>
 ## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Необходимо разрешение **CREATE SEQUENCE**, **ALTER**или **CONTROL** для схемы SCHEMA.  
+ Необходимо разрешение **CREATE SEQUENCE**, **ALTER** или **CONTROL** для схемы SCHEMA.  
   
 -   Члены предопределенных ролей базы данных db_owner и db_ddladmin могут создавать, изменять и удалять объекты последовательности.  
   

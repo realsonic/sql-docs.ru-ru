@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sequence number object, altering
 - ALTER SEQUENCE statement
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ae8e04d348f6a3146030d4f0bf8856b2d343b682
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c32f4e9a6a020df9f7be879eb6e4327bbb9d51f2
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688176"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094695"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "90688176"
   
  Объекты последовательностей создаются с помощью инструкции [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). Последовательность — это целочисленное значение, она может иметь любой тип данных, возвращающий целое число. Тип данных нельзя изменить с помощью инструкции ALTER SEQUENCE. Чтобы изменить тип данных, удалите и заново создайте объект последовательности.  
   
- Последовательность представляет собой определяемый пользователем объект, привязанный к схеме, который формирует последовательность числовых значений в соответствии со спецификацией. Новые значения формируются из последовательности функцией NEXT VALUE FOR. Получить несколько значений из последовательности за один раз можно с помощью функции **sp_sequence_get_range** . Сведения и сценарии использования CREATE SEQUENCE, **sp_sequence_get_range[ и функции NEXT VALUE FOR см. в разделе ](../../relational-databases/sequence-numbers/sequence-numbers.md)Порядковые номера**.  
+ Последовательность представляет собой определяемый пользователем объект, привязанный к схеме, который формирует последовательность числовых значений в соответствии со спецификацией. Новые значения формируются из последовательности функцией NEXT VALUE FOR. Получить несколько значений из последовательности за один раз можно с помощью функции **sp_sequence_get_range** . Сведения и сценарии использования CREATE SEQUENCE, **sp_sequence_get_range [ и функции NEXT VALUE FOR см. в разделе](../../relational-databases/sequence-numbers/sequence-numbers.md)Порядковые номера**.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a973fd5ec66f101c162e35baec0269f7b6d3d601
-ms.sourcegitcommit: d8a9ad86401bff422d506078c6200494c795e7c0
+ms.openlocfilehash: cccb47e059938745aa6166902402c8b94b674722
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765213"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099348"
 ---
 # <a name="best-practices-with-query-store"></a>Рекомендации по хранилищу запросов
 
@@ -34,7 +34,7 @@ ms.locfileid: "97765213"
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Используйте анализ производительности процессов в Базе данных SQL Azure
 
-При запуске хранилища запросов в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] можно использовать [анализ производительности запросов](/azure/sql-database/sql-database-query-performance) для анализа потребления ресурсов в динамике. С помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [Azure Data Studio](../../azure-data-studio/what-is.md) можно получить подробные сведения о потреблении ресурсов (ЦП, памяти и подсистемы ввода-вывода) всеми вашими запросами, а анализ производительности запросов обеспечивает быстрый и эффективный способ определения их влияния на общее использование DTU для базы данных. Дополнительные сведения см. в разделе [Анализ производительности запросов в базе данных SQL Azure](/azure/azure-sql/database/query-performance-insight-use).
+При запуске хранилища запросов в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] можно использовать [анализ производительности запросов](/azure/sql-database/sql-database-query-performance) для анализа потребления ресурсов в динамике. С помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) можно получить подробные сведения о потреблении ресурсов (ЦП, памяти и подсистемы ввода-вывода) всеми вашими запросами, а анализ производительности запросов обеспечивает быстрый и эффективный способ определения их влияния на общее использование DTU для базы данных. Дополнительные сведения см. в разделе [Анализ производительности запросов в базе данных SQL Azure](/azure/azure-sql/database/query-performance-insight-use).
 
 В этом разделе описываются оптимальные настройки по умолчанию, призванные обеспечить надежную работу хранилища запросов и зависимых компонентов. По умолчанию конфигурация оптимизирована для постоянного сбора данных, т. е. для минимальной продолжительности состояний "Отключено" и "Только для чтения". Дополнительные сведения обо всех доступных параметрах хранилища запросов см. в разделе [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 

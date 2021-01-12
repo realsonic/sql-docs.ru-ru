@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 23b04ae0e205a70b195b7da39a666256463bfa1c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 85d9e42b9c0ac537d6f33bd884b898374119972d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192854"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099338"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Файлы данных SQL Server в Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -145,7 +145,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>Поддержка среды SQL Server Management Studio  
  Среда SQL Server Management Studio позволяет использовать этот компонент с помощью нескольких диалоговых окон. Например, `https://teststorageaccnt.blob.core.windows.net/testcontainer/` представляет путь URL-адреса контейнера хранилища.
  
- в поле **Путь** в нескольких разных диалоговых окнах ( **Создание базы данных**, **Присоединение базы данных**и **Восстановление базы данных**). Дополнительные сведения см. в статье [Учебник. использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ в поле **Путь** в нескольких разных диалоговых окнах ( **Создание базы данных**, **Присоединение базы данных** и **Восстановление базы данных**). Дополнительные сведения см. в статье [Учебник. использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ### <a name="sql-server-management-objects-smo-support"></a>Поддержка управляющих объектов SQL Server (SMO)  
  При использовании компонента SQL Server Data Files в Azure поддерживаются все управляющие объекты SQL Server (SMO). Если объект SMO требует пути к файлам, вместо локального пути используйте формат URL-адреса большого двоичного объекта, например `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Дополнительные сведения об управляющих объектах SQL Server (SMO) см. в разделе [Учебник по программированию управляющих объектов SQL Server (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) электронной документации по SQL Server.  
@@ -177,7 +177,7 @@ ON
   
  **Ошибки базы данных**  
   
-Способы устранения **ошибки создания базы данных**. Ознакомьтесь с инструкциями, приведенными в занятии 4 в [руководстве по использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
+Способы устранения **ошибки создания базы данных**. Ознакомьтесь с инструкциями, приведенными в занятии 4 в [руководстве по использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#4----restore-database-to-virtual-machine-from-url).  
   
 **Ошибки при выполнении инструкции Alter.** Решение. Инструкцию Alter необходимо выполнять, когда база данных подключена к сети. При копировании файлов данных в службу хранилища Azure всегда создавайте страничный, а не блочный большой двоичный объект. В противном случае инструкция ALTER для базы данных завершится ошибкой. Ознакомьтесь с инструкциями, приведенными в занятии 7 в [руководстве по использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
