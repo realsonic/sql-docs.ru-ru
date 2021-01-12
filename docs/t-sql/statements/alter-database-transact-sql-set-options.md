@@ -28,15 +28,15 @@ helpviewer_keywords:
 - auto_update_statistics
 - Query Store options
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 97139ed9331853a5d84d261c69510993fb7231a2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 652a4b13db3fdd98b774a5c884e68848a3b0b847
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642270"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099574"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -2005,10 +2005,6 @@ OFF
 
 При установке параметра ALLOW_SNAPSHOT_ISOLATION в базе данных, находящейся в режиме READ_ONLY, он будет сохранен при переводе базы данных в режим READ_WRITE.
 
-Настройки ALLOW_SNAPSHOT_ISOLATION можно изменить и для баз данных master, model, msdb и tempdb. Если изменить значение для базы данных tempdb, оно будет сохраняться каждый раз при остановке и перезапуске экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. При изменении настройки для базы данных model эта настройка становится значением по умолчанию для любых вновь создаваемых баз данных, за исключением tempdb.
-
-Этот параметр для баз данных master и msdb по умолчанию установлен в состояние ON.
-
 Текущее состояние этого параметра можно определить по столбцу `snapshot_isolation_state` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }     
@@ -2222,13 +2218,13 @@ NO_WAIT
 |----------------------|-----------------------------------------|---------------------------------------------|
 |\<auto_option>|Да|Нет|
 |\<change_tracking_option>|Да|Да|
-|\<cursor_option>|Да|нет|
+|\<cursor_option>|Да|Нет|
 |\<db_encryption_option>|Да|Нет|
 |\<db_update_option>|Да|Да|
 |\<db_user_access_option>|Да|Да|
 |\<delayed_durability_option>|Да|Да|
 |\<parameterization_option>|Да|Да|
-|ALLOW_SNAPSHOT_ISOLATION|Нет|нет|
+|ALLOW_SNAPSHOT_ISOLATION|Нет|Нет|
 |READ_COMMITTED_SNAPSHOT|Нет|Да|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Да|Да|
 |DATE_CORRELATION_OPTIMIZATION|Да|Да|
