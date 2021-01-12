@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MScached_peer_lsns system table
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 23d4339d7a907cd755934df4803e38f5ba769b5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f1b9c527f1411f84afeef72d60c266ef1f3a91ea
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551019"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092438"
 ---
 # <a name="mscached_peer_lsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89551019"
 |**originator_db_version**|**int**|Показывает номер версии исходной базы данных.|  
 |**originator_lsn**|**varbinary (16)**|LSN-номер транзакции.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Значения LSN используются немедленно после вставки и не имеют последующего значения для системы.  
   
 ## <a name="see-also"></a>См. также:  

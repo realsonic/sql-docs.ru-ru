@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 615dd195f9553242b92b8830462036ab6384b665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 40201cb1fed3938da075b3fd5e97380eb0dddfc5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474678"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093866"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ fn_syscollector_get_execution_details ( log_id )
 |endtime|**datetime**|Время завершения выполнения пакета.|  
 |datacode|**int**|Целочисленное значение, которое указывает на событие, связанное с записью журнала. Значение 0 указывает, что событие не передало идентификатор.|  
 |databytes|**image**|Массив байтов, который указывает на возвращаемое значение.|  
-|сообщение|**nvarchar**|Описание события и сведения, связанные с событием.|  
+|message|**nvarchar**|Описание события и сведения, связанные с событием.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение SELECT для **dc_operator**.  

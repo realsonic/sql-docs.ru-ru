@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 713b0612ecbe67669955290a3abbb47732fe82b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f08273adcf261ecfdafaa70793d50b31360f7e40
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397200"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093878"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  Имя таблицы FileTable. *FileTable_name* имеет тип **nvarchar**. Этот параметр является необязательным. Значением по умолчанию является текущая база данных. Указывать *schema_name* также необязательно. Для *FileTable_name* можно передать значение null, чтобы использовать значение параметра по умолчанию.  
   
  *\@функцию*  
- Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. * \@ параметр* может иметь одно из следующих значений:  
+ Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *\@ параметр* может иметь одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -50,7 +50,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
 |**1**|Возвращает имя сервера без преобразования, например:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Возвращает полный путь сервера, например:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
-## <a name="return-type"></a>Тип возвращаемых данных  
+## <a name="return-type"></a>Возвращаемый тип  
  **nvarchar(4000)**  
   
  Когда база данных принадлежит к Always On группе доступности, функция **FileTableRootPath** возвращает имя виртуальной сети (VNN) вместо имени компьютера.  
@@ -66,7 +66,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
  Дополнительные сведения см. в статье [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
-## <a name="best-practices"></a>Советы и рекомендации  
+## <a name="best-practices"></a>Рекомендации  
  Чтобы код и приложения были независимы от текущего компьютера и базы данных, следует избегать создания кода с использованием абсолютных путей. Вместо этого получите полный путь к файлу во время выполнения, используя функции **FileTableRootPath** и **GetFileNamespacePath** вместе, как показано в следующем примере. По умолчанию функция **GetFileNamespacePath** возвращает относительный путь к файлу, находящемуся внутри корневого пути к базе данных.  
   
 ```sql  

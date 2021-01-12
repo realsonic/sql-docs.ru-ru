@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 126474b4efe2eafb5c235d1ba4a31e433d71500c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a7e5f2752557f63acffa69908f1c95025df83ae5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544676"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093782"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_ &lt; Schema &gt; _ &lt; Table &gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "89544676"
 |__$change_id|**Binary (8)**|Для локальной строки это значение равно __$row_id входящей строки, вызвавшей конфликт с локальной строкой. Для входящей строки это значение равно NULL.|  
 |\<base table column names>|\<base table column types>|Конфликтующая строка содержит один столбец для каждого из столбцов базовой таблицы.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

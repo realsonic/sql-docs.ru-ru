@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsub_identity_range system table
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b694526e1ccff9dce5dcdba7d3e1ac85d7449a74
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 98e4e7ac62890b95b99dd3020e83bc866aa1ad53
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540203"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092391"
 ---
 # <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89540203"
 |**last_seed**|**bigint**|Нижняя граница текущего диапазона.|  
 |**threshold**|**int**|Процентное значение, определяющее, когда агентом распространителя выделяется новый диапазон идентификаторов. При использовании процента значений, указанных в *пороговом значении* , агент распространения создает новый диапазон идентификаторов.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

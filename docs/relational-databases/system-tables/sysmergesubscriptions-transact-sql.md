@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aef0f508cc4d3c3034fe49c7e46762f3b9bb2645
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e3caa66b5e8e938a0e54f7212b37e0442e29ebfe
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537889"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98090969"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,12 +60,12 @@ ms.locfileid: "89537889"
 |partition_id|**int**|Идентифицирует предварительно вычисляемую секцию, которой принадлежит подписка.|  
 |cleanedup_unsent_changes|**bit**|Указывает, что метаданные для неотправленных изменений были удалены на стороне подписчика.|  
 |replica_version|**int**|Идентифицирует версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] владельца данной подписки и может принимать одно из следующих значений:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|supportability_mode|**int**|Только для внутреннего применения.|  
-|application_name|**nvarchar(128)**|Только для внутреннего применения.|  
-|subscriber_number|**int**|Только для внутреннего применения.|  
+|supportability_mode|**int**|Только для внутреннего использования.|  
+|application_name|**nvarchar(128)**|Только для внутреннего использования.|  
+|subscriber_number|**int**|Только для внутреннего использования.|  
 |last_makegeneration_datetime|**datetime**|Последняя **Дата и время** запуска процесса Makegeneration для издателя. Дополнительные сведения см. в описании параметра-MakeGenerationInterval в [агент слияния репликации](../../relational-databases/replication/agents/replication-merge-agent.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

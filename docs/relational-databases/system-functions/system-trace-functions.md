@@ -11,21 +11,21 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 08850a48a75f47d9cc4e3c849231983da20ee025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 546b524bced8719422ec94825094f268fcfa1d36
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419468"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092766"
 ---
 # <a name="system-trace-functions"></a>Системные функции трассировки
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет следующие системные функции трассировки.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [fn_trace_geteventinfo](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)  
   
  [fn_trace_getfilterinfo](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)  

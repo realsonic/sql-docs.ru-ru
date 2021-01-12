@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_availability_replica_states (Transact-SQL)
-title: sys. dm_hadr_availability_replica_states (Transact-SQL) | Документация Майкрософт
+title: sys.dm_hadr_availability_replica_states (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 347d05c0bfc37b1c14fddb728df5508e062cb13d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 549c37fdcc04d16eb2163fc7cca7e2ffddf9ce3e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546566"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092796"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89546566"
   Возвращает по строке для каждой локальной реплики и каждой удаленной реплики, входящей в ту же группу доступности AlwaysOn, что и локальная реплика. Каждая строка содержит сведения о состоянии конкретной реплики.  
   
 > [!IMPORTANT]  
->  Чтобы получить сведения о каждой реплике в данной группе доступности, запросите представление **sys. dm_hadr_availability_replica_states** на экземпляре сервера, на котором размещается первичная реплика. На экземпляре сервера, где размещена вторичная реплика группы доступности, это динамическое административное представление возвращает лишь локальные сведения о группе доступности.  
+>  Чтобы получить сведения о каждой реплике в данной группе доступности, запросите **sys.dm_hadr_availability_replica_states** на экземпляре сервера, на котором размещается первичная реплика. На экземпляре сервера, где размещена вторичная реплика группы доступности, это динамическое административное представление возвращает лишь локальные сведения о группе доступности.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "89546566"
 |**role_desc**|**nvarchar(60)**|Описание **роли**, одно из следующих:<br /><br /> RESOLVING<br /><br /> PRIMARY<br /><br /> SECONDARY|  
 |**operational_state**|**tinyint**|Текущее рабочее состояние реплики, одно из следующих:<br /><br /> 0 = ожидание отработки отказа<br /><br /> 1 = Ожидание<br /><br /> 2 = в сети<br /><br /> 3 = вне сети<br /><br /> 4 = сбой<br /><br /> 5 = ошибка, нет кворума<br /><br /> NULL = реплика не является локальной<br /><br /> Дополнительные сведения см. в подразделе [роли и операционные состояния](#RolesAndOperationalStates)далее в этой статье.|  
 |**desc операционного \_ состояния \_**|**nvarchar(60)**|Описание **операционного \_ состояния**, одно из следующих:<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
-|**\_работоспособность восстановления**|**tinyint**|Свертка столбца " ** \_ состояние базы данных** " динамического административного представления [sys. dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) . Ниже приведены возможные значения и их описания.<br /><br /> 0 — выполняется.  По крайней мере одна присоединенная база данных имеет состояние базы данных, отличное от "в сети" (** \_ состояние базы данных** не равно 0).<br /><br /> 1: в сети. Все соединяемые базы данных имеют состояние базы данных в сети (**database_state** равно 0).<br /><br /> NULL: **is_local** = 0|  
+|**\_работоспособность восстановления**|**tinyint**|Свертка столбца **\_ состояния базы данных** в динамическом административном представлении [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) . Ниже приведены возможные значения и их описания.<br /><br /> 0 — выполняется.  По крайней мере одна присоединенная база данных имеет состояние базы данных, отличное от "в сети" (**\_ состояние базы данных** не равно 0).<br /><br /> 1: в сети. Все соединяемые базы данных имеют состояние базы данных в сети (**database_state** равно 0).<br /><br /> NULL: **is_local** = 0|  
 |**recovery_health_desc**|**nvarchar(60)**|Описание **recovery_health**, одно из следующих:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**\_работоспособность синхронизации**|**tinyint**|Отражает сводное состояние синхронизации базы данных (**synchronization_state**) всех присоединенных баз данных доступности (также известных как *реплики*) и режима доступности реплики (режим синхронной фиксации или Асинхронная фиксация). Свертка будет отражать наименее работоспособное состояние баз данных в реплике. Ниже приведены возможные значения и их описания.<br /><br /> 0: неработоспособен.   Как минимум одна из присоединенных баз данных находится в состоянии NOT SYNCHRONIZING.<br /><br /> 1: частично работоспособен. Некоторые реплики не находятся в целевом состоянии синхронизации: реплики синхронной фиксации должны быть синхронизированы, а реплики асинхронной фиксации — синхронизировать.<br /><br /> 2: исправен. Все реплики находятся в целевом состоянии синхронизации: реплики синхронной фиксации синхронизированы, реплики асинхронной фиксации синхронизируются.|  
 |**synchronization_health_desc**|**nvarchar(60)**|Описание **synchronization_health**, одно из следующих:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_auto_page_repair (Transact-SQL)
-title: sys. dm_hadr_auto_page_repair (Transact-SQL) | Документация Майкрософт
+title: sys.dm_hadr_auto_page_repair (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/05/2019
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - automatic page repair
 - sys.dm_hadr_auto_page_repair dynamic management view
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a1dfdf8d99f4166bdcfd913f38e23b00cd1cd365
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d620d976e7b86ccf15cbf489175ebdf1cbc34f5f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539408"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092839"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "89539408"
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Автоматическое восстановление страниц (группы доступности: зеркальное отображение баз данных)](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Управление таблицей suspect_pages (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  

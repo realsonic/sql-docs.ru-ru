@@ -14,18 +14,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 4d1bcf2cdc9997ea33be87184c38447b7cd62973
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523921"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091610"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединение оценки с помощью DMA
 
 Следующие пошаговые инструкции помогут вам использовать Помощник по миграции данных для успешной масштабируемой оценки обновления локальной SQL Server или SQL Server, выполняющихся на виртуальных машинах Azure, или для миграции в базу данных SQL Azure.
 
-## <a name="prerequisites"></a>Обязательные условия
+## <a name="prerequisites"></a>Предварительные условия
 
 - Укажите компьютер средств в сети, с которого будет инициирован канал DMA. Убедитесь, что этот компьютер подключен к SQL Serverным целям.
 - Скачайте и установите следующие компоненты:
@@ -34,7 +34,7 @@ ms.locfileid: "92523921"
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) версии 4.5 или выше.
   - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17,0 или более поздней версии.
   - [Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop).
-  - [Модули Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.0.0).
+  - [Модули Azure PowerShell](/powershell/azure/install-az-ps).
 - Скачайте и извлеките:
   - [Power BI шаблон отчетов DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - [Скрипт лоадварехаусе](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
@@ -110,7 +110,7 @@ ms.locfileid: "92523921"
 
 - ServerName
 - InstanceName
-- Порт
+- Port
 - ассессментфлаг
 
 ![Снимок экрана SQL Server содержимого таблицы при использовании инвентаризации экземпляра.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
@@ -131,7 +131,7 @@ ms.locfileid: "92523921"
 |**databaseName** | База данных, в которой размещена таблица инвентаризации. |
 |**усеинстанцесонли** | Битовый флаг, указывающий, следует ли использовать список экземпляров для оценки.  Если задано значение 0, то для построения списка целевых объектов оценки будет использоваться таблица Датабасеинвентори. |
 |**AssessmentName** | Имя оценки DMA. |
-|**TargetPlatform** | Тип целевого объекта оценки, который требуется выполнить.  Возможные значения: **AzureSQLDatabase**, **манажедсклсервер**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019**и **SqlServerLinux2019**.  |
+|**TargetPlatform** | Тип целевого объекта оценки, который требуется выполнить.  Возможные значения: **AzureSQLDatabase**, **манажедсклсервер**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019** и **SqlServerLinux2019**.  |
 |**AuthenticationMethod** | Метод проверки подлинности для подключения к SQL Server целям, которые необходимо оценить. Возможными значениями являются **SQLAuth** и **WindowsAuth**. |
 |**аутпутлокатион** | Каталог, в котором хранится выходной файл оценки JSON. В зависимости от числа оцениваемых баз данных и количества объектов в базах данных оценка может занять очень много времени. После завершения всех оценок файл будет записан. |
 

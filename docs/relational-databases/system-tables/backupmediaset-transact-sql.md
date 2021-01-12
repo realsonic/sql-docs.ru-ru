@@ -1,9 +1,9 @@
 ---
 title: backupmediaset (Transact-SQL) | Документация Майкрософт
+description: Ссылка на backupmediaset, которая содержит по одной строке для каждого набора носителей резервных копий.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -15,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - backup media [SQL Server], backupmediaset system table
 - backupmediaset system table
-ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fded40f11cfc094e3af89295496787413e3fd4cd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 10b4d744e7ef4e0d11a9788580ea7f8c5a67bd1f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540384"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091584"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Содержит по одной строке для каждого резервного набора носителей. Эта таблица хранится в базе данных **msdb** .  
- 
+Содержит по одной строке для каждого резервного набора носителей. Эта таблица хранится в базе данных **msdb** .  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -46,7 +45,7 @@ ms.locfileid: "89540384"
 |**is_compressed**|**bit**|Указывает, является ли резервная копия сжатой:<br /><br /> 0 = не сжатая<br /><br /> 1 = сжатая<br /><br /> При обновлении базы данных **msdb** этому параметру присваивается значение null. Это означает резервное копирование без сжатия.|  
 |**is_encrypted**|**Версий**|Указывает, шифруется ли резервная копия.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбцы таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  

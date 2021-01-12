@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_commands system table
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8596aefdaecce0e7d39033b2a484ebfe6a4f46b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c939e1c5112aee07738ad5d368cb0ef05d804618
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540292"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091200"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89540292"
 |**hashkey**|**int**|Только для внутреннего использования.|  
 |**originator_lsn**|**varbinary (16)**|Определяет номер LSN для команды в порождающей публикации. Используется для одноранговой репликации транзакций.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  

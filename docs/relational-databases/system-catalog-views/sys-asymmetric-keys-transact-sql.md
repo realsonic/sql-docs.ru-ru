@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.asymmetric_keys catalog view
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 785b3095987a0ade14008f9251a45167ce5011ce
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cf926f7c3d3ab84a41ed142dd8ff1bef7357af96
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479075"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091563"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97479075"
 |**asymmetric_key_id**|**int**|Идентификатор ключа. Уникален в пределах базы данных.|  
 |**pvt_key_encryption_type**|**char(2)**|Способ шифрования ключа.<br /><br /> NA = не зашифрован<br /><br /> MK = ключ шифруется главным ключом<br /><br /> PW = ключ шифруется пользовательским паролем<br /><br /> MK = ключ шифруется главным ключом службы.|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Описание способа шифрования закрытого ключа.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**thumbprint**|**varbinary(32)**|Хэш ключа SHA-1. Хэш глобально уникален.|  
+|**отпечатк**|**varbinary(32)**|Хэш ключа SHA-1. Хэш глобально уникален.|  
 |**Microsof**|**char(2)**|Алгоритм, используемый с ключом.<br /><br /> 1R = 512-разрядный RSA<br /><br /> 2R = 1024-разрядный RSA<br /><br /> 3R = 2048-разрядный RSA|  
 |**algorithm_desc**|**nvarchar(60)**|Описание алгоритма, используемого с ключом.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|Длина ключа в битах.|  

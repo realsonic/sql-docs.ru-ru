@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublisherconstraints system table
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 24ab58c617748d52c8c7463454b4d701bf826c42
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d53c7bdee115715b8513356f02a3afddc75ec118
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545769"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092465"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89545769"
 |**publisherconstraint_id**|**int**|Идентифицирует опубликованное ограничение.|  
 |**table_id**|**int**|Определяет таблицу из [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) , к которой принадлежит ограничение.|  
 |**publisher_id**|**smallint**|Обозначает издателя, отличного от SQL Server, который публикует столбец.|  
-|**имя**;|**Имеет sysname**|Имя опубликованного ограничения.|  
+|**Имя**|**Имеет sysname**|Имя опубликованного ограничения.|  
 |**Тип**|**nvarchar(255)**|Поддерживаемый тип ограничения из системной таблицы [ихконстраинттипес](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) .|  
   
 ## <a name="see-also"></a>См. также  

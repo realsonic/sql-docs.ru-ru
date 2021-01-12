@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fc5b4b67074c85aef7d5d6d0f7c889a02cbb047d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 85058a3d551a385e4d2de8aed2ea9f56dc3b19c7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489755"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093915"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  Запрос пути к столбцу любого другого типа данных или для колумнсат **varbinary (max)** не имеет атрибута хранилища FILESTREAM, что вызовет ошибку во время компиляции запроса.  
   
  *\@функцию*  
- Целочисленное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющее способ форматирования серверного компонента пути. * \@ параметр* может принимать одно из следующих значений. Значение по умолчанию равно 0.  
+ Целочисленное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющее способ форматирования серверного компонента пути. *\@ параметр* может принимать одно из следующих значений. Значение по умолчанию — 0.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -67,13 +67,13 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 |0|Функция возвращает в пути имя виртуальной сети.|  
 |1|Функция возвращает в пути имя компьютера.|  
   
-## <a name="return-type"></a>Тип возвращаемых данных  
+## <a name="return-type"></a>Возвращаемый тип  
  **nvarchar(max)**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение является полным логическим путем или путем NETBIOS объекта BLOB. PathName не возвращает IP-адрес. Возвращается значение NULL, если объект FILESTREAM BLOB не создан.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Столбец ROWGUID должен быть виден любому запросу, который вызывает функцию PathName.  
   
  Объект FILESTREAM BLOB можно создать только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  

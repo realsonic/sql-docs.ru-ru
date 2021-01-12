@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f2433e5dcc96cc8b60adbc231a4f40e5a726dc62
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 20b2d5f012c33ea12d4b60ed3a8d44ee475f3bf2
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547165"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091496"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "89547165"
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|Указывает, может ли агент быть активизирован удаленно.<br /><br /> значение **0** указывает, что агент не может быть активирован удаленно.<br /><br /> значение **1** указывает, что агент будет активирован удаленно и на удаленном компьютере, указанном в свойстве *offload_server* .|  
 |**offload_server**|**sysname**|Сетевое имя сервера для удаленной активации.|  
-|**dts_package_name**;|**sysname**|Имя пакета служб DTS. Например, для пакета с именем **DTSPub_Package**укажите `@dts_package_name = N'DTSPub_Package'` .|  
+|**dts_package_name**;|**sysname**|Имя пакета служб DTS. Например, для пакета с именем **DTSPub_Package** укажите `@dts_package_name = N'DTSPub_Package'` .|  
 |**dts_package_password**;|**nvarchar (524)**|Пароль пакета.|  
 |**dts_package_location**.|**int**|Местонахождение пакета. Расположение пакета может быть **распространителем** или **подписчиком**.|  
 |**трансляцию**|**varbinary(85)**|Идентификатор безопасности (SID) агента распространителя или агента слияния при первом выполнении.|  
@@ -69,7 +69,7 @@ ms.locfileid: "89547165"
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar (524)**||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   
