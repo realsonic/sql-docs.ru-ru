@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergeschemachange system table
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a53651fb604e9e0359857d8d7125faa47866f557
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2a0315c49710ac324234710d30c223dfb9b27b12
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540188"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102025"
 ---
 # <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89540188"
 |**schemastatus**|**tinyint**|Показывает, есть ли незафиксированные изменения схемы для этой статьи. Может принимать следующие значения:<br /><br /> **0** = неактивно.<br /><br /> **1** = активно.<br /><br /> При ожидании изменения схемы это значение устанавливается равным **1**.|  
 |**schemasubtype**|**int**|Подтип изменения схемы:<br /><br /> **1** = ADDCOLUMN<br /><br /> **2** = DROPCOLUMN<br /><br /> **3** = алтерколумн<br /><br /> **4** = аддпримарикэй<br /><br /> **5** = аддуникуе<br /><br /> **6** = ADDREFERENCE<br /><br /> **7** = дропконстраинт<br /><br /> **8** = адддефаулт<br /><br /> **9** = аддчекк<br /><br /> **10** = дисаблетригжер<br /><br /> **11** = енаблетригжер<br /><br /> **12** = дисаблетригжер<br /><br /> **13** = енаблетригжер<br /><br /> **14** = енаблеконстраинт<br /><br /> **15** = дисаблеконстраинт<br /><br /> **16** = енаблеконстраинт<br /><br /> **17** = дисаблеконстраинт|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

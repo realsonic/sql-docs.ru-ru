@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 197d3fd3ab4108c898c9377bbeed2f0e16e83d76
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 62953d7f80a8d0fa327f37eadcc7a8dafd6fa734
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834471"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100056"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Уведомления о запросах — sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91834471"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|От|Кому|Включено|Тип|  
+|От|Кому|Включено|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|«многие к одному»|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|«многие к одному»|  
@@ -56,7 +56,7 @@ ms.locfileid: "91834471"
 |Код|Дополнительное состояние|Info|  
 |----------|------------------|----------|  
 |65798|Подписка сработала из-за изменения данных|Подписка сработала из-за операции вставки|  
-|65799|Подписка сработала из-за изменения данных|DELETE|  
+|65799|Подписка сработала из-за изменения данных|Удалить|  
 |65800|Подписка сработала из-за изменения данных|Update|  
 |65801|Подписка сработала из-за изменения данных|Объединить|  
 |65802|Подписка сработала из-за изменения данных|Усечение таблицы|  

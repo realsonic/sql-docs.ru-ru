@@ -1,6 +1,6 @@
 ---
-description: Система отслеживания измененных данных — sys. dm_cdc_log_scan_sessions
-title: sys. dm_cdc_log_scan_sessions (Transact-SQL) | Документация Майкрософт
+description: Система отслеживания измененных данных — sys.dm_cdc_log_scan_sessions
+title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7bef7989e6533b56ff1976ccf5fe145954a69afb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 312a0577d6ac2d092b01b34fcdb2aa034d36995d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534347"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100078"
 ---
-# <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Система отслеживания измененных данных — sys. dm_cdc_log_scan_sessions
+# <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Система отслеживания измененных данных — sys.dm_cdc_log_scan_sessions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает одну строку для каждого сеанса просмотра журнала в текущей базе данных. Последняя строка соответствует текущему сеансу. Данное представление можно использовать, чтобы получить сведения о состоянии текущего сеанса просмотра журнала либо статистические сведения обо всех сеансах с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -56,11 +56,11 @@ ms.locfileid: "89534347"
 |**empty_scan_count**|**int**|Количество последовательных сеансов, не содержащих транзакций системы отслеживания измененных данных.|  
 |**failed_sessions_count**|**int**|Число сеансов, завершившихся неудачно.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Значения в этом динамическом административном представлении сбрасываются при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение VIEW DATABASE STATE для запроса динамического административного представления **sys. dm_cdc_log_scan_sessions** . Дополнительные сведения о разрешениях для динамических административных представлений см. в разделе [динамические административные представления и функции &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Для запроса динамического административного представления **sys.dm_cdc_log_scan_sessions** требуется разрешение Просмотр состояния базы данных. Дополнительные сведения о разрешениях для динамических административных представлений см. в разделе [динамические административные представления и функции &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается информация о самом последнем сеансе.  
@@ -78,8 +78,8 @@ WHERE session_id = (SELECT MAX(b.session_id) FROM sys.dm_cdc_log_scan_sessions A
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys. dm_cdc_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
+## <a name="see-also"></a>См. также:  
+ [sys.dm_cdc_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   
 

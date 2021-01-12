@@ -1,6 +1,6 @@
 ---
 description: sys.fn_cdc_get_min_lsn (Transact-SQL)
-title: sys. fn_cdc_get_min_lsn (Transact-SQL) | Документация Майкрософт
+title: sys.fn_cdc_get_min_lsn (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 642a4e846e6da836ff296f8d271d21603ff84865
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 34f941c959d56e4526a73bd186e18cafeda43660
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321690"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099694"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Возвращает start_lsn значение столбца для указанного экземпляра отслеживания из системной таблицы [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) . Это значение представляет нижнюю конечную точку интервала допустимости для экземпляра отслеживания.  
+  Возвращает start_lsn значение столбца для указанного экземпляра отслеживания из системной таблицы [CDC.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) . Это значение представляет нижнюю конечную точку интервала допустимости для экземпляра отслеживания.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Возвращает значение 0x00000000000000000000, если экземпляр отслеживания не существует или если участник не авторизован для доступа к данным изменений, связанным с этим экземпляром отслеживания.  
   
  Эта функция обычно используется, чтобы вернуть нижнюю конечную точку временной шкалы системы отслеживания измененных данных для экземпляра отслеживания. Эту функцию можно также использовать для проверки того, входят ли конечные точки диапазона запроса во временную шкалу экземпляра отслеживания, перед запросом данных изменений. Важно выполнять такие проверки, поскольку нижняя конечная точка экземпляра отслеживания изменяется во время очистки таблиц изменений. Если между запросами информации об изменениях прошло достаточно много времени, даже нижняя конечная точка, установленная на верхнюю конечную точку предыдущего запроса информации об изменениях, может лежать вне текущей временной шкалы.  
@@ -96,7 +96,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys. fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

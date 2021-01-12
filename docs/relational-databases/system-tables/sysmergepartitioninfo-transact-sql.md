@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepartitioninfo system table
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2b9505763400dbb6bc0cfd98844ee73740353ca5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8a94f14212f2603639c1d272da4d35e9bea9fb29
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540815"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100509"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "89540815"
 |**logical_record_level_conflict_resolution**|**bit**|Показывает, должны ли конфликты разрешаться на уровне логических записей или на уровне строк или столбцов.<br /><br /> **0** = используется разрешение на уровне строк или столбцов.<br /><br /> **1** = в случае конфликта вся логическая запись из победителя переписывает всю логическую запись на проигравший стороне.<br /><br /> Значение **1** можно использовать как для обнаружения на уровне логической записи, так и для обнаружения на уровне строк или столбцов.|  
 |**partition_options**|**tinyint**|Определяет метод, при помощи которого производится секционирование статьи, что позволяет произвести оптимизацию производительности в случае, когда все строки принадлежат только одной секции или только одной подписке. *partition_options* может иметь одно из следующих значений.<br /><br /> **0** = фильтрация для статьи либо является статической, либо не дает уникального подмножества данных для каждой секции, т. е. перекрывающейся секции.<br /><br /> **1** = секции перекрываются, а обновления DML, выполняемые на подписчике, не могут изменить секцию, к которой принадлежит строка.<br /><br /> **2** = фильтрация для статьи дает неперекрывающиеся секции, но несколько подписчиков могут получить одну и ту же секцию.<br /><br /> **3** = фильтрация для статьи дает неперекрывающиеся секции, которые уникальны для каждой подписки.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_loaded_assemblies (Transact-SQL)
-title: sys. dm_clr_loaded_assemblies (Transact-SQL) | Документация Майкрософт
+title: sys.dm_clr_loaded_assemblies (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_loaded_assemblies dynamic management view
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42abc84bf1b5a78979da4c7443158abc6eddabc8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d132a0389ca636dbc24afe016b98389021d8d848
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539470"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099966"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "89539470"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**int**|Идентификатор загруженной сборки. **Assembly_id** можно использовать для поиска дополнительных сведений о сборке в представлении каталога [sys. assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) . Обратите внимание, что в [!INCLUDE[tsql](../../includes/tsql-md.md)] каталоге [sys. assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) сборки отображаются только в текущей базе данных. В представлении **СКС. dm_clr_loaded_assemblies** отображаются все загруженные сборки на сервере.|  
-|**appdomain_address**|**int**|Адрес домена приложения (**AppDomain**), в котором загружается сборка. Все сборки, принадлежащие одному пользователю, всегда загружаются в одном **домене AppDomain**. **Appdomain_address** можно использовать для поиска дополнительных сведений о **домене приложения** в представлении [sys. dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) .|  
+|**assembly_id**|**int**|Идентификатор загруженной сборки. **Assembly_id** можно использовать для поиска дополнительных сведений о сборке в представлении каталога [sys. assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) . Обратите внимание, что в [!INCLUDE[tsql](../../includes/tsql-md.md)] каталоге [sys. assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) сборки отображаются только в текущей базе данных. В представлении **SQS.dm_clr_loaded_assemblies** отображаются все загруженные сборки на сервере.|  
+|**appdomain_address**|**int**|Адрес домена приложения (**AppDomain**), в котором загружается сборка. Все сборки, принадлежащие одному пользователю, всегда загружаются в одном **домене AppDomain**. **Appdomain_address** можно использовать для поиска дополнительных сведений о **домене приложения** в представлении [sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) .|  
 |**load_time**|**datetime**|Время, когда сборка была загружена. Обратите внимание, что сборка остается загруженной до тех пор, пока не найдет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нехватка памяти и не выгрузит **AppDomain**. Вы можете отслеживать **load_time** , чтобы понять, как часто приходится наблюдать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] недостаток памяти и выгружать **AppDomain**.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Представление **dm_clr_loaded_assemblies. appdomain_address** имеет связь "многие к одному" с  **dm_clr_appdomains. appdomain_address**. Представление **dm_clr_loaded_assemblies. assembly_id** имеет связь «один ко многим» с **sys. assemblies. assembly_id**.  
   
 ## <a name="examples"></a>Примеры  
@@ -67,7 +67,7 @@ WHERE appdomain_address =
  WHERE assembly_id = 555);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления, связанные со средой CLR &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

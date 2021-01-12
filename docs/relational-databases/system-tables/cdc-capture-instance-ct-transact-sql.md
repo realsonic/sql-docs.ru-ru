@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5d0a2dae85606a5e1cb0ffd5f86776e7aae25680
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7fa737644611f24d9d0858fd04066d3ba0571ee3
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809790"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102734"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT capture_instance (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Таблица изменений, созданная при включении системы отслеживания измененных данных в исходной таблице. Эта таблица содержит по одной строке для каждой операции вставки и удаления в исходной таблице и по две строки для каждой операции обновления в исходной таблице. Если имя таблицы изменений не задано при включении исходной таблицы, создается производное имя. Имя имеет формат CDC. *capture_instance*_CT, где *capture_instance* — имя схемы исходной таблицы и имя исходной таблицы в формате *schema_table*. Например, если таблица **Person. адрес** в образце базы данных **AdventureWorks** включена для отслеживания измененных данных, то производное имя таблицы изменений будет храниться в **CDC. Person_Address_CT**.  
+  Таблица изменений, созданная при включении системы отслеживания измененных данных в исходной таблице. Эта таблица содержит по одной строке для каждой операции вставки и удаления в исходной таблице и по две строки для каждой операции обновления в исходной таблице. Если имя таблицы изменений не задано при включении исходной таблицы, создается производное имя. Имя имеет формат CDC. *capture_instance* _CT, где *capture_instance* — имя схемы исходной таблицы и имя исходной таблицы в формате *schema_table*. Например, если таблица **Person. адрес** в образце базы данных **AdventureWorks** включена для отслеживания измененных данных, то имя производной таблицы изменений будет **CDC.Person_Address_CT**.  
   
  Рекомендуется **не выполнять запросы к системным таблицам напрямую**. Вместо этого выполните [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) и [CDC.fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance функции.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "91809790"
  Однако значения этих столбцов совпадают со значениями столбцов в исходной таблице.  
   
 ### <a name="large-object-data-types"></a>Типы данных больших объектов  
- Столбцам типа данных **Image**, **Text**и **ntext** всегда присваивается значение **null** , если __ $ operation = 1 или \_ \_ $Operation = 3. Столбцам типа данных **varbinary (max)**, **varchar (max)** или **nvarchar (max)** присваивается значение **null** при \_ \_ $Operation = 3, если только столбец не изменился во время обновления. Если \_ \_ $Operation = 1, этим столбцам присваиваются значения во время удаления. Вычисленные столбцы, которые включены в экземпляр отслеживания, всегда имеют значение **null**.  
+ Столбцам типа данных **Image**, **Text** и **ntext** всегда присваивается значение **null** , если __ $ operation = 1 или \_ \_ $Operation = 3. Столбцам типа данных **varbinary (max)**, **varchar (max)** или **nvarchar (max)** присваивается значение **null** при \_ \_ $Operation = 3, если только столбец не изменился во время обновления. Если \_ \_ $Operation = 1, этим столбцам присваиваются значения во время удаления. Вычисленные столбцы, которые включены в экземпляр отслеживания, всегда имеют значение **null**.  
   
  По умолчанию максимальный объем данных, которые можно добавить в столбец, отслеженный с помощью одной инструкции INSERT, UPDATE, WRITETEXT или UPDATETEXT, не должен превышать 65 536 байт или 64 КБ. Чтобы увеличить этот размер для поддержки больших объемов данных LOB, используйте [параметр конфигурации сервера max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) , чтобы указать больший максимальный размер. Дополнительные сведения см. в статье [Настройка параметра конфигурации сервера max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   

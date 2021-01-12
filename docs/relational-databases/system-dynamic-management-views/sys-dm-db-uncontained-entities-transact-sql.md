@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_uncontained_entities (Transact-SQL)
-title: sys. dm_db_uncontained_entities (Transact-SQL) | Документация Майкрософт
+title: sys.dm_db_uncontained_entities (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 01f3c79cf6097f3e916d7faa5e77e508b75015e8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 54b087c98071ea550fcdff630a93d8049188ea91
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539440"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099906"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "89539440"
 |-|-|-|  
 |**Имя столбца**|**Тип**|**Описание**|  
 |*class*|**int**|1 = объект или столбец (включая модули, XP, представления, синонимы и таблицы).<br /><br /> 4 = Участник базы данных<br /><br /> 5 = Сборка<br /><br /> 6 = Тип<br /><br /> 7 = Индекс (полнотекстовый индекс)<br /><br /> 12 = Триггер DDL базы данных<br /><br /> 19 = Маршрут<br /><br /> 30 = Спецификация аудита|  
-|*class_desc*|**nvarchar(120)**|Описание класса сущности. Один из следующих элементов для сопоставления с классом:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **СБОРОК**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|Идентификатор сущности.<br /><br /> Если *класс* = 1, то object_id<br /><br /> Если *класс* = 4, то sys. database_principals. principal_id.<br /><br /> Если *класс* = 5, то sys. assemblies. assembly_id.<br /><br /> Если *класс* = 6, то sys. types. user_type_id.<br /><br /> Если *Class* = 7, то sys. indexes. index_id.<br /><br /> Если *Class* = 12, то sys. triggers. object_id.<br /><br /> Если *класс* = 19, то sys. routes. route_id.<br /><br /> Если *Class* = 30, то sys. database_audit_specifications. database_specification_id.|  
+|*class_desc*|**nvarchar(120)**|Описание класса сущности. Один из следующих элементов для сопоставления с классом:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **СБОРОК**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **НАПРАВЛЕНЫ**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*major_id*|**int**|Идентификатор сущности.<br /><br /> Если *класс* = 1, то object_id<br /><br /> Если *класс* = 4, то sys. database_principals. principal_id.<br /><br /> Если *класс* = 5, то sys.assemblies.assembly_id.<br /><br /> Если *класс* = 6, то sys.types.user_type_id.<br /><br /> Если *Class* = 7, то sys.indexes.index_id.<br /><br /> Если *Class* = 12, то sys.triggers.object_id.<br /><br /> Если *класс* = 19, то sys.routes.route_id.<br /><br /> Если *Class* = 30, то sys. database_audit_specifications.database_specification_id database_audit_specifications.|  
 |*statement_line_number*|**int**|Если класс является модулем, возвращает номер строки, в которой используется неавтономная инструкция.  В противном случае — значение NULL.|  
 |*statement_ offset_begin*|**int**|Если класс является модулем, он указывает (в байтах, начиная с 0) положение, откуда начинается неавтономная инструкция. В противном случае возвращается значение null.|  
 |*statement_ offset_end*|**int**|Если класс является модулем, он указывает (в байтах, начиная с 0) положение, где заканчивается неавтономная инструкция. Значение -1 обозначает конец модуля. В противном случае возвращается значение null.|  
@@ -46,8 +46,8 @@ ms.locfileid: "89539440"
 |*имя feature_*|**nvarchar(256)**|Возвращает внешнее имя объекта.|  
 |*feature_type_name*|**nvarchar(256)**|Возвращает тип функции.|  
   
-## <a name="remarks"></a>Примечания  
- sys. dm_db_uncontained_entities показывает эти сущности, которые потенциально могут пересекать границу базы данных. Будут возвращены все сущности пользователей, которые могут использовать объекты за пределами базы данных.  
+## <a name="remarks"></a>Комментарии  
+ sys.dm_db_uncontained_entities показывает эти сущности, которые потенциально могут пересекать границу базы данных. Будут возвращены все сущности пользователей, которые могут использовать объекты за пределами базы данных.  
   
  В отчете указываются следующие типы функций.  
   

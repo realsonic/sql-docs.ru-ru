@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
-title: sys. dm_os_buffer_pool_extension_configuration (Transact-SQL) | Документация Майкрософт
+title: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/09/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_pool_extension_configuration dynamic management view
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73fae53ccdba1ba02307996972a9fe409222d19a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5477a9da1810c64b6c6c359694f3db9254948efa
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539388"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101547"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "89539388"
   
 | Имя столбца | Тип данных | Описание |
 | :---------- | :-------- | :---------- |
-|path|**nvarchar**(256)|Путь и имя файла кэша расширения буферного пула. Допускает значение NULL.|  
+|путь|**nvarchar**(256)|Путь и имя файла кэша расширения буферного пула. Допускает значение NULL.|  
 |file_id|**int**|Идентификатор файла расширения буферного пула. Не допускает значение NULL.|  
 |Состояние|**int**|Состояние расширения буферного пула. Не допускает значение NULL.<br /><br /> 0 = расширение буферного пула выключено<br /><br /> 1 = отключение расширения буферного пула<br /><br /> 2 — зарезервировано для будущего использования<br /><br /> 3 = включение расширения буферного пула<br /><br /> 4 = зарезервировано для использования в будущем<br /><br /> 5 = расширение буферного пула включено|  
 |state_description|**nvarchar**(60)|Описывает состояние расширения буферного пула. Допускает значение NULL.<br /><br /> 0 = РАСШИРЕНИЕ БУФЕРНОГО ПУЛА ВЫКЛЮЧЕНО<br /><br /> 5 = РАСШИРЕНИЕ БУФЕРНОГО ПУЛА ВКЛЮЧЕНО|
@@ -66,7 +66,7 @@ WHERE is_in_bpool_extension <> 0
 ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md)   
  [sys.dm_os_buffer_descriptors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   

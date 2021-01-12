@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - dynamic management views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 844ccfb7ee96f5d4d869162aa64f3ededb0cd792
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 3ddbe057c2320d68aaff77738a11cce3cc8913ed
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551349"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101703"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Динамические административные представления групп доступности Always On — функции
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе описаны динамические административные представления и функции, связанные с [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
 
 :::row:::
     :::column:::

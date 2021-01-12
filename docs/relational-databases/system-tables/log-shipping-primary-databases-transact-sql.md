@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_primary_databases system table
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ae5bde1d9d9abde1d1bbf6ddabc0b29e378414e0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8dd97d1baa37b71fec2e1ceb113e4b0a3614a2e4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540946"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102154"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89540946"
 |**monitor_server_security_mode**|**bit**|Режим безопасности, используемый для подключения к серверу мониторинга:<br /><br /> 1 = проверка подлинности Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности.|  
 |**last_backup_file**|**nvarchar (500)**|Абсолютный путь последней резервной копии журнала транзакций.|  
 |**last_backup_date**|**datetime**|Дата и время создания последней резервной копии журнала.|  
-|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** и **sp_help_log_shipping_secondary_primary** используйте этот столбец для управления отображением параметров монитора в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .<br /><br /> 0 = при вызове любой из этих двух хранимых процедур пользователь не указал явно значение для параметра ** \@ monitor_server** .<br /><br /> 1 = пользователь задал значение явно.|  
+|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** и **sp_help_log_shipping_secondary_primary** используйте этот столбец для управления отображением параметров монитора в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .<br /><br /> 0 = при вызове любой из этих двух хранимых процедур пользователь не указал явно значение для параметра **\@ monitor_server** .<br /><br /> 1 = пользователь задал значение явно.|  
 |**backup_compression**|**tinyint**|Указывает, переопределяет ли конфигурация доставки журналов поведение сжатия резервной копии на уровне сервера.<br /><br /> 0 = отключено. Резервные копии журналов никогда не сжимаются независимо от параметров настраиваемого сервером сжатия резервной копии.<br /><br /> 1 = включено. Резервные копии журналов всегда сжимаются независимо от параметров настраиваемого сервером сжатия резервной копии.<br /><br /> 2 = использует конфигурацию сервера для параметра [Просмотреть или настроить параметр конфигурации сервера сжатие резервной копии по умолчанию](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) сервер-конфигурация. Это значение по умолчанию.<br /><br /> Сжатие резервной копии поддерживается только в выпуске Enterprise базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="see-also"></a>См. также:  

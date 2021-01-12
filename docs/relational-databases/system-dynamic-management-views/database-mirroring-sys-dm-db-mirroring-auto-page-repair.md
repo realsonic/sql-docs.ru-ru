@@ -1,6 +1,6 @@
 ---
-description: Зеркальное отображение базы данных — sys. dm_db_mirroring_auto_page_repair
-title: sys. dm_db_mirroring_auto_page_repair (Transact-SQL) | Документация Майкрософт
+description: Зеркальное отображение базы данных — sys.dm_db_mirroring_auto_page_repair
+title: sys.dm_db_mirroring_auto_page_repair (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - sys.dm_db_mirroring_auto_page_repair dynamic management view
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1d82a2f1a152bacf4458a92727d62da5d93f4c31
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: cef38d675dde0d36ca97f63c16f8d4589760a620
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537270"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101695"
 ---
-# <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>Зеркальное отображение базы данных — sys. dm_db_mirroring_auto_page_repair
+# <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>Зеркальное отображение базы данных — sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает строку для каждой попытки автоматического восстановления страниц во всех зеркально отображаемых баз данных на экземпляре сервера. Представление содержит строки, связанные с последними попытками автоматического восстановления страниц в определенной зеркальной базе данных, с максимальным количеством 100 строк на каждую базу данных. По достижении максимального значения строка для следующей попытки автоматического восстановления страниц заменяет одну из существующих записей. В следующей таблице дается определение значения столбцов.  
@@ -47,7 +47,7 @@ ms.locfileid: "89537270"
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Автоматическое восстановление страниц (группы доступности: зеркальное отображение баз данных)](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   

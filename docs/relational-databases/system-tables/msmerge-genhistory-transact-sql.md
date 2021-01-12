@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_genhistory system table
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4031540d14a0af583fa544d51fc43eddf589a9f1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7ccd9f9b6cc2780681f1f76c0764aaf423c2af36
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544502"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100593"
 ---
 # <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89544502"
 |**genstatus**|**tinyint**|Состояние поколения может быть:<br /><br /> **0** = открыть.<br /><br /> **1** = закрыто.<br /><br /> **2** = закрыто и создано на другом подписчике.|  
 |**changecount**|**int**|Количество изменений, отраженных в данном поколении|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

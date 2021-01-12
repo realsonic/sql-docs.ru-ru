@@ -1,6 +1,6 @@
 ---
-description: CDC. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
-title: CDC. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Документация Майкрософт
+description: '&lt;capture_instance CDC.fn_cdc_get_net_changes_ &gt; (TRANSACT-SQL)'
+title: cdc.fn_cdc_get_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_net_changes_<capture_instance>
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 731effd8310521308f9097323d10fcc57bcb9921
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7dee462b6b4a66b61d790bb06673d36f0907ef73
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498229"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099711"
 ---
-# <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>CDC. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
+# <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>&lt;capture_instance CDC.fn_cdc_get_net_changes_ &gt; (TRANSACT-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает одну строку "чистое изменение" для каждой исходной строки, измененной в пределах указанного диапазона номеров LSN.  
@@ -35,7 +35,7 @@ ms.locfileid: "88498229"
   
  Когда исходная строка имеет несколько изменений во время диапазона номеров LSN, одна строка, отражающая окончательное содержимое строки, возвращается функцией перечисления, описанной ниже. Например, если транзакция вставляет строку в исходную таблицу, а следующая транзакция в диапазоне LSN обновляет один или несколько столбцов в этой строке, функция возвращает только **одну** строку, которая включает обновленные значения столбца.  
   
- Эта функция перечисления создается, когда в исходной таблице включается система отслеживания измененных данных с указанием сетевого отслеживания. Чтобы включить сетевое отслеживание, исходная таблица должна иметь первичный ключ или уникальный индекс. Имя функции является производным и использует формат CDC. fn_cdc_get_net_changes_*capture_instance*, где *capture_instance* — это значение, заданное для экземпляра системы отслеживания, когда в исходной таблице была включена система отслеживания измененных данных. Дополнительные сведения см. в разделе [sys. sp_cdc_enable_table &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ Эта функция перечисления создается, когда в исходной таблице включается система отслеживания измененных данных с указанием сетевого отслеживания. Чтобы включить сетевое отслеживание, исходная таблица должна иметь первичный ключ или уникальный индекс. Имя функции является производным и использует формат cdc.fn_cdc_get_net_changes_ *capture_instance*, где *capture_instance* — значение, заданное для экземпляра системы отслеживания, когда в исходной таблице была включена система отслеживания измененных данных. Дополнительные сведения см. в разделе [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -97,7 +97,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="examples"></a>Примеры  
  В следующем примере функция используется `cdc.fn_cdc_get_net_changes_HR_Department` для сообщения об изменениях, внесенных в исходную таблицу в `HumanResources.Department` течение определенного интервала времени.  
   
- Вначале используется функция `GETDATE`, чтобы отметить начало интервала времени. После того как к исходной таблице применяются несколько инструкций DML, функция `GETDATE` вызывается вновь, чтобы отметить конец интервала времени. Функция [sys. fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) используется для отображения интервала времени в диапазоне запросов системы отслеживания измененных данных, ограниченных значениями LSN. Наконец, к функции `cdc.fn_cdc_get_net_changes_HR_Department` выполняется запрос, чтобы получить сетевые изменения в исходной таблице за этот интервал времени. Обратите внимание, что вставленная, а затем удаленная строка не появляется в результирующем наборе функции. Это происходит потому, что вставленная, а затем удаленная строка в окне запроса не выполняет сетевых изменений в исходной таблице за этот период времени. Перед запуском этого примера необходимо сначала запустить пример б в [sys. sp_cdc_enable_table &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ Вначале используется функция `GETDATE`, чтобы отметить начало интервала времени. После того как к исходной таблице применяются несколько инструкций DML, функция `GETDATE` вызывается вновь, чтобы отметить конец интервала времени. Функция [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) используется для отображения интервала времени в диапазоне запросов системы отслеживания измененных данных, ограниченного значениями LSN. Наконец, к функции `cdc.fn_cdc_get_net_changes_HR_Department` выполняется запрос, чтобы получить сетевые изменения в исходной таблице за этот интервал времени. Обратите внимание, что вставленная, а затем удаленная строка не появляется в результирующем наборе функции. Это происходит потому, что вставленная, а затем удаленная строка в окне запроса не выполняет сетевых изменений в исходной таблице за этот период времени. Перед запуском этого примера необходимо сначала запустить пример б в [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -126,11 +126,11 @@ SET @to_lsn = sys.fn_cdc_map_time_to_lsn('largest less than or equal', @end_time
 SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all');  
 ```  
   
-## <a name="see-also"></a>См. также  
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys. fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [Об отслеживании измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

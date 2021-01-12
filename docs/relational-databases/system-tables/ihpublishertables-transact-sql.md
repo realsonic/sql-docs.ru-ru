@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublishertables system table
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3e1a7f5485768a0d8c80211dd3a33d992419f104
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 604f5ddba7eb007833adcab0a4a026cd1fe3a124
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540918"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100598"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
