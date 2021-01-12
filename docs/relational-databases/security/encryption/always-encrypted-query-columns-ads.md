@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ac5e42497a0167a0e935c116a1efd9cc466300c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0a61514ff76bbae9e403683529d017f6fcb1c079
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477615"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101886"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Выполнение запросов к столбцам, использующим Always Encrypted, с помощью Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-В этой статье описывается выполнение запросов к столбцам, зашифрованным при помощи [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md), с использованием [Azure Data Studio](../../../azure-data-studio/what-is.md). При использовании Azure Data Studio возможно:
+В этой статье описывается выполнение запросов к столбцам, зашифрованным при помощи [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md), с использованием [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md). При использовании Azure Data Studio возможно:
 - извлечение значений зашифрованных данных, хранящихся в зашифрованных столбцах; 
 - извлечение значений открытого текста, хранящихся в зашифрованных столбцах;  
 - отправка значений открытого текста, предназначенных для зашифрованных столбцов (например, в инструкциях `INSERT` или `UPDATE` и в инструкциях `SELECT` в виде параметра поиска в предложениях `WHERE`). 

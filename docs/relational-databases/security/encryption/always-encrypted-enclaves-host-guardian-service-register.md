@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1774e2b2a27b2b1f0c36b298f98c916318fd1543
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5d1b2a7209de25b1ce5c988ec9a46b77369dcf70
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477655"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101836"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>Регистрация компьютера в службе защиты узла
 
@@ -243,7 +243,7 @@ Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputerna
 
 После регистрации компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] в службе HGS ([шаг 4А](#step-4a-register-a-computer-in-tpm-mode) для режима TPM или [шаг 4Б](#step-4b-register-a-computer-in-host-key-mode) для режима ключа узла) необходимо проверить возможность его успешной аттестации.
 
-Вы можете проверить конфигурацию клиента аттестации HGS и выполнить попытку аттестации в любое время с помощью командлета [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
+Вы можете проверить конфигурацию клиента аттестации HGS и выполнить попытку аттестации в любое время с помощью командлета [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration).
 Выходные данные команды будут выглядеть следующим образом:
 
 ```

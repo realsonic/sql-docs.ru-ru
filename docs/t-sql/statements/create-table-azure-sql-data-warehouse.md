@@ -12,12 +12,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: bf8ef986da54559c5928677643f6bd99c63c2266
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 733b129c9dd4f598e75baa31f49a4f9811edd5b8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643020"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102364"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -326,7 +326,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 Чтобы преобразовать таблицу rowstore в таблицу columnstore, удалите все существующие индексы таблицы и создайте кластеризованный индекс columnstore. Пример см. в разделе [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
 Дополнительные сведения вы найдете в следующих статьях:
-- [Сводка функций индексов columnstore по версиям](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)
+- [Сводка функций индексов columnstore по версиям](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
 - [Индексирование таблиц в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Руководство по индексам columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 

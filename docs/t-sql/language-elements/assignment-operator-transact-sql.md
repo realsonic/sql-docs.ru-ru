@@ -17,15 +17,15 @@ helpviewer_keywords:
 - relationships [SQL Server], assignment operators
 - column headings [SQL Server]
 ms.assetid: c3040db6-21d6-40ac-a783-82c98ec006cc
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86e9675dd5a11869c73f8f7dc77c12589cd38e1f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9b68e1d58926751166820dfe1d2c697efa6d6f7e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468045"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100932"
 ---
 # <a name="-assignment-operator-transact-sql"></a>= (оператор присваивания) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,7 +48,7 @@ FROM Production.Product;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  

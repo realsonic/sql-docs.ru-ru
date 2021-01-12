@@ -21,12 +21,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 31cdd59e519437f679cd738ef1dc959919b86667
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 08e105eac49b8377e128aa1cc746de1eebdee389
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96504938"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102234"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Обновление баз данных с помощью помощника по настройке запросов
 
@@ -231,4 +231,4 @@ QTA — это компонент на основе сеансов, которы
 - [Указания запросов USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [Модуль оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 - [Автоматическая настройка](../../relational-databases/automatic-tuning/automatic-tuning.md)   
-- [Использование помощника по настройке запросов SQL Server](https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/)
+- [Использование помощника по настройке запросов SQL Server](/learn/modules/use-sql-server-query-tuning-assistant/)
