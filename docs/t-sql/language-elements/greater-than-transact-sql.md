@@ -21,15 +21,15 @@ helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66cb21019fa07972e7e7cbbc600a40726765bf34
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b9a41c2123ff477ecf3321d6fa03de4ed8fe27e7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439169"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98085584"
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt; (больше) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +81,7 @@ DepartmentID Name
   
 ```  
   
-### <a name="b-using--to-compare-two-variables"></a>Б) Использование > для сравнения двух переменных  
+### <a name="b-using--to-compare-two-variables"></a>Б. Использование > для сравнения двух переменных  
   
 ```sql  
 DECLARE @a INT = 45, @b INT = 40;  
@@ -99,7 +99,7 @@ TRUE
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IIF (Transact-SQL)](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  

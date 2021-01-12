@@ -11,15 +11,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c201a7aca2574186ff8d61752f31e683925b1ef5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d15d5e3fec118b4dc9db0bdcc2f124f94aff020b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465965"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98081664"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ DROP EXTERNAL TABLE dbo.SalesPerson;
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   
-### <a name="b-dropping-an-external-table-from-the-current-database"></a>Б) Удаление внешней таблицы из текущей базы данных  
+### <a name="b-dropping-an-external-table-from-the-current-database"></a>Б. Удаление внешней таблицы из текущей базы данных  
  В следующем примере из текущей базы данных удаляется таблица `ProductVendor1`, ее данные, индексы и зависимые представления.  
   
 ```sql  
@@ -71,6 +71,6 @@ DROP EXTERNAL TABLE ProductVendor1;
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)  
   
