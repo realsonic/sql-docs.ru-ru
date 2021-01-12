@@ -1,6 +1,6 @@
 ---
 description: sys.fn_validate_plan_guide (Transact-SQL)
-title: sys. fn_validate_plan_guide (Transact-SQL) | Документация Майкрософт
+title: sys.fn_validate_plan_guide (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - fn_validate_plan_guide function
 - sys.fn_validate_plan_guide function
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: b19a3cd2f2ee449780127682555f1ae77fabd5d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7c9290f1d638f1eb2cf55c19d70d4e32a773bafe
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88396900"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093798"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>Аргументы  
  *plan_guide_id*  
- Идентификатор структуры плана, сообщаемый в представлении каталога [sys. plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) . *plan_guide_id* имеет **тип int** и не имеет значения по умолчанию.  
+ Идентификатор структуры плана, сообщаемый в представлении каталога [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) . *plan_guide_id* имеет **тип int** и не имеет значения по умолчанию.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -54,7 +54,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |msgnum|**int**|Идентификатор сообщения об ошибке.|  
 |severity|**tinyint**|Степень серьезности сообщения, от 1 до 25.|  
 |Состояние|**smallint**|Номер состояния ошибки, отмеченной точкой в коде, в котором она произошла.|  
-|сообщение|**nvarchar (2048)**|Текст сообщения ошибки.|  
+|message|**nvarchar (2048)**|Текст сообщения ошибки.|  
   
 ## <a name="permissions"></a>Разрешения  
  Для руководств планов области OBJECT требуются разрешения VIEW DEFINITION или ALTER на соответствующий объект и разрешения на компиляцию запроса или пакета, представленного в структуре плана. Например, если пакет содержит инструкции SELECT, необходимы разрешения SELECT на соответствующие объекты.  

@@ -1,6 +1,6 @@
 ---
 description: sys.fn_get_sql (Transact-SQL)
-title: sys. fn_get_sql (Transact-SQL) | Документация Майкрософт
+title: sys.fn_get_sql (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 6f5e3f4af1cd1bae33f0a340333cb6afd3268158
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4b3e28e4c66d45f28c6239431e8e6d5440d5d4a0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427806"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093824"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88427806"
   Возвращает текст инструкции SQL для указанного дескриптора SQL.  
   
 > [!IMPORTANT]  
->  В будущей версии Microsoft SQL Server этот компонент будет удален. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо нее используйте sys.dm_exec_sql_text. Дополнительные сведения см. в разделе [sys. dm_exec_sql_text &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  В будущей версии Microsoft SQL Server этот компонент будет удален. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо нее используйте sys.dm_exec_sql_text. Дополнительные сведения см. в разделе [sys.dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
@@ -64,10 +64,10 @@ sys.fn_get_sql ( SqlHandle )
 |encrypted|**bit**|Указывает, зашифрован ли объект.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована|  
 |текст|**text**|Текст инструкции SQL. Имеет значение NULL для зашифрованных объектов.|  
   
-## <a name="remarks"></a>Remarks  
- Допустимый обработчик SQL можно получить из столбца sql_handle в динамическом административном представлении [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
+## <a name="remarks"></a>Комментарии  
+ Допустимый обработчик SQL можно получить из столбца sql_handle sys.dm_exec_requests &#40;динамическое административное представление [Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
   
- Если передается обработчик, который больше не существует в кэше, fn_get_sq**l** возвращает пустой результирующий набор. Если передается недопустимый дескриптор, выполнение пакета прекращается и возвращается сообщение об ошибке.  
+ Если передается обработчик, который больше не существует в кэше, fn_get_sq **l** возвращает пустой результирующий набор. Если передается недопустимый дескриптор, выполнение пакета прекращается и возвращается сообщение об ошибке.  
   
  Инструкция [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] не может кэшировать некоторые [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции, такие как инструкции и инструкции инструкций Copy с строковыми литералами, размер которых ПРЕВЫШАЕТ 8 КБ. Дескрипторы этих инструкций не могут быть извлечены при помощи функции fn_get_sql.  
   
