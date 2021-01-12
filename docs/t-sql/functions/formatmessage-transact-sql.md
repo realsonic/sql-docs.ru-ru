@@ -20,14 +20,14 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 510c39bb15235b37a23894a4ff5e3bef9c2f51f5
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5987f2091f78df06f34e5804e7b934442c8842ca
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081793"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98088254"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

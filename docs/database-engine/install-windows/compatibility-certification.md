@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 8f680d2569bd05a5adb922e273378f920830a1ea
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 82d5aee8d0fa37ca66c49cf00b22385a896c653d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481495"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091797"
 ---
 # <a name="compatibility-certification"></a>Сертификация на совместимость
 
@@ -41,7 +41,7 @@ ms.locfileid: "97481495"
 
 Это фундаментальный принцип модели непрерывной интеграции [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] постоянно улучшается и обновляется в Azure, но так как для существующих баз данных сохраняется текущий уровень совместимости, они продолжают работать, как было задумано, даже после обновления базового [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. 
 
-Этот же принцип используют SharePoint Server 2016 и SharePoint Server 2019 для сертификации на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], что позволяет развертывать любые [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], которые могут использовать поддерживаемые уровни совместимости баз данных для этих версий SharePoint Server. Дополнительные сведения см. в статьях [Требования к оборудованию и программному обеспечению для SharePoint Server 2016](https://docs.microsoft.com/sharepoint/install/hardware-and-software-requirements#minimum-requirements-for-a-database-server-in-a-farm)и [Требования к оборудованию и программному обеспечению для SharePoint Server 2019](https://docs.microsoft.com/sharepoint/install/hardware-and-software-requirements-2019#minimum-requirements-for-a-database-server-in-a-farm).
+Этот же принцип используют SharePoint Server 2016 и SharePoint Server 2019 для сертификации на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], что позволяет развертывать любые [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], которые могут использовать поддерживаемые уровни совместимости баз данных для этих версий SharePoint Server. Дополнительные сведения см. в статьях [Требования к оборудованию и программному обеспечению для SharePoint Server 2016](/sharepoint/install/hardware-and-software-requirements#minimum-requirements-for-a-database-server-in-a-farm)и [Требования к оборудованию и программному обеспечению для SharePoint Server 2019](/sharepoint/install/hardware-and-software-requirements-2019#minimum-requirements-for-a-database-server-in-a-farm).
 
 ## <a name="managing-upgrade-risk-with-compatibility-certification"></a>Управление рисками при обновлении с помощью сертификации на совместимость
 Сертификация на совместимость — эффективный подход к модернизации базы данных. Выполняя сертификацию на уровне совместимости, разработчики устанавливают технические требования для поддержки приложения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], но отделяют жизненный цикл приложения от жизненного цикла платформы баз данных. Это позволяет компаниям обновлять [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в соответствии с политиками жизненного цикла, а также использовать улучшения в плане масштабируемости и производительности, не зависящие от кода, а подключающимся приложениям — **сохранять свое функциональное состояние** посредством обновлений.
@@ -115,4 +115,4 @@ ms.locfileid: "97481495"
 ## <a name="see-also"></a>См. также: 
 [Уровень совместимости ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)       
 [Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)       
-[Рекомендации по обновлению уровня совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)      
+[Рекомендации по обновлению уровня совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)

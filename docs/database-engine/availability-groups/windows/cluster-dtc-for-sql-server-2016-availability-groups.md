@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 981ce2dcfadf234383382103a33faf4f0ab9302e
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4fd420fd7d07af5a6efa81cdb7e716020c03a89b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643072"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091816"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Кластеризация службы DTC для группы доступности Always On
 
@@ -48,7 +48,7 @@ ms.locfileid: "97643072"
 |Задача|Справочник|  
 |-----------------|----------|  
 |Включение безопасного сетевого доступа для кластеризованного ресурса DTC.|[Включение безопасного сетевого доступа для MS DTC](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))|
-|Остановка и отключение локальной службы DTC.|[Настройка запуска службы](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
+|Остановка и отключение локальной службы DTC.|[Настройка запуска службы](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755249(v=ws.11))|
 |Отключение и включение службы SQL Server для каждого экземпляра в группе доступности.  Отработка отказа группы доступности при необходимости.|[Выполнение запланированного перехода на другой ресурс вручную для группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
 - Если запущен сервер Windows Server 2012 R2, к ОС должна быть применена [KB 3030373](https://support.microsoft.com/kb/3090973) .

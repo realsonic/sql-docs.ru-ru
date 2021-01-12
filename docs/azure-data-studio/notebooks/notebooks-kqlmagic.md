@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: cdb110059043741627300e1f6d080582363d834b
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+ms.openlocfilehash: cd9145bb01350a2019f1bfaa12c5280151c35f49
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900837"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091748"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Kqlmagic в Azure Data Studio
 
@@ -254,8 +254,8 @@ ms.locfileid: "96900837"
 
 Дополнительные сведения о записных книжках и Kqlmagic
 
-- [Расширение Kusto (KQL) для Azure Data Studio (предварительная версия)](https://docs.microsoft.com/sql/azure-data-studio/extensions/kusto-extension)
-- [Создание и запуск записной книжки Kusto (KQL) (предварительная версия)](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-kusto-kernel)
+- [Расширение Kusto (KQL) для Azure Data Studio (предварительная версия)](../extensions/kusto-extension.md)
+- [Создание и запуск записной книжки Kusto (KQL) (предварительная версия)](./notebooks-kusto-kernel.md)
 - [Использование расширения Jupyter Notebook и Kqlmagic для анализа данных в Azure Data Explorer](/azure/data-explorer/Kqlmagic)
 - [Расширение (Magic) для Jupyter Notebook и Jupyter Lab](https://github.com/Microsoft/jupyter-Kqlmagic), обеспечивающее работу с данными Kusto, Application Insights и Log Analytics в записных книжках.
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)

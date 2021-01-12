@@ -21,15 +21,15 @@ helpviewer_keywords:
 - CATCH block
 - states [SQL Server], error numbers
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81519e9f529cea23c12bab3ec55c3164e848a543
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0add98a5f8e05a9d0deddaf4bfa2428ba6b0ff08
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468205"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98087956"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
 
@@ -84,7 +84,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>Б) Использование функции ERROR_STATE в блоке CATCH вместе с другими средствами обработки ошибок  
+### <a name="b-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_STATE в блоке CATCH вместе с другими средствами обработки ошибок  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с состоянием ошибки возвращаются сведения, относящиеся к этой ошибке.  
   
 ```sql  

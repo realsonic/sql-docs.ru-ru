@@ -9,12 +9,12 @@ ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 453ec8226b018b1d5d756ba96ac174823657c5dd
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: d73e4b95059dab183f9a0af4896c5a6f86b7e564
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92060916"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091761"
 ---
 # <a name="create-sql-server-on-azure-virtual-machines-using-azure-data-studio"></a>Создание SQL Server на виртуальных машинах Azure с помощью Azure Data Studio
 
@@ -47,7 +47,7 @@ ms.locfileid: "92060916"
 
 3. Введите уникальное имя виртуальной машины, имя пользователя и пароль.
 
-4. Выберите предпочтительный образ, номер SKU и версию, а затем выберите предпочтительный размер виртуальной машины. Узнайте больше о [доступных размерах виртуальных машин](https://docs.microsoft.com/azure/virtual-machines/sizes), чтобы сделать выбор. Выберите **Далее**.
+4. Выберите предпочтительный образ, номер SKU и версию, а затем выберите предпочтительный размер виртуальной машины. Узнайте больше о [доступных размерах виртуальных машин](/azure/virtual-machines/sizes), чтобы сделать выбор. Выберите **Далее**.
 
 5. Выберите существующую виртуальную сеть из раскрывающегося списка или установите флажок **Создать виртуальную сеть**, чтобы ввести имя новой виртуальной сети.
 
@@ -75,6 +75,6 @@ ms.locfileid: "92060916"
 Чтобы узнать больше о том, как перенести данные на новую виртуальную машину SQL Server, ознакомьтесь со следующей статьей.
 
 > [!div class="nextstepaction"]
-> [Миграция базы данных SQL Server в экземпляр SQL Server на виртуальной машине Azure](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server)
+> [Миграция базы данных SQL Server в экземпляр SQL Server на виртуальной машине Azure](/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server)
 
-Дополнительные сведения об использовании SQL Server в Azure см. в статье [Приступая к работе с SQL Server в виртуальных машинах Azure](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) и [Часто задаваемые вопросы об SQL Server в виртуальных машинах Azure](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/frequently-asked-questions-faq).
+Дополнительные сведения об использовании SQL Server в Azure см. в статье [Приступая к работе с SQL Server в виртуальных машинах Azure](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) и [Часто задаваемые вопросы об SQL Server в виртуальных машинах Azure](/azure/azure-sql/virtual-machines/windows/frequently-asked-questions-faq).

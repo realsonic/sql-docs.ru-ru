@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d98fda12251dafb69ab3738ea90f1eaf0298df46
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: a3ee00006285ff8959ecba27624a491954e5a1bc
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92192704"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091648"
 ---
 # <a name="partition-processing-destination"></a>Назначение обработки секции
 
@@ -56,7 +56,7 @@ ms.locfileid: "92192704"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства назначения «Обработка секций»](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   

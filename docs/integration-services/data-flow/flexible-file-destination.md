@@ -13,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 253bd5f8accf3e2fd9fc28dcaa535bea6f736316
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: d331004e82b155a1c101a31253a82e029ec4a31b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127163"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091657"
 ---
 # <a name="flexible-file-destination"></a>Назначение "Гибкая работа с файлами"
 
@@ -53,7 +53,7 @@ ms.locfileid: "96127163"
 - **escapeChar:** Специальный символ, используемый для экранирования разделителя столбцов в содержимом входного файла. Не следует указывать escapeChar и quoteChar для таблицы одновременно. Допускается только один знак. Нет значения по умолчанию.
 - **quoteChar:** Символ, используемый для заключения строкового значения в кавычки. Разделители столбцов и строк внутри знаков кавычек будут рассматриваться как часть строкового значения. Это свойство применяется к входному и выходному наборам данных. Не следует указывать escapeChar и quoteChar для таблицы одновременно. Допускается только один знак. Нет значения по умолчанию.
 - **nullValue:** один или несколько символов, используемых для представления значения NULL. Значением **по умолчанию** является \N.
-- **encodingName:** задает имя кодировки. См. раздел [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8).
+- **encodingName:** задает имя кодировки. См. раздел [Encoding.EncodingName](/dotnet/api/system.text.encoding).
 - **skipLineCount:**  указывает количество непустых строк, которые нужно пропустить при чтении данных из входных файлов. Если указаны skipLineCount и firstRowAsHeader, то сначала пропускаются строки, а затем считываются данные заголовка из входного файла.
 - **treatEmptyAsNull:** Указывает, следует ли интерпретировать NULL или пустую строку как значение NULL при считывании данных из входного файла. Значение **по умолчанию** — true.
 

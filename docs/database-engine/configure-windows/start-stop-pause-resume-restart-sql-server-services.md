@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e971592b20dd2321e4265752cb8b01c38387b639
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 697cf043c4582796015b061c857145c214d105fb
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670757"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091777"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Запуск, остановка, приостановка, возобновление, перезапуск служб SQL Server
 
@@ -110,7 +110,7 @@ ms.locfileid: "91670757"
 
 ### <a name="starting-sql-server-configuration-manager"></a>Запуск диспетчера конфигурации SQL Server
 
-В меню **Пуск** укажите **Все программы**, **Microsoft SQL Server**, **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.
+В меню **Пуск** укажите **Все программы**, **Microsoft SQL Server**, **Средства настройки** и выберите пункт **Диспетчер конфигурации SQL Server**.
 
 Поскольку диспетчер конфигурации SQL Server является оснасткой консоли управления (Майкрософт), а не изолированной программой, при работе в более новых версиях Windows диспетчер конфигурации SQL Server не отображается как приложение. Ниже приведены расположения последних четырех версий этого диспетчера при установке Windows на диск C.  
 
@@ -130,7 +130,7 @@ ms.locfileid: "91670757"
 
 3. В диспетчере конфигурации SQL Server на панели слева выберите **Службы SQL Server**.
 
-4. На панели результатов щелкните правой кнопкой мыши **SQL Server (MSSQLServer)** или именованный экземпляр, затем выберите **Пуск**, **Остановка**, **Пауза**, **Продолжить**или **Перезапуск**.
+4. На панели результатов щелкните правой кнопкой мыши **SQL Server (MSSQLServer)** или именованный экземпляр, затем выберите **Пуск**, **Остановка**, **Пауза**, **Продолжить** или **Перезапуск**.
 
 5. Нажмите кнопку **ОК**, чтобы закрыть диспетчер конфигурации SQL Server.
 
@@ -198,7 +198,7 @@ ms.locfileid: "91670757"
   
 ### <a name="to-start-the-database-engine-with-startup-options"></a><a name="dbStartup"></a> Запуск ядра СУБД с параметрами запуска  
 
-- Укажите разделенные пробелами параметры запуска в конце команды **net start "SQL Server (MSSQLSERVER)"** . При запуске с помощью команды **net start**в параметрах запуска используется косая черта (/), а не дефис (-).  
+- Укажите разделенные пробелами параметры запуска в конце команды **net start "SQL Server (MSSQLSERVER)"** . При запуске с помощью команды **net start** в параметрах запуска используется косая черта (/), а не дефис (-).  
   
     **net start "SQL Server (MSSQLSERVER)" /f /m**
   
@@ -342,7 +342,7 @@ ms.locfileid: "91670757"
   
 ##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> Использование класса контроллера службы
 
-Класс ServiceController можно использовать для управления службой SQL Server или любой другой службой Windows. Пример того, как это сделать, см. в разделе [Класс ServiceController](/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8).
+Класс ServiceController можно использовать для управления службой SQL Server или любой другой службой Windows. Пример того, как это сделать, см. в разделе [Класс ServiceController](/dotnet/api/system.serviceprocess.servicecontroller).
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>Управление службой SQL Server в Linux
 
