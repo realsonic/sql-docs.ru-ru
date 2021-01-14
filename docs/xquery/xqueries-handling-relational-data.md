@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ebd9c4d2bae1c491d2bd7a23e52c83457942fb6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ac32119090ba7973ad628c35f6b5b994eb03561
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775477"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172356"
 ---
 # <a name="xqueries-handling-relational-data"></a>Запросы XQuery, обрабатывающие реляционные данные
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -34,15 +34,15 @@ ms.locfileid: "85775477"
   
 -   Функция **SQL: variable ()**  
   
- Эти расширения XQuery можно использовать при указании запроса XQuery в методе **query ()** типа данных **XML** . В результате метод **query ()** может формировать XML, объединяющий данные из типов данных XML и не**XML** .  
+ Эти расширения XQuery можно использовать при указании запроса XQuery в методе **query ()** типа данных **XML** . В результате метод **query ()** может формировать XML, объединяющий данные из типов данных XML и не **XML** .  
   
  Эти функции также можно использовать при использовании методов типа данных **XML** **Modify ()**, **value ()**, **query ()** и **exist ()** для предоставления реляционного значения внутри XML.  
   
  Дополнительные сведения см. в разделе [функции SQL: column () (XQuery)](../xquery/xquery-extension-functions-sql-column.md) и [SQL: variable () (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   
-## <a name="see-also"></a>См. также  
- [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
+ [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)   
  [Создание XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

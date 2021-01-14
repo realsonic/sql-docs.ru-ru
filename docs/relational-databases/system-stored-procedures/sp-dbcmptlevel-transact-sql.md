@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c03d436a85e174e1af17e47c8dc27d3ad2d6976
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fbf4875ec03cc961e696ae5f39bd0e29abccb4e9
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541932"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168526"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] name` Имя базы данных, для которой необходимо изменить уровень совместимости. Имена баз данных должны соответствовать правилам для идентификаторов. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @dbname = ] name` Имя базы данных, для которой необходимо изменить уровень совместимости. Имена баз данных должны соответствовать правилам для идентификаторов. Аргумент *Name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @new_cmptlevel = ] version` Версия, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с которой должна быть совместима база данных. *версия* имеет тип **tinyint**и значение по умолчанию NULL. Это должно быть одно из следующих значений.  
+`[ @new_cmptlevel = ] version` Версия, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с которой должна быть совместима база данных. *версия* имеет тип **tinyint** и значение по умолчанию NULL. Это должно быть одно из следующих значений.  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -56,7 +56,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  **120** = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+ **130** = [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -72,7 +72,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="permissions"></a>Разрешения  
  Эту процедуру могут выполнять только владелец базы данных, члены предопределенной роли сервера **sysadmin** и предопределенная роль базы данных **db_owner** (если вы изменяете текущую базу данных).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Зарезервированные ключевые слова (Transact-SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   

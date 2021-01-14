@@ -28,12 +28,12 @@ ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca23195b680ca5e2e16010b04c357fa2369d7f0a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6db232d77311b4d9e82bfe0afda8b14a4822d29f
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093882"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172646"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +77,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|Параметры сортировки сервера|Описание защищаемого класса.|  
 |permission_name|**nvarchar(60)**|Параметры сортировки сервера|Имя разрешения.|  
-|тип|**varchar(4)**|Параметры сортировки сервера|Код компактных типов разрешений. См. таблицу далее.|  
+|type|**varchar(4)**|Параметры сортировки сервера|Код компактных типов разрешений. См. таблицу далее.|  
 |covering_permission_name|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на данный класс, который содержит в себе другие разрешения данного класса.|  
 |parent_class_desc|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя родительского класса, который содержит текущий класс.|  
 |parent_covering_permission_name|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на родительский класс, который содержит в себе другие разрешения класса.|  
@@ -88,10 +88,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |---------------------|---------------------|-----------------------------------|  
 |AADS|ALTER ANY DATABASE EVENT SESSION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
 |AAES|ALTER ANY EVENT SESSION|SERVER|  
-|AAMK|ALTER ANY MASK<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
+|AAMK|ALTER ANY MASK<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
 |ADBO|ADMINISTER BULK OPERATIONS|SERVER|  
-|AEDS|ALTER ANY EXTERNAL DATA SOURCE<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
-|AEFF|ALTER ANY EXTERNAL FILE FORMAT<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
+|AEDS|ALTER ANY EXTERNAL DATA SOURCE<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
+|AEFF|ALTER ANY EXTERNAL FILE FORMAT<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
 |AL|ALTER|APPLICATION ROLE|  
 |AL|ALTER|ASSEMBLY|  
 |AL|ALTER<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|AVAILABILITY GROUP|  
@@ -123,12 +123,12 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |ALAS|ALTER ANY ASSEMBLY|DATABASE|  
 |ALCD|ALTER ANY CREDENTIAL|SERVER|  
 |ALCF|ALTER ANY CERTIFICATE|DATABASE|  
-|ALCK|ALTER ANY COLUMN ENCRYPTION KEY<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
-|ALCM|ALTER ANY COLUMN MASTER KEY<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
+|ALCK|ALTER ANY COLUMN ENCRYPTION KEY<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
+|ALCM|ALTER ANY COLUMN MASTER KEY<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
 |ALCO|ALTER ANY CONNECTION|SERVER|  
 |ALDA|ALTER ANY DATABASE AUDIT|DATABASE|  
 |ALDB|ALTER ANY DATABASE|SERVER|  
-|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
+|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
 |ALDS|ALTER ANY DATASPACE|DATABASE|  
 |ALED|ALTER ANY DATABASE EVENT NOTIFICATION|DATABASE|  
 |ALES|ALTER ANY EVENT NOTIFICATION|SERVER|  
@@ -144,7 +144,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |ALSC|ALTER ANY CONTRACT|DATABASE|  
 |ALSK|ALTER ANY SYMMETRIC KEY|DATABASE|  
 |ALSM|ALTER ANY SCHEMA|DATABASE|  
-|ALSP|ALTER ANY SECURITY POLICY<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
+|ALSP|ALTER ANY SECURITY POLICY<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
 |ALSR|ALTER ANY SERVER ROLE<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|SERVER|  
 |ALSS|ALTER SERVER STATE|SERVER|  
 |ALST|ALTER SETTINGS|SERVER|  
@@ -224,7 +224,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |DL|DELETE|DATABASE|  
 |DL|DELETE|OBJECT|  
 |DL|DELETE|SCHEMA|  
-|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
+|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
 |EX|EXECUTE|DATABASE|  
 |EX|EXECUTE|OBJECT|  
 |EX|EXECUTE|SCHEMA|  
@@ -283,7 +283,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|SYMMETRIC KEY|  
 |TO|TAKE OWNERSHIP|TYPE|  
 |TO|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
-|UMSK|UNMASK<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
+|UMSK|UNMASK<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
 |UP|UPDATE|DATABASE|  
 |UP|UPDATE|OBJECT|  
 |UP|UPDATE|SCHEMA|  
@@ -313,8 +313,8 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|Пользователь|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
-|VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
-|ввкм|VIEW ANY COLUMN MASTER KEY DEFINITION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
+|VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
+|ввкм|VIEW ANY COLUMN MASTER KEY DEFINITION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
 |VWCT|VIEW CHANGE TRACKING|OBJECT|  
 |VWCT|VIEW CHANGE TRACKING|SCHEMA|  
 |VWDB|VIEW ANY DATABASE|SERVER|  
@@ -323,7 +323,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Функция с табличным значением `sys.fn_builtin_permissions` выдает копию стандартной иерархии разрешений. Такая иерархия включает в себя покрытие разрешений. `DEFAULT`Результирующий набор описывает направленную ациклический диаграмму иерархии разрешений, для которой корневой каталог имеет значение (класс = сервер, разрешение = сервер управления).  
   
  Функция `sys.fn_builtin_permissions` не принимает связанные параметры.  

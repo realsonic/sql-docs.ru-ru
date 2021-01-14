@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 83d699e2da5e1de1e25a2618171924843c569188
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 70718b01e07cc883a030107e461e4390ca4e7cac
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101767"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169642"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "98101767"
 |max_dop|**int**|Максимальная степень параллелизма для группы рабочей нагрузки. Для значения по умолчанию 0 используются глобальные параметры. Не допускает значение NULL.<br /><br /> **Узел:** Этот параметр переопределит параметр запроса **MAXDOP**.|  
 |group_max_requests|**int**|Максимальное число параллельных запросов. Значение по умолчанию равно 0 и означает отсутствие ограничений. Не допускает значение NULL.|  
 |pool_id|**int**|Идентификатор пула ресурсов, используемого данной группой рабочей нагрузки.|  
-|external_pool_id|**int**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.<br /><br /> ИДЕНТИФИКАТОР внешнего пула ресурсов, который используется этой группой рабочей нагрузки.|  
+|external_pool_id|**int**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий.<br /><br /> ИДЕНТИФИКАТОР внешнего пула ресурсов, который используется этой группой рабочей нагрузки.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Представление каталога отображает хранимые метаданные. Чтобы просмотреть конфигурацию в памяти, используйте соответствующее динамическое административное представление [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
   
  Сохраненная конфигурация и конфигурация, хранимая в памяти, могут различаться, если конфигурация регулятора ресурсов была изменена, но инструкция ALTER RESOURCE GOVERNOR RECONFIGURE не применялась.  

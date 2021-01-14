@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 542db6b144471e2942bb160f1b91d7e2628ace69
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5324370d1635914fbf6436e97cfaaee7d062329b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097918"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171666"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "98097918"
 |**is_nonsql_subscriber**|**bit**|Сервер является подписчиком репликации, отличным от SQL Server.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Если 1, вызов удаленной хранимой процедуры приводит к запуску распределенной транзакции и привлекает к выполнению транзакции MS DTC. Дополнительные сведения см. в статье [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Дата последнего изменения сведений о сервере.|  
-|**is_rda_server**|**bit**|**Применимо к:** Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Сервер является удаленным архивом данных включить (Stretch-Enabled). Дополнительные сведения см. в разделе [включение Stretch Database на сервере](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
+|**is_rda_server**|**bit**|**Применимо к:** Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .<br /><br />Сервер является удаленным архивом данных включить (Stretch-Enabled). Дополнительные сведения см. в разделе [включение Stretch Database на сервере](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Разрешения  
  Значение в **provider_string** всегда равно null, если у вызывающего объекта нет разрешения ALTER ANY Linked Server.  
@@ -71,7 +71,7 @@ ms.locfileid: "98097918"
   
  Если сопоставление удалено, только те пользователи, которые добавлены явно со связанным или удаленным именем входа, могут просматривать связанные или удаленные сервера соответственно.  Следующие разрешения необходимы для просмотра всех связанных и удаленных серверов после сопоставления имени входа по умолчанию:  
   
-- `ALTER ANY LINKED SERVER` либо `ALTER ANY LOGIN ON SERVER`  
+- `ALTER ANY LINKED SERVER` или `ALTER ANY LOGIN ON SERVER`  
 - Членство в предопределенных ролях сервера **setupadmin** или **sysadmin**  
   
 ## <a name="see-also"></a>См. также:  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f3e21ddbcf4d3599548a827e169f2c0d63f114e8
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 21224e52ae9109f5404fc6a6ee11ad59e525995b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194428"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171176"
 ---
 # <a name="database-requirements-master-data-services"></a>Требования к базе данных (службы Master Data Services)
 
@@ -36,9 +36,9 @@ ms.locfileid: "92194428"
  База данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] может быть размещена на следующих выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Enterprise x64 (64-разрядная версия)  
+-   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Enterprise x64 (64-разрядная версия)  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Developer Edition x64 (64-разрядная версия)  
+-   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Developer Edition x64 (64-разрядная версия)  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence x64 (64-разрядная версия)  
   

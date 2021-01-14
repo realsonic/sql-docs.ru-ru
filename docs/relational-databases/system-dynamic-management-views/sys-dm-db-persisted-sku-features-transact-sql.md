@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9221515e0c8a6c0704f0a036d851241d849d5f3d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 89fd845ade31b7ca2de9559452bb04b15bc2c505
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101683"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171436"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "98101683"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на базу данных.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если в базе данных не используются функции, которые могут быть ограничены конкретным выпуском, представление не возвращает никаких строк.  
   
  sys.dm_db_persisted_sku_features может содержать следующие функции изменения базы данных, ограниченные конкретными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпусками:  
@@ -66,7 +66,7 @@ ms.locfileid: "98101683"
 -   **TransparentDataEncryption.** Указывает, что база данных зашифрована с помощью прозрачного шифрования данных. Чтобы удалить прозрачное шифрование данных, используйте инструкцию ALTER DATABASE. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 1 (SP1), эти функции, кроме **транспарентдатаенкриптион.** доступны в нескольких [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпусках и не ограничиваются только выпусками Enterprise или Developer.
+> Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] пакетом обновления 1 (SP1), эти функции, кроме **транспарентдатаенкриптион.** доступны в нескольких [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпусках и не ограничиваются только выпусками Enterprise или Developer.
 
  Чтобы определить, используются ли в базе данных функции, ограниченные конкретными выпусками, выполните следующую инструкцию:  
   

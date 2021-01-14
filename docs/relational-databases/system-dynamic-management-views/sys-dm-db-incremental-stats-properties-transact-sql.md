@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: b11acf31ca9f20aaf70acbe530106e58ca787439
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 27585efd99f537e6b2f6d3082c341533e8bbea3b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094154"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172096"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает свойства добавочной статистики для указанного объекта базы данных (таблицы) из текущей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Использование `sys.dm_db_incremental_stats_properties` (который содержит номер секции) аналогичен `sys.dm_db_stats_properties` , который используется для недобавочной статистики. 
   
-  Эта функция была введена в [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] пакет обновления 2 (SP2) и [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] пакет обновления 1 (SP1).
+  Эта функция была введена в [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] пакет обновления 2 (SP2) и [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] пакет обновления 1 (SP1).
   
 ## <a name="syntax"></a>Синтаксис  
   

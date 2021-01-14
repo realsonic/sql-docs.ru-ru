@@ -21,12 +21,12 @@ ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0916891a629298602c274d4cf787e6bd9e1a8a9f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: bc6744d2f75df3aa6a7a40519ea014d9a7e1a200
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099922"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171116"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "98099922"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|Идентификатор объекта, которому принадлежит данный индекс.|  
-|xtp_object_id|**bigint**|Внутренний идентификатор, соответствующий текущей версии объекта.<br /><br /> Примечание. применяется к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .|  
+|xtp_object_id|**bigint**|Внутренний идентификатор, соответствующий текущей версии объекта.<br /><br /> Примечание. применяется к [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .|  
 |index_id|**bigint**|Идентификатор индекса. Значение index_id уникально только в пределах объекта.|  
 |scans_started|**bigint**|Количество выполненных сканирований индексов In-Memory OLTP. Каждая инструкция SELECT, INSERT, UPDATE и DELETE требует сканирования индекса.|  
 |scans_retries|**bigint**|Количество сканирований индекса, необходимое для повторной попытки.|  

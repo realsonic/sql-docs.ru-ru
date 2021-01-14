@@ -21,12 +21,12 @@ ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08cd6d78f4da2d0f5dc68ad43db29bc0542411e9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2fa75ed45028187c4855aaf80f25f9a30c6000c7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092935"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171456"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,8 +42,8 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] существенно отличается от более поздних версий и обсуждается ниже в разделе [SQL Server 2014](#bkmk_2014).**
   
-## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий  
- В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats` , начиная с **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
+## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий  
+ В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats` , начиная с **[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]** .  
   
 |Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  

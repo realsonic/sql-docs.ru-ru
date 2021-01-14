@@ -1,6 +1,6 @@
 ---
-title: sys. dm_db_rda_migration_status (Transact-SQL) | Документация Майкрософт
-description: Узнайте, как sys. dm_db_rda_migration_status содержит по одной строке для каждого пакета перенесенных данных из каждой таблицы с поддержкой растяжения на локальном экземпляре SQL Server.
+title: sys.dm_db_rda_migration_status (Transact-SQL) | Документация Майкрософт
+description: Узнайте, как sys.dm_db_rda_migration_status содержит по одной строке для каждого пакета перенесенных данных из каждой таблицы с поддержкой растяжения на локальном экземпляре SQL Server.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 87e69284a4fdcac90420ec8a091fd1bd66933bb0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: eac014075edd5663b490791f6c49fc0b865afd2a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238844"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171636"
 ---
-# <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
+# <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database sys.dm_db_rda_migration_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Содержит по одной строке для каждого пакета перенесенных данных из каждой таблицы с поддержкой растяжения на локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Пакеты идентифицируются по времени начала и времени окончания.  
   
- представление **sys. dm_db_rda_migration_status** ограничивается контекстом текущей базы данных. Убедитесь, что вы находитесь в контексте базы данных таблиц с растяжением, для которых требуется просмотреть состояние миграции.  
+ **sys.dm_db_rda_migration_status** ограничивается контекстом текущей базы данных. Убедитесь, что вы находитесь в контексте базы данных таблиц с растяжением, для которых требуется просмотреть состояние миграции.  
   
- В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] выходные данные **sys. dm_db_rda_migration_status** ограничены 200 строками.  
+ В [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] выходные данные **sys.dm_db_rda_migration_status** ограничены 200 строками.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

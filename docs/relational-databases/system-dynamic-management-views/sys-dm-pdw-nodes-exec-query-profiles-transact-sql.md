@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: c5c908d8db988e83d682bbf636de08ef86a8223a
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f1917899d58262f670b58843c118864618702950
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644071"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169966"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 
@@ -68,16 +68,16 @@ ms.locfileid: "97644071"
 |segment_read_count|**int**|Количество операций упреждающего чтения сегментов к текущему времени.|  
 |segment_skip_count|**int**|Количество сегментов, пропущенных к текущему времени.| 
 |actual_read_row_count|**bigint**|Число строк, считанных оператором перед применением остаточного предиката.| 
-|estimated_read_row_count|**bigint**|**Применимо к:** Начиная с с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] пакетом обновления 1. <br/>Количество строк, которое должно быть считано оператором перед применением остаточного предиката.|  
+|estimated_read_row_count|**bigint**|**Применимо к:** Начиная с с [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] пакетом обновления 1. <br/>Количество строк, которое должно быть считано оператором перед применением остаточного предиката.|  
   
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
 
 Те же примечания в [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md) применяются.  
 
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
  [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    

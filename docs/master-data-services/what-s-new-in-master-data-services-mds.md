@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1aa72c49e5862621da193d4e4a400813c7cd0d91
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 7e731d14967d808aa57f3fa0e001e5e593238ffd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480596"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170436"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Новые возможности служб Master Data Services (MDS)
 
@@ -30,7 +30,7 @@ ms.locfileid: "89480596"
   
  **Загрузить**  
   
--   Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
+-   Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
   
 -   Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
@@ -81,7 +81,7 @@ ms.locfileid: "89480596"
   
  В этом выпуске [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] мы предлагаем больше уровней разрешений за счет следующих новых разрешений: чтение, создание, обновление и удаление. Например, пользователь у которого есть только разрешение на обновление, теперь сможет обновлять основные данные без создания или удаления данных. Если предоставить пользователю разрешение на создание, обновление или удаление, то ему будет автоматически назначено разрешение на чтение. Разрешения на чтение, создание, обновление и удаление, помимо прочего, можно объединять друг с другом.  
   
- При обновлении до [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]старые разрешения преобразуются в новые, как показано в следующей таблице.  
+ При обновлении до [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]старые разрешения преобразуются в новые, как показано в следующей таблице.  
   
 |Разрешение в предыдущем выпуске|Новое разрешение|  
 |------------------------------------|--------------------|  
@@ -113,7 +113,7 @@ ms.locfileid: "89480596"
   
 ## <a name="improved-troubleshooting"></a>Улучшенное устранение неполадок  
   
- В [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] добавлены функции для улучшения отладки и упрощения процесса устранения неполадок. Дополнительные сведения см. в статье [Трассировка (Master Data Services)](../master-data-services/tracing-master-data-services.md).  
+ В [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] добавлены функции для улучшения отладки и упрощения процесса устранения неполадок. Дополнительные сведения см. в статье [Трассировка (Master Data Services)](../master-data-services/tracing-master-data-services.md).  
   
 ## <a name="improved-manageability"></a>Улучшения управляемости  
   

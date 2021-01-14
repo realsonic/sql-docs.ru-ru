@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80c59436a83795f4111dfae2997b8678b94e617e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 461898cf3bf9e694e8d8272608861fdbfa0aff79
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096611"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170256"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "98096611"
 |segment_read_count|**int**|Количество операций упреждающего чтения сегментов к текущему времени.|  
 |segment_skip_count|**int**|Количество сегментов, пропущенных к текущему времени.| 
 |actual_read_row_count|**bigint**|Число строк, считанных оператором перед применением остаточного предиката.| 
-|estimated_read_row_count|**bigint**|**Применимо к:** Начиная с с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] пакетом обновления 1. <br/>Количество строк, которое должно быть считано оператором перед применением остаточного предиката.|  
+|estimated_read_row_count|**bigint**|**Применимо к:** Начиная с с [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] пакетом обновления 1. <br/>Количество строк, которое должно быть считано оператором перед применением остаточного предиката.|  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Если у узла плана запроса нет операций ввода-вывода, то для всех счетчиков, связанных с вводом-выводом, устанавливается значение NULL.  
@@ -84,7 +84,7 @@ ms.locfileid: "98096611"
   
 -   Если есть параллельное сканирование, данное динамическое административное представление выдает счетчики для каждого из параллельных потоков, выполняющих сканирование.
  
-Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 1 (SP1) *Стандартная инфраструктура профилирования статистики выполнения запросов* существует параллельно с *инфраструктурой профилирования статистики выполнения упрощенных запросов*. `SET STATISTICS XML ON` и `SET STATISTICS PROFILE ON` всегда используйте *стандартную инфраструктуру профилирования статистики выполнения запросов*. Для `sys.dm_exec_query_profiles` заполнения необходимо включить одну из инфраструктур профилирования запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).    
+Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] пакетом обновления 1 (SP1) *Стандартная инфраструктура профилирования статистики выполнения запросов* существует параллельно с *инфраструктурой профилирования статистики выполнения упрощенных запросов*. `SET STATISTICS XML ON` и `SET STATISTICS PROFILE ON` всегда используйте *стандартную инфраструктуру профилирования статистики выполнения запросов*. Для `sys.dm_exec_query_profiles` заполнения необходимо включить одну из инфраструктур профилирования запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > Запрос в процессе расследования должен начаться **после** включения инфраструктуры профилирования запросов, после того как запрос не будет давать результаты в `sys.dm_exec_query_profiles` . Дополнительные сведения о том, как включить инфраструктуру профилирования запросов, см. в разделе [инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).
