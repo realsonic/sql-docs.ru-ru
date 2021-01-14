@@ -2,7 +2,7 @@
 description: Partitioned Tables and Indexes
 title: Секционированные таблицы и индексы | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/20/2016
+ms.date: 1/5/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4cb894ef393f767d85af5c43b50bffce87f3a6fc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dcc5d8e3602261c975f5517ea859e19fc7902936
+ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480045"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952061"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,6 +55,9 @@ ms.locfileid: "97480045"
   
 ### <a name="partition-scheme"></a>Схема секционирования 
 Объект базы данных, который сопоставляет секции функции секционирования набору файловых групп. Главная причина, по которой секции разделяются по разным файловым группам, заключается в необходимости независимого резервного копирования этих секций, поскольку оно всегда выполняется отдельно для каждой из файловых групп.  
+
+> [!NOTE]
+> В [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Azure поддерживаются только первичные файловые группы.  
   
 ### <a name="partitioning-column"></a>Столбец секционирования  
 Столбец таблицы или индекса, используемый функцией секционирования для секционирования таблицы или индекса. Вычисляемые столбцы, участвующие в функции секционирования, должны быть явно помечены как PERSISTED. Все типы данных, допустимые для использования в качестве индексных столбцов, могут использоваться как столбцы секционирования, за исключением **timestamp**. Типы данных **ntext**, **text**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** или **varbinary(max)** указать нельзя. Также нельзя указать определяемый пользователем тип данных среды Microsoft .NET Framework CLR и столбцы типа данных псевдонима.  

@@ -27,14 +27,14 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ea6018e34db8ddc07a1e30cec6089994e402b9e6
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 36b22f01bbc9bd089cf6f651d8f97d2d2d2b3d32
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96124024"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093484"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -160,9 +160,11 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  Если функция секционирования `myRangePF4` изменяется для добавления секции, файловая группа `test5fg` получает вновь созданную секцию.  
 
-### <a name="e-creating-a-partition-scheme-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>Д. Создание схемы секционирования только в группе PRIMARY — только группа PRIMARY поддерживается для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+### <a name="e-creating-a-partition-scheme-only-on-primary"></a>Д. Создание схемы секционирования только в PRIMARY
 
- В следующем примере создается функция секционирования для разделения таблицы или индекса на четыре секции. Затем создается схема секционирования, указывающая, что все секции создаются в файловой группе PRIMARY.  
+ В [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Azure добавление файлов и файловых групп не поддерживается, а секционирование таблиц поддерживается путем секционирования только по файловой группе PRIMARY. 
+
+В следующем примере создается функция секционирования для разделения таблицы или индекса на четыре секции. Затем создается схема секционирования, указывающая, что все секции создаются в файловой группе PRIMARY.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF1 (INT)  

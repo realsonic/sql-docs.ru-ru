@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
-ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
+ms.openlocfilehash: c24a98684e87eb94a3cd9e100f203509789b7a0f
+ms.sourcegitcommit: 4a813a0741502c56c0cd5ecaafafad2e857a9d7f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96523068"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98031113"
 ---
 # <a name="move-system-databases"></a>Перемещение системных баз данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "96523068"
   
 2.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или выключите систему для проведения работ по обслуживанию дисков. Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Переместите файл или файлы в новое расположение.  
+3.  Переместите файл или файлы в новое расположение и убедитесь, что учетная запись службы [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] все еще имеет разрешение на доступ к этому расположению.
 
 4.  Перезапустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или сервер. Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -151,14 +151,10 @@ ms.locfileid: "96523068"
   
 3.  В диалоговом окне **Свойства SQL Server (** _имя_экземпляра_ **)** перейдите на вкладку **Параметры запуска** .  
   
-4.  В поле **Существующие параметры** выберите параметр -d, чтобы переместить файл данных master. Нажмите **Обновить** для сохранения изменений.  
+4.  В поле **Существующие параметры** выберите параметр "-d". В поле **Укажите параметр запуска** измените значение параметра, указав новый путь к файлу *данных* базы данных master. Нажмите **Обновить** для сохранения изменений.
   
-     В поле **Укажите параметр запуска** задайте новый путь к базе данных master.  
-  
-5.  В поле **Существующие параметры** выберите параметр -l, чтобы переместить файл журнала master. Нажмите **Обновить** для сохранения изменений.  
-  
-     В поле **Укажите параметр запуска** задайте новый путь к базе данных master.  
-  
+5.  В поле **Существующие параметры** выберите параметр "-l". В поле **Укажите параметр запуска** измените значение параметра, указав новый путь к файлу *журнала* базы данных master. Нажмите **Обновить** для сохранения изменений.
+
      Значение параметра для файла данных должно соответствовать параметру `-d` , а значение для файла журнала — параметру `-l` . В следующем примере показаны значения параметров для указания местоположения файла базы данных master по умолчанию.  
   
      `-dC:\Program Files\Microsoft SQL Server\MSSQL<version>.MSSQLSERVER\MSSQL\DATA\master.mdf`  
@@ -170,14 +166,16 @@ ms.locfileid: "96523068"
      `-dE:\SQLData\master.mdf`  
   
      `-lE:\SQLData\mastlog.ldf`  
+
+6.  Нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно **Свойства SQL Server (** _имя_экземпляра_ **)** .
+
+7.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , щелкнув правой кнопкой мыши имя экземпляра и выбрав команду **Остановить**.  
   
-6.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , щелкнув правой кнопкой мыши имя экземпляра и выбрав команду **Остановить**.  
+8.  Переместите файлы master.mdf и mastlog.ldf на новое место.  
   
-7.  Переместите файлы master.mdf и mastlog.ldf на новое место.  
+9.  Повторно запустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-8.  Повторно запустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-9. Проверьте правильность изменений для базы данных master, выполнив следующий запрос.  
+10. Проверьте правильность изменений для базы данных master, выполнив следующий запрос.  
   
     ```  
     SELECT name, physical_name AS CurrentLocation, state_desc  
@@ -186,7 +184,7 @@ ms.locfileid: "96523068"
     GO  
     ```  
 
-10. На этом этапе среда SQL Server должна выполняться как обычно. Однако корпорация Майкрософт рекомендует также изменить запись реестра, указанную в `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, где *instance_ID* имеет вид `MSSQL13.MSSQLSERVER`. В этом кусте измените значение `SQLDataRoot` на новый путь. Невозможность обновления реестра может привести сбою исправления и обновления.
+11. На этом этапе среда SQL Server должна выполняться как обычно. Однако корпорация Майкрософт рекомендует также изменить запись реестра, указанную в `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, где *instance_ID* имеет вид `MSSQL13.MSSQLSERVER`. В этом кусте измените значение `SQLDataRoot` на новый путь. Невозможность обновления реестра может привести сбою исправления и обновления.
 
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Перемещение базы данных Resource  

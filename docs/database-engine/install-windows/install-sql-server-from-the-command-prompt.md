@@ -83,14 +83,14 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 07/26/2019
+ms.date: 01/07/2020
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 6d815a88b9ac185871ed12b8192f6a5a7741f23a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f3d0be0d607a8f6a810e9d1f24fbbbff1dc11a69
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440246"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005373"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -832,7 +832,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 
 ##  <a name="feature-parameters"></a><a name="Feature"></a> Параметры компонентов  
- Чтобы установить конкретные компоненты, необходимо использовать параметр /FEATURES и указать родительский компонент или один из компонентов, приведенных в следующей таблице. Сведения о функциях, поддерживаемых различными выпусками SQL Server, см. в статье [Возможности, поддерживаемые различными выпусками [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
+ Чтобы установить конкретные компоненты, необходимо использовать параметр /FEATURES и указать родительский компонент или один из компонентов, приведенных в следующей таблице. Сведения о функциях, поддерживаемых различными выпусками SQL Server, см. в разделах [Выпуски и поддерживаемые функции [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-components-of-sql-server-2016.md), [Выпуски и поддерживаемые функции [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]](../../sql-server/editions-and-components-of-sql-server-2017.md) и [Выпуски и поддерживаемые функции [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md).
   
 |Параметр родительского компонента|Параметр компонента|Описание|  
 |:---|:---|:---|  
@@ -845,9 +845,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||PolyBaseCore | Начиная с SQL Server 2019, можно связать установку с **PolyBase**, чтобы установить технологию Polybase, которая реализует интегрированные запросы Oracle, Teradata, SQL Server и других реляционных и нереляционных данных с помощью стандартных инструкций T-SQL. |
 || PolyBaseJava | Начиная с SQL Server 2019, можно связать установку с **PolyBase**, чтобы установить соединитель Polybase для Java, который реализует интегрированные запросы по данным HDFS с помощью стандартных инструкций T-SQL.
 ||AdvancedAnalytics |Устанавливает [Службы машинного обучения SQL Server](../../machine-learning/install/sql-machine-learning-services-windows-install.md) или [службы R в SQL Server 2016 (в базе данных)](../../machine-learning/install/sql-r-services-windows-install.md).|  
-||SQL_INST_MR |Применяется к [Службам машинного обучения SQL Server](../../machine-learning/install/sql-machine-learning-services-windows-install.md). Настройте связь с **AdvancedAnalytics**, чтобы установить компонент R Open и входящие в него пакеты R.|  
-||SQL_INST_MPY|Применяется к [Службам машинного обучения SQL Server](../../machine-learning/install/sql-machine-learning-services-windows-install.md). Настройте связь с **AdvancedAnalytics**, чтобы установить компонент Anaconda и входящие в него пакеты Python.|  
-||SQL_INST_JAVA |Применяется к [Службам машинного обучения SQL Server](../../machine-learning/install/sql-machine-learning-services-windows-install.md). Свяжите с **AdvancedAnalytics**, чтобы установить расширения, обеспечивающие интеграцию с Java с помощью стандартных инструкций T-SQL.|  
+||SQL_INST_MR |Применяется к [Службам машинного обучения SQL Server](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (2017 или более поздних версий) и [Службам R в SQL Server 2016 R (в базе данных)](../../machine-learning/install/sql-r-services-windows-install.md). Настройте связь с **AdvancedAnalytics**, чтобы установить компонент R Open и входящие в него пакеты R.|  
+||SQL_INST_MPY|Применяется к [Службам машинного обучения SQL Server](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (2017 или более поздних версий). Настройте связь с **AdvancedAnalytics**, чтобы установить компонент Anaconda и входящие в него пакеты Python.|  
+||SQL_INST_JAVA |Применяется к [Расширению языка Java для SQL Server](../../language-extensions/install/windows-java.md) (2019 или более поздних версий). Свяжите с **AdvancedAnalytics**, чтобы установить расширения, обеспечивающие интеграцию с Java с помощью стандартных инструкций T-SQL.|  
 |AS||Устанавливает все компоненты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Сервер отчетов||Устанавливает все компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Удалено, начиная с SQL Server 2017. |  
 |RS_SHP||Устанавливает компоненты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для SharePoint. Удалено, начиная с SQL Server 2017.|  

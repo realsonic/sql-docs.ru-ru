@@ -17,12 +17,12 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: d258594f464a18d1c2495c2ca868a043d91e415e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b1995d22488693a31adb7c9a421f5a2e32de463d
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460717"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975488"
 ---
 # <a name="install-sql-server-replication"></a>Установка репликации SQL Server
 
@@ -48,5 +48,5 @@ ms.locfileid: "97460717"
 ## <a name="see-also"></a>См. также раздел  
  [Установка SQL Server](../../database-engine/install-windows/install-sql-server.md)   
  [Установка SQL Server из командной строки](./install-sql-server-from-the-command-prompt.md)   
- [Возможности, поддерживаемые различными выпусками SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md)  
+ [Функции, поддерживаемые выпусками SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) и [Функции, поддерживаемые выпусками SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
   
