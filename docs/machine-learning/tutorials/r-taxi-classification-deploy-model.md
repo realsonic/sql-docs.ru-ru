@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
-ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 026090f3eb61e2bd2ffe2b96eb09751cc3543dbf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470115"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101875"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>Учебник по R. Запуск прогнозов в хранимых процедурах SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ GO
 
 + Инструкция SELECT получает сериализованную модель из базы данных и сохраняет ее в переменной R `mod` для дальнейшей обработки с помощью языка R.
 
-+ Новые варианты для оценки получаются из запроса [!INCLUDE[tsql](../../includes/tsql-md.md)], указанного в `@inquery`, первом параметре хранимой процедуры. По мере считывания данных запроса строки сохраняются в кадре данных по умолчанию `InputDataSet`. Этот кадр данных передается в функцию [PREDICT](/sql/t-sql/queries/predict-transact-sql), которая формирует оценки.
++ Новые варианты для оценки получаются из запроса [!INCLUDE[tsql](../../includes/tsql-md.md)], указанного в `@inquery`, первом параметре хранимой процедуры. По мере считывания данных запроса строки сохраняются в кадре данных по умолчанию `InputDataSet`. Этот кадр данных передается в функцию [PREDICT](../../t-sql/queries/predict-transact-sql.md), которая формирует оценки.
   
   `OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));`
   

@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: cc182838cbe519ea42235f40648e1eb2567b8954
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9a8b30cc1fa5af3e22ce0294e8eff21cf413e2c6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471265"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102070"
 ---
 # <a name="insert-python-dataframe-into-sql-table"></a>Вставка кадра данных Python в таблицу SQL
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97471265"
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) для восстановления образца базы данных в Управляемый экземпляр SQL Azure.
 ::: moniker-end
 
-* Azure Data Studio. Сведения об установке см. в разделе [Azure Data Studio](../../azure-data-studio/what-is.md).
+* Azure Data Studio. Сведения об установке см. в разделе [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
 
 * [Восстановление образца базы данных](../../samples/adventureworks-install-configure.md) для получения демонстрационных данных, используемых в этой статье.
 

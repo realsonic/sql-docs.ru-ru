@@ -1,19 +1,19 @@
 ---
-description: Параметры ("Среда"— страница "Запуск")
 title: " Страница параметров SQL Server — \"Среда\" — \"Запуск\""
-ms.date: 11/05/2018
+description: Параметры ("Среда"— страница "Запуск")
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85d0b99d0929f7fb7ae642c5b0673fdc7b9b185b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.date: 11/05/2018
+ms.openlocfilehash: 6db0e4b3cf24087b9441b9e3c6b83b59cbefe48f
+ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417910"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98193051"
 ---
 # <a name="options-environment---startup-page"></a>Параметры ("Среда"— страница "Запуск")
 

@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d258ac514cd998fd121c87a8d6da4a2694878c3e
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: ee0ceb3a9f86fc2a7fabe44e9279b7e63dabfb8b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378458"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091689"
 ---
 # <a name="monitor-cluster-with-azdata-and-grafana-dashboard"></a>Выполнение мониторинга кластера с помощью azdata и панели мониторинга Grafana
 
@@ -24,18 +24,18 @@ ms.locfileid: "92378458"
 ## <a name="prerequisites"></a>Предварительные требования
 
 - [Кластер больших данных SQL Server 2019](deployment-guidance.md)
-- [Служебная программа командной строки azdata](deploy-install-azdata.md)
+- [Служебная программа командной строки azdata](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Возможности
 
-В SQL Server 2019 можно создать, удалить, описать, инициализировать, перечислить, запустить и обновить приложение. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata** .
+В SQL Server 2019 можно создать, удалить, описать, инициализировать, перечислить, запустить и обновить приложение. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata**.
 
 |Get-Help |Описание |
 |:---|:---|
 |`azdata bdc endpoint list` | Список конечных точек для кластера больших данных. |
 
 
-Следующий пример можно использовать для перечисления конечной точки **панели мониторинга Grafana** :
+Следующий пример можно использовать для перечисления конечной точки **панели мониторинга Grafana**:
 
 ```bash
 azdata bdc endpoint list --endpoint-name metricsui 

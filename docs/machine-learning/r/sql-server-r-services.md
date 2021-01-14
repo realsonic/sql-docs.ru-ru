@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016
-ms.openlocfilehash: d1910099e1f0aa4a8f3e58f1faa01dfbe177c517
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 66e023799f69f35b8e220983b261d9e5ae074f24
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470765"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102248"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Что представляют собой службы SQL Server 2016 R Services?
 
@@ -92,7 +92,7 @@ R Services используют платформу расширяемости д
 
 1. Настройте средства разработки. Вы можете использовать:
 
-    + [Azure Data Studio](../../azure-data-studio/what-is.md) или [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) для использования T-SQL и хранимой процедуры [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), чтобы выполнить скрипт R.
+    + [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) или [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) для использования T-SQL и хранимой процедуры [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), чтобы выполнить скрипт R.
     + R на собственном ноутбуке или рабочей станции разработки для выполнения скриптов. Можно либо извлечь данные локально, либо отправить выполнение удаленно в SQL Server с помощью [RevoScaleR](../r/ref-r-revoscaler.md). Дополнительные сведения см. в разделе о [настройке обработки и анализа для разработки на R](../r/set-up-a-data-science-client.md).
 
 1. Напишите свой первый скрипт R

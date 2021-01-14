@@ -10,22 +10,22 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 80535a9baefe60301927723511a5bf1afeb805a8
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: be07fa7f00f38f4f7ff3782593b19a584627e2f7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378479"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091702"
 ---
 # <a name="monitor-cluster-with-azdata-and-kubectl"></a>Мониторинг кластера с помощью azdata и kubectl
 
 ## <a name="use-azdata"></a>Использование azdata
 
-Для просмотра обеих конечных точек и состояния кластера также можно использовать команды [azdata](deploy-install-azdata.md).
+Для просмотра обеих конечных точек и состояния кластера также можно использовать команды [azdata](../azdata/install/deploy-install-azdata.md).
 
 ### <a name="service-endpoints"></a>Конечные точки служб
 
-1. Войдите в кластер больших данных с помощью [azdata login](reference-azdata.md). Задайте для параметра **--controller-endpoint** значение внешнего IP-адреса конечной точки контроллера.
+1. Войдите в кластер больших данных с помощью [azdata login](../azdata/reference/reference-azdata.md). Задайте для параметра **--controller-endpoint** значение внешнего IP-адреса конечной точки контроллера.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -39,7 +39,7 @@ ms.locfileid: "92378479"
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 
-1. Выполните команду [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md), чтобы получить список с описанием каждой конечной точки и соответствующими значениями IP-адреса и порта. 
+1. Выполните команду [`azdata bdc endpoint list`](../azdata/reference/reference-azdata-bdc-endpoint.md), чтобы получить список с описанием каждой конечной точки и соответствующими значениями IP-адреса и порта. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -65,14 +65,14 @@ ms.locfileid: "92378479"
 
 ### <a name="view-cluster-status"></a>Просмотр состояния кластера
 
-Проверить состояние кластера можно с помощью команды [`azdata bdc status show`](reference-azdata-bdc-status.md).
+Проверить состояние кластера можно с помощью команды [`azdata bdc status show`](../azdata/reference/reference-azdata-bdc-status.md).
 
 ```bash
 azdata bdc status show
 ```
 
 > [!TIP]
-> Чтобы выполнить команды состояния, нужно сначала войти в систему с помощью команды **azdata login** , которая была приведена в предыдущем разделе о конечных точках.
+> Чтобы выполнить команды состояния, нужно сначала войти в систему с помощью команды **azdata login**, которая была приведена в предыдущем разделе о конечных точках.
 
 Ниже приведен пример выходных данных этой команды.
 
@@ -150,7 +150,7 @@ azdata bdc status show
 
 ### <a name="view-specific-resource-status"></a>Просмотр состояния конкретного ресурса
 
-Состояние конкретного ресурса в кластере можно просмотреть с помощью команды [azdata bdc status show](reference-azdata-bdc-status.md). При использовании этой команды можно фильтровать результаты с помощью параметра `--resource`. Ниже приведены некоторые примеры входных данных для параметра `--resource`.
+Состояние конкретного ресурса в кластере можно просмотреть с помощью команды [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md). При использовании этой команды можно фильтровать результаты с помощью параметра `--resource`. Ниже приведены некоторые примеры входных данных для параметра `--resource`.
 
 - master
 - управляющие
@@ -242,7 +242,7 @@ azdata bdc status show --all --resource storage-0
 
 ### <a name="view-controller-status"></a>Просмотр состояния контроллера
 
-Состояние контроллера можно увидеть с помощью команды [`azdata bdc control status show`](reference-azdata-bdc-control-status.md). Она предоставляет аналогичные ссылки на панели мониторинга, связанные с компонентами контроллера в кластере больших данных.
+Состояние контроллера можно увидеть с помощью команды [`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md). Она предоставляет аналогичные ссылки на панели мониторинга, связанные с компонентами контроллера в кластере больших данных.
 
 
 ## <a name="next-steps"></a>Дальнейшие действия

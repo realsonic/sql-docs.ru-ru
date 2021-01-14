@@ -10,12 +10,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66b405f020728c0ed7040a712d56bcadc3180e38
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 55dc3056b9f66f7a96b55ab750a5f74fe9bfd394
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378476"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091714"
 ---
 # <a name="check-out-cluster-logs--with-kibana-dashboard"></a>Извлечение журналов кластера с помощью панели мониторинга Kibana
 
@@ -24,18 +24,18 @@ ms.locfileid: "92378476"
 ## <a name="prerequisites"></a>Предварительные требования
 
 - [Кластер больших данных SQL Server 2019](deployment-guidance.md)
-- [Служебная программа командной строки azdata](deploy-install-azdata.md)
+- [Служебная программа командной строки azdata](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Возможности
 
-В SQL Server 2019 можно создать, удалить, описать, инициализировать, перечислить, запустить и обновить приложение. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata** .
+В SQL Server 2019 можно создать, удалить, описать, инициализировать, перечислить, запустить и обновить приложение. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata**.
 
 |Get-Help |Описание |
 |:---|:---|
 |`azdata bdc endpoint list` | Список конечных точек для кластера больших данных. |
 
 
-Следующий пример можно использовать для вывода конечной точки **панели мониторинга Kibana** :
+Следующий пример можно использовать для вывода конечной точки **панели мониторинга Kibana**:
 
 ```bash
 azdata bdc endpoint list --endpoint-name logsui 

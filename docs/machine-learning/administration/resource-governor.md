@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 85ee78e0d7558cf2ad683321a13a842ff5d8daf5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3e71b33eb08fd386232e992e9b47da7b5057aa32
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471335"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170726"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>Управление рабочими нагрузками Python и R с помощью Resource Governor в службах машинного обучения SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97471335"
  
 По умолчанию внешние процессы используют до 20% общего объема памяти узла на локальном сервере. Пул ресурсов по умолчанию можно изменить, чтобы внести изменения на уровне сервера, а процессы R и Python будут использовать любую емкость, доступную для внешних процессов.
 
-При необходимости можно создать настраиваемые **внешние пулы ресурсов** со связанными группами рабочих нагрузок и классификаторами, чтобы определить выделение ресурсов для запросов, исходящих от конкретных программ или узлов, или в соответствии с другими указанными условиями. Внешний пул ресурсов — это тип пула ресурсов в [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], который помогает управлять процессами R и Python за пределами ядра СУБД.
+При необходимости можно создать настраиваемые **внешние пулы ресурсов** со связанными группами рабочих нагрузок и классификаторами, чтобы определить выделение ресурсов для запросов, исходящих от конкретных программ или узлов, или в соответствии с другими указанными условиями. Внешний пул ресурсов — это тип пула ресурсов в [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], который помогает управлять процессами R и Python за пределами ядра СУБД.
 
 1. [Включите управление ресурсами](../../relational-databases/resource-governor/enable-resource-governor.md) (по умолчанию оно отключено).
 

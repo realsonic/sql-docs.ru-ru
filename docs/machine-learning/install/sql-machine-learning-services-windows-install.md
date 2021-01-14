@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017'
-ms.openlocfilehash: 9df3f0d56e3d210389110cdf155bd79a32c7c978
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 592a365024edbbe4ee2743a156ee480b76849ba9
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471195"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096860"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Установка служб машинного обучения SQL Server (Python и R) в Windows
 
@@ -191,7 +191,7 @@ ms.locfileid: "97471195"
     > [!TIP]
     > Скачать и установить соответствующую версию можно с этой страницы: [Скачайте SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
     > 
-    > Можно также использовать среду [Azure Data Studio](../../azure-data-studio/what-is.md), которая поддерживает административные задачи и запросы к SQL Server.
+    > Можно также использовать среду [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), которая поддерживает административные задачи и запросы к SQL Server.
   
 2. Подключитесь к экземпляру, в который вы установили службы машинного обучения, нажмите **Создать запрос**, чтобы открыть окно запроса, и выполните следующую команду:
 

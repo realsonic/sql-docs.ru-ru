@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: 968bcd1560fd4fd24dddfaf45cfe606518235b60
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: fad1ac64dcc1024d5dad091670300b8d39fa0632
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081893"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092716"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 
@@ -23,7 +23,7 @@ ms.locfileid: "92081893"
 
 **[Установка компонентов SQL Server PowerShell](download-sql-server-ps-module.md)**
 
-Существует два модуля SQL Server PowerShell — **[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)** и **[SQLPS](https://docs.microsoft.com/powershell/module/sqlps)** .
+Существует два модуля SQL Server PowerShell — **[SqlServer](/powershell/module/sqlserver)** и **[SQLPS](/powershell/module/sqlps)** .
 
 Самым актуальным модулем PowerShell является модуль **SqlServer**.
 

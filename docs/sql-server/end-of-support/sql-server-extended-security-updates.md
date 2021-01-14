@@ -10,12 +10,12 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 0ed29ad1b6a6b548b910ecce3d2b89da9bfb0180
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 94939adb2934e16ed7d1c81c33ebab4631c4b114
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478885"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172516"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Что такое дополнительные обновления системы безопасности SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -322,7 +322,7 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
 
 Клиенты могут перенести устаревшие среды [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Управляемый экземпляр SQL Azure, полностью управляемую службу платформы данных (PaaS), которая предоставляет бесплатную версию для устранения проблем с окончанием сроков поддержки или на виртуальных машинах Azure для получения доступа к обновлениям системы безопасности. Перенесенные базы данных сохраняют совместимость с устаревшей системой. Дополнительные сведения см. в статье [Сертификация на совместимость](../../database-engine/install-windows/compatibility-certification.md).
 
-Дополнительные обновления системы безопасности будут доступны для [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] на виртуальных машинах Azure по истечении срока поддержки 9 июля 2019 г. в течение следующих трех лет. Для клиентов, желающих обновить [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], будут поддерживаться все последующие версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для версий с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] клиентам необходимо иметь последний поддерживаемый пакет обновления. Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] клиентам рекомендуется использовать последнее накопительное обновление. Обратите внимание, что пакеты обновления не будут доступны начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], доступны будут только накопительные обновления и выпуски для общего распространения (GDR).
+Дополнительные обновления системы безопасности будут доступны для [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] на виртуальных машинах Azure по истечении срока поддержки 9 июля 2019 г. в течение следующих трех лет. Для клиентов, желающих обновить [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], будут поддерживаться все последующие версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для версий с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] клиентам необходимо иметь последний поддерживаемый пакет обновления. Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] клиентам рекомендуется использовать последнее накопительное обновление. Обратите внимание, что пакеты обновления не будут доступны начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], доступны будут только накопительные обновления и выпуски для общего распространения (GDR).
 
 Управляемый экземпляр SQL Azure — это вариант развертывания на уровне экземпляра в [!INCLUDE[ssSDS](../../includes/sssds-md.md)], который обеспечивает широкую совместимость [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и встроенную поддержку виртуальных сетей (VNET), поэтому вы можете перенести базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Управляемый экземпляр без изменения приложений. Он сочетает в себе многофункциональную контактную зону [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с эксплуатационными и финансовыми преимуществами интеллектуальной, полностью управляемой службы. Используйте новую службу Azure Database Migration Service для перемещения [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] в Управляемый экземпляр SQL Azure с минимальными изменениями кода приложения или вообще без них.
 

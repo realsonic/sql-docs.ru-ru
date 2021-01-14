@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
-ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
+ms.openlocfilehash: ced001726b7a8306f2064c1436ddb41cf65a6eb0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92914350"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091814"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -69,11 +69,11 @@ ms.locfileid: "92914350"
 
 Возможности управления и мониторинга реализуются на основе сочетания средств командной строки, API, порталов и динамических административных представлений.
 
-Вы можете использовать [Azure Data Studio](../azure-data-studio/what-is.md) для выполнения самых разных задач в кластере больших данных.
+Вы можете использовать [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) для выполнения самых разных задач в кластере больших данных.
 - Встроенные фрагменты кода для общих задач управления.
 - Просмотр HDFS, загрузка и предварительный просмотр файлов, а также создание каталогов.
 - Создание, открытие и выполнение записных книжек, совместимых с Jupyter.
-- Мастер виртуализации данных, упрощающий процесс создания внешних источников данных (включается с помощью **расширения Data Virtualization** ).
+- Мастер виртуализации данных, упрощающий процесс создания внешних источников данных (включается с помощью **расширения Data Virtualization**).
 
 ## <a name="architecture"></a><a id="architecture"></a> Архитектура
 

@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8e1544a46e84b77ce290dded936f86b75a251f13
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 80b93a4a55b6d12ee5177230b78447c21fc0cae8
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642946"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172536"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Выпуски и поддерживаемые функции SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -67,7 +67,7 @@ ms.locfileid: "97642946"
 
 ### <a name="try-sql-server"></a>Попробуйте SQL Server!    
     
-> [![Скачать на странице центра оценки](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Скачать SQL Server 2016 на странице центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
+> [![Скачать на странице центра оценки](/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Скачать SQL Server 2016 на странице центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
 > 
 > ![Значок виртуальной машины Azure](/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Разверните виртуальную машину с уже установленным SQL Server 2016](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)**   
   
@@ -136,13 +136,13 @@ ms.locfileid: "97642946"
 |Максимальный объем памяти для буферного пула на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Максимум, поддерживаемый операционной системой|128 ГБ|64 ГБ|1410 МБ|1410 МБ|
 |Максимальный объем памяти для кэша сегмента Columnstore на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Неограниченная память| 32 ГБ<sup>2</sup>| 16 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>|  
 |Максимальный размер данных, оптимизированных для памяти, на базу данных в [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Неограниченная память| 32 ГБ<sup>2</sup>| 16 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>|  
-|Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Максимум, поддерживаемый операционной системой|Табличный: 16 ГБ<br /><br /> MOLAP: 64 ГБ|Н/Д|Недоступно|Н/Д|  
+|Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Максимум, поддерживаемый операционной системой|Табличный: 16 ГБ<br /><br /> MOLAP: 64 ГБ|Н/Д|Н/Д|Н/Д|  
 |Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Максимум, поддерживаемый операционной системой|64 ГБ|64 ГБ|4 ГБ|Н/Д|
 |Максимальный размер реляционной базы данных|524 ПБ|524 ПБ|524 ПБ|10 ГБ|10 ГБ|  
   
 <sup>1</sup> Использование выпуска Enterprise Edition с лицензированием по принципу "лицензия на сервер и клиентские лицензии (Server+CAL)" (недоступно для новых соглашений) ограничено максимум 20 ядрами в расчете на экземпляр SQL Server. В модели лицензирования по числу ядер никаких ограничений нет. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками. 
+<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками. 
 
 ##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -195,7 +195,7 @@ ms.locfileid: "97642946"
 
 <sup>1</sup> Размер данных выполняющейся в памяти OLTP и кэша сегмента Columnstore ограничены объемом памяти, указанным в выпуске в разделе "Ограничения масштабирования". Максимальная степень параллелизма ограничена. Степень параллелизма процесса (DOP) для построения индекса ограничена значением 2 для выпуска Standard и 1 для выпусков Express и Web. Это относится к индексам columnstore, созданным на основе таблиц на диске и оптимизированных для памяти таблиц.
 
-<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками. Передача агрегата, передача предиката строки и оптимизация SIMD — улучшения масштабируемости в выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition. Дополнительные сведения см. в статье [Новые возможности индексов columnstore](../relational-databases/indexes/columnstore-indexes-what-s-new.md). 
+<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками. Передача агрегата, передача предиката строки и оптимизация SIMD — улучшения масштабируемости в выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition. Дополнительные сведения см. в статье [Новые возможности индексов columnstore](../relational-databases/indexes/columnstore-indexes-what-s-new.md). 
 
 <sup>3</sup> Эта функция не включена в вариант установки LocalDB.
 
@@ -215,7 +215,7 @@ ms.locfileid: "97642946"
 |Автономные базы данных|Да|Да|Да|Да|Да| 
 |Шифрование для резервного копирования|Да|Да|Нет|Нет|Нет|  
 
-<sup>1</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.      
+<sup>1</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.      
 
 ##  <a name="replication"></a><a name="Replication"></a> Репликация  
   
@@ -276,7 +276,7 @@ ms.locfileid: "97642946"
   
  <sup>1</sup> Дополнительные сведения см. в разделе [Вопросы по установке SQL Server с помощью SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
-<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.      
+<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.      
   
 ##  <a name="development-tools"></a><a name="DevTools"></a> Development Tools  
   
@@ -314,7 +314,7 @@ ms.locfileid: "97642946"
 
 <sup>1</sup> Для горизонтального увеличения масштаба с несколькими вычислительными узлами требуется головной узел.
 
-<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.     
+<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.     
   
 ## <a name="integration-services"></a><a name="IS"></a> Службы Integration Services
 
@@ -336,7 +336,7 @@ ms.locfileid: "97642946"
 |Параллельная обработка запросов для секционированных таблиц и индексов|Да|Нет|Нет|Нет|Нет|   
 |Глобальная статистическая обработка пакета|Да|Нет|Нет|Нет|Нет| 
 
-<sup>1</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.     
+<sup>1</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.     
 
 ##  <a name="analysis-services"></a><a name="SSAS"></a> Analysis Services  
   
@@ -389,9 +389,8 @@ ms.locfileid: "97642946"
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|Нет|Нет| 
 |StreamInsight HA|StreamInsight Premium Edition|Нет|Нет|Нет|Нет|   
   
-> [![Скачать SSMS](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Скачайте последнюю версию SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)** .      
+> [![Скачать SSMS](/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Скачайте последнюю версию SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)** .      
   
 ## <a name="see-also"></a>См. также  
  [Установка SQL Server](../database-engine/install-windows/install-sql-server.md)  
  
-  
