@@ -19,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 142269f7c3cd8a5a1e764e2e48cf41f83490bd76
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8a913c3bf4f01828fcf75df1e3c69dca9149e2de
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464605"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241825"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "97464605"
 |resource_name|NVARCHAR(128)|Имя ресурса.|
 |sku|NVARCHAR(128)|Управляемый экземпляр уровня служб экземпляра. Допустимы следующие значения: <br><ul><li>Общее назначение</li></ul><ul><li>Критически важный для бизнеса</li></ul>|
 |hardware_generation|NVARCHAR(128)|Идентификатор создания оборудования: например, Gen 4 или Gen 5|
-|virtual_core_count|INT|Представляет число виртуальных ядер на экземпляр (8, 16 или 24 в общедоступной предварительной версии)|
+|virtual_core_count|int|Представляет число виртуальных ядер на экземпляр (8, 16 или 24 в общедоступной предварительной версии)|
 |avg_cpu_percent|Decimal (5, 2)|Среднее использование вычислительных ресурсов в процентах от ограничения уровня служб Управляемый экземпляр, используемого экземпляром. Он вычисляется как сумма времени ЦП всех пулов ресурсов для всех баз данных в экземпляре и распределяется по доступному времени ЦП для этого уровня в заданном интервале.|
 |reserved_storage_mb|BIGINT|Зарезервированное хранилище на экземпляр (объем дискового пространства, приобретенный клиентом для управляемого экземпляра)|
 |storage_space_used_mb|десятичное число (18, 2)|Хранилище, используемое всеми файлами базы данных в управляемом экземпляре (включая пользовательские и системные базы данных)|
@@ -63,19 +63,18 @@ ms.locfileid: "97464605"
  Данные, возвращаемые **sys.server_resource_stats** , выражаются как общее значение, используемое в байтах или мегабайтах (в именах столбцов), отличном от avg_cpu, который выражается в процентах от максимально допустимого количества допустимых ограничений для уровня службы или производительности, который вы используете.  
  
 ## <a name="examples"></a>Примеры  
- В следующем примере возвращаются все базы данных с усреднением по меньшей мере для 80 % использования вычислительной мощности за последнюю неделю.  
+В следующем примере возвращается среднее использование ЦП за последние семь дней.  
   
 ```sql  
 DECLARE @s datetime;  
 DECLARE @e datetime;  
 SET @s= DateAdd(d,-7,GetUTCDate());  
 SET @e= GETUTCDATE();  
-SELECT resource_name, AVG(avg_cpu_percent) AS Average_Compute_Utilization   
+SELECT AVG(avg_cpu_percent) AS Average_Compute_Utilization   
 FROM sys.server_resource_stats   
 WHERE start_time BETWEEN @s AND @e  
-GROUP BY resource_name  
-HAVING AVG(avg_cpu_percent) >= 80  
+GO;
 ```  
     
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровни служб Управляемого экземпляра](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
