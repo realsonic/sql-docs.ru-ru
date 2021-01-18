@@ -5,16 +5,16 @@ description: В этой статье описаны последние обно
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 10/19/2020
+ms.date: 01/13/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f328e136bc0b07f23083153277ac98588702b373
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 1382a7e2d1c1e54163c1918b0795197fd9b217cd
+ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489664"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192991"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Заметки о выпуске Кластеров больших данных SQL Server 2019
 
@@ -62,16 +62,17 @@ ms.locfileid: "97489664"
 
 В следующей таблице указана история выпусков для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Выпуск <sup>1</sup> | Версия BDC    | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] Версия <sup>2</sup>| Дата выпуска |
-|------------------|----------------|-----------------|--------------|
-| [CU8](#cu8)      | 15.0.4073.23   | 20.2.2          | 19.10.2020   |
-| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 04.08.2020   |
-| [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 22.06.2020   |
-| [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
-| [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
-| [CU2](#cu2)      | 15.0.4013.40   | 15.0.4013       | 2020-02-13   |
-| [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
-| [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
+| Выпуск <sup>1</sup> | Версия BDC | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] Версия <sup>2</sup> | Дата выпуска |
+|--|--|--|--|
+| [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 12.01.2021 |
+| [CU8](#cu8)     | 15.0.4073.23 | 20.2.2    | 19.10.2020 |
+| [CU6](#cu6)     | 15.0.4053.23 | 20.0.1    | 04.08.2020 |
+| [CU5](#cu5)     | 15.0.4043.16 | 20.0.0    | 22.06.2020 |
+| [CU4](#cu4)     | 15.0.4033.1  | 15.0.4033 | 2020-03-31 |
+| [CU3](#cu3)     | 15.0.4023.6  | 15.0.4023 | 2020-03-12 |
+| [CU2](#cu2)     | 15.0.4013.40 | 15.0.4013 | 2020-02-13 |
+| [CU1](#cu1)     | 15.0.4003.23 | 15.0.4003 | 2020-01-07 |
+| [GDR1](#rtm)    | 15.0.2070.34 | 15.0.2070 | 2019-11-04 |
 
 <sup>1</sup> CU7 недоступен для BDC.
 
@@ -80,6 +81,14 @@ ms.locfileid: "97489664"
 ## <a name="how-to-install-updates"></a>Установка обновлений
 
 Сведения об установке обновлений см. в статье [Обновление [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a name="cu8-gdrjanuary-2021"></a><a id="cu8-gdr"></a> CU8-GDR (январь 2021 г.)
+
+Выпуск накопительного пакета обновления 8 GDR (CU8-GDR) для SQL Server 2019.
+
+|Версия пакета | Тег образа |
+|-----|-----|
+|15.0.4083.2 |[2019-CU8-GDR1-ubuntu-16.04]<br/><br/>[2019-CU8-GDR1-ubuntu-18.04]
 
 ## <a name="cu8-september-2020"></a><a id="cu8"></a> CU8 (сентябрь 2020 г.)
 

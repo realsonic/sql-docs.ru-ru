@@ -3,18 +3,18 @@ title: Установка из командной строки
 description: Запустите программу установки SQL Server из командной строки, чтобы добавить Службы машинного обучения с R и Python в экземпляр ядра СУБД SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/25/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 7c9fb33f32a5807f46136ec1ede69386927621ca
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9b0bf3444ab09cbbbb4aa8eca225dfa9964898c3
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471145"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005329"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Установка Служб машинного обучения с R и Python в SQL Server из командной строки
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "97471145"
 | /FEATURES = AdvancedAnalytics | Устанавливает версию в базе данных: Службы машинного обучения SQL Server (в базе данных)  |
 | /FEATURES = SQL_INST_MR | Объедините с AdvancedAnalytics. Устанавливает функцию R (в базе данных), включая Microsoft R Open и частные пакеты R. |
 | /FEATURES = SQL_INST_MRY | Объедините с AdvancedAnalytics. Устанавливает функцию Python (в базе данных), включая Anaconda и частные пакеты R. |
-| /FEATURES = SQL_INST_MJAVA | Объедините с AdvancedAnalytics. Устанавливает компонент Java (в базе данных), включая открытый JRE. |
+| /FEATURES = SQL_INST_MJAVA | Объедините с AdvancedAnalytics. Устанавливает компонент Java (в базе данных), включая открытый JRE. Применяется к [расширению языка Java для SQL Server](../../language-extensions/install/windows-java.md).|
 | /FEATURES = SQL_SHARED_MR | Устанавливает компонент R для изолированной версии: Сервер машинного обучения SQL Server (изолированный) Изолированный сервер — это "общий компонент", не привязанный к экземпляру ядра СУБД.|
 | /FEATURES = SQL_SHARED_MRY | Устанавливает компонент Python для изолированной версии: Сервер машинного обучения SQL Server (изолированный) Изолированный сервер — это "общий компонент", не привязанный к экземпляру ядра СУБД.|
 | /IACCEPTROPENLICENSETERMS  | Указывает, что вы приняли условия лицензионного соглашения для использования компонентов R с открытым исходным кодом. |
