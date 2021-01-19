@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2490c95bf099e586de9692b6057f59fc6a6ce2fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc99e599596658019c073b67dbf39b6dd7e573ce
+ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425356"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125613"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (выражение служб SSIS)
 
@@ -95,7 +95,7 @@ TOKEN("        a little white dog", " ", 1)
  В следующем примере функция TOKEN возвращает год из строки даты.  
   
 ```  
-TOKEN("2009/01/01", "/"), 1  
+TOKEN("2009/01/01", "/", 1)
 ```  
   
  В следующем примере функция TOKEN возвращает имя файла из указанного пути. Например, если значение параметра User::Path равно "c:\program files\data\myfile.txt", функция TOKEN возвращает строку "myfile.txt". Функция TOKENCOUNT возвращает 4, а функция TOKEN возвращает четвертый токен — "myfile.txt".  

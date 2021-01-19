@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 345c02a175643967a509900ab415b90708a3d9e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 910db0887a50e12163ddeda927159f5e6c97b74b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478305"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169282"
 ---
 # <a name="tempdb-database"></a>tempdb, база данных
 
@@ -213,7 +213,7 @@ GO
 Расположите базу данных `tempdb` на дисках, отличающихся от используемых пользовательскими базами данных.
 
 ## <a name="performance-improvements-in-tempdb-for-sql-server"></a>Увеличение производительности базы данных tempdb в SQL Server
-Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], производительность `tempdb` дополнительно оптимизирована следующим образом:  
+Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], производительность `tempdb` дополнительно оптимизирована следующим образом:  
   
 - Временные таблицы и табличные переменные кэшируются. Кэширование позволяет операциям удаления и создания временных объектов выполняться очень быстро. Кэширование также снижает вероятность возникновения состязаний, связанных с метаданными и выделением страниц.  
 - Усовершенствован протокол кратковременных блокировок выделения страниц для снижения количества используемых кратковременных блокировок `UP` (обновление).  

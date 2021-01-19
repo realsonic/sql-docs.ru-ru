@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: d81ecf6b555022aeac47e810041d96a57f61b00b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 43f3bbae327731f6522b71c0fdaafbc9441fe9ca
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468215"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169753"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -249,7 +249,7 @@ SELECT *
 |ACP|Столбцы типа **char**, **varchar** или **text** преобразуются из кодовой страницы ANSI или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |OEM (по умолчанию)|Столбцы типа **char**, **varchar** или **text** преобразуются из системной кодовой страницы OEM в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |RAW|Преобразование из одной кодовой страницы в другую не выполняется. Это наиболее быстрый параметр.|
-|*code_page*|Показывает исходную кодовую страницу, в которой представлены символы в файле данных, например 850.<br /><br /> **Важно!** Версии до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|
+|*code_page*|Показывает исходную кодовую страницу, в которой представлены символы в файле данных, например 850.<br /><br /> **Важно!** Версии до [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|
 
 ##### <a name="format"></a>FORMAT
 `FORMAT` **=** 'CSV' **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
