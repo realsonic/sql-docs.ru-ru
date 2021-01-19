@@ -154,7 +154,7 @@
               href: big-data-cluster/manage-user-access.md
         - name: Частный кластер
           items:
-            - name: Развернуть
+            - name: Развертывание
               href: big-data-cluster/private-deploy.md
             - name: Управление
               href: big-data-cluster/private-manage.md
@@ -1986,6 +1986,8 @@
               href: relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
             - name: Использование
               href: relational-databases/track-changes/work-with-change-data-sql-server.md
+            - name: Совместимость
+              href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
         - name: отслеживание изменений
           href: relational-databases/track-changes/about-change-tracking-sql-server.md
           items:
@@ -1995,8 +1997,6 @@
               href: relational-databases/track-changes/manage-change-tracking-sql-server.md
             - name: Использование
               href: relational-databases/track-changes/work-with-change-tracking-sql-server.md
-            - name: Совместимость
-              href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
     - name: Триггеры
       items:
         - name: Триггеры входа
@@ -7785,11 +7785,12 @@
                     - name: "Разработка приложений с помощью .NET\_Framework"
                       href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: Always Encrypted с безопасными анклавами.
-              href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
               items:
+                - name: Настройка Always Encrypted с безопасными анклавами
+                  href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
                 - name: Настройка среды для поддержки анклавов и аттестации
                   items:
-                    - name: Настройка анклавов VBS с помощью аттестации службы защиты узла
+                    - name: Set up SQL Server
                       items:
                         - name: Планирование аттестации службы защиты узла
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
@@ -7797,6 +7798,8 @@
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
                         - name: Регистрация компьютера в службе защиты узла
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
+                        - name: Настройка безопасного анклава в SQL Server
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md
                 - name: Управление ключами для Always Encrypted с безопасными анклавами
                   items:
                     - name: Управление ключами с поддержкой анклава
@@ -7813,12 +7816,10 @@
                       href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
                     - name: Включение Always Encrypted с безопасными анклавами для существующих зашифрованных столбцов
                       href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
-                - name: Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами
-                  items:
-                    - name: Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами
-                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
-                    - name: Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами с использованием SSMS
-                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
+                - name: Выполнение инструкций Transact-SQL с помощью безопасных анклавов
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+                - name: Устранение распространенных неполадок с безопасными анклавами
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-troubleshooting.md
                 - name: Создание и использование индексов в столбцах с поддержкой анклава
                   href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
                 - name: "Разработка приложений с помощью Always\_Encrypted с безопасными анклавами"
@@ -7964,8 +7965,10 @@
               href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
         - name: Always Encrypted с безопасными анклавами.
           items:
-            - name: Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
+            - name: Начало работы с Always Encrypted и безопасными анклавами в SQL Server
               href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+            - name: "Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure\_>"
+              href: /azure/azure-sql/database/always-encrypted-enclaves-getting-started
             - name: Создание и использование индексов в столбцах Always Encrypted с безопасными анклавами
               href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
             - name: "Разработка приложения .NET Framework с помощью Always\_Encrypted с безопасными анклавами"
@@ -9220,6 +9223,8 @@
                   href: ssms/menu-help/options-environment-help-general-page.md
                 - name: "Параметры (параметры \"Выполнение запроса\"\_— \"Справка\"\_— страница \"Общие\")"
                   href: ssms/menu-help/options-query-execution.md
+                - name: "Параметры (служба Azure\_— \"Справка\"\_— страница \"Общие\")"
+                  href: ssms/menu-help/options-azure-services.md
                 - name: Внешние инструменты
                   href: ssms/menu-help/external-tools.md
                 - name: Настройка (страница «Команды»)
@@ -9990,6 +9995,8 @@
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
         - name: Создание и настройка групп доступности
           href: linux/sql-server-linux-create-availability-group.md
+        - name: Создание решений с высоким уровнем доступности с помощью HPE Serviceguard
+          href: linux/sql-server-availability-group-ha-hpe.md
         - name: Развертывание в Kubernetes
           href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: Настройка репликации
