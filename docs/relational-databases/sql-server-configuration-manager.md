@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fee95de639217481b3278fcf4f5f3315564a0be8
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: fc5fb052e2a02630a78f899e5dcdad615bb00266
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809678"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172746"
 ---
 # <a name="sql-server-configuration-manager"></a>Диспетчер конфигурации SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] — это средство, предназначенное для управления службами, связанными с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], для настройки сетевых протоколов, которые используются [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а также для управления конфигурацией подключений с клиентских компьютеров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] устанавливается вместе с SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации [!INCLUDE[msCoName](../includes/msconame-md.md)] представляет собой оснастку консоли управления (ММС), которую можно открыть из меню "Пуск" или добавить в любой экран консоли управления [!INCLUDE[msCoName](../includes/msconame-md.md)] . [!INCLUDE[msCoName](../includes/msconame-md.md)] Консоль управления (**mmc.exe**) использует файл **SQLServerManager\<version>.msc** (например, **SQLServerManager13.msc** для [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]), чтобы открыть диспетчер конфигурации. Для управления конкретной версией [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] потребуется соответствующая версия диспетчера конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ниже приведены расположения последних пяти версий этого диспетчера при установке Windows на диск C.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] — это средство, предназначенное для управления службами, связанными с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], для настройки сетевых протоколов, которые используются [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а также для управления конфигурацией подключений с клиентских компьютеров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] устанавливается вместе с SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации [!INCLUDE[msCoName](../includes/msconame-md.md)] представляет собой оснастку консоли управления (ММС), которую можно открыть из меню "Пуск" или добавить в любой экран консоли управления [!INCLUDE[msCoName](../includes/msconame-md.md)] . [!INCLUDE[msCoName](../includes/msconame-md.md)] Консоль управления (**mmc.exe**) использует файл **SQLServerManager\<version>.msc** (например, **SQLServerManager13.msc** для [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]), чтобы открыть диспетчер конфигурации. Для управления конкретной версией [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] потребуется соответствующая версия диспетчера конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ниже приведены расположения последних пяти версий этого диспетчера при установке Windows на диск C.  
   
 |Версия|путь|  
 |-|-|
@@ -47,7 +47,7 @@ ms.locfileid: "91809678"
 >  Поскольку диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] является оснасткой консоли управления ( [!INCLUDE[msCoName](../includes/msconame-md.md)] ), а не изолированной программой, при работе в более новых версиях Windows диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не отображается как приложение.  
 > 
 >  -   **Windows 10**:  
->          чтобы открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , введите на **начальной странице**SQLServerManager13.msc (для [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]). Для других версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] замените 13 соответствующим числом. Если щелкнуть SQLServerManager13.msc, откроется диспетчер конфигурации. Чтобы закрепить диспетчер конфигурации на начальной странице или панели задач, щелкните правой кнопкой мыши SQLServerManager13.msc и выберите пункт **Открыть папку с файлом**. В проводнике щелкните правой кнопкой мыши SQLServerManager13.msc, а затем выберите команду **Закрепить на начальном экране** или **Закрепить на панели задач**.  
+>          чтобы открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , введите на **начальной странице** SQLServerManager13.msc (для [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]). Для других версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] замените 13 соответствующим числом. Если щелкнуть SQLServerManager13.msc, откроется диспетчер конфигурации. Чтобы закрепить диспетчер конфигурации на начальной странице или панели задач, щелкните правой кнопкой мыши SQLServerManager13.msc и выберите пункт **Открыть папку с файлом**. В проводнике щелкните правой кнопкой мыши SQLServerManager13.msc, а затем выберите команду **Закрепить на начальном экране** или **Закрепить на панели задач**.  
 > -   **Windows 8**:  
 >          Чтобы открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], с помощью чудо-кнопки **Поиск** на вкладке **Приложения** введите **SQLServerManager\<version>.msc** (например, **SQLServerManager13.msc**) и нажмите клавишу **ВВОД**.  
   

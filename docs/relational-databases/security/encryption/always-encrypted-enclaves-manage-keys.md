@@ -2,7 +2,7 @@
 description: Управление ключами для Always Encrypted с безопасными анклавами
 title: Управление ключами для Always Encrypted с безопасными анклавами | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/30/2019
+ms.date: 01/15/2021
 ms.reviewer: vanto
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 0c1f00a5b1e69bdb8f51f848210e8e90b0ae6a4b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 68cc07fdf37dc358d0de024c3227f7225ebea27c
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477635"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534430"
 ---
 # <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>Управление ключами для Always Encrypted с безопасными анклавами
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 Компонент [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md) расширяет возможности управления ключами для [Always Encrypted](always-encrypted-database-engine.md), представляя ключи с поддержкой анклава: 
 
@@ -35,9 +36,9 @@ ms.locfileid: "97477635"
 - [Подготовка ключей с поддержкой анклава](always-encrypted-enclaves-provision-keys.md)
 - [Смена ключей с поддержкой анклава](always-encrypted-enclaves-rotate-keys.md)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Next Steps
 - [Подготовка ключей с поддержкой анклава](always-encrypted-enclaves-provision-keys.md)
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 - [Общие сведения об управлении ключами для Always Encrypted](overview-of-key-management-for-always-encrypted.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

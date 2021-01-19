@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b18a3131329e0485221a0ae2cdaafd0726a4f31c
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 1b5726aad103012b0ed7619749c1f6f669baa234
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878977"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241848"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
 
@@ -40,7 +40,7 @@ ms.locfileid: "97878977"
  Для компьютера сервера должен быть подготовлен сертификат. Чтобы подготовить сертификат на сервере, его необходимо [импортировать в Windows](#single-server). Для клиентского компьютера необходимо настроить [доверие корневому центру сертификата](#about).  
   
 > [!IMPORTANT]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] протокол SSL больше не поддерживается. Используйте вместо него протокол TLS.
+> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] протокол SSL больше не поддерживается. Используйте вместо него протокол TLS.
 
 ## <a name="transport-layer-security-tls"></a>Протокол TLS
 
@@ -92,7 +92,7 @@ ms.locfileid: "97878977"
 
 - Свойство **Субъект** сертификата должно указывать, что общее имя (CN) совпадает с именем узла или полным доменным именем (FQDN) сервера. При использовании имени узла в сертификате должен быть указан DNS-суффикс. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в отказоустойчивом кластере, то общее имя должно совпадать с именем узла или полным доменным именем виртуального сервера, а сертификаты должны быть подготовлены во всех узлах отказоустойчивого кластера.
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client поддерживают групповые сертификаты. Интерфейс SNAC устарел и был заменен [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) и [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Другие клиенты могут их не поддерживать. Дополнительные сведения см. в документации клиента и статье базы знаний [KB 258858](https://support.microsoft.com/kb/258858).       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client поддерживают групповые сертификаты. Интерфейс SNAC устарел и был заменен [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) и [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Другие клиенты могут их не поддерживать.      
   Групповые сертификаты невозможно выбрать с помощью диспетчера конфигурации SQL Server. Чтобы использовать групповой сертификат, нужно изменить раздел реестра `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` и ввести отпечаток сертификата без пробелов в качестве значения **Сертификат**.  
 
   > [!WARNING]  

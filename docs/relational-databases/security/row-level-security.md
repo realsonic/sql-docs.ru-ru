@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 409d0d3cb5ecc3a673810c1bb92d1218803eff27
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6eb3fe21d1b5ea41e1f7c70818a7b998f0d3ca42
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480875"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172716"
 ---
 # <a name="row-level-security"></a>Безопасность на уровне строк
 
@@ -39,7 +39,7 @@ ms.locfileid: "97480875"
   
 Реализуйте безопасность на уровне строк с помощью инструкции [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] и предикатов в виде [встроенных функций с табличным значением](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [текущую версию](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([получить](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] по [текущую версию](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([получить](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
 > Azure Synapse поддерживает только предикаты фильтров. Предикаты блокирования сейчас не поддерживаются в Azure Synapse.

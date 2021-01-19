@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77bd2f1cb2cd3e028bccbc5185f2336812f3f891
-ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
+ms.openlocfilehash: 7800e75ee2b35b491053bbcbc2ef3c05e86e1939
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98005429"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172786"
 ---
 # <a name="statistics"></a>Статистика
 
@@ -114,12 +114,12 @@ ORDER BY s.name;
     * Если на момент оценки статистических данных кратность в таблице не превышала 500, обновление выполняется для каждых 500 модификаций.
     * Если на момент оценки статистических данных кратность в таблице превышала 500, обновление выполняется для каждых 500 + 20 % модификаций.
 
-* Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице. Оно вычисляется как квадратный корень из произведения текущего значения кратности в таблице и 1000. Например, если таблица содержит 2 миллиона строк, значение вычисляется как квадратный корень из (1000 * 2000000) = 44721,359. Благодаря этому изменению статистика для больших таблиц будет обновляться чаще. Но если уровень совместимости для базы данных ниже 130, применяется пороговое значение [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. 
+* Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице. Оно вычисляется как квадратный корень из произведения текущего значения кратности в таблице и 1000. Например, если таблица содержит 2 миллиона строк, значение вычисляется как квадратный корень из (1000 * 2000000) = 44721,359. Благодаря этому изменению статистика для больших таблиц будет обновляться чаще. Но если уровень совместимости для базы данных ниже 130, применяется пороговое значение [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. 
 
 > [!IMPORTANT]
-> В [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий в категории [уровень совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 и ниже включите [флаг трассировки 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), чтобы служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовала пороговое значение динамического обновления статистики, которое понижается.
+> В [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий в категории [уровень совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 и ниже включите [флаг трассировки 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), чтобы служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовала пороговое значение динамического обновления статистики, которое понижается.
 
-Вы можете использовать следующее руководство для включения флага трассировки 2371 в среде до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
+Вы можете использовать следующее руководство для включения флага трассировки 2371 в среде до [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].
 
  - Если вы не заметили проблем с производительностью из-за устаревшей статистики, этот флаг трассировки можно не включать.
  - Если вы используете системы SAP, включите этот флаг трассировки.  Дополнительные сведения см. в этом [блоге](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
@@ -297,7 +297,7 @@ GO
  Такие операции, как перестроение, дефрагментация и реорганизация индекса, не изменяют распределение данных, и поэтому после выполнения операций [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md), [DBCC INDEXDEFRAG](../../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md) и [ALTER INDEX REORGANIZE](../../t-sql/statements/alter-index-transact-sql.md#reorganizing-indexes) не нужно обновлять статистику. Но оптимизатор запросов обновляет статистику, когда выполняется перестройку индекса для таблицы или представления с помощью инструкции ALTER INDEX REBUILD или DBCC DBREINDEX. Такое обновление статистики является побочным эффектом повторного создания индекса. Оптимизатор запросов не обновляет статистику после операций DBCC INDEXDEFRAG и ALTER INDEX REORGANIZE. 
  
 > [!TIP]
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 и накопительным пакетом обновления 4 используйте параметр PERSIST_SAMPLE_PERCENT для [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) или [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md), чтобы задать и сохранить определенный процент выборки для последующих обновлений статистических данных, в которых такой процент явно не указан.
+> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 и накопительным пакетом обновления 4 используйте параметр PERSIST_SAMPLE_PERCENT для [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) или [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md), чтобы задать и сохранить определенный процент выборки для последующих обновлений статистических данных, в которых такой процент явно не указан.
 
 ### <a name="automatic-index-and-statistics-management"></a>Автоматическое управление индексами и статистикой
 
