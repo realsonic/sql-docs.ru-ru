@@ -23,12 +23,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e8fb26ecf962b797d227f84b3e1cb67f39fd64e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 652d705c92aede4592a079733c8dd281e9dd8e91
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480445"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170536"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -159,7 +159,7 @@ OBJECTPROPERTY ( id , property )
 |TableUpdateTrigger|Таблица|Таблица содержит триггер UPDATE.<br /><br /> > 1 = идентификатор первого триггера указанного типа.|  
 |TableUpdateTriggerCount|Таблица|В таблице имеется указанное число триггеров UPDATE.<br /><br /> > 0 = количество триггеров UPDATE.|  
 |TableHasColumnSet|Таблица|Таблица содержит набор столбцов.<br /><br /> 0 = ложь<br /><br /> 1 = истина<br /><br /> Дополнительные сведения см. в статье [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).|  
-|TableTemporalType|Таблица|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.<br /><br /> Задает тип таблицы:<br /><br /> 0 = нетемпоральная таблица;<br /><br /> 1 = таблица журнала для таблицы с управлением версиями;<br /><br /> 2 = темпоральная таблица с управлением версиями.|  
+|TableTemporalType|Таблица|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий.<br /><br /> Задает тип таблицы:<br /><br /> 0 = нетемпоральная таблица;<br /><br /> 1 = таблица журнала для таблицы с управлением версиями;<br /><br /> 2 = темпоральная таблица с управлением версиями.|  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  

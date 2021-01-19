@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9b5aa3ac8158baca696b57706d2dc06cbf936937
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: de35e51632ef898e89e8ab6d036d58243ba03f4f
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102334"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172086"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ ON ALL SERVER
 
 ## <a name="arguments"></a>Аргументы
  *IF EXISTS*  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
  Условное удаление триггера только в том случае, если он уже существует.  
   
@@ -107,7 +107,7 @@ ON ALL SERVER
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. Удаление триггера DML  
- В следующем примере показано удаление триггера `employee_insupd` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] можно использовать синтаксис DROP TRIGGER IF EXISTS.)  
+ В следующем примере показано удаление триггера `employee_insupd` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] можно использовать синтаксис DROP TRIGGER IF EXISTS.)  
   
 ```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

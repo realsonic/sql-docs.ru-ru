@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 873f7550194671bb5ca7498d48f32cfaa1aab075
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8dba825de1f507e736761a24cab70ed6520101ad
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98081503"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171246"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 
 ## <a name="arguments"></a>Аргументы
  *IF EXISTS*  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Условное удаление сборки только в том случае, если она уже существует.  
   

@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 125a95f14f7082a3ed806d6dfa7fcb05b6d11c81
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 57372929f190ff2fe32e7688d16acc75fafc9700
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505085"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171556"
 ---
 # <a name="query-profiling-infrastructure"></a>Инфраструктура профилирования запросов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,16 +53,16 @@ ms.locfileid: "96505085"
 
 ## <a name="the-lightweight-query-execution-statistics-profiling-infrastructure"></a><a name="lwp"></a> Упрощенная инфраструктура профилирования статистики выполнения запросов
 
-Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] была введена новая *упрощенная инфраструктура профилирования статистики выполнения запросов*, или **упрощенное профилирование**. 
+Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 и [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] была введена новая *упрощенная инфраструктура профилирования статистики выполнения запросов*, или **упрощенное профилирование**. 
 
 > [!NOTE]
 > Хранимые процедуры, скомпилированные в собственном коде, не поддерживаются в упрощенном профилировании.  
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>Упрощенная инфраструктура профилирования статистики выполнения запросов версии 1
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 по [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 по [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]). 
   
-Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] потребление ресурсов при сборе сведений о планах выполнения было снижено путем введения упрощенного профилирования. В отличие от стандартного, упрощенное профилирование не собирает сведения о ЦП среды выполнения. Однако упрощенное профилирование по-прежнему собирает сведения о количестве строк и сведения об использовании операций ввода-вывода.
+Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 и [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] потребление ресурсов при сборе сведений о планах выполнения было снижено путем введения упрощенного профилирования. В отличие от стандартного, упрощенное профилирование не собирает сведения о ЦП среды выполнения. Однако упрощенное профилирование по-прежнему собирает сведения о количестве строк и сведения об использовании операций ввода-вывода.
 
 Также было добавлено новое расширенное событие **_query_thread_profile_* _, использующее упрощенное профилирование. Это расширенное событие предоставляет статистику выполнения по операторам, позволяя получить больше сведений о производительности каждого узла и потока. Ниже приведен пример сеанса, использующего это расширенное событие.
 
@@ -90,11 +90,11 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Упрощенная инфраструктура профилирования статистики выполнения запросов версии 2
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 по [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 по [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 включает переработанную версию упрощенного профилирования с минимальным потреблением ресурсов. Упрощенное профилирование можно также включить глобально с помощью [флага трассировки 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) в версиях, указанных выше в поле *Применимо к*. Новая функция динамического управления [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) введена для возвращения плана выполнения запроса для активных запросов.
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 включает переработанную версию упрощенного профилирования с минимальным потреблением ресурсов. Упрощенное профилирование можно также включить глобально с помощью [флага трассировки 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) в версиях, указанных выше в поле *Применимо к*. Новая функция динамического управления [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) введена для возвращения плана выполнения запроса для активных запросов.
 
-Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, если упрощенное профилирование не включено глобально, можно использовать [указание запроса USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) с новым аргументом **QUERY_PLAN_PROFILE** для включения упрощенного профилирования на уровне запроса для любого сеанса. После завершения запроса, содержащего это новое указание, также выводится новое расширенное событие **_query_plan_profile_* _, предоставляющее действительный план выполнения в формате XML, аналогично расширенному событию _query_post_execution_showplan*. 
+Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU3 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, если упрощенное профилирование не включено глобально, можно использовать [указание запроса USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) с новым аргументом **QUERY_PLAN_PROFILE** для включения упрощенного профилирования на уровне запроса для любого сеанса. После завершения запроса, содержащего это новое указание, также выводится новое расширенное событие **_query_plan_profile_* _, предоставляющее действительный план выполнения в формате XML, аналогично расширенному событию _query_post_execution_showplan*. 
 
 > [!NOTE]
 > Расширенное событие *query_plan_profile* также использует упрощенное профилирование, даже если указание запроса отсутствует. 
@@ -178,17 +178,17 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 
 |Область|Стандартное профилирование|Упрощенное профилирование|
 |---------------|---------------|---------------|
-|Global|Сеанс xEvent с расширенным событием `query_post_execution_showplan`. Минимальная версия: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Флаг трассировки 7412. Минимальная версия: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)|
+|Global|Сеанс xEvent с расширенным событием `query_post_execution_showplan`. Минимальная версия: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Флаг трассировки 7412. Минимальная версия: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1)|
 |Global|Система "Трассировка SQL" и SQL Server Profiler с событием трассировки `Showplan XML`. Минимальная версия: SQL Server 2000|Сеанс xEvent с расширенным событием `query_thread_profile`. Минимальная версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2)|
 |Global|-|Сеанс xEvent с расширенным событием `query_post_execution_plan_profile`. Минимальная версия: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 14 (CU14) и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
-|Сеанс|Используйте `SET STATISTICS XML ON`. Минимальная версия: SQL Server 2000|Используйте указание запроса `QUERY_PLAN_PROFILE`, а также сеанс xEvent с расширенным событием `query_plan_profile`. Минимальная версия: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 (CU3) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 11 (CU11)|
+|Сеанс|Используйте `SET STATISTICS XML ON`. Минимальная версия: SQL Server 2000|Используйте указание запроса `QUERY_PLAN_PROFILE`, а также сеанс xEvent с расширенным событием `query_plan_profile`. Минимальная версия: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 (CU3) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 11 (CU11)|
 |Сеанс|Используйте `SET STATISTICS PROFILE ON`. Минимальная версия: SQL Server 2000|-|
 |Сеанс|Нажмите кнопку [Статистика активных запросов](../../relational-databases/performance/live-query-statistics.md) в SSMS. Минимальная версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2)|-|
 
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
-> Из-за возможных случайных нарушений прав доступа во время выполнения мониторинга хранимой процедуры, которая ссылается на [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), необходимо установить исправление [4078596 КБ](https://support.microsoft.com/help/4078596) на [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+> Из-за возможных случайных нарушений прав доступа во время выполнения мониторинга хранимой процедуры, которая ссылается на [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), необходимо установить исправление [4078596 КБ](https://support.microsoft.com/help/4078596) на [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 Начиная с упрощенного профилирования версии 2, благодаря его низкому потреблению ресурсов, любой сервер, у которого нет перегрузки ЦП, может выполнять упрощенное профилирование **непрерывно**. Это позволяет специалистам по работе с базами данных в любое время подключаться к любому запущенному выполнению, например с помощью монитора активности или прямого запроса `sys.dm_exec_query_profiles`, и получать план запроса со статистикой времени выполнения.
 

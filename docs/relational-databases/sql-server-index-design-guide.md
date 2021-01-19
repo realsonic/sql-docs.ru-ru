@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe0c23f3cd5b087b4e5a14d50d681b983aeac496
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9d7e51afb97a5ff698ef9a504375783b93ef9640
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97459973"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170666"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Руководство по архитектуре и разработке индексов SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -799,15 +799,15 @@ deltastore состоит из одной или нескольких групп
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>Вы можете объединить индексы columnstore и rowstore в одной таблице
 Некластеризованный индекс содержит копию всех или части строк и столбцов в базовой таблице. Индекс определяется как один или несколько столбцов таблицы и включает дополнительное условие для фильтрации строк. 
 
-Начиная с версии [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], можно создавать обновляемый **некластеризованный индекс columnstore в таблице rowstore**. Индекс columnstore сохраняет копию данных, так что вам обязательно потребуется дополнительное хранилище. Тем не менее данные в индексе columnstore будут сжаты до меньшего размера, чем это требуется для таблицы rowstore.  Таким образом, вы сможете выполнять аналитику на основе индекса columnstore и транзакции на основе индекса rowstore одновременно. Хранилище столбцов обновляется при каждом изменении данных в таблице rowstore, поэтому оба индекса работают с одними и теми же данными.  
+Начиная с версии [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], можно создавать обновляемый **некластеризованный индекс columnstore в таблице rowstore**. Индекс columnstore сохраняет копию данных, так что вам обязательно потребуется дополнительное хранилище. Тем не менее данные в индексе columnstore будут сжаты до меньшего размера, чем это требуется для таблицы rowstore.  Таким образом, вы сможете выполнять аналитику на основе индекса columnstore и транзакции на основе индекса rowstore одновременно. Хранилище столбцов обновляется при каждом изменении данных в таблице rowstore, поэтому оба индекса работают с одними и теми же данными.  
   
-Начиная с версии [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], **индекс columnstore может включать один или несколько некластеризованных индексов rowstore**. Это обеспечивает эффективность поиска по таблицам на основе базового индекса columnstore. Кроме того, появляется доступ к другим возможностям. Например, можно принудительно задать ограничение PRIMARY KEY, применив к таблице rowstore ограничение UNIQUE. Поскольку неуникальное значение в таблицу rowstore не вставляется, SQL Server не может вставить значение в columnstore.  
+Начиная с версии [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], **индекс columnstore может включать один или несколько некластеризованных индексов rowstore**. Это обеспечивает эффективность поиска по таблицам на основе базового индекса columnstore. Кроме того, появляется доступ к другим возможностям. Например, можно принудительно задать ограничение PRIMARY KEY, применив к таблице rowstore ограничение UNIQUE. Поскольку неуникальное значение в таблицу rowstore не вставляется, SQL Server не может вставить значение в columnstore.  
  
 ### <a name="performance-considerations"></a>Вопросы производительности 
 
 -   Определение некластеризованного индекса columnstore поддерживает использование отфильтрованных условий. Чтобы свести к минимуму негативное влияние на производительность, вызванное добавлением некластеризованного индекса columnstore для таблицы OLTP, можно использовать отфильтрованное условие для создания некластеризованного индекса columnstore только для холодных данных операционной рабочей нагрузки. 
   
--   Таблица в памяти может включать один индекс columnstore. Его можно создать при создании таблицы или добавить позже с помощью процедуры [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md). До версии [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] создание индекса columnstore допускалось только в таблицах на дисках. 
+-   Таблица в памяти может включать один индекс columnstore. Его можно создать при создании таблицы или добавить позже с помощью процедуры [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md). До версии [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] создание индекса columnstore допускалось только в таблицах на дисках. 
 
 Дополнительные сведения см. в статье [Производительность запросов по индексам columnstore](../relational-databases/indexes/columnstore-indexes-query-performance.md).
 

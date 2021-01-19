@@ -15,18 +15,18 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 9cc9c07d69be1b08a887ddf4a7ac071647a4d89a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d2c5f2fc245c981cf0c6d045333528aeff32536c
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440235"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170196"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-Эта статья описывает установку SQL Server с помощью мастера установки. Она применима к [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] и [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
+Эта статья описывает установку SQL Server с помощью мастера установки. Она применима к [!INCLUDE[SQLServer2016](../../includes/sssql16-md.md)] и [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
 В этой статье приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В мастере установки доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поэтому их не требуется устанавливать по отдельности. Сведения об установке отдельных компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Установка отдельных компонентов](../../database-engine/install-windows/install-sql-server.md#individual-component-installation).  
 
@@ -131,7 +131,7 @@ ms.locfileid: "97440235"
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], вы можете установить флажок **Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server**, чтобы разрешить учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовать [мгновенную инициализацию файлов](../../relational-databases/databases/database-instant-file-initialization.md).
+    > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], вы можете установить флажок **Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server**, чтобы разрешить учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовать [мгновенную инициализацию файлов](../../relational-databases/databases/database-instant-file-initialization.md).
   
 1. На странице **Настройка сервера — параметры сортировки** можно для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] задать параметры сортировки, отличные от заданных по умолчанию.    
 
@@ -300,7 +300,7 @@ ms.locfileid: "97440235"
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], вы можете установить флажок **Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server**, чтобы разрешить учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовать [мгновенную инициализацию файлов](../../relational-databases/databases/database-instant-file-initialization.md).
+    > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], вы можете установить флажок **Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server**, чтобы разрешить учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовать [мгновенную инициализацию файлов](../../relational-databases/databases/database-instant-file-initialization.md).
   
      На странице **Настройка сервера — параметры сортировки** можно для [!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] задать параметры сортировки, отличные от заданных по умолчанию. Дополнительные сведения см. в статье [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
   

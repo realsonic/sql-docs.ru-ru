@@ -47,12 +47,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8ebd5ecac550537f13d20e25a19222477ccebb6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a23a11bf4968179baad9d3cc88e5a64acae68b76
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092126"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170166"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -148,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 
 OR ALTER
 
-**Область применения**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)).
+**Область применения**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1)).
 
 Изменяет процедуру, если она уже существует.
 
@@ -220,7 +220,7 @@ ENCRYPTION
 
 EXECUTE AS *clause* — определяет контекст безопасности, в котором должна быть выполнена процедура.
 
-Для скомпилированных в собственном коде хранимых процедур, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], отсутствуют ограничения на предложение EXECUTE AS. В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] предложения SELF, OWNER и *user_name* поддерживаются с помощью хранимых процедур, скомпилированных в собственном коде.
+Для скомпилированных в собственном коде хранимых процедур, начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], отсутствуют ограничения на предложение EXECUTE AS. В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] предложения SELF, OWNER и *user_name* поддерживаются с помощью хранимых процедур, скомпилированных в собственном коде.
 
 Дополнительные сведения см. в разделе [Предложение EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md).
 

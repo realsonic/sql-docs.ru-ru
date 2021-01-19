@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eca1dbef6ff7d519200e46cff7879d7cb0a9b128
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 991a30108d0683d89d8bece48eb0d2de1c1e0d37
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478255"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171886"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Разрешение фрагментации индекса путем реорганизации или перестроения индекса
 
@@ -110,7 +110,7 @@ ms.locfileid: "97478255"
 |Значение **вычисленной фрагментации в процентах**|Применимо к версии|Корректирующая инструкция|
 |-----------------------------------------------|--------------------------|--------------------------|
 |> = 20 %|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|ALTER INDEX REBUILD|
-|> = 20 %|Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|ALTER INDEX REORGANIZE|
+|> = 20 %|Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|ALTER INDEX REORGANIZE|
 
 ### <a name="to-check-the-fragmentation-of-a-rowstore-index-using-tsql"></a>Проверка фрагментации индекса rowstore с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
@@ -234,7 +234,7 @@ object_id   TableName                   index_id    IndexName                   
 - Для [индексов columnstore](columnstore-indexes-overview.md) при перестроении устраняется фрагментация, все строки перемещаются в columnstore и освобождается место на диске за счет физического удаления строк, которые логически удалены из таблицы. 
   
   > [!TIP]
-  > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] перестраивать индекс columnstore обычно не требуется, так как инструкция `REORGANIZE` выполняет необходимые для перестройки действия в фоновом и оперативном режиме. 
+  > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] перестраивать индекс columnstore обычно не требуется, так как инструкция `REORGANIZE` выполняет необходимые для перестройки действия в фоновом и оперативном режиме. 
   
   Примеры синтаксиса см. в разделе [Примеры. Перестройка ColumnStore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
@@ -382,7 +382,7 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 ## <a name="considerations-specific-to-reorganizing-a-columnstore-index"></a>Вопросы, связанные с реорганизацией индекса columnstore
 
-При реорганизации индекса columnstore [!INCLUDE[ssde_md](../../includes/ssde_md.md)] сжимает каждую разностную группу строк CLOSED в columnstore в виде сжатой группы строк. Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и в решении [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] с помощью команды `REORGANIZE` в оперативном режиме выполняются следующие дополнительные действия по дефрагментационной оптимизации:
+При реорганизации индекса columnstore [!INCLUDE[ssde_md](../../includes/ssde_md.md)] сжимает каждую разностную группу строк CLOSED в columnstore в виде сжатой группы строк. Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и в решении [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] с помощью команды `REORGANIZE` в оперативном режиме выполняются следующие дополнительные действия по дефрагментационной оптимизации:
 
 - Физически удаляет строки из группы строк, если были логически удалено 10 % или более строк. Удаленные байты освобождают место на физическом носителе. Например, если в сжатой группе из одного миллиона строк удалено 100 тысяч строк, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удалит эти строки и выполнит повторное сжатие группы с 900 тысяч строк. Группа будет сохранена в хранилище за счет удаления удаленных строк.
 

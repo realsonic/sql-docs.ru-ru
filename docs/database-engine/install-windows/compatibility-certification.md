@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 82d5aee8d0fa37ca66c49cf00b22385a896c653d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 14b78d968fcb3350c488c9353df6017c4616f632
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091797"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170906"
 ---
 # <a name="compatibility-certification"></a>Сертификация на совместимость
 
@@ -37,7 +37,7 @@ ms.locfileid: "98091797"
 Для каждого нового выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровень совместимости по умолчанию устанавливается в зависимости от версии [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Однако уровень совместимости предыдущих версий сохраняется, чтобы совместимость существующих приложений не терялась. Таблицу совместимости можно просмотреть [здесь](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats).
 Поэтому если приложение было сертифицировано для работы с определенной версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **оно сертифицировано для работы на уровне совместимости по умолчанию этой версии**.
 
-Например, в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по умолчанию использовался уровень совместимости базы данных 130. Так как уровни совместимости определяют функциональное поведение и способ оптимизации запросов [!INCLUDE[tsql](../../includes/tsql-md.md)], **база данных, сертифицированная для работы в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], неявно сертифицирована на уровне совместимости базы данных 130**. Эта база данных может работать "как есть" в более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и в [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] при условии, что сохраняется уровень совместимости базы данных 130. 
+Например, в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] по умолчанию использовался уровень совместимости базы данных 130. Так как уровни совместимости определяют функциональное поведение и способ оптимизации запросов [!INCLUDE[tsql](../../includes/tsql-md.md)], **база данных, сертифицированная для работы в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], неявно сертифицирована на уровне совместимости базы данных 130**. Эта база данных может работать "как есть" в более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и в [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] при условии, что сохраняется уровень совместимости базы данных 130. 
 
 Это фундаментальный принцип модели непрерывной интеграции [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] постоянно улучшается и обновляется в Azure, но так как для существующих баз данных сохраняется текущий уровень совместимости, они продолжают работать, как было задумано, даже после обновления базового [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. 
 
@@ -95,7 +95,7 @@ ms.locfileid: "98091797"
 Это легко сделать, использовав [Помощник по миграции данных (Майкрософт)](https://www.microsoft.com/download/details.aspx?id=53595) (DMA). Отсутствие в выходных данных DMA ошибок, связанных с отсутствием или несовместимостью функциональных возможностей, позволит избежать снижения функциональности приложения в новой конечной версии. Если требуется внести изменения, чтобы гарантировать, работоспособность базы данных в новой версии, DMA позволит точно определить, где требуется внести изменения, и какие обходные решения доступны. Дополнительные сведения см. в разделе [Общие сведения о Помощнике по миграции данных](../../dma/dma-overview.md).   
 
 > [!TIP]
-> Эта функциональная проверка особенно важна при переводе базы данных с устаревшей версии (например, [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) на новую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], так как код приложения может использовать неподдерживаемую [!INCLUDE[tsql](../../includes/tsql-md.md)], не защищенную уровнем совместимости базы данных. Но при переходе с более новой версии (например, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], нет причин волноваться о неподдерживаемых [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения о неподдерживаемых [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Использование уровня совместимости для обеспечения обратной совместимости](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat).
+> Эта функциональная проверка особенно важна при переводе базы данных с устаревшей версии (например, [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) на новую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], так как код приложения может использовать неподдерживаемую [!INCLUDE[tsql](../../includes/tsql-md.md)], не защищенную уровнем совместимости базы данных. Но при переходе с более новой версии (например, [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], нет причин волноваться о неподдерживаемых [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения о неподдерживаемых [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Использование уровня совместимости для обеспечения обратной совместимости](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat).
 
 > [!NOTE]
 > DMA поддерживает уровень совместимости базы данных 100 и выше. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] как исходная версия не поддерживается.   

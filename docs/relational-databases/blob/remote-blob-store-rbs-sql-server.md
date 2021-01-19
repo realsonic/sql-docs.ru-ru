@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 83abd087cab67c0b048ed6333e912ac1edc76f7c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: bfd234025664e7508d7d9cf942ff81a216b447a2
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810165"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171756"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Удаленное хранилище больших двоичных объектов (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91810165"
 
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version | Расположение скачивания RBS |
 |:---|:---|
-| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Пакет дополнительных компонентов SP2](https://www.microsoft.com/download/details.aspx?id=56833) |
+| [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Пакет дополнительных компонентов SP2](https://www.microsoft.com/download/details.aspx?id=56833) |
 | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [Пакет дополнительных компонентов [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]](https://www.microsoft.com/download/details.aspx?id=55992) |
 | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [Страница скачивания RBS [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]](https://go.microsoft.com/fwlink/?linkid=2109005) |
 | &nbsp; | &nbsp; |
@@ -59,7 +59,7 @@ ms.locfileid: "91810165"
  Некоторые сторонние поставщики хранилищ разработали средства удаленного хранения больших двоичных объектов, которые соответствуют этим стандартным API-интерфейсам и поддерживают хранилища больших двоичных объектов на разных платформах.  
   
 ## <a name="rbs-requirements"></a>Требования к удаленным хранилищам больших двоичных объектов  
- - При работе с удаленным хранилищем больших двоичных объектов необходим выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise для главного сервера базы данных, на котором хранятся метаданные больших двоичных объектов.  Однако, если используется предоставленный поставщик FILESTREAM, сами большие двоичные объекты можно хранить в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]RBS требуется по меньшей мере версия 11 драйвера ODBC для [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] и версия 13 драйвера ODBC для [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Драйверы можно найти на странице [скачивания драйвера ODBC для SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).    
+ - При работе с удаленным хранилищем больших двоичных объектов необходим выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise для главного сервера базы данных, на котором хранятся метаданные больших двоичных объектов.  Однако, если используется предоставленный поставщик FILESTREAM, сами большие двоичные объекты можно хранить в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]RBS требуется по меньшей мере версия 11 драйвера ODBC для [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] и версия 13 драйвера ODBC для [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]. Драйверы можно найти на странице [скачивания драйвера ODBC для SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).    
   
  Удаленное хранилище больших двоичных объектов включает поставщик FILESTREAM, позволяющий использовать удаленное хранилище больших двоичных объектов для хранения больших двоичных объектов на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы применять RBS для хранения больших двоичных объектов в другом хранилище, необходимо использовать сторонний поставщик RBS, разработанный для этого хранилища, или разработать пользовательский поставщик RBS с помощью API-интерфейса RBS. Образец поставщика, хранящего большие двоичные объекты в файловой системе NTFS, доступен в качестве обучающего ресурса на сайте [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "91810165"
 ### <a name="credential-store-symmetric-key"></a>Симметричный ключ хранилища учетных данных  
  Если поставщик требует установки и использования секретов, хранимых в хранилище учетных данных, RBS использует симметричный ключ для шифрования секрета поставщика, который клиент может использовать для авторизации в хранилище больших двоичных объектов этого поставщика.  
   
--   RBS 2016 использует симметричный ключ **AES_128** . [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] позволяет создавать новые ключи **TRIPLE_DES** только для обеспечения обратной совместимости. Дополнительные сведения см. в статье [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
+-   RBS 2016 использует симметричный ключ **AES_128** . [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] позволяет создавать новые ключи **TRIPLE_DES** только для обеспечения обратной совместимости. Дополнительные сведения см. в статье [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
 -   RBS 2014 и более ранние версии используют хранилище учетных данных, которое содержит секретные данные, зашифрованные с помощью устаревшего алгоритма симметричного ключа **TRIPLE_DES**. Если вы используете **TRIPLE_DES**[!INCLUDE[msCoName](../../includes/msconame-md.md)] , рекомендуется усилить безопасность и сменить ваш ключ на новый с более надежным методом шифрования, выполнив описанные в этом разделе действия.  
   

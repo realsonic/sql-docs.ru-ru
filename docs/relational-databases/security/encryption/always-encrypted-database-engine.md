@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f097d500c1d1b0a035f2bb0e737214d65803414
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 534d7238316fe2037ea0ce43e2b4aeeb11e6eea2
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477725"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171336"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,14 +31,14 @@ ms.locfileid: "97477725"
   
  Always Encrypted — это функция, предназначенная для защиты конфиденциальных данных, таких как номера кредитных карт или номера документов (например, номеров социального страхования в США), которые хранятся в базах данных [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Постоянное шифрование позволяет клиентам шифровать конфиденциальные данные в клиентских приложениях, не раскрывая ключи шифрования [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Таким образом, постоянное шифрование позволяет разделить пользователей на тех, кто владеет данными или имеет право их просматривать, и тех, кто управляет данными, но не должен иметь к ним доступа. У локальных администраторов баз данных, операторов облачных баз данных и других неавторизованных пользователей с высоким уровнем привилегий нет доступа к зашифрованным данным, поэтому постоянное шифрование позволяет клиентам хранить конфиденциальные данные вне сферы их непосредственного контроля. При этом организации могут хранить данные в Azure, делегировать права администратора локальной базы данных третьим лицам или упростить требования к безопасности для собственных администраторов базы данных.
 
- Always Encrypted предоставляет возможности конфиденциальных вычислений, позволяя [!INCLUDE[ssDE](../../../includes/ssde-md.md)] обрабатывать некоторые запросы к зашифрованным данным, при этом сохраняя конфиденциальность данных и предоставляя указанные выше преимущества безопасности. В [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] Always Encrypted поддерживает сравнение на равенство через детерминированное шифрование. См. раздел [Выбор детерминированного или случайного шифрования](#selecting--deterministic-or-randomized-encryption). 
+ Always Encrypted предоставляет возможности конфиденциальных вычислений, позволяя [!INCLUDE[ssDE](../../../includes/ssde-md.md)] обрабатывать некоторые запросы к зашифрованным данным, при этом сохраняя конфиденциальность данных и предоставляя указанные выше преимущества безопасности. В [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] Always Encrypted поддерживает сравнение на равенство через детерминированное шифрование. См. раздел [Выбор детерминированного или случайного шифрования](#selecting--deterministic-or-randomized-encryption). 
 
   > [!NOTE] 
   > В [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] безопасные анклавы существенно расширяют возможности конфиденциальных вычислений Always Encrypted с помощью сопоставления шаблонов, других операторов сравнения и шифрования на месте. См. раздел [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md).
 
  Постоянное шифрование делает шифрование прозрачным для приложений. Драйвер с поддержкой постоянного шифрования, установленный на клиентском компьютере, реализует это за счет автоматического шифрования и расшифровки конфиденциальных данных в клиентском приложении. Драйвер шифрует данные из конфиденциальных столбцов перед их передачей в [!INCLUDE[ssDE](../../../includes/ssde-md.md)]и автоматически переписывает запросы, чтобы сохранить семантику приложения. Аналогичным образом драйвер прозрачно расшифровывает данные, которые хранятся в зашифрованных столбцах базы данных в результатах запроса.  
   
- Always Encrypted доступен во всех выпусках [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], начиная с [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], и всех уровней служб [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (До версии [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 шифрование Always Encrypted было ограничено выпуском Enterprise Edition.) Презентацию с описанием постоянного шифрования на канале 9 см. на странице [Безопасное хранение конфиденциальных данных с помощью постоянного шифрования](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted).  
+ Always Encrypted доступен во всех выпусках [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], начиная с [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)], и всех уровней служб [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (До версии [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1 шифрование Always Encrypted было ограничено выпуском Enterprise Edition.) Презентацию с описанием постоянного шифрования на канале 9 см. на странице [Безопасное хранение конфиденциальных данных с помощью постоянного шифрования](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted).  
 
   
 ## <a name="typical-scenarios"></a>Типичные сценарии  

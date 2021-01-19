@@ -12,25 +12,25 @@ ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 251af732e6c55ee2b5567bb181859b1fdec1360a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3e72e67bf033ecef94b318d69b31f33604572cf8
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485226"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172066"
 ---
 # <a name="scalability"></a>Масштабируемость
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] содержит улучшения масштабируемости для хранения на дисках таблиц, оптимизированных для памяти. 
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] содержит улучшения масштабируемости для хранения на дисках таблиц, оптимизированных для памяти. 
 
 ## <a name="multiple-threads-to-persist-memory-optimized-tables"></a>Несколько потоков для сохранения таблиц, оптимизированных для памяти.  
   
 В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] использовался один поток автономных контрольных точек, который проверял журнал транзакций на наличие изменений в таблицах, оптимизированных для памяти, и сохранял их в файлы контрольных точек (например, файлы данных и разностные файлы). В компьютерах с большим числом ядер один поток контрольных точек может отставать от времени.  
   
-Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] за сохранение изменений в таблицах, оптимизированных для памяти, отвечают несколько параллельных потоков.  
+Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] за сохранение изменений в таблицах, оптимизированных для памяти, отвечают несколько параллельных потоков.  
   
 ## <a name="multi-threaded-recovery"></a>Многопоточное восстановление.
-В предыдущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]журнал, применяемый при операции восстановления, использовал один поток. Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] для применения журнала используется несколько потоков.  
+В предыдущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]журнал, применяемый при операции восстановления, использовал один поток. Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] для применения журнала используется несколько потоков.  
   
 ## <a name="merge-operation"></a>Операция MERGE  
 Теперь операция MERGE является многопоточной.  

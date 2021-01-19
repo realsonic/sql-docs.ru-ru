@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fd729c01993f06c9017a898e1e804dde844e10f2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 73ee631c0dc853a60e07f09aa2ade5ce58487a0e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642170"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171096"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Выбор страницы начальной синхронизации данных (мастера группы доступности AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97642170"
   
 ## <a name="automatic-seeding"></a><a name="Auto"></a> Автоматическое заполнение
  
- SQL Server автоматически создает вторичные реплики для каждой базы данных в группе. Для работы автоматического заполнения путь к файлу данных и файлу журнала должен быть одинаковым на каждом экземпляре SQL Server, входящем в группу. Доступно в [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] и более поздних версиях. См. раздел [Автоматическая инициализация группы доступности AlwaysOn](automatically-initialize-always-on-availability-group.md).
+ SQL Server автоматически создает вторичные реплики для каждой базы данных в группе. Для работы автоматического заполнения путь к файлу данных и файлу журнала должен быть одинаковым на каждом экземпляре SQL Server, входящем в группу. Доступно в [!INCLUDE[sssql16-md.md](../../../includes/sssql16-md.md)] и более поздних версиях. См. раздел [Автоматическая инициализация группы доступности AlwaysOn](automatically-initialize-always-on-availability-group.md).
 
 ##  <a name="full-database-and-log-backup"></a><a name="Full"></a> Полная архивация базы данных и журналов 
  При выборе параметра **Полная архивация базы данных и журналов** в отношении каждой базы данных-источника в одном рабочем процессе будет выполнено несколько операций: создание полной резервной копии базы данных-источника и резервной копии ее журнала, создание соответствующих баз данных-получателей путем восстановления этих резервных копий на каждом экземпляре сервера, где размещается вторичная реплика, а также присоединение каждой базы данных-получателя к группе доступности.  

@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24091fa04d0db4499f03e4722977a34cf70ae5ac
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7f17a896316ca0e85f11cf8359aa50a11c35faa5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097360"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171946"
 ---
 # <a name="cast-and-convert-transact-sql"></a>Функции CAST и CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -138,7 +138,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**0** (по умолчанию)|Не более 6 разрядов. По необходимости используется экспоненциальное представление чисел.|  
 |**1**|Всегда 8 разрядов. Всегда используется экспоненциальное представление чисел.|  
 |**2**|Всегда 16 разрядов. Всегда используется экспоненциальное представление чисел.|  
-|**3**|Всегда 17 разрядов. Используется для преобразования без потери данных. При использовании этого стиля каждое отдельное значение типа float или real гарантированно преобразуется в отдельную строку символов.<br /><br /> **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**3**|Всегда 17 разрядов. Используется для преобразования без потери данных. При использовании этого стиля каждое отдельное значение типа float или real гарантированно преобразуется в отдельную строку символов.<br /><br /> **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**126, 128, 129**|Включено для совместимости с прежними версиями. В следующих версиях эти значения могут быть исключены.|  
   
 ## <a name="money-and-smallmoney-styles"></a>Стили данных money и smallmoney

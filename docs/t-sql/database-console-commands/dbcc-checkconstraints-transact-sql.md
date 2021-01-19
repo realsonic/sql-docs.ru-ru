@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: c9599042d8cab079c155496be1fb4e0194bc66fe
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a0257d403980bcb869a7ac1e06471cd1699dd16d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111142"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170606"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 
@@ -92,7 +92,7 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 Данные запроса хранятся во временной таблице. После того, как все указанные таблицы или ограничения были проверены, возвращается результирующий набор.
 DBCC CHECKCONSTRAINTS проверяет целостность ограничений FOREIGN KEY и CHECK, но не проверяет целостность дисковых структур данных таблицы. Проверки этих структур данных могут быть произведены с помощью команд [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) и [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
   
-**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий
+**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий
   
 Если указан аргумент *table_name* или *table_id* и для соответствующей таблицы включено системное управление версиями, DBCC CHECKCONSTRAINTS также проводит для нее проверки согласованности темпоральных данных. Если параметр *NO_INFOMSGS* не указан, эта команда возвращает сведения о всех нарушениях согласованности в отдельной строке выходных данных. Формат выходных данных будет иметь вид ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record>.
   

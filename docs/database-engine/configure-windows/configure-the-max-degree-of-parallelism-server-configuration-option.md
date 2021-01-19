@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperf-fy20q4
-ms.openlocfilehash: e42d6b716202a5080e5d6330bc0a674f0c627878
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 7b0e4b8abf21d918e7d4d627c7ed82d5507394ec
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878937"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171066"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Настройка параметра конфигурации сервера max degree of parallelism
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,9 +55,9 @@ ms.locfileid: "97878937"
 -   Помимо запросов и операций с индексами, этот параметр также управляет степенью параллелизма при выполнении инструкций DBCC CHECKTABLE, DBCC CHECKDB и DBCC CHECKFILEGROUP. Планы параллельного выполнения для этих инструкций можно отключить с помощью флага трассировки 2528. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ###  <a name="recommendations"></a><a name="Recommendations"></a> <a name="Guidelines"></a> Рекомендации  
-Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по умолчанию система [!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически создает узлы архитектуры Soft-NUMA, если во время запуска обнаруживает более восьми физических ядер на один сокет или узел NUMA. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] помещает логические процессоры одного и того же физического ядра в разных узлах программной архитектуры NUMA. Рекомендации, приведенные в следующей таблице, нацелены на сохранение рабочих потоков параллельного запроса на одном узле программной архитектуры NUMA. Это улучшит производительность запросов и распределение рабочих потоков между узлами NUMA для рабочей нагрузки. Дополнительные сведения см. в разделе [Программная архитектура NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
+Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] по умолчанию система [!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически создает узлы архитектуры Soft-NUMA, если во время запуска обнаруживает более восьми физических ядер на один сокет или узел NUMA. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] помещает логические процессоры одного и того же физического ядра в разных узлах программной архитектуры NUMA. Рекомендации, приведенные в следующей таблице, нацелены на сохранение рабочих потоков параллельного запроса на одном узле программной архитектуры NUMA. Это улучшит производительность запросов и распределение рабочих потоков между узлами NUMA для рабочей нагрузки. Дополнительные сведения см. в разделе [Программная архитектура NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
 
-Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] при настройке значения параметра **max degree of parallelism** в конфигурации сервера следуйте приведенным ниже рекомендациям.
+Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] при настройке значения параметра **max degree of parallelism** в конфигурации сервера следуйте приведенным ниже рекомендациям.
 
 |Конфигурация сервера|Количество процессоров|Руководство|
 |----------------|-----------------|-----------------|
@@ -67,7 +67,7 @@ ms.locfileid: "97878937"
 |Сервер с несколькими узлами NUMA|Больше 16 логических процессоров на каждый узел NUMA|Значение MAXDOP должно быть равно половине количества логических процессоров на узел NUMA со значением MAX, равным 16|
   
 > [!NOTE]
-> Узлы NUMA в приведенной выше таблице — это узлы программной архитектуры NUMA, автоматически создаваемые в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий, или аппаратной архитектуры NUMA, если узлы программной архитектуры NUMA отключены.   
+> Узлы NUMA в приведенной выше таблице — это узлы программной архитектуры NUMA, автоматически создаваемые в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий, или аппаратной архитектуры NUMA, если узлы программной архитектуры NUMA отключены.   
 >  Эти же правила используются в том случае, если значение max degree of parallelism задано для групп рабочей нагрузки регулятора ресурсов. Дополнительные сведения см. в разделе [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
   
 В версиях с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] по [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] при настройке значения параметра **max degree of parallelism** в конфигурации сервера следуйте приведенным ниже рекомендациям.

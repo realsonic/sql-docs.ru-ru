@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c8f93191b689599a24ad960d316a02901de2e6e0
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 1b7be0ce3e3be27633c32e031f7c674804a43d8b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643826"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170816"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Перенос нагрузки только для чтения на вторичную реплику в группе доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "97643826"
  Это означает, что между первичной и вторичной репликами возникает некоторая задержка, обычно порядка нескольких секунд. В нетипичных случаях, например в ситуации, когда проблемы с сетью ухудшают пропускную способность, задержка может стать значительной. Задержка увеличивается из-за наличия узких мест в системе ввода-вывода и в результате приостановки движения данных. Для отслеживания приостановок перемещения данных можно использовать [Панель управления AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) или динамическое административное представление [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> Задержка данных для баз данных с таблицами, оптимизированными для памяти  
- В [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] предлагались особые рекомендации, связанные с задержкой данных в активных вторичных репликах (см. статью [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Активные вторичные реплики: вторичные реплики для чтения](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)). Начиная с [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , никаких особых рекомендаций в связи с задержкой данных в таблицах, оптимизированных для памяти, нет. Ожидаемая задержка данных в таблицах, оптимизированных для памяти, сопоставима с задержкой в таблицах на диске.  
+ В [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] предлагались особые рекомендации, связанные с задержкой данных в активных вторичных репликах (см. статью [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Активные вторичные реплики: вторичные реплики для чтения](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)). Начиная с [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] , никаких особых рекомендаций в связи с задержкой данных в таблицах, оптимизированных для памяти, нет. Ожидаемая задержка данных в таблицах, оптимизированных для памяти, сопоставима с задержкой в таблицах на диске.  
   
 ###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> Влияние на рабочую нагрузку только для чтения  
  При настройке вторичной реплики для доступа только для чтения, нагрузки только для чтения в базах данных-получателях потребляют системные ресурсы, т. е. ресурсы процессора и системы ввода-вывода (для дисковых таблиц), за счет потоков повтора, в особенности, если нагрузка операций чтения дисковых таблиц выполняет большой объем операций ввода-вывода. При доступе к таблицам, оптимизированным для памяти, дополнительная нагрузка на систему ввода-вывода отсутствует, поскольку все строки находятся в памяти.  

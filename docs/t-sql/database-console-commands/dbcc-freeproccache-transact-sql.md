@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6d4d31f2f34344fc6b001d798815b3096be33a1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 635cbfe8b21f60bf2bb9cec49efac62c627a6ae4
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472225"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172626"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  Очистка кэша планов запросов в каждом вычислительном узле и в управляющем узле.  
 
 > [!NOTE]
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], для очистки кэша процедур (планов) для базы данных в области действия служит инструкция `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`.
+> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], для очистки кэша процедур (планов) для базы данных в области действия служит инструкция `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`.
 
 ## <a name="remarks"></a>Комментарии  
 Инструкция DBCC FREEPROCCACHE используется для аккуратной очистки кэша планов. Очистка кэша процедур (планов) приводит к исключению всех планов. В результате при выполнении входящих запросов будет компилироваться новый план, а не использоваться существующий план из кэша. 

@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 03bd2039fc132724ba78222c81a79c75f37764ff
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: ef87d8cdfb44d36faff5e06cfdc0b0f691142c03
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505134"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170406"
 ---
 # <a name="performance-dashboard"></a>Панель мониторинга производительности
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "96505134"
 
 В отчете **Ожидание** приводятся ожидания в режиме простоя или спящем режиме. Дополнительные сведения об ожидании см. в статье [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) и документе [Настройка производительности SQL Server 2005 с помощью ожиданий и очередей](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
 
-Отчеты **Ресурсоемкие запросы** сбрасываются при перезапуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так как данные в базовых динамических административных представлениях очищаются. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] подробные сведения о ресурсоемких запросах можно найти в хранилище запросов. 
+Отчеты **Ресурсоемкие запросы** сбрасываются при перезапуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так как данные в базовых динамических административных представлениях очищаются. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] подробные сведения о ресурсоемких запросах можно найти в хранилище запросов. 
 
 
 > [!NOTE]

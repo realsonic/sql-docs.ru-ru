@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 796a0423da44917251fa87828c71d0e47092d028
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 0cbe2b75a46e63b5e388b91ace3d74c0db3be49b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867054"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170736"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Требования для использования таблиц, оптимизированных для памяти
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "91867054"
   
  Помимо [требований к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), для использования выполняющейся в памяти OLTP необходимо следующее.  
   
--   Любой выпуск [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) или более поздней версии. Для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM (с предварительным пакетом обновления 1, SP1) необходим выпуск Enterprise, Developer или Evaluation.
+-   Любой выпуск [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) или более поздней версии. Для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] RTM (с предварительным пакетом обновления 1, SP1) необходим выпуск Enterprise, Developer или Evaluation.
     
     > [!NOTE]
     > Для выполняющейся в памяти OLTP нужна 64-разрядная версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,12 +46,12 @@ ms.locfileid: "91867054"
   
 ## <a name="important-notes-on-using-hek_2"></a>Важные примечания относительно использования [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
--   Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], ограничения на размер оптимизированных для памяти таблиц, кроме доступной памяти, отсутствуют. 
+-   Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], ограничения на размер оптимизированных для памяти таблиц, кроме доступной памяти, отсутствуют. 
 
 -   В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] общий объем памяти всех устойчивых таблиц в базе данных не должен превышать 250 ГБ. Дополнительные сведения см. в статье [Оценка требований к объему памяти для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
 
 > [!NOTE]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), выпуски Standard и Express поддерживают выполняющуюся в памяти OLTP, однако налагают квоты на объем памяти, который можно использовать для оптимизированных для памяти таблиц в отдельной базе данных. В выпуске Standard это ограничение равно 32 ГБ на базу данных; в выпуске Express — 352 МБ на базу данных. 
+> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1), выпуски Standard и Express поддерживают выполняющуюся в памяти OLTP, однако налагают квоты на объем памяти, который можно использовать для оптимизированных для памяти таблиц в отдельной базе данных. В выпуске Standard это ограничение равно 32 ГБ на базу данных; в выпуске Express — 352 МБ на базу данных. 
   
 -   Если создается одна база данных с оптимизированными для памяти таблицами или несколько, необходимо включить мгновенную инициализацию файлов (предоставьте стартовой учетной записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользовательское право *SE_MANAGE_VOLUME_NAME*). Без IFI оптимизированные для памяти файлы хранилища (файлы данных и разностные файлы) будут инициализироваться при создании, что может снизить производительность рабочей нагрузки. Дополнительные сведения об IFI см. в разделе [Инициализация файлов базы данных](../../relational-databases/databases/database-instant-file-initialization.md).
   

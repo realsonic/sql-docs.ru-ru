@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 72fecc8d4e14d8d9066cd7821f34195bdfdd8b5d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 643c21ea1e854dd7fa65798505b6f7d2225da62a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651407"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170956"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>Службы SCM. Отключение автоматического запуска экземпляра
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,19 +33,19 @@ ms.locfileid: "85651407"
   
 #### <a name="to-prevent-automatic-startup-of-an-instance-of-sql-server"></a>Отключение автоматического запуска экземпляра SQL Server  
   
-1.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**и щелкните **Диспетчер конфигурации SQL Server**.  
+1.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки** и щелкните **Диспетчер конфигурации SQL Server**.  
   
     > [!NOTE]  
     >  Поскольку диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является оснасткой консоли управления ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), а не изолированной программой, при работе в более новых версиях Windows диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не отображается как приложение.  
     >   
     >  -   **Windows 10**:  
-    >          чтобы открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , введите на **начальной странице**SQLServerManager13.msc (для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). Для предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] замените 13 на меньшее число. Если щелкнуть SQLServerManager13.msc, откроется диспетчер конфигурации. Чтобы закрепить диспетчер конфигурации на начальной странице или панели задач, щелкните правой кнопкой мыши SQLServerManager13.msc и выберите пункт **Открыть папку с файлом**. В проводнике щелкните правой кнопкой мыши SQLServerManager13.msc, а затем выберите команду **Закрепить на начальном экране** или **Закрепить на панели задач**.  
+    >          чтобы открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , введите на **начальной странице** SQLServerManager13.msc (для [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]). Для предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] замените 13 на меньшее число. Если щелкнуть SQLServerManager13.msc, откроется диспетчер конфигурации. Чтобы закрепить диспетчер конфигурации на начальной странице или панели задач, щелкните правой кнопкой мыши SQLServerManager13.msc и выберите пункт **Открыть папку с файлом**. В проводнике щелкните правой кнопкой мыши SQLServerManager13.msc, а затем выберите команду **Закрепить на начальном экране** или **Закрепить на панели задач**.  
     > -   **Windows 8**:  
     >          Чтобы открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с помощью чудо-кнопки **Поиск** на вкладке **Приложения** введите **SQLServerManager\<version>.msc** (например, **SQLServerManager13.msc**) и нажмите клавишу **ВВОД**.  
   
 2.  В диспетчере конфигурации SQL Server разверните **Службы**, затем выберите **SQL Server**.  
   
-3.  В области сведений щелкните правой кнопкой мыши **MSSQLServer**и выберите пункт **Свойства**.  
+3.  В области сведений щелкните правой кнопкой мыши **MSSQLServer** и выберите пункт **Свойства**.  
   
 4.  В диалоговом окне **Свойства SQL Server \<**_instancename_**>** на вкладке **Служба** в поле **Общее** укажите для параметра **Режим запуска** значение **Вручную**.  
   

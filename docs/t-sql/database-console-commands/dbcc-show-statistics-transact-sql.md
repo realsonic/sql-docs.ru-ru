@@ -34,12 +34,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0d83ada5889c27e960c8ab798c3784d2095a818
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 710a6211b588ab0dd4745b41af1f330c81241294
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480525"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170506"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>Инструкция DBCC SHOW_STATISTICS (Transact-SQL)
 
@@ -58,7 +58,7 @@ DBCC SHOW_STATISTICS отображает заголовок, гистограм
 > Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 1 (SP1) и [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 2 (SP2), DMV [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) позволяет программно получать сведения о заголовке, содержащиеся в объекте статистики, для накопительных статистических данных.
 
 > [!IMPORTANT]
-> Начиная с накопительного обновления 2 (CU2) [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), DMV [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) позволяет программно получать данные гистограммы, содержащиеся в объекте статистики.
+> Начиная с накопительного обновления 2 (CU2) [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1), DMV [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) позволяет программно получать данные гистограммы, содержащиеся в объекте статистики.
 
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -120,7 +120,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |String Index|Значение «Да» указывает, что объект статистики содержит сводную строковую статистику, позволяющую уточнить оценку количества элементов для предикатов запроса, использующих оператор LIKE, например `WHERE ProductName LIKE '%Bike'`. Сводная строковая статистика хранится отдельно от гистограммы и создается в первом ключевом столбце объекта статистики, если он имеет тип **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text** или **ntext**.|  
 |Критерий фильтра|Предикат для подмножества строк таблицы, включенных в объект статистики. NULL — неотфильтрованная статистика. Дополнительные сведения об отфильтрованных предикатах см. в статье [Создание отфильтрованных индексов](../../relational-databases/indexes/create-filtered-indexes.md). Дополнительные сведения об отфильтрованной статистике см. в разделе [Статистика](../../relational-databases/statistics/statistics.md).|  
 |Unfiltered Rows|Общее количество строк в таблице перед применением критерия фильтра. Если Filter Expression имеет значение NULL, то столбец Unfiltered Rows совпадает со столбцом Rows.|  
-|Процент материализованной выборки|Процент материализованной выборки используется для обновлений статистики, где явно не указан процент выборки. Если значение равно нулю, процент материализованной выборки не устанавливается для этой статистики.<br /><br /> **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) и накопительным обновлением 4| 
+|Процент материализованной выборки|Процент материализованной выборки используется для обновлений статистики, где явно не указан процент выборки. Если значение равно нулю, процент материализованной выборки не устанавливается для этой статистики.<br /><br /> **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) и накопительным обновлением 4| 
   
 Следующая таблица описывает столбцы, возвращаемые в результирующий набор, если указан параметр DENSITY_VECTOR.
   

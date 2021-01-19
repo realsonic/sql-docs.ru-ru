@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22ac2d69eaba62d6cde697c2299ee432d837987c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7d604298ca4956ef699ab763255cb2534be30679
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098534"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170636"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -565,7 +565,7 @@ SPARSE
 Указывает, что столбец является разреженным столбцом. Хранилище разреженных столбцов оптимизируется для значений NULL. Разреженные столбцы не могут иметь свойство NOT NULL. При преобразовании столбцов из разреженных в неразреженные или наоборот таблица блокируется на время выполнения этой команды. Возможно, потребуется использование предложения REBUILD для освобождения пространства. Дополнительные ограничения и сведения о разреженных столбцах см. в разделе [Разреженные столбцы](../../relational-databases/tables/use-sparse-columns.md).
 
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Указывает маску для динамического маскирования данных. *mask_function* — это имя функции маскирования с соответствующими параметрами. Доступны три функции:
 
@@ -577,7 +577,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 Чтобы удалить маску, используйте `DROP MASKED`. Параметры функции см. в разделе [Динамическое маскирование данных](../../relational-databases/security/dynamic-data-masking.md).
 
 WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Позволяет выполнять разные действия по изменению столбцов с сохранением доступности таблицы. По умолчанию — OFF. Изменение столбцов можно выполнять в оперативном режиме, если эти изменения связаны с типом данных, длиной или точностью столбцов, допустимостью значений NULL, разреженностью и параметрами сортировки.
 
@@ -668,7 +668,7 @@ COLUMN *column_name*
 > При удалении столбца занимаемое им место на диске не освобождается. В том случае, если размер строк таблицы приближается к пределу или превышает его, возможен возврат места, занятого на диске удаленным столбцом. Возврат пространства осуществляется путем создания кластеризованного индекса в таблице или перестроения существующего кластеризованного индекса при помощи инструкции [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Дополнительные сведения о последствиях удаления типов данных больших двоичных объектов см. в этой [записи в блоге CSS](/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower).
 
 PERIOD FOR SYSTEM_TIME  
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Удаляет спецификацию для столбцов, которые будут использоваться для системного управления версиями.
 
@@ -792,7 +792,7 @@ SET **(** FILESTREAM_ON = { *partition_scheme_name* \| *filestream_filegroup_nam
 Значение **"** NULL **"** указывает на удаление всех ссылок на файловые группы FILESTREAM для таблицы. Сначала должны быть удалены все столбцы FILESTREAM. Используйте инструкцию SET FILESTREAM_ON = "**NULL**", чтобы удалить все данные FILESTREAM, связанные с таблицей.
 
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ] ) ] } **)**  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Отключает или включает для таблицы системное управление версиями. Чтобы включить системное управление версиями в таблице, система проверяет соблюдение требований к типам данных, ограничениям допустимости значений NULL и ограничениям первичного ключа. Если аргумент HISTORY_TABLE не используется, система создает новую таблицу журнала по схеме текущей таблицы, а затем создает между ними связь и настраивает сохранение в таблице журнала истории каждой записи текущей таблицы. Таблица журнала будет называться `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Если вы укажете аргумент HISTORY_TABLE, чтобы создать связь с уже существующей таблицей журнала, система создает связь между текущей таблицей и указанной в этом аргументе таблицей. При создании связи с существующей таблицей журнала вы можете настроить проверку согласованности данных. Проверка согласованности данных гарантирует, что существующие записи не перекрываются. Выполнение проверки согласованности данных считается вариантом по умолчанию. Дополнительные сведения см. в разделе [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
@@ -1000,7 +1000,7 @@ BLOCKERS
 Необходимо разрешение **ALTER ANY CONNECTION**.
 
 IF EXISTS  
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Условное удаление столбца или ограничения в том случае, если они существуют.
 
@@ -1737,7 +1737,7 @@ REBUILD WITH
 
 В следующем примере показано, как выполнить операцию изменения столбца с параметром ONLINE.
 
-**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ```sql
 CREATE TABLE dbo.doc_exy (column_a INT) ;
@@ -1756,7 +1756,7 @@ GO
 
 Следующие четыре примера помогут ознакомиться с синтаксисом использования системного управления версиями. Дополнительные сведения см. в разделе [Приступая к работе c темпоральными таблицами с системным управлением версиями](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).
 
-**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 #### <a name="a-add-system-versioning-to-existing-tables"></a>A. Добавление системного управления версиями в существующие таблицы
 

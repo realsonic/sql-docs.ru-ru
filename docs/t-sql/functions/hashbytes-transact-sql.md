@@ -20,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b72eb876317282b421c64f0101c275970548f8f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: da6f1b1bdb357a6321207720d2ea64938f4ada41
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97422039"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170246"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -48,7 +48,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="arguments"></a>Аргументы
 
 `<algorithm>`  
-Указывает используемый алгоритм хэширования. Этот аргумент обязателен и не имеет значения по умолчанию. Указание одинарных кавычек (") также обязательно. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] все алгоритмы, отличные от SHA2_256 и SHA2_512, являются нерекомендуемыми.  
+Указывает используемый алгоритм хэширования. Этот аргумент обязателен и не имеет значения по умолчанию. Указание одинарных кавычек (") также обязательно. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] все алгоритмы, отличные от SHA2_256 и SHA2_512, являются нерекомендуемыми.  
   
 `@input`  
 Указывает переменную, содержащую хэшируемые данные. `@input` имеет тип **varchar**, **nvarchar** или **varbinary**.  
@@ -68,7 +68,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="remarks"></a>Комментарии  
 Попробуйте использовать `CHECKSUM` или `BINARY_CHECKSUM` в качестве альтернативы для вычисления хэш-значения.
 
-Алгоритмы MD2, MD4, MD5, SHA и SHA1 начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] отмечены как нерекомендуемые. Вместо этого используйте алгоритмы SHA2_256 или SHA2_512. Старые алгоритмы по-прежнему будут работать, но будут вызывать событие нерекомендуемого алгоритма.
+Алгоритмы MD2, MD4, MD5, SHA и SHA1 начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] отмечены как нерекомендуемые. Вместо этого используйте алгоритмы SHA2_256 или SHA2_512. Старые алгоритмы по-прежнему будут работать, но будут вызывать событие нерекомендуемого алгоритма.
 
 ## <a name="examples"></a>Примеры  
 ### <a name="return-the-hash-of-a-variable"></a>Возвращение хэша данных в переменной  

@@ -26,12 +26,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff06180d1abb67239407d91c564558e4d45c2550
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 21314c02ddb58aabcee33257fc4d8d44f56b9da7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644424"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170576"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -114,7 +114,7 @@ NAME = newUserName
 > [!NOTE]
 > Этот параметр можно задать только в автономной базе данных и только для содержащихся пользователей.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю массово копировать зашифрованные данные между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF.
 
@@ -302,7 +302,7 @@ ALTER USER userName
 > [!NOTE]
 > Данный параметр доступен только для содержащихся пользователей.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю массово копировать зашифрованные данные между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF.
 

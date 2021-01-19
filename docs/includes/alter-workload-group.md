@@ -72,7 +72,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > По умолчанию по истечении лимита времени Resource Governor не прекращает выполнение запроса. Однако будет сформировано событие. Дополнительные сведения см. в разделе [Класс событий CPU Threshold Exceeded](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> Начиная с [!INCLUDE[ssSQL15](sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](sssql17-md.md)] с накопительным пакетом обновления 3 и в случае использования [флага трассировки 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) при превышении максимального значения времени Resource Governor прервет запрос.
+> Начиная с [!INCLUDE[ssSQL15](sssql16-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](sssql17-md.md)] с накопительным пакетом обновления 3 и в случае использования [флага трассировки 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) при превышении максимального значения времени Resource Governor прервет запрос.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Задает максимальное время (в секундах), которое запрос может ожидать предоставления памяти (памяти рабочего буфера).  

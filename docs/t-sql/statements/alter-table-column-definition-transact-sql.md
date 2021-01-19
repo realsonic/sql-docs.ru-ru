@@ -22,12 +22,12 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a0724503ed6843972730afc5179c0d6ba9f18a1
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 001417f19035ab9a304f2af3ae42207bd7600fb1
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100274"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170836"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -216,14 +216,14 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  Столбцы должны иметь подходящий тип данных.  
   
 ALGORITHM  
-**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
 Должно быть **'AEAD_AES_256_CBC_HMAC_SHA_256'** .  
   
  Дополнительные сведения, в том числе об ограничениях функции, см. в разделе [Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Указывает маску для динамического маскирования данных. *mask_function* — это имя функции маскирования с соответствующими параметрами. Доступны следующие функции:  
   

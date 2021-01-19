@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49394aa04c726d015bbff3ea31a06ec47ffd64d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35ed1cf50f1d39af97ac636c8aba3ca36f90e7d7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478776"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171676"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Аргументы инструкций RESTORE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -255,7 +255,7 @@ CREDENTIAL
  Используется только при восстановлении резервной копии с помощью службы хранилища BLOB-объектов Azure.  
   
 > [!NOTE]  
->  Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) и накопительным обновлением 2 (CU2) по [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] восстановление с URL-адреса можно выполнять только с одного устройства. Чтобы выполнить восстановление с URL-адреса с нескольких устройств, необходимо использовать версию с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [текущую версию](https://go.microsoft.com/fwlink/p/?LinkId=299658) и маркеры подписанных URL-адресов (SAS). Дополнительные сведения см. в разделах [Включение управляемого резервного копирования SQL Server в Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) и [Упрощение создания учетных данных SQL с помощью маркеров подписанных URL-адресов (SAS) в службе хранилища Azure с PowerShell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).  
+>  Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) и накопительным обновлением 2 (CU2) по [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] восстановление с URL-адреса можно выполнять только с одного устройства. Чтобы выполнить восстановление с URL-адреса с нескольких устройств, необходимо использовать версию с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] по [текущую версию](https://go.microsoft.com/fwlink/p/?LinkId=299658) и маркеры подписанных URL-адресов (SAS). Дополнительные сведения см. в разделах [Включение управляемого резервного копирования SQL Server в Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) и [Упрощение создания учетных данных SQL с помощью маркеров подписанных URL-адресов (SAS) в службе хранилища Azure с PowerShell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).  
   
  REPLACE  
  **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

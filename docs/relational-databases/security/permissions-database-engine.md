@@ -20,12 +20,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: AndreasWolter
 ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b7839615ed830f91ced84f1c565d9c2d32bf3a3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b40dbcfc25bcc3b86868228fe5646c4318ed830c
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479425"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172226"
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "97479425"
 С каждым защищаемым объектом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связаны разрешения, которые могут быть предоставлены участнику. Управление разрешениями в [!INCLUDE[ssDE](../../includes/ssde-md.md)] осуществляется на уровне сервера (назначение разрешений именам входа и ролям сервера) и на уровне базы данных (назначение разрешений пользователям и ролям базы данных). Модель для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] использует ту же систему для разрешений базы данных, однако разрешения на уровне сервера недоступны. Здесь содержится полный список разрешений. Советы по проектированию системы разрешений см. в статье [Начало работы с разрешениями ядра СУБД](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 Общее количество разрешений для [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] составляет 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] предоставляет 254 разрешений. Большинство разрешений применяются ко всем платформам, но некоторые из них — только к определенным. Например, разрешения на уровне сервера нельзя предоставить в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], а некоторые разрешения действуют только в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-Новые разрешения вводятся постепенно с новыми выпусками. [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] предоставляет 238 разрешений. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставлены 230 разрешений. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] предоставлены 219 разрешений. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] предоставлены 214 разрешений. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] предоставлены 195 разрешений. В разделе [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) указаны новые разрешения последних версий.
+Новые разрешения вводятся постепенно с новыми выпусками. [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] предоставляет 238 разрешений. [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] предоставлены 230 разрешений. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] предоставлены 219 разрешений. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] предоставлены 214 разрешений. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] предоставлены 195 разрешений. В разделе [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) указаны новые разрешения последних версий.
 
 Если вы знаете, как применять разрешения, примените их на уровне сервера к именам для входа и пользователям разрешений на уровне базы данных, используя инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)и [DENY](../../t-sql/statements/deny-transact-sql.md) . Пример:   
 ```sql
@@ -158,25 +158,25 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
 |DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Применяется к [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL DATA SOURCE|AEDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL FILE FORMAT|AEFF|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY MASK|AAMK<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY MASK|AAMK<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY REMOTE SERVICE BINDING|ALSB|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|ALSP<br />Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с SQL Server 2019 (15.x) до текущей версии), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|DATABASE|CONTROL SERVER|
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
@@ -215,7 +215,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до текущей версии).|SERVER|CONTROL SERVER|  
+|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до текущей версии).|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Относится только к [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Использование ALTER ANY CONNECTION в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF;|SERVER|CONTROL SERVER|  
@@ -223,10 +223,10 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|DATABASE|UNMASK|UMSK<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|UNMASK|UMSK<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
-|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|  
-|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до текущей версии) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|

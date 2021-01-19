@@ -24,12 +24,12 @@ ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 00926a8ee1244112d1fb5a01273e90d22a5753a7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: eeae562c4cfbf093d3b7237a044c51084331e8a9
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463969"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172246"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Инструкции RESTORE — VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -110,7 +110,7 @@ FROM <backup_device> [ ,...n ]
 >  Инструкция RESTORE VERIFYONLY не применяется в отношении моментальных снимков базы данных. Проверка моментального снимка базы данных перед операцией восстановления до предыдущего состояния выполняется с помощью инструкции DBCC CHECKDB.  
   
 > [!NOTE]  
->  С помощью резервного копирования путем моментальных снимков RESTORE VERIFYONLY подтверждает наличие моментальных снимков в расположениях, указанных в файле резервной копии. Резервное копирование путем моментальных снимков — это новая функция в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Дополнительные сведения о резервном копировании путем создания моментального снимка см. в статье [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+>  С помощью резервного копирования путем моментальных снимков RESTORE VERIFYONLY подтверждает наличие моментальных снимков в расположениях, указанных в файле резервной копии. Резервное копирование путем моментальных снимков — это новая функция в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Дополнительные сведения о резервном копировании путем создания моментального снимка см. в статье [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ## <a name="security"></a>Безопасность  
  В операции создания резервной копии могут дополнительно указываться пароли для набора носителей, резервного набора данных или и того и другого. Если для набора носителей или резервного набора данных установлен пароль, то в инструкции RESTORE необходимо указывать правильные пароли. Эти пароли предотвращают несанкционированные операции восстановления и присоединения резервных наборов данных к носителю при помощи инструментальных средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако пароль не запрещает перезапись носителей с помощью параметра FORMAT инструкции BACKUP.  

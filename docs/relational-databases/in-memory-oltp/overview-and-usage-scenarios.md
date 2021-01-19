@@ -12,12 +12,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: kevin-farlee
 ms.author: kfarlee
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35e59fa45d81c5b80fe6ff28e2cb3ab4abab47c9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0b01ecd66479d93d3eb89065a94005d9deeffaf5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485276"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172306"
 ---
 # <a name="overview-and-usage-scenarios"></a>Общие сведения и сценарии использования
 
@@ -29,7 +29,7 @@ ms.locfileid: "97485276"
 
 ## <a name="in-memory-oltp-overview"></a>Общие сведения о выполняющейся в памяти OLTP
 
-Выполняющаяся в памяти OLTP может существенно повысить производительность соответствующих рабочих нагрузок. Одному клиенту, BWIN, удалось [повысить производительность до 1,2 млн запросов в секунду](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale), используя выполняющуюся в памяти OLTP в одной виртуальной машине с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Другой клиент, Quorum, удвоил рабочую нагрузку и [сократил использование ресурсов на 70 %](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), применяя выполняющуюся в памяти OLTP в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. В некоторых случаях производительность у клиентов повышалась в 30 раз, но каков будет ваш прирост, зависит от типа и величины рабочей нагрузки.
+Выполняющаяся в памяти OLTP может существенно повысить производительность соответствующих рабочих нагрузок. Одному клиенту, BWIN, удалось [повысить производительность до 1,2 млн запросов в секунду](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale), используя выполняющуюся в памяти OLTP в одной виртуальной машине с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Другой клиент, Quorum, удвоил рабочую нагрузку и [сократил использование ресурсов на 70 %](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), применяя выполняющуюся в памяти OLTP в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. В некоторых случаях производительность у клиентов повышалась в 30 раз, но каков будет ваш прирост, зависит от типа и величины рабочей нагрузки.
 
 Что же влияет на прирост производительности? По сути, выполняющаяся в памяти OLTP позволяет повысить производительность обработки транзакций путем оптимизации доступа к данным и выполнения транзакций, а также за счет устранения конфликтов блокировок и кратковременных блокировок между параллельно выполняемыми транзакциями: производительность повышается не из-за того, что данные находятся в памяти, а из-за оптимизации этих данных. Алгоритмы хранения и обработки данных, а также доступа к ним были полностью изменены с учетом последних улучшений в вычислениях в памяти и вычислениях с высоким уровнем параллелизма.
 
@@ -67,8 +67,8 @@ ms.locfileid: "97485276"
 
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
-- Компания CMC Markets использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], чтобы обеспечить постоянно низкую задержку: [Секунда — это слишком долго. Финансовая организация обновила программное обеспечение для торговли.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Компания Derivco использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] для поддержки возросшего показателя пропускной способности и обработки пиков рабочей нагрузки: [Компания по разработке сетевых игр сделала ставку на [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], чтобы не рисковать собственным будущим.](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- Компания CMC Markets использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], чтобы обеспечить постоянно низкую задержку: [Секунда — это слишком долго. Финансовая организация обновила программное обеспечение для торговли.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
+- Компания Derivco использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] для поддержки возросшего показателя пропускной способности и обработки пиков рабочей нагрузки: [Компания по разработке сетевых игр сделала ставку на [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], чтобы не рисковать собственным будущим.](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>Прием данных из разных источников, включая Интернет вещей
 
@@ -101,7 +101,7 @@ ms.locfileid: "97485276"
 
 Благодаря технологии выполняющейся в памяти OLTP среда SQL весьма привлекательна для поддержки состояния сеанса (например, для приложения ASP.NET) и кэширования.
 
-Один из эффективных сценариев — использование выполняющейся в памяти OLTP для поддержки состояния сеанса ASP.NET. Работая с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], одним клиентам почти удалось добиться выполнения 1,2 млн запросов в секунду. В то же время они начали использовать выполняющуюся в памяти OLTP для кэширования всех приложений среднего уровня на предприятии. Сведения. [Как компания bwin добилась небывалой производительности и масштаба, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+Один из эффективных сценариев — использование выполняющейся в памяти OLTP для поддержки состояния сеанса ASP.NET. Работая с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], одним клиентам почти удалось добиться выполнения 1,2 млн запросов в секунду. В то же время они начали использовать выполняющуюся в памяти OLTP для кэширования всех приложений среднего уровня на предприятии. Сведения. [Как компания bwin добилась небывалой производительности и масштаба, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 #### <a name="implementation-considerations"></a>Рекомендации по реализации
 
@@ -112,7 +112,7 @@ ms.locfileid: "97485276"
 #### <a name="customer-case-studies"></a>Примеры реальных клиентов
 
 - Компании bwin удалось значительно увеличить пропускную способность и сократить площадь, занимаемую оборудованием, для состояния сеанса ASP.NET, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Игорный сайт смог повысить масштаб до 250 000 запросов в секунду и улучшить условия игры для игроков](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
-- Благодаря состоянию сеанса ASP.NET компании bwin удалось еще больше повысить пропускную способность и внедрить корпоративную систему кэширования среднего уровня, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: [Как компания bwin добилась небывалой производительности и масштаба, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+- Благодаря состоянию сеанса ASP.NET компании bwin удалось еще больше повысить пропускную способность и внедрить корпоративную систему кэширования среднего уровня, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]: [Как компания bwin добилась небывалой производительности и масштаба, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 ### <a name="tempdb-object-replacement"></a>Замена объекта tempdb
 

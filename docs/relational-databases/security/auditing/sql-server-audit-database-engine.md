@@ -17,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: e978c269a17f42bc75729303a860c61d4868f3fb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 45b22073dd0ac7e4c87d8fb838e9e55e346b5b5d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468615"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171466"
 ---
 # <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "97468615"
   
  Группы действий аудита сервера можно записывать для всего экземпляра, а также группы действий аудита базы данных либо действия аудита базы данных для каждой базы данных. Событие аудита будет происходить каждый раз при обнаружении действия, подлежащего аудиту.  
   
- Аудит на уровне сервера поддерживается во всех выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Все выпуски поддерживают аудит на уровне базы данных, начиная с [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1). Раньше аудит на уровне базы банных был доступен только в выпусках Enterprise Edition, Developer Edition и Evaluation Edition. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Аудит на уровне сервера поддерживается во всех выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Все выпуски поддерживают аудит на уровне базы данных, начиная с [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1). Раньше аудит на уровне базы банных был доступен только в выпусках Enterprise Edition, Developer Edition и Evaluation Edition. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
 >  Этот раздел относится к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Дополнительные сведения для [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]см. в статье [Приступая к работе с аудитом базы данных SQL](/azure/azure-sql/database/auditing-overview).  

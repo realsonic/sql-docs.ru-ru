@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dfa929e7a669ef20eb178353fb7055f5f244f8a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 06288dc0bc6e16ab8928322005254f5fac1ddc61
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475575"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171486"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
 
@@ -314,7 +314,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 
 ## <a name="tde-and-in-memory-oltp"></a>TDE и выполняющаяся в памяти OLTP
 
-Прозрачное шифрование данных можно включить в базе данных, которая содержит объекты OLTP в памяти. В [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE. В [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE, однако файлы в файловой группе MEMORY_OPTIMIZED_DATA не шифруются.
+Прозрачное шифрование данных можно включить в базе данных, которая содержит объекты OLTP в памяти. В [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE. В [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE, однако файлы в файловой группе MEMORY_OPTIMIZED_DATA не шифруются.
 
 ## <a name="related-tasks"></a>Связанные задачи
 

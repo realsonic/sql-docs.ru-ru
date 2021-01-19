@@ -11,12 +11,12 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: cbc9d56a0c084fe912ad9af0136166cdcf804ebf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 00c7778583545c56b886bfc30c4763bacd1404b3
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734971"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171566"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Изменение целевого времени восстановления базы данных (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "85734971"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Изменение целевого времени восстановления**  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
   
 2.  Раскройте контейнер **Базы данных**, щелкните правой кнопкой мыши базу данных, которую необходимо изменить, и выберите пункт **Свойства**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "85734971"
      TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
-     Начиная с версии [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], значение по умолчанию равно 1 минуте. Если значение больше 0 (значение по умолчанию для более старых версий), то оно указывает значение верхней границы времени восстановления для заданной базы данных в случае сбоя.  
+     Начиная с версии [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)], значение по умолчанию равно 1 минуте. Если значение больше 0 (значение по умолчанию для более старых версий), то оно указывает значение верхней границы времени восстановления для заданной базы данных в случае сбоя.  
   
      SECONDS  
      Указывает, что значение *target_recovery_time* выражается в количестве секунд.  

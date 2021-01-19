@@ -22,12 +22,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8d9cc3f1218ab0e374359a57dce6cb13dc0b8a6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 3680ba07e290f8b531ab46576f76bd3ffeee3460
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099445"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170446"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -108,7 +108,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  Команда SAMPLE полезна в особых случаях, в которых план запроса на основе выборки по умолчанию не является оптимальным. В большинстве случаев нет необходимости использовать команду SAMPLE, так как оптимизатор запросов делает выборку и определяет размер статистически значимой выборки по умолчанию, что требуется для создания высококачественных планов запроса. 
  
-Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], выборка данных для формирования статистики выполняется в параллельном режиме при использовании уровня совместимости 130, что повышает производительность сбора статистики. Оптимизатор запросов будет использовать статистику параллельной выборки каждый раз, когда размер таблицы превышает определенный порог. 
+Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], выборка данных для формирования статистики выполняется в параллельном режиме при использовании уровня совместимости 130, что повышает производительность сбора статистики. Оптимизатор запросов будет использовать статистику параллельной выборки каждый раз, когда размер таблицы превышает определенный порог. 
    
  Параметр SAMPLE нельзя использовать вместе с параметром FULLSCAN. Если не указана ни одна из команд SAMPLE или FULLSCAN, оптимизатор запросов использует выбранные данные и вычисляет размер выборки по умолчанию.  
   
@@ -136,7 +136,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  > [!TIP] 
  > Значение сохраненного процента выборки для выбранной статистики отображается в [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) и [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md).
  
- **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) и выше (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1).  
+ **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4) и выше (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1).  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ]. Задает принудительное повторное вычисление статистик конечного уровня, посвященных секциям в предложении ON PARTITIONS, с последующим их объединением для создания глобальных статистик. WITH RESAMPLE обязательно, потому что статистики секции, построенные с различной частотой выборки, нельзя объединить.  
   
@@ -171,7 +171,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий
 
 MAXDOP = *max_degree_of_parallelism*  
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 3 (CU3)).  
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 3 (CU3)).  
   
  Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции со статистикой. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   

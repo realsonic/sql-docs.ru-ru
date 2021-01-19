@@ -12,20 +12,20 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 702d2adcfda0f75937b9629467f14ca66f4acdad
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0ca8263c5d75fca3bc59164d8d3ff7acaa9c5f2e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97407478"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172736"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Хранилище данных для индексов columnstore
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Индексы columnstore в сочетании с секционированием являются необходимым элементом для создания хранилища данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="whats-new"></a>Новое  
- В[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] появились следующие функции для повышения производительности индексов columnstore:  
+## <a name="whats-new"></a>Новые возможности  
+ В[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] появились следующие функции для повышения производительности индексов columnstore:  
   
 -   AlwaysOn поддерживает запросы к индексу columnstore в доступной для чтения вторичной реплике.  
 -   Режим MARS поддерживает индексы columnstore.  
@@ -39,7 +39,7 @@ ms.locfileid: "97407478"
 -   Изоляция моментального снимка для уровня совместимости базы данных 130 или более высокого.  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Повышение производительности благодаря объединению некластеризованных индексов и индексов columnstore  
- Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] можно определить некластеризованные индексы в кластеризованном индексе columnstore.   
+ Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] можно определить некластеризованные индексы в кластеризованном индексе columnstore.   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Пример. Повышение эффективности операций поиска в таблицах с помощью некластеризованного индекса  
  Для повышения эффективности операций поиска в таблицах хранилища данных можно создать некластеризованный индекс, предназначенный для запуска запросов, которые показывают максимальную производительность с операциями поиска в таблицах. Например, запросы, которые ищут совпадающие значения или возвращают небольшой диапазон значений, будут эффективнее выполняться с индексом сбалансированного дерева, а не с индексом columnstore. Они не требуют сканирования всей таблицы через индекс columnstore и вернут правильный результат быстрее, выполнив двоичный поиск по индексу сбалансированного дерева.  
@@ -101,7 +101,7 @@ WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey);
 ```  
   
 ### <a name="improve-performance-by-enabling-row-level-and-row-group-level-locking"></a>Повышение производительности за счет включения блокировки на уровне строки и на уровне группы строк  
- В дополнение к функции некластеризованного индекса для индекса columnstore [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставляет возможность детализированной блокировки для операций выбора, обновления и удаления. Запросы могут выполняться с блокировкой на уровне строки для индексных операций поиска по некластеризованному индексу и блокировкой на уровне группы строк для полного сканирования таблиц по индексу columnstore. Это позволяет повысить параллелизм чтения и записи при надлежащем использовании блокировки на уровне строки и на уровне группы строк.  
+ В дополнение к функции некластеризованного индекса для индекса columnstore [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] предоставляет возможность детализированной блокировки для операций выбора, обновления и удаления. Запросы могут выполняться с блокировкой на уровне строки для индексных операций поиска по некластеризованному индексу и блокировкой на уровне группы строк для полного сканирования таблиц по индексу columnstore. Это позволяет повысить параллелизм чтения и записи при надлежащем использовании блокировки на уровне строки и на уровне группы строк.  
   
 ```sql  
 --Granular locking example  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a7c1e12e2e0253f0f22df8dd5ea841671adc94ec
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 60c298991f80586ed9b830b856b84b3640ac509e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643790"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170796"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Группы доступности Always On: взаимодействие (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "97643790"
 
 Следующие функции взаимодействуют с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с определенными ограничениями. Дополнительные сведения см. в статьях по ссылкам.
 
-- Межбазовые транзакции и распределенные транзакции ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] и Windows Server 2016). Дополнительные сведения см. в статье [Транзакции между базами данных и распределенные транзакции для групп доступности AlwaysOn и зеркального отображения базы данных (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
+- Межбазовые транзакции и распределенные транзакции ([!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] и Windows Server 2016). Дополнительные сведения см. в статье [Транзакции между базами данных и распределенные транзакции для групп доступности AlwaysOn и зеркального отображения базы данных (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 - [Сборщик данных системы статистики запроса](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) не может надежно работать в среде с недоступными для чтения вторичными базами данных. Чтобы использовать сборщик данных системы статистики запросов, разрешите [доступ на чтение](configure-read-only-access-on-an-availability-replica-sql-server.md) всех вторичных реплик группы доступности. 
 
 ## <a name="features-that-do-not-interoperate-with-always-on-availability-groups"></a><a name="NoInterop"></a> Функции, несовместимые с группами доступности AlwaysOn

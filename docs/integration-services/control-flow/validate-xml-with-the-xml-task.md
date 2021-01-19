@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01ccacdadefac0943e721c27d11287f28d66382b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 97e0ea80dcc5cffefc99cbbc928eace94ade942a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196078"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172596"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
@@ -37,7 +37,7 @@ ms.locfileid: "92196078"
  Функция проверки XML легко масштабируется в соответствии с размером XML-документов и количеством ошибок. Так как выходной файл имеет формат XML, можно запрашивать и анализировать содержащиеся в нем данные. Например, если выходные данные содержат большое количество ошибок, их можно сгруппировать, используя запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] , как описано в этом разделе.  
   
 > [!NOTE]
->  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) появилось свойство **ValidationDetails** в пакете обновления 2 (SP2) для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Кроме того, это свойство доступно в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+>  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) появилось свойство **ValidationDetails** в пакете обновления 2 (SP2) для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Кроме того, это свойство доступно в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Пример выходных данных в допустимом XML-файле  
  Ниже приведен пример допустимого выходного XML-файла с результатами проверки.  

@@ -18,12 +18,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 41525854d161d029beae6e0956bc11e536ab813b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bd6886f7ad5569d4eba40e9e603c9fccead17f71
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460307"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171226"
 ---
 # <a name="replication-agent-executables-concepts"></a>Основные понятия исполняемых файлов агента репликации
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "97460307"
 >  Символы обозначения конца строки в этих примерах были добавлены для повышения удобства чтения. В пакетном файле команды необходимо вводить в одной строке.  
   
 ### <a name="running-the-snapshot-agent"></a>Управление агентом моментальных снимков  
- Этот пример пакетного файла вызывает агент моментальных снимков из командной строки для создания моментального снимка публикации **AdvWorksSalesOrdersMerge**. (Приведенный ниже скрипт использует путь к файлам [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] (версия 130). Измените его так, чтобы путь к файлам соответствовал вашей версии [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]).  
+ Этот пример пакетного файла вызывает агент моментальных снимков из командной строки для создания моментального снимка публикации **AdvWorksSalesOrdersMerge**. (Приведенный ниже скрипт использует путь к файлам [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] (версия 130). Измените его так, чтобы путь к файлам соответствовал вашей версии [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]).  
   
 ```  
 REM -- Declare variables  

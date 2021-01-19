@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: c36d6718455f85314f98219b860a801984804d9d
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: 4acdd7f1d8b6a39af4054f30381665d1504bcb71
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975478"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171836"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Выбор метода обновления компонента Database Engine
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -86,10 +86,10 @@ ms.locfileid: "97975478"
  Например, этот подход можно использовать для обновления:  
   
 -   установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в неподдерживаемой операционной системе;    
--   установки SQL Server для архитектуры x86, поскольку [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и более поздних версий не поддерживает установки x86;   
+-   установки SQL Server для архитектуры x86, поскольку [!INCLUDE[ss2016](../../includes/sssql16-md.md)] и более поздних версий не поддерживает установки x86;   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на новом оборудовании или в новой версии операционной системы.    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в сочетании с консолидацией серверов;   
--   SQL Server 2005, поскольку [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и более поздних версий не поддерживает обновление выпуска SQL Server 2005 на месте. Дополнительные сведения см. в статье [Обновление SQL Server 2005](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
+-   SQL Server 2005, поскольку [!INCLUDE[ss2016](../../includes/sssql16-md.md)] и более поздних версий не поддерживает обновление выпуска SQL Server 2005 на месте. Дополнительные сведения см. в статье [Обновление SQL Server 2005](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
 
   
 Действия, необходимые для обновления методом новой установки, немного различаются в зависимости от того, используется ли подключенное хранилище или хранилище SAN.  

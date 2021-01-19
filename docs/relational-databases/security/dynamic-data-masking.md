@@ -11,12 +11,12 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 568b3f60205e94bd0b81ff5e80e8b3db372a4691
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 33fb069efc355ebaa8892a743b926f927d8a435e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480915"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171286"
 ---
 # <a name="dynamic-data-masking"></a>Динамическое маскирование данных
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "97480915"
 
 Назначение динамического маскирования данных — ограничение раскрытия конфиденциальных данных, при котором пользователи, у которых нет доступа к данным, не смогут их просматривать. Динамическое маскирование данных не сможет помешать пользователям подключиться к базе данных напрямую и выполнить запросы для получения фрагментов конфиденциальных данных. Динамическое маскирование данных дополняет другие функции безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (аудит, шифрование, безопасность на уровне строк...). Настоятельно рекомендуется использовать маскирование вместе с этими функциями для лучшей защиты конфиденциальных данных в базе данных.  
   
-Динамическое маскирование данных доступно в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]и настраивается с помощью команд [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о настройке динамического маскирования данных с помощью портала Azure см. в разделе [Приступая к работе с динамическим маскированием данных в базах данных SQL (портал Azure)](/azure/azure-sql/database/dynamic-data-masking-overview).  
+Динамическое маскирование данных доступно в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]и настраивается с помощью команд [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о настройке динамического маскирования данных с помощью портала Azure см. в разделе [Приступая к работе с динамическим маскированием данных в базах данных SQL (портал Azure)](/azure/azure-sql/database/dynamic-data-masking-overview).  
   
 ## <a name="defining-a-dynamic-data-mask"></a>Определение маски для динамического маскирования данных
  Правило маскирования можно задать для столбца в таблице, чтобы замаскировать данные в этом столбце. Доступны четыре типа маскирования.  

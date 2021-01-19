@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: cfcfd5e7b9ccd3447c775f4fe6275035b1747762
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f536d06a8351b514490f645c46922b3ff38e09e5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095778"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172436"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 
 ## <a name="arguments"></a>Аргументы
  *IF EXISTS*  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Условное удаление агрегатной функции только в том случае, если она уже существует.  
   

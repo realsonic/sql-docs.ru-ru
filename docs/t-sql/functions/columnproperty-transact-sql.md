@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 287b8ff6085658b863601fcc11a3e8c37cd50faa
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4bd06800692eb8f27494055dfa391169ced45803
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097285"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171366"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ COLUMNPROPERTY ( id , column , property )
 |**AllowsNull**|Разрешение использовать NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**ColumnId**|Значение идентификатора столбца, соответствующего **sys.columns.column_id**.|Идентификатор столбца<br /><br /> **Примечание**. При запросе множества столбцов могут появиться пропуски в последовательности значений идентификаторов столбцов.|  
 |**FullTextTypeColumn**|TYPE COLUMN в таблице, которая содержит информацию о типе документа столбца *column*.|Идентификатор полнотекстового TYPE COLUMN для выражений имен столбцов, переданных вторым параметром этой функции.|  
-|**GeneratedAlwaysType**|Значение столбца создано системой. Соответствует **sys.columns.generated_always_type**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.<br /><br /> 0: создается не всегда<br /><br /> 1: создается всегда как начало строки<br /><br /> 2: создается всегда как конец строки|  
+|**GeneratedAlwaysType**|Значение столбца создано системой. Соответствует **sys.columns.generated_always_type**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий.<br /><br /> 0: создается не всегда<br /><br /> 1: создается всегда как начало строки<br /><br /> 2: создается всегда как конец строки|  
 |**IsColumnSet**|Столбец представляет собой набор столбцов. Дополнительные сведения см. в статье [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsComputed**|Столбец является вычисляемым столбцом.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsCursorType**|Параметр процедуры имеет тип CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  

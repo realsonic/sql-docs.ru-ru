@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6595db2d6d9f0c2f4e3cbd50dcadbc16e379d05f
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: e293b33b0b20ab7545744c7d4e3f47351f8e0c29
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505430"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172196"
 ---
 # <a name="use-sql-server-objects"></a>Использование объектов SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,14 +100,14 @@ ms.locfileid: "96505430"
 |[SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)|Предоставляет сведения о том, как часто [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрашивает и получает доступ к свободным страницам.|  
 |[SQLServer:Catalog Metadata](../../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md)|Определяет объект диспетчера метаданных каталога для SQL Server.| 
 |[SQLServer: среда CLR](../../relational-databases/performance-monitor/sql-server-clr-object.md)|Предоставляет сведения о языке среды выполнения CLR.|  
-|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше).<br /><br /> Предоставляет информацию о группах строк и сегментах для индексов columnstore.|  
+|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше).<br /><br /> Предоставляет информацию о группах строк и сегментах для индексов columnstore.|  
 |[SQLServer:Cursor Manager by Type](../../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md)|Предоставляет сведения о курсорах.|  
 |[SQLServer:Cursor Manager Total](../../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md)|Предоставляет сведения о курсорах.|  
 |[SQLServer:Database Mirroring](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)|Предоставляет сведения о зеркальном отображении баз данных.|  
 |[SQLServer: базы данных](../../relational-databases/performance-monitor/sql-server-databases-object.md)|Предоставляет сведения о базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например объем доступного свободного места для журналов или количество активных транзакций в базе данных. Может существовать несколько экземпляров этого объекта.|  
 |[SQL Server: устаревшие функции](../../relational-databases/performance-monitor/sql-server-deprecated-features-object.md)|Подсчитывает частоту использования устаревших функций.|  
 |[SQLServer: статистика выполнений](../../relational-databases/performance-monitor/sql-server-execstatistics-object.md)|Предоставляет сведения о статистике выполнения.|  
-|[SQL Server:External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше).<br /><br /> Предоставляет сведения о выполнении внешних скриптов.|  
+|[SQL Server:External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше).<br /><br /> Предоставляет сведения о выполнении внешних скриптов.|  
 |[SQLServer:FileTable](../../relational-databases/performance-monitor/sql-server-filetable-object.md)|Статистика, связанная с FileTable и доступом без использования транзакций.|  
 |[SQLServer: General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|Предоставляет сведения об активности сервера в общем, например количество пользователей, подключенных к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQL Server: реплика доступности HADR](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|Предоставляет сведения о репликах доступности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .|  

@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 652a4b13db3fdd98b774a5c884e68848a3b0b847
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d02a4199775c519602e88573c7fbca72c1e8f9a9
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099574"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170486"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -738,7 +738,7 @@ DIRECTORY_NAME = *\<directory_name>*
 Дополнительные сведения см. в описании [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
 **\<mixed_page_allocation_option> ::=**      
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
 
 Управляет возможностью базы данных создавать начальные страницы с использованием смешанного экстента для первых восьми страниц таблицы или индекса.
 
@@ -764,7 +764,7 @@ FORCED
 Текущее состояние этого параметра можно определить по столбцу `is_parameterization_forced column` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 <a name="query-store"></a> **\<query_store_options> ::=**      
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
 
 ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 Указывает, включено ли хранилище запросов в этой базе данных, а также управляет удалением содержимого хранилища запросов. Дополнительные сведения: [Сценарии использования хранилища запросов](../../relational-databases/performance/query-store-usage-scenarios.md).
@@ -773,7 +773,7 @@ ON
 Включает хранилище запросов.
 
 OFF [ ( FORCED ) ]      
-Отключает хранилище запросов. OFF — значение по умолчанию. FORCED является необязательным. FORCED прерывает все выполняющиеся фоновые задачи хранилища запросов и пропускает синхронный сброс, когда хранилище запросов отключается. Приводит к максимально быстрому завершению работы хранилища запросов. FORCED применяется к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 и более поздним сборкам.
+Отключает хранилище запросов. OFF — значение по умолчанию. FORCED является необязательным. FORCED прерывает все выполняющиеся фоновые задачи хранилища запросов и пропускает синхронный сброс, когда хранилище запросов отключается. Приводит к максимально быстрому завершению работы хранилища запросов. FORCED применяется к [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 и более поздним сборкам.
 
 > [!NOTE]  
 > Хранилище запросов нельзя отключить в отдельной базе данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и эластичном пуле. При исполнении `ALTER DATABASE [database] SET QUERY_STORE = OFF` будет возвращено предупреждение `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
@@ -797,7 +797,7 @@ DATA_FLUSH_INTERVAL_SECONDS
 Определяет частоту, с которой данные, записанные в хранилище запросов, сохраняются на диск. Для оптимизации производительности данные, собранные хранилищем запросов, асинхронно записываются на диск. Для настройки частоты этой асинхронной передачи используется аргумент DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS имеет тип **bigint**. Значение по умолчанию ― **900** (15 минут).
 
 MAX_STORAGE_SIZE_MB     
-Определяет свободное место, выделенное для хранилища запросов. MAX_STORAGE_SIZE_MB имеет тип **bigint**. Значение по умолчанию — **100 МБ** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], значение по умолчанию равно **1 ГБ**.
+Определяет свободное место, выделенное для хранилища запросов. MAX_STORAGE_SIZE_MB имеет тип **bigint**. Значение по умолчанию — **100 МБ** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] по [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], значение по умолчанию равно **1 ГБ**.
 
 > [!NOTE]
 > Ограничение `MAX_STORAGE_SIZE_MB` не применяется строго. Размер хранилища проверяется только в том случае, если хранилище запросов записывает данные на диск. Этот интервал задается параметром `DATA_FLUSH_INTERVAL_SECONDS` или параметром диалогового окна хранилища запросов [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] **Интервал записи данных на диск**. Значение по умолчанию — 900 секунд (или 15 минут).
@@ -829,7 +829,7 @@ QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }
 > Курсоры, запросы в хранимых процедурах и скомпилированные в собственном коде запросы всегда записываются, если задан режим записи запроса ALL, AUTO или CUSTOM.
 
 ALL     
-Записывает все запросы. **ALL** — значение конфигурации по умолчанию для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]).
+Записывает все запросы. **ALL** — значение конфигурации по умолчанию для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] по [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]).
 
 AUTO     
 Записываются соответствующие запросы на основе показателя выполнения и объема потребления ресурсов. Это значение конфигурации по умолчанию для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -945,7 +945,7 @@ None
 Текущее состояние этого параметра можно определить, проверив значение столбца `page_verify_option` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) или свойство `IsTornPageDetectionEnabled` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<remote_data_archive_option> ::=**      
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
 
 Включает или отключает Stretch Database для базы данных. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -1206,7 +1206,7 @@ OFF
 **\<target_recovery_time_option> ::=**      
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
-Указывает частоту косвенных контрольных точек для каждой базы данных. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], значение по умолчанию для новых баз данных равно **1 минуте**. Оно означает, что база данных будет использовать косвенные контрольные точки. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра интервала для восстановления экземпляра сервера. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует 1 минуту для большинства систем.
+Указывает частоту косвенных контрольных точек для каждой базы данных. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], значение по умолчанию для новых баз данных равно **1 минуте**. Оно означает, что база данных будет использовать косвенные контрольные точки. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра интервала для восстановления экземпляра сервера. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует 1 минуту для большинства систем.
 
 TARGET_RECOVERY_TIME **=** *target_recovery_time* { SECONDS | MINUTES }     
 *target_recovery_time*     
@@ -1400,7 +1400,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>Д. Включение хранилища запросов
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
 
 В приведенном ниже примере включается хранилище запросов и настраиваются его параметры.
 
@@ -2178,7 +2178,7 @@ OFF
 Состояние этого параметра можно определить, проверив значение столбца `is_recursive_triggers_on` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) или свойства `IsRecursiveTriggersEnabled` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<target_recovery_time_option> ::=**      
-Указывает частоту косвенных контрольных точек для каждой базы данных. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] значение по умолчанию для новых баз данных равно 1 минуте, что указывает, что база данных будет использовать косвенные контрольные точки. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра интервала для восстановления экземпляра сервера. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует 1 минуту для большинства систем.
+Указывает частоту косвенных контрольных точек для каждой базы данных. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] значение по умолчанию для новых баз данных равно 1 минуте, что указывает, что база данных будет использовать косвенные контрольные точки. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра интервала для восстановления экземпляра сервера. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует 1 минуту для большинства систем.
 
 TARGET_RECOVERY_TIME **=** target_recovery_time { SECONDS | MINUTES }     
 *target_recovery_time*     
@@ -2999,7 +2999,7 @@ OFF
 Состояние этого параметра можно определить, проверив значение столбца `is_recursive_triggers_on` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) или свойства `IsRecursiveTriggersEnabled` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<target_recovery_time_option> ::=**      
-Указывает частоту косвенных контрольных точек для каждой базы данных. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], значение по умолчанию для новых баз данных равно **1 минуте**. Оно означает, что база данных будет использовать косвенные контрольные точки. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра интервала для восстановления экземпляра сервера. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует 1 минуту для большинства систем.
+Указывает частоту косвенных контрольных точек для каждой базы данных. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], значение по умолчанию для новых баз данных равно **1 минуте**. Оно означает, что база данных будет использовать косвенные контрольные точки. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра интервала для восстановления экземпляра сервера. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует 1 минуту для большинства систем.
 
 TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }     
 *target_recovery_time*     

@@ -27,12 +27,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8165d82fa5db393b3f2f66737910ba4de9d11a8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6af1077d46fa6378e0853eb570ba560d49e6eaec
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473885"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171346"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
 
@@ -97,7 +97,7 @@ ms.locfileid: "97473885"
 Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], одностраничное, многостраничное выделение и выделение CLR будут объединены в **распределителе страниц "Любой размер"** и будут учитываться в пределах для памяти, управляемых параметрами конфигурации *Макс. памяти сервера (МБ)* и *Мин. памяти сервера (МБ)* . Это изменение позволяет более точно измерять размер для всех требований к памяти, которые проходят через диспетчер памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 > [!IMPORTANT]
-> Внимательно ознакомьтесь с текущими параметрами конфигурации *Макс. памяти сервера (МБ)* и *Мин. памяти сервера (МБ)* после обновления до [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] с помощью [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], такие параметры конфигурации теперь включают и учитывают больше видов выделения памяти по сравнению с более ранними версиями. Эти изменения применяются к 32-разрядной и 64-разрядной версиям [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], а также 64-разрядным версиям [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+> Внимательно ознакомьтесь с текущими параметрами конфигурации *Макс. памяти сервера (МБ)* и *Мин. памяти сервера (МБ)* после обновления до [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] с помощью [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], такие параметры конфигурации теперь включают и учитывают больше видов выделения памяти по сравнению с более ранними версиями. Эти изменения применяются к 32-разрядной и 64-разрядной версиям [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], а также 64-разрядным версиям [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] через [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 
 В следующей таблице указано, управляется ли определенный тип выделения памяти параметрами конфигурации *Макс. памяти сервера (МБ)* и *Мин. памяти сервера (МБ)* .
 
@@ -341,9 +341,9 @@ FROM sys.dm_os_process_memory;
 Однако использование мьютексов может привести к состязанию, если из одного объекта памяти выделяется много потоков в режиме высокой конкуренции. Таким образом, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] имеет концепцию секционированных объектов памяти (PMO) и каждая секция представлена одним объектом CMemThread. Секционирование объекта памяти статически определено и не может быть изменено после создания. Так как шаблоны выделения памяти могут сильно различаться в зависимости от таких факторов, как использование оборудования и памяти, невозможно заранее подготовить идеальный шаблон секционирования. В подавляющем большинстве случаев достаточно использовать одну секцию, но в некоторых сценариях это может привести к состязанию, которое можно предотвратить только с помощью объекта памяти с высоким уровнем секционирования. Не рекомендуется секционировать каждый объект памяти, так как большее количество секций может негативно сказаться на эффективности и вызвать фрагментацию памяти.
 
 > [!NOTE]
-> Прежде чем [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], можно использовать флаг трассировки 8048, чтобы превратить PMO на основе узла в PMO на основе ЦП. Начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], эта реакция является динамической и управляется подсистемой.
+> Прежде чем [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], можно использовать флаг трассировки 8048, чтобы превратить PMO на основе узла в PMO на основе ЦП. Начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], эта реакция является динамической и управляется подсистемой.
 
-Начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], [!INCLUDE[ssde_md](../includes/ssde_md.md)] может динамически обнаруживать состязание в конкретном объекте CMemThread и менять реализацию объекта между вариантами на основе узла или на основе ЦП.  После изменения реализации PMO остается в этом состоянии до тех пор, пока не будет перезапущен процесс [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Состязание в CMemThread можно обнаружить по большому времени ожидания CMEMTHREAD в динамическом административном представлении [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), а также по содержанию столбцов динамического административного представления [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) *contention_factor*, *partition_type*, *exclusive_allocations_count* и *waiting_tasks_count*.
+Начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], [!INCLUDE[ssde_md](../includes/ssde_md.md)] может динамически обнаруживать состязание в конкретном объекте CMemThread и менять реализацию объекта между вариантами на основе узла или на основе ЦП.  После изменения реализации PMO остается в этом состоянии до тех пор, пока не будет перезапущен процесс [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Состязание в CMemThread можно обнаружить по большому времени ожидания CMEMTHREAD в динамическом административном представлении [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), а также по содержанию столбцов динамического административного представления [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) *contention_factor*, *partition_type*, *exclusive_allocations_count* и *waiting_tasks_count*.
 
 ## <a name="see-also"></a>См. также:
 [Параметры конфигурации сервера «Server Memory»](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

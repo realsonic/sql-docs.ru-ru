@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23f9507c0db019383aa1cef148a169d83e4a53be
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 74a6b4985ab31d69813e305c92ee80ae8bca75d2
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100815"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171646"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ ms.locfileid: "98100815"
 - Виртуализация и загрузка данных с помощью [PolyBase][intro_pb]
 - Операции массовой загрузки с помощью `BULK INSERT` или `OPENROWSET`
 
-**Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
+**Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -91,8 +91,8 @@ WITH
 
 | Внешний источник данных    | Префикс расположения | Путь к расположению                                         | Поддерживаемые расположения по продукту или службе |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
-| Cloudera или Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]                       |
-| Учетная запись хранения Azure (v2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] иерархическое пространство имен **не поддерживается** |
+| Cloudera или Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]                       |
+| Учетная запись хранения Azure (v2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] иерархическое пространство имен **не поддерживается** |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | Oracle;                  | `oracle`        | `<server_name>[:port]`                                | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
@@ -212,7 +212,7 @@ PolyBase поддерживает проверку подлинности на �
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples-starting-with-sssql15"></a>Примеры (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
+## <a name="examples-starting-with-sssql15"></a>Примеры (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
 
 > [!IMPORTANT]
 > Сведения о том, как установить и включить PolyBase, см. в разделе [Установка PolyBase в Windows](../../relational-databases/polybase/polybase-installation.md).

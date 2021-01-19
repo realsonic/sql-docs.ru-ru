@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b650e0fa1d1d6c02e657d3d5860908164ed5cd91
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 57665811cd12b4c31effb82a91a722780a774874
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099580"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170456"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98099580"
 Преобразование таблицы rowstore в кластеризованный индекс columnstore или создание некластеризованного индекса columnstore. Используйте индекс columnstore для эффективного выполнения операционной аналитики в реальном времени в рабочей нагрузке OLTP или повышения производительности сжатия данных и запросов для рабочих нагрузок хранилищ данных.  
   
 > [!NOTE]
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] таблицы можно создавать как кластеризованный индекс columnstore.   Больше не нужно сначала создавать таблицу rowstore, а затем преобразовывать ее в кластеризованный индекс columnstore.  
+> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] таблицы можно создавать как кластеризованный индекс columnstore.   Больше не нужно сначала создавать таблицу rowstore, а затем преобразовывать ее в кластеризованный индекс columnstore.  
 
 > [!TIP]
 > Дополнительные сведения о правилах проектирования индексов см. в статье [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md).
@@ -120,10 +120,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 |Параметр| CLUSTERED | NONCLUSTERED |
 |---|---|---|
-| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
-| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
+| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
+| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | 
 | ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
-| WHERE, предложение | Недоступно | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| WHERE, предложение | Недоступно | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
 
 Все параметры доступны в Базе данных SQL Azure.
 
@@ -369,7 +369,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 **Столбцы, которые используют следующие типы данных, не могут быть включены в индекс columnstore:**
 -   ntext, text, и image  
--   nvarchar(max), varchar(max) и varbinary(max) (область применения: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и предыдущие версии и некластеризованные индексы columnstore) 
+-   nvarchar(max), varchar(max) и varbinary(max) (область применения: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и предыдущие версии и некластеризованные индексы columnstore) 
 -   rowversion (и timestamp)  
 -   sql_variant  
 -   Типы CLR (hierarchyid и пространственные типы)  
@@ -387,7 +387,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 
 
 > [!NOTE]  
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], вы можете создавать некластеризованный индекс columnstore для индексированного представления.  
+> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], вы можете создавать некластеризованный индекс columnstore для индексированного представления.  
 
 
  **Индексы columnstore нельзя использовать вместе со следующими функциями:**  
@@ -453,7 +453,7 @@ GO
 ```  
   
 ### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>В. Обработка некластеризованных индексов при преобразовании таблицы rowstore в индекс columnstore.  
- В этом примере показано, как обрабатывать некластеризованные индексы при преобразовании таблицы rowstore в индекс columnstore. На самом деле, начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] никаких специальных действий не требуется. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически определяет и перестраивает некластеризованные индексы в новый кластеризованный индекс columnstore.  
+ В этом примере показано, как обрабатывать некластеризованные индексы при преобразовании таблицы rowstore в индекс columnstore. На самом деле, начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] никаких специальных действий не требуется. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически определяет и перестраивает некластеризованные индексы в новый кластеризованный индекс columnstore.  
   
  Если вы хотите удалить некластеризованные индексы, используйте инструкцию DROP INDEX до создания индекса columnstore. Параметр DROP EXISTING удаляет только преобразуемый кластеризованный индекс. Он не удаляет некластеризованные индексы.  
   
@@ -582,7 +582,7 @@ ON MyFactTable;
  Есть два способа полностью перестроить кластеризованный индекс columnstore. Можно использовать инструкцию CREATE CLUSTERED COLUMNSTORE INDEX или [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) с параметром REBUILD. Оба метода дают одинаковые результаты.  
   
 > [!NOTE]  
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], используйте `ALTER INDEX...REORGANIZE` вместо перестраивания с помощью методов, описанных в этом примере.  
+> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], используйте `ALTER INDEX...REORGANIZE` вместо перестраивания с помощью методов, описанных в этом примере.  
   
 ```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  

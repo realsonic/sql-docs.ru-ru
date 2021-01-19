@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9e0d729d951de184aa16717e784f14ae244639d8
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 12c1273473fd91c0ea5222add0288fac1b06f37b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098519"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170596"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -135,7 +135,7 @@ CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** 
 |ACP|Столбцы типа **char**, **varchar** или **text** преобразуются из кодовой страницы [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |OEM (по умолчанию)|Столбцы типа **char**, **varchar** или **text** преобразуются из кодовой страницы OEM в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |RAW|Преобразование кодовой страницы не производится. Это самый быстрый режим.|
-|*code_page*|Номер кодовой страницы, например 850.<br /><br /> **&#42;&#42; Важно! &#42;&#42;** Версии до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|
+|*code_page*|Номер кодовой страницы, например 850.<br /><br /> **&#42;&#42; Важно! &#42;&#42;** Версии до [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|
 | &nbsp; | &nbsp; |
 
 DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenative'** } Указывает, что инструкция BULK INSERT выполняет операцию импорта с использованием указанного типа файла данных.

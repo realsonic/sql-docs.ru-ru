@@ -11,12 +11,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 73dcacb73703ab2138c36bcc7c849b5a6a8e9fbe
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ab5a2352358fdb678241425e0ca5e8f999d8a2f2
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483726"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170176"
 ---
 # <a name="install-sql-server-on-server-core"></a>Установка SQL Server в Server Core
 
@@ -74,7 +74,7 @@ ms.locfileid: "97483726"
 |Выпуск Windows|Windows Server 2019 Datacenter <br/><br/> Windows Server 2019 Standard <br /><br />  [!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
 ## <a name="upgrade"></a>Обновление 
- В установках Server Core поддерживается обновление с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
+ В установках Server Core поддерживается обновление с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .  
   
 ## <a name="install"></a>Установка  
  [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] не поддерживает установку с помощью мастера установки в операционной системе Server Core. При установке на Server Core программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает полный тихий режим без вывода сообщений с использованием параметра /Q или простой режим без вывода сообщений с использованием параметра /QS. Дополнительные сведения см. в разделе [Установка SQL Server из командной строки](./install-sql-server-from-the-command-prompt.md).  

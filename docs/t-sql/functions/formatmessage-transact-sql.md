@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5987f2091f78df06f34e5804e7b934442c8842ca
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 27fa2389740a7b2d15cb019d86ba1d02559ce6d4
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98088254"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172666"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,12 +49,12 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' | @msg_variable} , [ param_value 
  Идентификатор сообщения, хранящегося в sys.messages. Если *msg_number* <= 13000 или сообщение отсутствует в sys.messages, возвращается значение NULL.  
   
  *msg_string*  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Строка, заключенная в одинарные кавычки и содержащая заполнители значений параметров. Это сообщение об ошибке не должно содержать более 2 047 символов. Если сообщение содержит 2 048 и более символов, то отображаются только первые 2 044, а за ними появляется знак многоточия, показывающий, что сообщение было усечено. Обратите внимание, что параметры подстановки содержат больше символов, чем видно на выходе из-за внутренней структуры хранения.  Сведения о структуре сообщения и использовании параметров в строке см. в описании аргумента *msg_str* в статье [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md).  
 
  *@msg_variable*  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Переменная типа nvarchar или varchar, которая содержит строку, удовлетворяющую критериям для *msg_string* выше.  
   
@@ -85,7 +85,7 @@ SELECT @var1;
   
 ### <a name="b-example-with-a-message-string"></a>Б. Пример со строкой сообщения  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  В приведенном ниже примере в качестве входных данных принимается строка.  
   

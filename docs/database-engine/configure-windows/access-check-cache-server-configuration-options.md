@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5790d5eb416f789bbe67f10d28f18a375b4c572
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 893400411c6f3d2faf6313923aa0f6127a3f2cf0
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158932"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171076"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>Параметры конфигурации сервера «access check cache»
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "86158932"
 
 Параметр **доступ к квоте кэша проверки** контролирует количество записей, хранящихся в кэше результатов проверки доступа. При достижении максимального количества записей самые старые записи удаляются из кэша результатов проверки доступа.
   
-Значение по умолчанию 0 указывает на то, что этими параметрами управляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], значения по умолчанию преобразуются в следующие внутренние конфигурации:
+Значение по умолчанию 0 указывает на то, что этими параметрами управляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], значения по умолчанию преобразуются в следующие внутренние конфигурации:
 -   Для счетчика контейнеров кэша проверки доступа значение 0 устанавливает значение по умолчанию, которое составляет 256 сегментов.
 -   Для квоты кэша проверки доступа значение 0 устанавливает значение по умолчанию, которое составляет 1024 записи.
 

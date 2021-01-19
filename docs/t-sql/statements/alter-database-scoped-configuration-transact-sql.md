@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest
-ms.openlocfilehash: 85c4646af6f5801bd617baef47aecf913374ae95
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8d314e90bbe869dec9ccdc31c45996c4834fc829
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099603"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170426"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -170,7 +170,7 @@ LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 
 > [!TIP]
 > Для выполнения этого на уровне запросов добавьте [указание запроса](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), для выполнения этой задачи на уровне запроса добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**, вместо того чтобы использовать флаг трассировки.
+> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1), для выполнения этой задачи на уровне запроса добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**, вместо того чтобы использовать флаг трассировки.
 
 PRIMARY
 
@@ -182,7 +182,7 @@ PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
 > [!TIP]
 > Для выполнения этой задачи на уровне запроса добавьте **указание запроса** [OPTIMIZE FOR UNKNOWN](../../t-sql/queries/hints-transact-sql-query.md).
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), для выполнения этой задачи на уровне запроса также доступно [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**.
+> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1), для выполнения этой задачи на уровне запроса также доступно [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**.
 
 PRIMARY
 
@@ -196,7 +196,7 @@ PRIMARY
 
 > [!TIP]
 > Для выполнения этого на уровне запросов добавьте [указание запроса](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) для выполнения этой задачи на уровне запроса добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) USE HINT, вместо того чтобы использовать флаг трассировки.
+> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) для выполнения этой задачи на уровне запроса добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) USE HINT, вместо того чтобы использовать флаг трассировки.
 
 PRIMARY
 
@@ -466,7 +466,7 @@ ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
 
 ### <a name="dacfx"></a>DacFx
 
-Так как инструкция `ALTER DATABASE SCOPED CONFIGURATION` — это новая функция в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]), которая влияет на схему базы данных, экспорт схемы (с данными или без них) невозможно импортировать в более старую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Например, экспорт в [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) или [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md#bacpac) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.
+Так как инструкция `ALTER DATABASE SCOPED CONFIGURATION` — это новая функция в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]), которая влияет на схему базы данных, экспорт схемы (с данными или без них) невозможно импортировать в более старую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Например, экспорт в [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) или [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md#bacpac) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.
 
 ### <a name="elevate_online"></a>ELEVATE_ONLINE
 

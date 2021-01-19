@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 24d5c3ff3e1b1c3f5c4be81af7a51e525dd102f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e61f723ddbc3010cc705c076675b731482fdee6b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97418137"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171846"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 
@@ -31,7 +31,7 @@ ms.locfileid: "97418137"
 Сведения о работе с хранилищем запросов в Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в разделе [Работа с хранилищем запросов в Базе данных SQL Azure](best-practice-with-the-query-store.md#Insight).
 
 > [!IMPORTANT]
-> Если вы используете хранилище запросов для JIT-анализа рабочих нагрузок в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], запланируйте установку исправлений масштабируемости производительности (см. [статью базы знаний 4340759](https://support.microsoft.com/help/4340759)) как можно скорее.
+> Если вы используете хранилище запросов для JIT-анализа рабочих нагрузок в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], запланируйте установку исправлений масштабируемости производительности (см. [статью базы знаний 4340759](https://support.microsoft.com/help/4340759)) как можно скорее.
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Включение хранилища запросов
 

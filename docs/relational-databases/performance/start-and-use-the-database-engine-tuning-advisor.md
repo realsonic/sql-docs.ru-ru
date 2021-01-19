@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9bf93bf9b59df77efe905a6c0debb722c63c3bbb
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 5b83b5781d8c40c0acc6ee79ab0730c249def7c5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643064"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172526"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Запуск и использование помощника по настройке ядра СУБД
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "97643064"
 
       ||  
       |-|  
-      |**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.|  
+      |**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий.|  
 
   
 -   Использовать кэш планов в качестве рабочей нагрузки. Это позволяет не создавать рабочую нагрузку вручную. Дополнительные сведения см. далее в подразделе [Настройка базы данных](#Tune) .  

@@ -14,12 +14,12 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 41b69dfc9cc5564025fd7b28d14094389ff52450
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460059"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171696"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Приступая к работе с разрешениями Database Engine
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -100,7 +100,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `AUTHORIZATION` должен быть равен `GRANT`, `REVOKE` или `DENY`.  
   
--   Предложение `PERMISSION` определяет, какое действие разрешено или запрещено. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] можно указать 230 разрешений. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] предусмотрено меньше разрешений, так как некоторые действия не относятся к Azure. Разрешения перечисляются в разделе [Разрешения (компонент Database Engine)](../../../relational-databases/security/permissions-database-engine.md) и на схеме, упоминаемой ниже.  
+-   Предложение `PERMISSION` определяет, какое действие разрешено или запрещено. [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] можно указать 230 разрешений. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] предусмотрено меньше разрешений, так как некоторые действия не относятся к Azure. Разрешения перечисляются в разделе [Разрешения (компонент Database Engine)](../../../relational-databases/security/permissions-database-engine.md) и на схеме, упоминаемой ниже.  
   
 -   `ON SECURABLE::NAME` представляет тип защищаемого объекта (сервер, объект сервера, база данных или объект базы данных) и его имя. Некоторые разрешения не требуют указания `ON SECURABLE::NAME` , так как оно может быть однозначным или недопустимым в контексте. Например, для разрешения `CREATE TABLE` не требуется предложение `ON SECURABLE::NAME`. (Инструкция `GRANT CREATE TABLE TO Mary;` позволяет пользователю Mary создавать таблицы.)  
   
@@ -157,7 +157,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  Первое указанное выше разрешение (`GRANT SELECT ON OBJECT::Region TO Ted;`) — наиболее гранулярное, то есть эта инструкция предоставляет минимально возможное разрешение `SELECT`. Вместе с ним не предоставляются разрешения для каких-либо вложенных объектов. Рекомендуется всегда предоставлять минимально возможное разрешение, однако (напротив) на более высоких уровнях для упрощения системы предоставления разрешений. Таким образом, если пользователю Ted нужны разрешения для всей схемы, предоставьте разрешение `SELECT` один раз на уровне схемы, вместо того чтобы предоставлять `SELECT` на уровне таблицы или представления несколько раз. Структура базы данных имеет большое влияние на успешность применения этой стратегии. Стратегия наиболее эффективна, когда объекты в базе данных, которым требуются одинаковые разрешения, включаются в одну схему.  
   
 ## <a name="list-of-permissions"></a>Список разрешений  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] предусмотрено 230 разрешений. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] предусмотрено 219 разрешений. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] предусмотрено 214 разрешений. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] предусмотрено 195 разрешений. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]и [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] разрешений меньше, так как они определяют только часть ядра СУБД, тогда как отдельные их разрешения не применяются к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+ [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] предусмотрено 230 разрешений. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] предусмотрено 219 разрешений. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] предусмотрено 214 разрешений. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] предусмотрено 195 разрешений. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]и [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] разрешений меньше, так как они определяют только часть ядра СУБД, тогда как отдельные их разрешения не применяются к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
  
  [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  

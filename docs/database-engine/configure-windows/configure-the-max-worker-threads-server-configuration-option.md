@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89da087dd829642653fee6ae8648af3c1c00c2a0
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 4d95d8f774d2b9daba6bd2a0e7a179dd901ef0ac
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878900"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171046"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Настройка параметра конфигурации сервера max worker threads
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "97878900"
   
 -   В следующей таблице показано автоматически настроенное число рабочих потоков (если задано значение, равное 0) для различных сочетаний ЦП, архитектуры компьютера и версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием формулы: **_Максимальное число рабочих потоков по умолчанию_ + ((* логические ЦП* – 4) * *рабочие потоки на ЦП*)**.  
   
-    |Число процессоров|32-разрядный компьютер (до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|64-разрядный компьютер (до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|64-разрядный компьютер (начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
+    |Число процессоров|32-разрядный компьютер (до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|64-разрядный компьютер (до [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1)|64-разрядный компьютер (начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  
     |\< = 4|256|512|512|   
     |8|288|576|576|   
@@ -79,14 +79,14 @@ ms.locfileid: "97878900"
     |128|1248|2496|4480|   
     |256|2272|4544|8576|   
     
-    До [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 *Число рабочих потоков на ЦП* зависит только от архитектуры (32- или 64-разрядная):
+    До [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 *Число рабочих потоков на ЦП* зависит только от архитектуры (32- или 64-разрядная):
     
     |Число процессоров|32-разрядный компьютер <sup>1</sup>|64-разрядный компьютер|   
     |------------|------------|------------|   
     |\< = 4|256|512|   
     |\> 4|256 + ((число логических ЦП – 4) * 8)|512 <sup>2</sup> + ((число логических ЦП – 4) * 16)|   
     
-    Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], *Число рабочих потоков на ЦП* зависит от архитектуры и количества процессоров (от 4 до 64 или больше 64):
+    Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], *Число рабочих потоков на ЦП* зависит от архитектуры и количества процессоров (от 4 до 64 или больше 64):
     
     |Число процессоров|32-разрядный компьютер <sup>1</sup>|64-разрядный компьютер|   
     |------------|------------|------------|   
@@ -94,7 +94,7 @@ ms.locfileid: "97878900"
     |\> 4 и \< = 64|256 + ((число логических ЦП – 4) * 8)|512 <sup>2</sup> + ((число логических ЦП – 4) * 16)|   
     |\> 64|256 + ((число логических ЦП – 4) * 32)|512 <sup>2</sup> + ((число логических ЦП – 4) * 32)|   
   
-    <sup>1</sup> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] больше нельзя устанавливать в 32-разрядной операционной системе. Значения для 32-разрядного компьютера приведены, чтобы помочь клиентам, работающим с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более ранних версий. Для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], работающего на 32-разрядном компьютере, рекомендуется ограничить число рабочих потоков до 1024.
+    <sup>1</sup> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] больше нельзя устанавливать в 32-разрядной операционной системе. Значения для 32-разрядного компьютера приведены, чтобы помочь клиентам, работающим с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более ранних версий. Для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], работающего на 32-разрядном компьютере, рекомендуется ограничить число рабочих потоков до 1024.
     
     <sup>2</sup> Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], *Максимальное число рабочих потоков по умолчанию* делится на 2 для компьютеров с объемом памяти менее 2 ГБ.
   

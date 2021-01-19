@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c88b7acdabad8ff50b15a1dc840b9acf48e91d89
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 446e9fa7dc252da75bc1c14ecf3fbe0fdf92b3e8
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464125"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170326"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -240,7 +240,7 @@ SID = *sid*
  Применимо только для пользователей с паролями (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) в автономной базе данных. Указывает идентификатор SID нового пользователя базы данных. Если этот параметр не выбран, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает идентификатор SID автоматически. Используйте параметр идентификатора SID для создания пользователей в нескольких базах данных с одинаковыми идентификаторами SID. Это удобно при создании пользователей в нескольких базах данных для подготовки обработки отказа AlwaysOn. Чтобы определить идентификатор SID пользователя, выполните запрос sys.database_principals.  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю массово копировать зашифрованные данные между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF.  
   
@@ -458,7 +458,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>З. Создание пользователя для копирования зашифрованных данных  
  В следующем примере создается пользователь, который может копировать данные, защищенные компонентом Always Encrypted, из одного набора таблиц, содержащего зашифрованные столбцы, в другой набор таблиц с зашифрованными столбцами (в той же или другой базе данных).  Дополнительные сведения см. в разделе [Перенос конфиденциальных данных с помощью функции Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql  
 CREATE USER [Chin]   

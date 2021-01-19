@@ -12,17 +12,17 @@ ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1280b9f127fe6c56d85002687e2ff0ee84778265
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8052a98ff5a2e17f1da6a4b804130bf8dd6929b1
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465455"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172636"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Изменение скомпилированных в собственном коде модулей T-SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] можно выполнять операции [!INCLUDE[tsql](../../includes/tsql-md.md)] применительно к скомпилированным в собственном коде хранимым процедурам и другим скомпилированным в собственном коде модулям `ALTER`, например определяемым пользователем скалярным функциям и триггерам, с помощью инструкции `ALTER`.  
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] можно выполнять операции [!INCLUDE[tsql](../../includes/tsql-md.md)] применительно к скомпилированным в собственном коде хранимым процедурам и другим скомпилированным в собственном коде модулям `ALTER`, например определяемым пользователем скалярным функциям и триггерам, с помощью инструкции `ALTER`.  
   
 При выполнении инструкции `ALTER` скомпилированный в собственном коде модуль [!INCLUDE[tsql](../../includes/tsql-md.md)] перекомпилируется с использованием нового определения. Во время перекомпиляции старую версию модуля все еще можно выполнить. После завершения компиляции выполнение модуля постепенно завершается, и устанавливается новая версия модуля. При изменении скомпилированного в собственном коде модуля [!INCLUDE[tsql](../../includes/tsql-md.md)] можно изменить перечисленные ниже параметры.  
   

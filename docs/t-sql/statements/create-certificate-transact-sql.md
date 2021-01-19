@@ -28,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 793adfcb5bbb59dc836bd7ec05728a9ccf979200
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 238fcde63bf0af459ab741f54a411fefb317bfe9
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471985"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170356"
 ---
 # <a name="create-certificate-transact-sql"></a>Инструкция CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-pdw](../../includes/applies-to-version/sql-asdb-pdw.md)]
@@ -168,7 +168,7 @@ CREATE CERTIFICATE certificate_name
 ## <a name="remarks"></a>Комментарии  
  Сертификат — это защищаемый объект уровня базы данных, соответствующий стандарту X.509 и поддерживающий поля X.509 V1. Инструкция `CREATE CERTIFICATE` может загрузить сертификат из файла, двоичной константы или сборки. Она также может создать пару ключей и самостоятельно подписанный сертификат.  
   
- Закрытый ключ должен быть \<= 2500 байт в зашифрованном формате. Закрытые ключи, созданные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеют длину 1024 бит до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], и 2048 бит, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Закрытые ключи, импортированные из внешнего источника, имеют минимальную длину в 384 бит и максимальную длину в 4 096 бит. Длина импортируемого закрытого ключа должна быть кратной 64 бит. Для сертификатов, используемых для прозрачного шифрования данных, размер закрытого ключа ограничен 3456 битами.  
+ Закрытый ключ должен быть \<= 2500 байт в зашифрованном формате. Закрытые ключи, созданные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеют длину 1024 бит до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], и 2048 бит, начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Закрытые ключи, импортированные из внешнего источника, имеют минимальную длину в 384 бит и максимальную длину в 4 096 бит. Длина импортируемого закрытого ключа должна быть кратной 64 бит. Для сертификатов, используемых для прозрачного шифрования данных, размер закрытого ключа ограничен 3456 битами.  
   
  Сохраняется весь серийный номер сертификата, но в представлении каталога sys.certificates отображаются только первые 16 байт.  
   
@@ -187,7 +187,7 @@ CREATE CERTIFICATE certificate_name
   
  Двоичное описание сертификата можно создать с помощью функций [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) и [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md). Пример использования функций **CERTPRIVATEKEY** и **CERTENCODED** для копирования сертификата в другую базу данных см. в примере Б в руководстве по [использованию CERTENCODED в Transact-SQL](../../t-sql/functions/certencoded-transact-sql.md).  
 
-Алгоритмы MD2, MD4, MD5, SHA и SHA1 отмечены как нерекомендуемые в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. В версиях, предшествующих [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], самозаверяющий сертификат создается с помощью SHA1. Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] самозаверяющий сертификат создается с помощью SHA2_256.
+Алгоритмы MD2, MD4, MD5, SHA и SHA1 отмечены как нерекомендуемые в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. В версиях, предшествующих [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], самозаверяющий сертификат создается с помощью SHA1. Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] самозаверяющий сертификат создается с помощью SHA2_256.
 
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `CREATE CERTIFICATE` на базу данных. Сертификаты могут принадлежать только именам входа Windows, именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и ролям приложений. Сертификаты не могут принадлежать группам и ролям.  

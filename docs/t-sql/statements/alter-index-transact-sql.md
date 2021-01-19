@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7854c78f0643294b1b5111c1b6f2e0b0ef07afa6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f04986f085653957bd685ae0db72a14a109e8079
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099608"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170756"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -293,7 +293,7 @@ LOB_COMPACTION = OFF
 -   REORGANIZE не требуется для перемещения разностных групп строк CLOSED в сжатые группы строк. Для сжатия разностных групп строк CLOSE периодически активируется фоновый процесс перемещения кортежей (TM). REORGANIZE рекомендуется использовать при отставании процесса перемещения кортежей. REORGANIZE может сжимать группы строк более агрессивно.  
 -   Сведения о сжатии всех групп строк OPEN и CLOSED см. далее в разделе о параметре `REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS)`.  
   
-Для индексов columnstore в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] инструкция REORGANIZE выполняет следующие дополнительные оптимизации дефрагментации с подключением к сети:  
+Для индексов columnstore в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] инструкция REORGANIZE выполняет следующие дополнительные оптимизации дефрагментации с подключением к сети:  
   
 -   Физически удаляет строки из группы строк, если были логически удалено 10 % или более строк. Удаленные байты освобождают место на физическом носителе. Например, если в сжатой группе из одного миллиона строк удалено 100 тысяч строк, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удалит эти строки и выполнит повторное сжатие группы с 900 тысяч строк. Группа будет сохранена в хранилище за счет удаления удаленных строк.  
   
@@ -304,7 +304,7 @@ LOB_COMPACTION = OFF
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  Применимо к индексам columnstore. 
 
- **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 COMPRESS_ALL_ROW_GROUPS позволяет принудительно отправлять разностные группы строк OPEN или CLOSED в columnstore. При использовании этого параметра не требуется перестраивать индекс columnstore для очистки разностных групп строк.  Это, в сочетании и другими функциями дефрагментации удаления и слияния, отменяет необходимость перестроения индекса в большинстве случаев.    
 
@@ -410,7 +410,7 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
  Для XML-индекса или пространственного индекса поддерживается только значение `ONLINE = OFF`. Если для ONLINE задано состояние ON, возникает ошибка.  
   
 > [!IMPORTANT]
-> Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статьях [Возможности, поддерживаемые различными выпусками [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) и [Возможности, поддерживаемые различными выпусками SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+> Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статьях [Возможности, поддерживаемые различными выпусками [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) и [Возможности, поддерживаемые различными выпусками SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  ON  
  Долгосрочные блокировки таблицы не поддерживаются во время операций с индексами. Во время главной фазы операций с индексами только блокировка с намерением совмещаемого доступа (IS) удерживается в исходной таблице. Это позволяет продолжить выполнение запросов или обновлений для базовых таблиц и индексов. В начале операции совмещаемая блокировка (S) исходного объекта поддерживается в течение очень короткого времени. Если создается некластеризованный индекс, то по завершении операции на короткое время создается блокировка типа S (совмещаемая) для источника. Блокировка типа SCH-M (изменения схемы) запрашивается, если кластеризованный индекс создается или удаляется в режиме в сети либо, происходит перестроение кластеризованного или некластеризованного индекса. При создании индекса для временной локальной таблицы параметр ONLINE не может принимать значение ON.  
@@ -512,7 +512,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
 
-**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])  
+**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])  
   
  Для таблицы на основе диска значение delay указывает минимальное количество минут, в течение которых разностная группа строк в состоянии CLOSED должна оставаться в разностной группе строк до того, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сможет преобразовать ее в сжатую группу строк. Так как таблицы на основе диска не отслеживают время вставки и обновления отдельных строк, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяется задержка к разностным группам строк в состоянии CLOSED.  
   
@@ -835,7 +835,7 @@ CREATE TABLE cci_target (
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
- Используйте параметр TABLOCK для параллельной вставки строк. Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], операция INSERT INTO может выполняться параллельно с TABLOCK.  
+ Используйте параметр TABLOCK для параллельной вставки строк. Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], операция INSERT INTO может выполняться параллельно с TABLOCK.  
   
 ```sql  
 INSERT INTO cci_target WITH (TABLOCK) 
@@ -875,7 +875,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>В. Сжатие всех разностных групп строк OPEN и CLOSED в columnstore  
- **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+ **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Команда REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) сжимает каждую разностную группу строк OPEN и CLOSED в columnstore как сжатую группу строк. При этом очищается хранилище deltastore и все строки принудительно сжимаются в columnstore. Это особенно полезно после выполнения множества операций вставки, так как они хранят строки в одном или нескольких разностных группах строк.  
   
@@ -893,10 +893,10 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="d-defragment-a-columnstore-index-online"></a>Г. Дефрагментация индекса columnstore в режиме "в сети"  
  Не применяется к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], REORGANIZE позволяет не только сжимать разностные групп строк в columnstore. Эта команда также выполняет дефрагментацию в режиме "в сети". Сначала она уменьшает размер columnstore путем физического удаления удаленных строк, если в группе строк было удалено 10 % или более строк.  Затем она объединяет группы строк для формирования более крупных групп, каждая из которых может содержать до 1 024 576 строк.  Все измененные группы строк проходят повторное сжатие.  
+ Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], REORGANIZE позволяет не только сжимать разностные групп строк в columnstore. Эта команда также выполняет дефрагментацию в режиме "в сети". Сначала она уменьшает размер columnstore путем физического удаления удаленных строк, если в группе строк было удалено 10 % или более строк.  Затем она объединяет группы строк для формирования более крупных групп, каждая из которых может содержать до 1 024 576 строк.  Все измененные группы строк проходят повторное сжатие.  
   
 > [!NOTE]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], в большинстве случаев больше не требуется перестраивать индекса columnstore, так как REORGANIZE физически удаляет удаленные строки и объединяет группы строк. Параметр COMPRESS_ALL_ROW_GROUPS принудительно отправляет все разностные группы строк OPEN или CLOSED в columnstore. Ранее это можно было сделать только с помощью перестроения. REORGANIZE работает в режиме "в сети" и выполняется в фоне, поэтому запросы могут продолжаться по мере выполнения операции.  
+> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], в большинстве случаев больше не требуется перестраивать индекса columnstore, так как REORGANIZE физически удаляет удаленные строки и объединяет группы строк. Параметр COMPRESS_ALL_ROW_GROUPS принудительно отправляет все разностные группы строк OPEN или CLOSED в columnstore. Ранее это можно было сделать только с помощью перестроения. REORGANIZE работает в режиме "в сети" и выполняется в фоне, поэтому запросы могут продолжаться по мере выполнения операции.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -908,7 +908,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
 Область применения: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])   
   
 > [!TIP]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], рекомендуется использовать инструкцию ALTER INDEX REORGANIZE вместо инструкции ALTER INDEX REBUILD.  
+> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], рекомендуется использовать инструкцию ALTER INDEX REORGANIZE вместо инструкции ALTER INDEX REBUILD.  
   
 > [!NOTE]
 > В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] REORGANIZE используется только для сжатия групп строк CLOSED в columnstore. Единственным способом выполнения операций дефрагментация и принудительной отправки всех разностных групп строк в columnstore является перестроение индекса.  
@@ -946,7 +946,7 @@ SELECT * FROM sys.column_store_row_groups;
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>Е. Перестроение секции кластеризованного индекса columnstore в режиме "вне сети"  
  **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
  
- Для перестроения секции большого кластеризованного индекса columnstore используйте инструкцию ALTER INDEX REBUILD с параметром секции. В этом примере перестраивается секция 12. Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], рекомендуется заменить REBUILD на REORGANIZE.  
+ Для перестроения секции большого кластеризованного индекса columnstore используйте инструкцию ALTER INDEX REBUILD с параметром секции. В этом примере перестраивается секция 12. Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], рекомендуется заменить REBUILD на REORGANIZE.  
   
 ```sql  
 ALTER INDEX cci_fact3   

@@ -30,12 +30,12 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e1d8f3d96adfd912ae1e4707d8aaaf17ffec20b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7afde8d9db8beedc46ea597dc47e31877d170942
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476695"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172726"
 ---
 # <a name="select---into-clause-transact-sql"></a>Предложение SELECT ...INTO (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "97476695"
  *filegroup*    
  Указывает имя файловой группы, в которой будет создана таблица. Указанная файловая группа должна существовать в базе данных, в противном случае обработчик SQL Server создает ошибку.   
  
- **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и выше.
+ **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и выше.
   
 ## <a name="data-types"></a>Типы данных  
  Атрибут FILESTREAM не переносится в новую таблицу. Объекты BLOB FILESTREAM копируются и хранятся в новой таблице как объекты BLOB типа **varbinary(max)** . Без атрибута FILESTREAM тип данных **varbinary(max)** имеет ограничение в 2 ГБ. Если размер большого двоичного объекта FILESTREAM превышает это значение, происходит ошибка 7119 и инструкция прекращает работу.  
@@ -236,7 +236,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-copying-the-data-from-one-table-to-another-and-create-the-new-table-on-a-specified-filegroup"></a>Е. Копирование данных из одной таблицы в другую и создание новой таблицы в указанной файловой группе
 В следующем примере показано создание новой таблицы в качестве копии другой таблицы и ее загрузка в указанную файловую группу, отличную от файловой группы по умолчанию для пользователя.
 
- **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и выше.
+ **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и выше.
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

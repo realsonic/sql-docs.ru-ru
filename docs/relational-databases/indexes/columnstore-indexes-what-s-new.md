@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9fc87cef0244afc4459c789f94855c0c0530ddd
-ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
+ms.openlocfilehash: 58f0348a84362b48520c9bd5cf46868cdaea60e0
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97697117"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171186"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "97697117"
   Сводка функций индексов columnstore, доступных для каждой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и для последних выпусков [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > Для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] индексы columnstore доступны на уровнях "Премиум", уровнях "Стандартный" (S3 и выше) и всех уровнях "Виртуальное ядро" для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) и более поздних версий индексы columnstore доступны во всех выпусках. Для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (до пакета обновления 1 (SP1)) и более ранних версий индексы columnstore доступны только в выпуске Enterprise Edition.
+ > Для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] индексы columnstore доступны на уровнях "Премиум", уровнях "Стандартный" (S3 и выше) и всех уровнях "Виртуальное ядро" для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Для [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) и более поздних версий индексы columnstore доступны во всех выпусках. Для [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] (до пакета обновления 1 (SP1)) и более ранних версий индексы columnstore доступны только в выпуске Enterprise Edition.
  
 ## <a name="feature-summary-for-product-releases"></a>Сводка функций по выпускам  
  В следующей таблице перечислены основные функции для индексов columnstore и продукты, в которых они доступны.  
 
-|Функция индекса columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|Функция индекса columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
 |Пакетный режим выполнения для многопоточных запросов|да|да|да|да|да|да|да| 
 |Пакетный режим выполнения для однопоточных запросов|||да|да|да|да|да|  
@@ -67,8 +67,8 @@ ms.locfileid: "97697117"
 ### <a name="functional"></a>Функциональные
 - [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] поддерживает нематериализованные вычисляемые столбцы в кластеризованных индексах columnstore. Не поддерживает материализованные вычисляемые столбцы в кластеризованных индексах columnstore. Невозможно создать некластеризованный индекс в индексе columnstore, где есть вычисляемый столбец. 
 
-## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- В[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] реализованы ключевые усовершенствования для повышения производительности и гибкости индексов columnstore. Эти улучшения расширяют возможности хранения данных и обеспечивают поддержку операционной аналитики в реальном времени.  
+## [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
+ В[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] реализованы ключевые усовершенствования для повышения производительности и гибкости индексов columnstore. Эти улучшения расширяют возможности хранения данных и обеспечивают поддержку операционной аналитики в реальном времени.  
   
 ### <a name="functional"></a>Функциональные  
   

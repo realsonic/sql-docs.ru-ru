@@ -38,12 +38,12 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 246ba275b1e918f063e05b22d9ec3637b9a5631e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7096cc309a826d88ba160882fe3b4da2bff87534
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099468"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171506"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  База данных SQL Azure поддерживает формат трехкомпонентного имени имя_базы_данных.[имя_схемы].имя_объекта, если имя_базы_данных — это текущая база данных или tempdb, а имя_объекта начинается с символа #. База данных SQL Azure не поддерживает четырехкомпонентные имена.  
   
  *IF EXISTS*  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Условное удаление таблицы только в том случае, если она уже существует.  
   
@@ -123,7 +123,7 @@ DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>В. Удаление временной таблицы  
- Следующий пример создает временную таблицу, проверяет ее наличие, удаляет ее и снова проверяет ее наличие. В этом примере не используется синтаксис **IF EXISTS**, доступный с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ Следующий пример создает временную таблицу, проверяет ее наличие, удаляет ее и снова проверяет ее наличие. В этом примере не используется синтаксис **IF EXISTS**, доступный с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
   
 ```sql  
 CREATE TABLE #temptable (col1 INT);  
@@ -142,7 +142,7 @@ SELECT * FROM #temptable;
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>Г. Удаление таблицы с помощью IF EXISTS  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  В следующем примере создается таблица с именем T1. Затем вторая инструкция удаляет таблицу. Третья инструкция не выполняет никаких действий, так как таблица уже удалена, однако это не вызывает ошибку.  
   

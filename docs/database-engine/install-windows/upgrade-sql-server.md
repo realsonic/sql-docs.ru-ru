@@ -13,17 +13,17 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: eaf66c17921094aa6a0e4ce10224ab4eaeaf108c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3e5bdb3488708bfd4c4e6463b1f87bda580c8fd4
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460647"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170136"
 ---
 # <a name="upgrade-sql-server"></a>Обновление SQL Server
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
- Экземпляры [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] можно обновить до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] напрямую. Для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] необходимо выполнить либо параллельное обновление, либо миграцию, чтобы перейти на SQL Server 2019, так как между поддерживаемыми основными операционными системами нет перекрытия. Перед запуском программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]просмотрите следующие статьи, относящиеся к процессу обновления, и связанные заметки о выпуске.  
+ Экземпляры [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql16-md.md)] и [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] можно обновить до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] напрямую. Для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] необходимо выполнить либо параллельное обновление, либо миграцию, чтобы перейти на SQL Server 2019, так как между поддерживаемыми основными операционными системами нет перекрытия. Перед запуском программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]просмотрите следующие статьи, относящиеся к процессу обновления, и связанные заметки о выпуске.  
   
    - Сведения об обновлении [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]см. в статье [Вы выполняете обновление с версии SQL Server 2005?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)  
    - [Заметки о выпуске для SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 

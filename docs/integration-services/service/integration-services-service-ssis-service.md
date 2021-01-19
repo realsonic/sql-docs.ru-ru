@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: a665d78d180d87fe0d412b025bcce75d509285d4
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90990415"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171206"
 ---
 # <a name="integration-services-service-ssis-service"></a>Службы Integration Services (службы SSIS)
 
@@ -274,7 +274,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 ```  
   
 ### <a name="modify-the-configuration-file-location"></a>Изменение расположения файла конфигурации  
- Раздел реестра **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** указывает расположение и имя файла конфигурации, используемого службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. По умолчанию этот раздел реестра имеет значение **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Можно изменить значение этого раздела реестра, чтобы использовать другое имя и местонахождение файла конфигурации. Обратите внимание на то, что номер версии в пути (120 для SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и т. д.) зависит от версии SQL Server.
+ Раздел реестра **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** указывает расположение и имя файла конфигурации, используемого службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. По умолчанию этот раздел реестра имеет значение **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Можно изменить значение этого раздела реестра, чтобы использовать другое имя и местонахождение файла конфигурации. Обратите внимание на то, что номер версии в пути (120 для SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 для [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и т. д.) зависит от версии SQL Server.
   
 > [!CAUTION]  
 >  Неправильное изменение реестра может приводить к серьезным проблемам, вплоть до необходимости переустановки операционной системы. [!INCLUDE[msCoName](../../includes/msconame-md.md)] не гарантирует возможность разрешения проблем, возникших в результате неправильного изменения реестра. Перед изменением реестра создайте резервную копию всех необходимых данных. Дополнительные сведения о том, как выполнять создание резервной копии, восстановление и изменение системного реестра, см. в [!INCLUDE[msCoName](../../includes/msconame-md.md)] статье базы знаний [Описание системного реестра Microsoft Windows](https://support.microsoft.com/kb/256986).  

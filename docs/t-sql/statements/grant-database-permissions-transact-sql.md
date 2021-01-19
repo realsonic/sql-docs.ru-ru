@@ -21,12 +21,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dc5771af62394dfd8c69bba4faaa52b07b4a5bb
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 18a18c170ffddafca6656f7f3092a22e1f3b6524
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489944"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171716"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT, предоставление разрешений на базу данных (Transact-SQL)
 
@@ -125,7 +125,7 @@ AS \<database_principal>. Указывает субъект, от которог
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br />**Применимо к**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|
@@ -176,7 +176,7 @@ AS \<database_principal>. Указывает субъект, от которог
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
 |DELETE|CONTROL|CONTROL SERVER|
 |EXECUTE|CONTROL|CONTROL SERVER|
-|EXECUTE ANY EXTERNAL SCRIPT <br /> **Применимо к**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|
+|EXECUTE ANY EXTERNAL SCRIPT <br /> **Применимо к**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)].|CONTROL|CONTROL SERVER|
 |EXECUTE EXTERNAL SCRIPT <br /> **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
 |KILL DATABASE CONNECTION<br />**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|

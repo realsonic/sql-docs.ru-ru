@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: cb4c79d1f4c8c7b8103ff9d34b8f32fd497b8c6a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 717ffe936bef35c9794e160e56c7ea7b0658058f
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095815"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170706"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
@@ -271,12 +271,12 @@ RETURNS return_data_type
 ## <a name="arguments"></a>Аргументы
 
 *OR ALTER*
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) и выше), а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) и выше), а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Условно изменяет функцию только в том случае, если она уже существует.
 
 > [!NOTE]
-> Необязательный синтаксис [OR ALTER] для среды CLR доступен, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) с накопительным пакетом обновления 1 (CU1).
+> Необязательный синтаксис [OR ALTER] для среды CLR доступен, начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) с накопительным пакетом обновления 1 (CU1).
 
 *schema_name*. Имя схемы, к которой принадлежит определяемая пользователем функция.
 

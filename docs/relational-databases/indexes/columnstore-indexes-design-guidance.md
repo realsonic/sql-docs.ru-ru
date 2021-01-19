@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68783d1da202771f39ec232cd9ba5cf1586ef48e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 72ab05dfce314119c30e08428fdcaa2b94ba25ed
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481225"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171776"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Руководство по проектированию индексов columnstore
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "97481225"
 
 ## <a name="add-b-tree-nonclustered-indexes-for-efficient-table-seeks"></a>Добавление некластеризованных индексов сбалансированного дерева для эффективного поиска в таблице
 
-Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], вы можете создавать некластеризованные индексы сбалансированного дерева как вторичные индексы кластеризованного индекса columnstore. Некластеризованный индекс сбалансированного дерева обновляется при изменении индекса columnstore. Это мощная функция, которую можно использовать в своих интересах. 
+Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], вы можете создавать некластеризованные индексы сбалансированного дерева как вторичные индексы кластеризованного индекса columnstore. Некластеризованный индекс сбалансированного дерева обновляется при изменении индекса columnstore. Это мощная функция, которую можно использовать в своих интересах. 
 
 Вторичный индекс сбалансированного дерева позволяет выполнять более эффективный поиск определенных строк без сканирования всех строк.  Кроме того, появляется доступ к другим возможностям. Например, можно принудительно задать ограничение первичного или внешнего ключа, применив уникальное ограничение к индексу сбалансированного дерева. Так как неуникальное значение в индекс сбалансированного дерева не вставляется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может вставить значение в columnstore. 
 
@@ -84,7 +84,7 @@ ms.locfileid: "97481225"
 
 ## <a name="use-a-nonclustered-columnstore-index-for-real-time-analytics"></a>Использование некластеризованного индекса columnstore для операционной аналитики в реальном времени
 
-Начиная с выпуска [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], вам предоставляется некластеризованный индекс columnstore в таблице rowstore на базе диска или в таблице выполняющейся в памяти OLTP. Таким образом, вы можете выполнять анализ в таблице транзакций в режиме реального времени. Хотя транзакции выполняются в базовой таблице, вы можете выполнять анализ в индексе columnstore. Изменения доступны для индекса rowstore и columnstore в режиме реального времени, так как обоими индексами управляет одна таблица.
+Начиная с выпуска [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], вам предоставляется некластеризованный индекс columnstore в таблице rowstore на базе диска или в таблице выполняющейся в памяти OLTP. Таким образом, вы можете выполнять анализ в таблице транзакций в режиме реального времени. Хотя транзакции выполняются в базовой таблице, вы можете выполнять анализ в индексе columnstore. Изменения доступны для индекса rowstore и columnstore в режиме реального времени, так как обоими индексами управляет одна таблица.
 
 Так как индекс columnstore обеспечивает уровень сжатия в 10 раз выше, чем индекс rowstore, ему необходимо небольшое дополнительное пространство. Например, если в сжатую таблицу rowstore передается 20 ГБ данных, индексу columnstore может потребоваться 2 ГБ места дополнительно. Объем дополнительного пространства также зависит от числа столбцов в некластеризованном индексе columnstore. 
 
@@ -94,7 +94,7 @@ ms.locfileid: "97481225"
   
 *   Устранение необходимости использования отдельного хранилища данных. В большинстве случаев в компаниях транзакции выполняются в таблице rowstore и данные загружаются в отдельное хранилище для выполнения анализа. Для многих рабочих нагрузок можно исключить процесс загрузки и устранить необходимость использования отдельного хранилища данных, создав некластеризованный индекс columnstore в транзакционных таблицах.
 
-  В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предусмотрено несколько стратегий выполнения этого сценария. Они очень просты, так как вы можете включить некластеризованный индекс columnstore, не изменяя приложение OLTP. 
+  В [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] предусмотрено несколько стратегий выполнения этого сценария. Они очень просты, так как вы можете включить некластеризованный индекс columnstore, не изменяя приложение OLTP. 
 
 Чтобы добавить дополнительные вычислительные ресурсы, необходимо выполнить анализ на вторичной реплике для чтения, позволяющей отделить обработку транзакционной и аналитической рабочей нагрузки. 
 
@@ -171,11 +171,11 @@ ms.locfileid: "97481225"
   
 |Задача|Справочные разделы|Примечания|  
 |----------|----------------------|-----------|  
-|Создание таблицы как кластеризованного индекса columnstore|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], таблицы можно создавать как кластеризованный индекс columnstore. Для этого не нужно создавать таблицу rowstore, а затем конвертировать ее в columnstore.|  
-|Создание таблицы в памяти с индексом columnstore.|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], таблицы, оптимизированные для памяти, можно создавать с индексом columnstore. Индекс columnstore можно добавить и после создания таблицы, используя синтаксис ALTER TABLE ADD INDEX.|  
+|Создание таблицы как кластеризованного индекса columnstore|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], таблицы можно создавать как кластеризованный индекс columnstore. Для этого не нужно создавать таблицу rowstore, а затем конвертировать ее в columnstore.|  
+|Создание таблицы в памяти с индексом columnstore.|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], таблицы, оптимизированные для памяти, можно создавать с индексом columnstore. Индекс columnstore можно добавить и после создания таблицы, используя синтаксис ALTER TABLE ADD INDEX.|  
 |Преобразование таблицы rowstore в таблицу columnstore|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Преобразуйте существующую кучу или сбалансированное дерево в columnstore. В примерах показано, как обрабатывать существующие индексы, а также имя индекса, которое нужно использовать в процессе преобразования.|  
 |Преобразование таблицы columnstore в rowstore|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index) или [Преобразование таблицы columnstore обратно в кучу rowstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |Обычно это преобразование не требуется, но бывают ситуации, когда оно необходимо. В примерах показано, как преобразовать columnstore в кучу или кластеризованный индекс.|   
-|Создание индекса columnstore в таблице rowstore|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Таблица rowstore может включать один индекс columnstore.  Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], индекс columnstore может иметь отфильтрованное условие. В примерах показан основной синтаксис.|  
+|Создание индекса columnstore в таблице rowstore|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Таблица rowstore может включать один индекс columnstore.  Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], индекс columnstore может иметь отфильтрованное условие. В примерах показан основной синтаксис.|  
 |Создание высокопроизводительных индексов для оперативной аналитики|[Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Описывает процесс создания дополнительных индексов columnstore и сбалансированного дерева, которые позволят использовать индексы сбалансированного дерева в запросах OLTP и индексы columnstore в запросах аналитики.|  
 |Создание высокопроизводительных индексов сolumnstore для хранилищ данных|[Columnstore indexes — data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md) (Хранилище данных для индексов columnstore)|Описывает использование индексов сбалансированного дерева в таблицах columnstore для создания высокопроизводительных запросов к хранилищу данных.|  
 |Использование индекса сбалансированного дерева для принудительного применения ограничения первичного ключа к индексу columnstore.|[Columnstore indexes — data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md) (Хранилище данных для индексов columnstore)|Показано, как объединить индексы сбалансированного дерева и columnstore для принудительного применения ограничений первичного ключа к индексу columnstore.|  

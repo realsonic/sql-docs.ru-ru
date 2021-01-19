@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 79e04e64a4fc89bb3e745d67b1cdbe929850b6ec
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f2295f8694a9573b0e9c541ea817e9e03e70f83e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643002"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171086"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Транзакции — группы доступности AlwaysOn и зеркальное отображение баз данных
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "97643002"
 SQL Server 2017 поддерживает распределенные транзакции для баз данных в группах доступности. Эта поддержка распространяется на базы данных на одном экземпляре SQL Server или базы данных на разных экземплярах SQL Server. Распределенные транзакции не поддерживаются для баз данных, настроенных для зеркального отображения.
 
 > [!NOTE]
-> [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и более поздние версии включают полную поддержку распределенных транзакций в группах доступности. 
+> [!INCLUDE[SQL Server 2016](../../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и более поздние версии включают полную поддержку распределенных транзакций в группах доступности. 
 > 
-> В версиях [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] до пакета обновления 2 (SP2) распределенные транзакции между базами данных (т. е. транзакции между базами данных в одном экземпляре SQL Server), включающие базу данных в группе доступности, не поддерживаются.
+> В версиях [!INCLUDE[SQL Server 2016](../../../includes/sssql16-md.md)] до пакета обновления 2 (SP2) распределенные транзакции между базами данных (т. е. транзакции между базами данных в одном экземпляре SQL Server), включающие базу данных в группе доступности, не поддерживаются.
 
 Сведения о настройка группы доступности для распределенных транзакций см. в статье [Configure Availability Group for Distributed Transactions](configure-availability-group-for-distributed-transactions.md) (Настройка группы доступности для распределенных транзакций).
 

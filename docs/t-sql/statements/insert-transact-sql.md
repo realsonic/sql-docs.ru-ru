@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cccb11c84b9b5354d418dae19557f7f76e027cf
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 206aefdd3cd58b94124a0840cef7e788c5a29390
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095734"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171276"
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -319,7 +319,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
 В отличие от инструкции `BULK INSERT`, которая удерживает менее строгую блокировку массового обновления, инструкция `INSERT INTO … SELECT` с указанием `TABLOCK` удерживает монопольную блокировку (X) таблицы. Это означает, что отсутствует возможность вставки строк с помощью нескольких операций вставки, которые выполняются одновременно. 
 
-Но начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и уровня совместимости базы данных 130, одну инструкцию `INSERT INTO … SELECT` можно выполнять параллельно при вставке в кучи или кластеризованные индексы columnstore (CCI). При использовании указания `TABLOCK` можно выполнять вставку параллельно.  
+Но начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и уровня совместимости базы данных 130, одну инструкцию `INSERT INTO … SELECT` можно выполнять параллельно при вставке в кучи или кластеризованные индексы columnstore (CCI). При использовании указания `TABLOCK` можно выполнять вставку параллельно.  
 
 Требования к параллелизму для указанной выше инструкции (аналогичны требованиям для минимального ведения журнала):  
 -   целевой таблицей должны быть пустая или непустая куча;  

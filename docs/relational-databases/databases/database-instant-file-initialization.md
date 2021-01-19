@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6598dc9812aed56b170c22d0ed1b4a470c5f7209
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 47bb374abb29374fade7a4c2c158ea4e76abe71b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878775"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171746"
 ---
 # <a name="database-instant-file-initialization"></a>Мгновенная инициализация файлов базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "97878775"
 > Некоторые условия, например [прозрачное шифрование данных](../../relational-databases/security/encryption/transparent-data-encryption.md), могут не допускать мгновенную инициализацию файлов.  
 
 > [!NOTE]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], это разрешение можно предоставлять учетной записи службы во время установки. <br><br>При использовании [установки из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) добавьте аргумент /SQLSVCINSTANTFILEINIT либо установите флажок *Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server* в [мастере установки](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
+> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], это разрешение можно предоставлять учетной записи службы во время установки. <br><br>При использовании [установки из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) добавьте аргумент /SQLSVCINSTANTFILEINIT либо установите флажок *Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server* в [мастере установки](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
   
 Предоставление учетной записи разрешения `Perform volume maintenance tasks` .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "97878775"
 1. Проверьте журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при запуске.
    
   
-    **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 4 (SP4), [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и версий [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше).
+    **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 4 (SP4), [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и версий [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше).
     1. Если учетной записи запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставлено разрешение *SE_MANAGE_VOLUME_NAME*, регистрируется подобное информационное сообщение:
 
         `Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`

@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8e64eb57dbcfecabaa5c6f24881206152df4d8d0
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f7e96df4eba36bbcb3da18a1423b5162aef557a7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639969"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170806"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Настройка маршрутизации только для чтения в группе доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Чтобы настроить группу доступности AlwaysOn для поддержки маршрутизации только для чтения в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], можно использовать процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell. *Маршрутизация только для чтения* означает способность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] направлять уточняющие запросы на соединение только для чтения к имеющейся [доступной для чтения вторичной реплике](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn (то есть реплике, настроенной для разрешения рабочих нагрузок только для чтения при выполнении вторичной роли). Для поддержки маршрутизации только для чтения группа доступности должна иметь [прослушиватель группы доступности](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Клиент, запрашивающий данные в режиме только чтения, должен направлять свои запросы к данному прослушивателю, а строки подключения клиента должны определять намерение приложения как «только для чтения». Это означает, что они должны быть *запросами на соединение с правами чтения*.  
 
-Маршрутизация только для чтения доступна в [!INCLUDE[sssql15](../../../includes/sssql15-md.md)] и более поздних версиях.
+Маршрутизация только для чтения доступна в [!INCLUDE[sssql15](../../../includes/sssql16-md.md)] и более поздних версиях.
 
 > [!NOTE]  
 >  Дополнительные сведения о настройке доступной для чтения вторичной реплики см. в разделе [Настройка доступа только для чтения в реплике доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
@@ -104,7 +104,7 @@ ms.locfileid: "97639969"
         >  Необходимо настроить URL-адрес маршрутизации только для чтения перед настройкой списка маршрутизации только для чтения.  
   
 ###  <a name="configure-load-balancing-across-read-only-replicas"></a><a name="loadbalancing"></a> Настройка балансировки нагрузки между репликами только для чтения  
- Начиная с версии [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]балансировку нагрузки можно настроить в наборе реплик только для чтения. Раньше при маршрутизации только для чтения трафик всегда направлялся к первой доступной реплике только для чтения в списке маршрутизации. Чтобы воспользоваться этой функцией, используйте один уровень вложенных скобок вокруг экземпляров сервера **READ_ONLY_ROUTING_LIST** в команде **CREATE AVAILABILITY GROUP** или **ALTER AVAILABILITY GROUP** .  
+ Начиная с версии [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)]балансировку нагрузки можно настроить в наборе реплик только для чтения. Раньше при маршрутизации только для чтения трафик всегда направлялся к первой доступной реплике только для чтения в списке маршрутизации. Чтобы воспользоваться этой функцией, используйте один уровень вложенных скобок вокруг экземпляров сервера **READ_ONLY_ROUTING_LIST** в команде **CREATE AVAILABILITY GROUP** или **ALTER AVAILABILITY GROUP** .  
   
  Например, в приведенном ниже списке маршрутизации запрос на подключение для чтения равномерно распределяется между двумя репликами только для чтения: `Server1` и `Server2`. Вложенные скобки вокруг этих серверов определяют набор с балансировкой нагрузки. Если в этом наборе ни одна из реплик недоступна, будет происходить дальнейшее последовательное подключение к другим репликам в списке маршрутизации только для чтения: `Server3` и `Server4`.  
   

@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016'
-ms.openlocfilehash: edf0b261b6046d63e037e601ab9e92dd13d8728e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 24a228fb504f53c1afe88b0955500e811f1073b6
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464785"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171496"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Устранение неполадок с подключением PolyBase к Kerberos
 
@@ -33,7 +33,7 @@ ms.locfileid: "97464785"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) CU3, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] или выше с установленной службой Polybase
+1. [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] RTM CU6, [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) CU3, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] или выше с установленной службой Polybase
 1. Кластер Hadoop (Cloudera или Hortonworks), защищенный с помощью Kerberos (Active Directory или MIT)
 
 ## <a name="introduction"></a>Введение
@@ -71,7 +71,7 @@ ms.locfileid: "97464785"
 
 `\[System Drive\]:{install path}\{MSSQL##.INSTANCENAME}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
-Например, для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по умолчанию используется `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
+Например, для [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] по умолчанию используется `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
 Обновите файл **core-site.xml**, добавив три приведенных ниже свойства. Задайте значения в соответствии со средой:
 
