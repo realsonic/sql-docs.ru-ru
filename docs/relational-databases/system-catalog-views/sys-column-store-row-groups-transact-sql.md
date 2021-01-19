@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c6e99ae69d27bbaebbd0fa8bd720820f14064d9b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: bb30e3c829dcdabde66fd1a330ec617eea7e5b34
+ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095628"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98564472"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "98095628"
    
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**object_id**|INT|Идентификатор таблицы, для которой определен индекс.|  
-|**index_id**|INT|Идентификатор индекса таблицы, в которой содержится этот индекс columnstore.|  
-|**partition_number**|INT|Идентификатор секции таблицы, содержащей идентификатор row_group_id группы строк. Partition_number можно использовать для соединения этого динамического административного представления с представлением sys.partitions.|  
-|**row_group_id**|INT|Номер группы строк, связанный с этой группой строк. Он уникален внутри секции.<br /><br /> -1 = Заключительный фрагмент таблицы в памяти.|  
-|* * delta_store_hobt_id|bigint * *|Hobt_id для открытой группы строк в разностном хранилище.<br /><br /> Значение NULL, если группа строк не находится в разностном хранилище.<br /><br /> Значение NULL для заключительного фрагмента таблицы в памяти.|  
+|**object_id**|int|Идентификатор таблицы, для которой определен индекс.|  
+|**index_id**|int|Идентификатор индекса таблицы, в которой содержится этот индекс columnstore.|  
+|**partition_number**|int|Идентификатор секции таблицы, содержащей идентификатор row_group_id группы строк. Partition_number можно использовать для соединения этого динамического административного представления с представлением sys.partitions.|  
+|**row_group_id**|int|Номер группы строк, связанный с этой группой строк. Он уникален внутри секции.<br /><br /> -1 = Заключительный фрагмент таблицы в памяти.|  
+|**delta_store_hobt_id**|BIGINT|Hobt_id для открытой группы строк в разностном хранилище.<br /><br /> Значение NULL, если группа строк не находится в разностном хранилище.<br /><br /> Значение NULL для заключительного фрагмента таблицы в памяти.|  
 |**state**|tinyint|Идентификатор, связанный с параметром state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN;<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = ЗАХОРОНЕНИЕ|  
 |**state_description**|nvarchar(60)|Описание сохраняемого состояния группы строк:<br /><br /> Невидимый — скрытый сжатый сегмент в процессе построения из данных в разностном хранилище. Операции чтения будут использовать разностное хранилище до момента построения скрытого сжатого сегмента. Когда новый сегмент станет видимым, исходное разностное хранилище будет удалено.<br /><br /> ОТКРЫТЬ — группа строк для чтения и записи, которая принимает новые записи. Открытая группа строк остается в формате rowstore и не сжимается в формат columnstore.<br /><br /> ЗАКРЫТо — группа строк, которая была заполнена, но еще не сжата процессом перемещения кортежей.<br /><br /> СЖАТЫЙ — группа строк, которая была заполнена и сжата.|  
 |**total_rows**|BIGINT|Общее число строк, которые физически хранятся в группе строк. Некоторые из строк могли быть удалены, но хранятся и дальше. Максимальное количество строк в группе — 1 048 576 (FFFFF в шестнадцатеричном формате).|  
@@ -78,7 +78,7 @@ AND i.index_id = CSRowGroups.index_id
 ORDER BY object_name(i.object_id), i.name, row_group_id;  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также  
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
