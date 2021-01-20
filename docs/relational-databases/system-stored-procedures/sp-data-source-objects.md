@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d30a5190d88a0b3714f670f5f253c2a31e98f69e
-ms.sourcegitcommit: 2e7154475ba1f31d1aeebc8f48ac05846f793736
+ms.openlocfilehash: 4c76026dcd24572b4d52c6b82246e5293c22e713
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126604"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596692"
 ---
 # <a name="sp_data_source_objects-transact-sql"></a>sp_data_source_objects (Transact-SQL)
 
@@ -83,7 +83,7 @@ sp_data_source_objects
 
 Требуется разрешение ALTER ANY EXTERNAL DATA SOURCE.  
 
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
 
 На экземпляре SQL Server должен быть установлен компонент  [polybase](../../relational-databases/polybase/polybase-guide.md) .
 
@@ -239,7 +239,7 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 
 ## <a name="see-also"></a>См. также раздел
 
-- [sp_data_source_columns](/sql/relational-databases/system-stored-procedures/sp-data-source-table-columns)   
+- [sp_data_source_columns](./sp-data-source-table-columns.md)   
 - [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
 - [Расширение Data Virtualization для Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md)   

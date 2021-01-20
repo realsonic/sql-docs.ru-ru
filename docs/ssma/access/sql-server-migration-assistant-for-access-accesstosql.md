@@ -11,12 +11,12 @@ ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: fdb846a0b43bd9816faf931d936c456093ac26e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 25e7694505f7f67702f476983c33120a87539887
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934020"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596418"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>Помощник по миграции SQL Server для Access (Акцесстоскл)
 
@@ -28,7 +28,7 @@ ms.locfileid: "87934020"
   
 |Section|Описание|
 |-----------|---------------|
-|[Новые возможности в SSMA для Access](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|Перечисляет изменения в выпусках SSMA.|  
+|[Новые возможности в SSMA для Access](./what-s-new-in-ssma-for-access-accesstosql.md)|Перечисляет изменения в выпусках SSMA.|  
 |[Установка Помощник по миграции SQL Server для доступа](installing-sql-server-migration-assistant-for-access-accesstosql.md)|Список необходимых компонентов для установки SSMA, процедура установки и лицензирования SSMA и ссылка на последнюю версию.|  
 |[Начало работы с Помощник по миграции SQL Server для доступа &#40;Акцесстоскл&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|Вводит SSMA и его пользовательский интерфейс.|  
 |[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)|Описывает подготовку баз данных Access для преобразования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure/SQL.|  
@@ -36,4 +36,4 @@ ms.locfileid: "87934020"
 |[Связывание приложений Access с SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|Описание использования существующих приложений Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Справочник по пользовательскому интерфейсу](user-interface-reference-accesstosql.md)|Содержит документацию для диалоговых окон SSMA.|  
 |[Работа с консолью SSMA для Access](working-with-ssma-for-access-console-accesstosql.md)|Содержит документацию по консольному приложению SSMA|  
-|[Получение помощи SSMA для доступа](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Содержит сведения о получении дополнительной помощи.|  
+|[Получение помощи SSMA для доступа](../sql-server-migration-assistant.md)|Содержит сведения о получении дополнительной помощи.|

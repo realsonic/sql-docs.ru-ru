@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 ms.author: alexiva
-ms.openlocfilehash: 497c3df711c2cfacbb2774edf791e4c36837bb87
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 8e13b9ea8bcd264d1668cf0979dc2956bd11bef7
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779046"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596723"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Подключение к Oracle (OracleToSQL)
 
@@ -23,7 +23,7 @@ ms.locfileid: "84779046"
 
 Чтобы открыть это диалоговое окно, в меню **файл** выберите **подключиться к Oracle**. Если подключение было выполнено ранее, команда **повторно подключится к Oracle**.
 
-## <a name="options"></a>Варианты
+## <a name="options"></a>Параметры
 
 **Поставщик**  
 Выберите поставщик доступа к данным для подключения к базе данных Oracle. Доступные поставщики — поставщик клиента Oracle и поставщик OLE DB. Значение по умолчанию — поставщик клиента Oracle.
@@ -56,13 +56,13 @@ ms.locfileid: "84779046"
 
 Это Стандартный режим.
 
-**User name**  
+**Имя пользователя**  
 Введите имя пользователя, которое SSMA будет использовать для подключения к базе данных Oracle.
 
 **Пароль**  
 Введите пароль для имени пользователя.
 
-**Строка подключения**  
+**Строка соединения**  
 > [!IMPORTANT]
 > Не рекомендуется использовать режим строки подключения, так как текст может содержать пароли и отправляется в виде открытого текста.
 
@@ -70,7 +70,7 @@ ms.locfileid: "84779046"
 
 Строки подключения состоят из пар имя параметра и значение.
 
-- Сведения о строках подключения OLE DB см. в [поставщик OLE DB для Oracle (Майкрософт)](https://go.microsoft.com/fwlink/?LinkId=85640) статье библиотеки MSDN.
+- Сведения о строках подключения OLE DB см. в [поставщик OLE DB для Oracle (Майкрософт)](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) статье библиотеки MSDN.
 
 Для строк подключения SSMA всегда включайте параметр provider. Кроме того, убедитесь, что вы включили параметр Port при подключении к Oracle.
 

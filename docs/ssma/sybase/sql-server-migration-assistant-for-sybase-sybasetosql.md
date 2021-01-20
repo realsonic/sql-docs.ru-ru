@@ -11,12 +11,12 @@ ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 455f7b31ca4b64b92751551849fa22091c331892
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d961301d94eb9c14bb4fc924cf826c769843483e
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934613"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596609"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>Помощник по миграции SQL Server для Sybase (SybaseToSQL)
 
@@ -34,4 +34,4 @@ ms.locfileid: "87934613"
 |[Миграция баз данных Sybase ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)|Содержит общие сведения о процессе преобразования и подробные сведения о каждом шаге процесса.|  
 |[Справочник по пользовательскому интерфейсу &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)|Содержит документацию для диалоговых окон SSMA для Sybase.|  
 |[Работа с консолью SSMA для Sybase](working-with-ssma-for-sybase-console-sybasetosql.md)|Содержит документацию по консольному приложению SSMA.|  
-|[Получение помощи по SSMA для Sybase](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Содержит сведения о получении дополнительной помощи.|  
+|[Получение помощи по SSMA для Sybase](../sql-server-migration-assistant.md)|Содержит сведения о получении дополнительной помощи.|

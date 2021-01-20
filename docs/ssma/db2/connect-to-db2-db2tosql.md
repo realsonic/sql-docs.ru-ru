@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cef31b2968ea0241b3c999e0dbd781d70974b360
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c590a76696f2729bf5d1c6c5d4ca5b0242a63df6
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426976"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596732"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Подключение к DB2 (DB2ToSQL)
 Используйте диалоговое окно **Подключение к DB2** для подключения к базе данных DB2, которую требуется перенести.  
   
 Чтобы открыть это диалоговое окно, в меню **файл** выберите **подключиться к DB2**. Если подключение было выполнено ранее, команда **повторно подключится к DB2**.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
 **Поставщик**  
 Выберите поставщик доступа к данным для подключения к базе данных DB2. Доступные поставщики — поставщик клиента DB2 и поставщик OLE DB. Значение по умолчанию — поставщик клиента DB2.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "88426976"
   
 Это Стандартный режим.  
   
-**User name**  
+**Имя пользователя**  
 Введите имя пользователя, которое SSMA будет использовать для подключения к базе данных DB2.  
   
 **Пароль**  
@@ -70,7 +70,6 @@ ms.locfileid: "88426976"
   
 Строки подключения состоят из пар имя параметра и значение.  
   
--   Сведения о строках подключения OLE DB см. в [поставщик OLE DB для DB2 (Майкрософт)](https://go.microsoft.com/fwlink/?LinkId=85640) статье библиотеки MSDN.  
+-   Сведения о строках подключения OLE DB см. в [поставщик OLE DB для DB2 (Майкрософт)](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) статье библиотеки MSDN.  
   
 Для строк подключения SSMA всегда включайте параметр provider. Кроме того, убедитесь, что вы включили параметр Port при подключении к DB2.  
-  
