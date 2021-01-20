@@ -415,8 +415,6 @@
       href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
     - name: Включение и отключение песочницы для языка определения отчетов
       href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
-    - name: Настройка использования альтернативного имени субъекта в Reporting Services
-      href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Веб-часть "Средство просмотра отчетов" на сайте SharePoint
   href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
   items:
@@ -1267,6 +1265,8 @@
               href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
     - name: 'Настройка соединений SSL для сервера отчетов, работающего в собственном режиме'
       href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
+    - name: Настройка использования альтернативного имени субъекта в Reporting Services
+      href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Подписки на отчет
   items:
     - name: "Обзор расписаний в\_SSRS"

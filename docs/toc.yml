@@ -348,7 +348,7 @@
               href: big-data-cluster/notebooks-tutorial-spark.md
             - name: Список записных книжек для определенных операций
               href: big-data-cluster/cluster-manage-notebooks.md
-        - name: Azure Monitor
+        - name: Монитор
           items:
             - name: Выполнение мониторинга с помощью Azure Data Studio
               href: big-data-cluster/cluster-monitor-ads.md
@@ -16441,6 +16441,8 @@
                   href: t-sql/statements/add-sensitivity-classification-transact-sql.md
                 - name: BULK INSERT
                   href: t-sql/statements/bulk-insert-transact-sql.md
+                - name: КОПИРОВАТЬ
+                  href: t-sql/statements/copy-into-transact-sql.md
                 - name: DELETE
                   href: t-sql/statements/delete-transact-sql.md
                 - name: DISABLE TRIGGER

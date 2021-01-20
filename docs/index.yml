@@ -6,12 +6,12 @@ metadata:
   title: Документация по Microsoft SQL | Документация Майкрософт
   description: 'Узнайте, как использовать возможности SQL Server и SQL Azure для эффективного управления базами данных, размещаемыми как локально, так и в облаке. (Быстрая ссылка: https://aka.ms/sqldocs)'
   ms.topic: hub-page
-  ms.openlocfilehash: 484438ba00d9a99b5666361536ec2eea59851d4f
-  ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+  ms.openlocfilehash: 9e5ac2f53987c94f7a4fa84a55df23409861712e
+  ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 12/17/2020
-  ms.locfileid: "97617543"
+  ms.lasthandoff: 01/20/2021
+  ms.locfileid: "98594370"
 highlightedContent:
   items:
   - title: Попробуйте SQL Server 2019
@@ -33,27 +33,27 @@ productDirectory:
     links:
     - url: sql-server/index.yml
       text: В локальной среде
-    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/
+    - url: /azure/azure-sql/virtual-machines/windows/
       text: На виртуальной машине Azure
-    - url: https://docs.microsoft.com/previous-versions/sql/
+    - url: /previous-versions/sql/
       text: Предыдущие версии (SQL 2005–2012)
   - title: SQL в Azure
     imageSrc: media/index/azure.svg
     links:
-    - url: https://docs.microsoft.com/azure/azure-sql/database/
+    - url: /azure/azure-sql/database/
       text: База данных SQL Azure
-    - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
-      text: Управляемый экземпляр SQL Azure
-    - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
+    - url: /azure/azure-sql/managed-instance/
+      text: Управляемый экземпляр SQL Azure
+    - url: /azure/azure-sql-edge/overview
       text: SQL Azure для пограничных вычислений
-    - url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
+    - url: /azure/synapse-analytics/overview-what-is/
       text: Azure Synapse Analytics
   - title: SQL Server в Linux
     imageSrc: media/index/linux.svg
     links:
     - url: linux/sql-server-linux-overview.md
       text: В локальной среде
-    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/linux/
+    - url: /azure/azure-sql/virtual-machines/linux/
       text: На виртуальной машине Azure
 conceptualContent:
   items:
@@ -77,16 +77,16 @@ conceptualContent:
   - title: Новые возможности
     links:
     - text: SQL Server 2019
-      url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15
+      url: ./sql-server/what-s-new-in-sql-server-ver15.md
       itemType: whats-new
     - text: Кластер больших данных SQL Server
-      url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
+      url: ./big-data-cluster/big-data-cluster-overview.md
       itemType: whats-new
     - text: Azure Data Studio
       url: azure-data-studio/release-notes-azure-data-studio.md
       itemType: whats-new
     - text: Azure Database Migration Service
-      url: https://docs.microsoft.com/azure/dms/dms-overview
+      url: /azure/dms/dms-overview
       itemType: whats-new
     - text: Службы машинного обучения SQL Server
       url: machine-learning/index.yml
@@ -103,10 +103,10 @@ conceptualContent:
       url: ssms/download-sql-server-management-studio-ssms.md
       itemType: deploy
     - text: Azure Data Studio
-      url: azure-data-studio/download.md
+      url: ./azure-data-studio/download-azure-data-studio.md
       itemType: deploy
     - text: Analysis Services (SSAS)
-      url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
+      url: /analysis-services/instances/install-windows/install-analysis-services/
       itemType: deploy
     - text: Службы Integration Services (SSIS)
       url: integration-services/install-windows/install-integration-services.md
@@ -120,10 +120,10 @@ conceptualContent:
       url: https://datamigration.microsoft.com/
       itemType: overview
     - text: Сертификация на совместимость базы данных
-      url: https://aka.ms/dbcompat
+      url: ./database-engine/install-windows/compatibility-certification.md
       itemType: overview
     - text: Azure Database Migration Service (DMS)
-      url: https://docs.microsoft.com/azure/dms/dms-overview
+      url: /azure/dms/dms-overview
       itemType: overview
     - text: Помощник по переносу баз данных (DMA)
       url: dma/dma-overview.md
@@ -149,9 +149,9 @@ additionalContent:
       - text: DevOps с использованием SQL Server
         url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
       - text: Приложения баз данных SQL Azure
-        url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
+        url: /azure/sql-database/sql-database-develop-overview
       - text: Библиотеки подключений к Базе данных SQL Azure
-        url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
+        url: /azure/sql-database/sql-database-connect-query#libraries
       - text: Transact-SQL (T-SQL)
         url: t-sql/language-reference.md
       - text: SQL PowerShell
@@ -161,24 +161,24 @@ additionalContent:
     - title: Отчеты и аналитика
       links:
       - text: Сервер отчетов Power BI
-        url: https://docs.microsoft.com/power-bi/report-server/get-started
+        url: /power-bi/report-server/get-started
       - text: Служба Power BI
-        url: https://docs.microsoft.com/power-bi/service-get-started
+        url: /power-bi/service-get-started
       - text: Службы SQL Server Reporting Services (SSRS)
         url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
       - text: Службы SQL Server Analysis Services (SSAS)
-        url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+        url: /analysis-services/analysis-services-overview
       - text: Службы Azure Analysis Services
-        url: https://docs.microsoft.com/azure/analysis-services/
+        url: /azure/analysis-services/
     - title: Большие данные и машинное обучение
       links:
       - text: Кластеры больших данных SQL Server
-        url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
+        url: ./big-data-cluster/big-data-cluster-overview.md
       - text: Виртуализация данных с помощью Polybase
         url: relational-databases/polybase/polybase-guide.md
       - text: Azure Synapse Analytics
-        url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
+        url: /azure/synapse-analytics/overview-what-is/
       - text: Microsoft Analytics Platform System
-        url: analytics-platform-system/index.md
+        url: ./analytics-platform-system/home-analytics-platform-system-aps-pdw.md
       - text: Службы машинного обучения SQL Server (R и Python)
         url: machine-learning/index.yml
