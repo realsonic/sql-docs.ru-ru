@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5fc10c705564c88fe157860d00a61fa5ea682cc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81a5c562ddade5c60458ad491a401dab916c59d4
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486287"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620298"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ sp_change_log_shipping_secondary_database
   
 `[ @restore_threshold = ] 'restore_threshold'` Количество минут между операциями восстановления до создания предупреждения. *restore_threshold* имеет **тип int** и не может иметь значение null.  
   
-`[ @threshold_alert = ] 'threshold_alert'` Предупреждение, создаваемое при превышении порогового значения восстановления. *threshold_alert* имеет **тип int**и значение по умолчанию 14420.  
+`[ @threshold_alert = ] 'threshold_alert'` Предупреждение, создаваемое при превышении порогового значения восстановления. *threshold_alert* имеет **тип int** и значение по умолчанию 14421.  
   
 `[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Указывает, будет ли создаваться предупреждение при превышении *restore_threshold*. 1 = включены; 0 = отключены. *threshold_alert_enabled* имеет **бит** и не может иметь значение null.  
   
